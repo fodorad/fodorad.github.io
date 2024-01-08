@@ -6,6 +6,9 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+html {
+    scroll-behavior: smooth;
+}
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -1798,7 +1801,11 @@ input, select, textarea {
 	}
 
 	header p {
-		margin-top: 0.5em;
+		margin: 0.5em 0 0 0;
+	}
+
+	header .actions {
+		margin: 1.5em 0 2em 0;
 	}
 
 	@media screen and (max-width: 736px) {
@@ -1807,6 +1814,9 @@ input, select, textarea {
 			margin-top: 0;
 		}
 
+		header .actions {
+			margin: 1.0em 0 2em 0;
+		}
 	}
 
 /* Icon */
@@ -2048,6 +2058,13 @@ input, select, textarea {
 
 		}
 
+/* Icons section */
+
+	div.top_icon_holder {
+		text-align: center;
+		margin: 0 0 5em 0;
+	}
+
 /* Icons */
 
 	ul.icons {
@@ -2061,6 +2078,23 @@ input, select, textarea {
 			display: inline-block;
 			padding: 1em 0 0 1em;
 		}
+
+		
+	ul.icons_top {
+		cursor: default;
+		list-style: none;
+		padding-left: 0;
+		margin: -2em 0 1em -0.5em;
+	}
+
+	ul.icons_top li {
+		display: inline-block;
+		padding: 0em 0em 0 1em;
+	}
+
+	ul.icons_top li a {
+		font-size: 0.75em;
+	}
 
 /* Form */
 
@@ -2334,7 +2368,7 @@ input, select, textarea {
 		}
 
 		.image.left, .image.right {
-			max-width: 40%;
+			max-width: 50%;
 		}
 
 			.image.left img, .image.right img {
@@ -2355,7 +2389,7 @@ input, select, textarea {
 
 		.image.fit {
 			display: block;
-			margin: 0 0 2em 0;
+			margin: 1em 0 0 2em;
 			width: 100%;
 		}
 
@@ -2380,6 +2414,13 @@ input, select, textarea {
 				}
 
 			}
+	
+	#front-page-header .image.fit.right {
+		float: right;
+		padding: 0 0 0 8em;
+		margin: 0.25em 0 0 0;
+	}
+
 
 /* Table */
 
@@ -3024,8 +3065,10 @@ input, select, textarea {
 /* Header */
 
 	#header {
-		padding: 3em 0 0.5em 0;
+		margin: 3em 0 0 0;
+		padding: 0em 0 0 0;
 	}
+	
 
 		#header .logo {
 			display: block;
@@ -3156,6 +3199,7 @@ input, select, textarea {
 					}
 
 		}
+	
 
 /* Menu */
 
