@@ -29,13 +29,10 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
-.hyear {
-	padding: 5em 0 0 0;
-}
-
 .fyear {
 	font-size: 2em;
-	padding: 3em 0 0 0;
+	margin: 2em 0 -0.3em 0;
+	padding: -1.0em 0 0 0;
 }
 
 body {
@@ -108,7 +105,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #ffffff;
+		background: rgb(245, 245, 245);
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -172,14 +169,14 @@ input, select, textarea {
 	}
 
 	p {
-		margin: 0 0 2em 0;
+		margin: 0 0 0 0;
 	}
 
 	h1 {
-		font-size: 2.75em;
-		font-weight: 700;
-		line-height: 1.3;
-		margin: 0 0 1em 0;
+		font-size: 3em;
+		font-weight: 600;
+		line-height: 1em;
+		margin: 0 0 0.5em 0;
 		letter-spacing: -0.035em;
 	}
 
@@ -205,13 +202,13 @@ input, select, textarea {
 		}
 
 	h2, h3, h4, h5, h6 {
-		font-weight: 900;
-		line-height: 1.5;
-		margin: 0 0 2em 0;
+		font-weight: 600;
+		line-height: 2;
+		margin: 1em 0 1em 0;
 		/*
 		text-transform: uppercase;
 		*/
-		letter-spacing: 0.15em;
+		letter-spacing: 0.05em;
 	}
 
 		h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -219,7 +216,7 @@ input, select, textarea {
 		}
 
 	h2 {
-		font-size: 1.1em;
+		font-size: 1.5em;
 	}
 
 	h3 {
@@ -253,9 +250,11 @@ input, select, textarea {
 			font-size: 1em;
 		}
 
+		/*
 		h3 {
 			font-size: 0.8em;
 		}
+		*/
 
 	}
 
@@ -1792,14 +1791,14 @@ input, select, textarea {
 
 		}
 
-/* Section/Article */
+/* Section / Article */
 
 	section.special, article.special {
 		text-align: center;
 	}
 
 	header p {
-		margin-top: -1em;
+		margin-top: 0.5em;
 	}
 
 	@media screen and (max-width: 736px) {
@@ -2596,6 +2595,7 @@ input, select, textarea {
 			position: relative;
 			width: calc(33.33333% - 2.5em);
 			margin: 2.5em 0 0 2.5em;
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 		}
 
 			.tiles article > .image {
@@ -2840,10 +2840,191 @@ input, select, textarea {
 
 		}
 
+/* Sections */
+
+	.section__info {
+		margin: 3em 0 1.5em 0;
+	}
+
+	.section__info .section__head {
+		display: flex;
+		justify-content: space-between;
+		align-items: center
+	}
+
+	.section__info h3.section_title {
+		margin: 0;
+		padding: 0 0 0 0;
+		font-size: 1.5em;
+		line-height: 1;
+	}
+
+	.section__info .section__head .section__link {
+		font-size: 1em;
+		font-weight: 600;
+		line-height: 1;
+		white-space: nowrap;
+		will-change: transform
+	}
+
+	.section__info .section__head .section__link:hover {
+		color: #110e38
+	}
+
+	.section__info .section__head .section__link:hover i {
+		transform: translate(2px)
+	}
+
+	.section__info .section__head .section__link i {
+		width: 18px;
+		height: 18px;
+		margin-left: 4px;
+		font-size: 14px;
+		line-height: 18px;
+		border-radius: 50%;
+		text-align: center;
+		box-shadow: 0 0 2px #0000000d;
+		background: #fff;
+		transition: .2s
+	}
+
+	.section__info .section__description {
+		max-width: 50%;
+		line-height: 1.75;
+		margin: 1em 0 0 0;
+	}
+
+	.section__info .section__description p {
+		margin: 0 0 2em 0;
+	}
+
+/* Blog */
+
+	.tiles article.blog-post {
+		border-radius: 10px;
+		background-color: #ffffff;
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+		transform: scale(1);
+		opacity: 1;
+		-moz-transition: -moz-transform 0.5s ease, opacity 0.5s ease;
+		-webkit-transition: -webkit-transform 0.5s ease, opacity 0.5s ease;
+		-ms-transition: -ms-transform 0.5s ease, opacity 0.5s ease;
+		transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+	}
+
+	.tiles article.blog-post.filter-transition-out {
+		transform: scale(0.9);
+		opacity: 0;
+	}
+
+	.tiles article.blog-post.filter-transition-in {
+		transform: scale(1);
+		opacity: 1;
+	}
+
+	.tiles article.blog-post img {
+		border-radius: 8px;
+		width: 100%;
+		height: 60%;
+	}
+
+	.tiles article.blog-post h3 {
+		font-size: 1.25em;
+		line-height: 1.25em;
+		margin: -1em 0.5em 0 0.8em;
+		padding: 0 0 0.5em 0;
+		text-transform: capitalize;
+	}
+
+	.tiles article.blog-post p {
+		font-size: 0.8em;
+		margin: 0 0 0 1.25em;
+	}
+
+	.tiles article.blog-post .tag {
+		display: inline-block;
+		line-height: 2em;
+		text-transform: capitalize;
+		font-size: 0.8em;
+		border-radius: 0.6em;
+		padding: 0 1em 0 1em;
+		margin: 0 0.75em 0 -0.25em;
+		opacity: 0.85;
+		color: #fff;
+		cursor: pointer;
+		font-weight: 600;
+		transition: opacity .35s;
+		background: linear-gradient(90deg, #DFA878 0%, #6C3428 167%);
+	}
+
+	.tiles article.blog-post .tag:hover {
+		opacity: 1;
+	}
+
+	.tiles article.blog-post:hover {
+		transform: scale(1.1);
+	}
+
+/* Events */
+
+	.tiles article.event-box {
+		border-radius: 10px;
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+		transform: scale(1);
+		opacity: 1;
+		transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, box-shadow 0.5s ease;
+		height: 25em;
+		overflow: hidden;
+	}
+
+	.tiles article.event-box img {
+		border-radius: 8px;
+		width: 100%;
+		height: 80%;
+		transition: height 0.5s ease;
+	}
+
+	.tiles article.event-box:hover img {
+		height: 40%;
+	}
+
+	.tiles article.event-box h3 {
+		font-size: 1.25em;
+		line-height: 1.25em;
+		margin: 0.5em 0.5em 0 0.8em;
+		padding: 0 0 0.5em 0;
+		text-transform: capitalize;
+	}
+	
+	.tiles article.event-box h4 {
+		font-size: 0.8em;
+		line-height: 0.8em;
+		margin: 0 0.5em 0 1.3em;
+		padding: 0 0 1.5em 0;
+		text-transform: capitalize;
+	}
+
+	.tiles article.event-box p {
+		font-size: 0.8em;
+		margin: 0 0 0 1.25em;
+		opacity: 0;
+		transition: opacity 0.5s ease;
+	}
+
+	.tiles article.event-box:hover p {
+		opacity: 1;
+	}
+
+	.tiles article.event-box:hover {
+		transform: scale(1.1);
+	}
+
+
+
 /* Header */
 
 	#header {
-		padding: 8em 0 0.1em 0 ;
+		padding: 3em 0 0.5em 0;
 	}
 
 		#header .logo {
@@ -2902,10 +3083,10 @@ input, select, textarea {
 					#header nav ul li a {
 						display: block;
 						position: relative;
-						height: 3em;
-						line-height: 3em;
-						padding: 0 1.5em;
-						background-color: rgba(255, 255, 255, 0.5);
+						height: 2em;
+						line-height: 2em;
+						padding: 0 1em;
+						background-color: rgba(245, 245, 245, 1.0);
 						border-radius: 4px;
 						border: 0;
 						font-size: 0.8em;
@@ -2962,7 +3143,7 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			#header {
-				padding: 4em 0 0.1em 0 ;
+				padding: 3em 0 0.1em 0 ;
 			}
 
 				#header nav {
@@ -3180,7 +3361,7 @@ input, select, textarea {
 
 	#footer {
 		padding: 5em 0 6em 0 ;
-		background-color: #f6f6f6;
+		background-color: rgb(233, 233, 233)
 	}
 
 		#footer > .inner {
@@ -3218,7 +3399,7 @@ input, select, textarea {
 				margin-top: 5em;
 				list-style: none;
 				font-size: 0.8em;
-				color: rgba(88, 88, 88, 0.5);
+				color: rgba(88, 88, 88, 0.767);
 			}
 
 				#footer > .inner .copyright a {

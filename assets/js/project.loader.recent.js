@@ -7,7 +7,7 @@ function getCyclicNumber(list, index) {
 fetch('content/projects.json')
     .then(response => response.json())
     .then(data => {
-        const projectContainer = document.getElementById('project-container')
+        const projectContainer = document.getElementById('project-container-recent')
         // create project box container
         const contentContainer = document.createElement('section');
         contentContainer.classList.add('tiles')

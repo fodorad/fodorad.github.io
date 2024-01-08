@@ -10,7 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="assets/css/blog.css" />
+		<!--<link rel="stylesheet" href="assets/css/blog.css" />-->
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -42,9 +42,10 @@
 						<h2>Menu</h2>
 						<ul>
 							<li><a href="index.html">Home</a></li>
-							<li><a href="generic.html">News</a></li>
 							<li><a href="projects.html">Projects</a></li>
 							<li><a href="blog.html">Blog</a></li>
+							<li><a href="events.html">Events</a></li>
+							<li><a href="teaching.html">Teaching</a></li>
 							<li><a href="about.html">About</a></li>
 						</ul>
 					</nav>
@@ -53,27 +54,14 @@
 					<div id="main">
 						<div class="inner">
 							<header>
-								<h1>My posts</h1>
+								<h1>Blog</h1>
 								<p>Here I showcase some stuff I found interesting recently. Check it out!</p>
 							</header>
-
-							<div class="blog-post">
-								<img src="images/pic01.jpg" alt="Image">
-								<ul class="tags">
-								  <li>Tag 1</li>
-								  <li>Tag 2</li>
-								  <li>Tag 3</li>
-								</ul>
-								<h3>Title</h3>
-								<p>This is the first sentence.</p>
-								<p>This is the second sentence.</p>
-							  </div>
-
-							<!--
-							<script src="assets/js/project.loader.js"></script>
-							<section id="project-container"></section>
-							-->
-
+							<div id="filter-row">
+								<p id="filter-text">All posts are shown.</p>
+            					<button class="filter-option" data-filter="all" disabled>Show All</button>
+							</div>
+							<section id="blog-post-container" class="tiles"></section>
 						</div>
 					</div>
 
@@ -82,7 +70,7 @@
 						<div class="inner">
 							<section>
 								<h3>Get in touch</h3>
-								<form method="post" action="#">
+								<form method="post" action="https://formspree.io/f/xyyrykek">
 									<div class="fields">
 										<div class="field half">
 											<input type="text" name="name" id="name" placeholder="Name" />
@@ -122,7 +110,9 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/blog.loader.js"></script>
 			<script src="assets/js/blog.resizer.js"></script>
+			<script src="assets/js/blog.filter.js"></script>
 
 	</body>
 </html>

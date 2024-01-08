@@ -1,0 +1,30 @@
+[
+    {
+      "date": "2023-03-23T12:20:40.001Z",
+      "image": "images/pic01.jpg",
+      "alt": "description",
+      "title": "Event title 1",
+      "content": "This is the first sentence.\nThis is the second sentence."
+    },
+    {
+      "date": "2023-04-22T12:20:40.001Z",
+      "image": "images/pic01.jpg",
+      "alt": "description",
+      "title": "Event title 2",
+      "content": "This is the first sentence.\nThis is the second sentence."
+    },
+    {
+      "date": "2023-04-23T12:20:40.001Z",
+      "image": "images/pic01.jpg",
+      "alt": "description",
+      "title": "Event title 3",
+      "content": "This is the first sentence.\nThis is the second sentence."
+    },
+    {
+      "date": "2023-05-21T12:20:40.001Z",
+      "image": "images/pic01.jpg",
+      "alt": "description",
+      "title": "Event title 4",
+      "content": "This is the first sentence.\nThis is the second sentence."
+    }
+]

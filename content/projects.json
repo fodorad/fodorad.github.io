@@ -1,12 +1,62 @@
 [
-    {"year": 2023, "image": "images/pic01.jpg", "title": "BlinkLinMulT", "content": "Transformer-based Eye Blink Detection."},
-    {"year": 2023, "image": "images/pic02.jpg", "title": "Exordium", "content": "Collection of preprocessing functions and deep learning methods."},
-    {"year": 2023, "image": "images/pic03.jpg", "title": "Personality Questionnaires", "content": "Personality questionnaire processing methods for various experiments."},
-    {"year": 2022, "image": "images/pic04.jpg", "title": "PersonalityLinMulT", "content": "Multimodal Sentiment and Personality Perception Under Speech: A Comparison of Transformer-based Architectures."},
-    {"year": 2022, "image": "images/pic05.jpg", "title": "LinMulT", "content": "General-purpose Multimodal Transformer with Linear Complexity Attention Mechanism."},
-    {"year": 2021, "image": "images/pic06.jpg", "title": "Siamese", "content": "Enhancing Apparent Personality Trait Analysis with Cross-Modal Embeddings."},
-    {"year": 2021, "image": "images/pic01.jpg", "title": "AHFS", "content": "Adaptive, hybrid feature selection."},
-    {"year": 2021, "image": "images/pic02.jpg", "title": "De-identification", "content": "Speech de-identification with deep neural networks."},
-    {"year": 2020, "image": "images/pic03.jpg", "title": "Skeletonization", "content": "Skeletonization Combined with Deep Neural Networks for Superpixel Temporal Propagation."},
-    {"year": 2020, "image": "images/pic04.jpg", "title": "Supervoxel segmentation", "content": "Common Fate Based Episodic Segmentation by Combining Supervoxels with Deep Neural Networks."}
+  {
+    "year": 2023,
+    "image": "images/pic01.jpg",
+    "title": "BlinkLinMulT",
+    "content": "Transformer-based Eye Blink Detection."
+  },
+  {
+    "year": 2023,
+    "image": "images/pic02.jpg",
+    "title": "Exordium",
+    "content": "Collection of preprocessing functions and deep learning methods."
+  },
+  {
+    "year": 2023,
+    "image": "images/pic03.jpg",
+    "title": "Personality Questionnaires",
+    "content": "Personality questionnaire processing methods for various experiments."
+  },
+  {
+    "year": 2022,
+    "image": "images/pic04.jpg",
+    "title": "PersonalityLinMulT",
+    "content": "Multimodal Sentiment and Personality Perception Under Speech: A Comparison of Transformer-based Architectures."
+  },
+  {
+    "year": 2022,
+    "image": "images/pic05.jpg",
+    "title": "LinMulT",
+    "content": "General-purpose Multimodal Transformer with Linear Complexity Attention Mechanism."
+  },
+  {
+    "year": 2021,
+    "image": "images/pic06.jpg",
+    "title": "Siamese",
+    "content": "Enhancing Apparent Personality Trait Analysis with Cross-Modal Embeddings."
+  },
+  {
+    "year": 2021,
+    "image": "images/pic01.jpg",
+    "title": "AHFS",
+    "content": "Adaptive, hybrid feature selection."
+  },
+  {
+    "year": 2021,
+    "image": "images/pic02.jpg",
+    "title": "De-identification",
+    "content": "Speech de-identification with deep neural networks."
+  },
+  {
+    "year": 2020,
+    "image": "images/pic03.jpg",
+    "title": "Skeletonization",
+    "content": "Skeletonization Combined with Deep Neural Networks for Superpixel Temporal Propagation."
+  },
+  {
+    "year": 2020,
+    "image": "images/pic04.jpg",
+    "title": "Supervoxel segmentation",
+    "content": "Common Fate Based Episodic Segmentation by Combining Supervoxels with Deep Neural Networks."
+  }
 ]
