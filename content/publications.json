@@ -1,0 +1,18 @@
+[
+    {
+      "year": "2024",
+      "citation": "Vis ac commodo adipiscing arcu aliquet.",
+      "link": {
+        "pdf": "path/to/pdf2.pdf",
+        "webpage": "http://example.com/project2"
+      }
+    },
+    {
+      "year": "2023",
+      "citation": "Ante turpis integer aliquet porttitor.",
+      "link": {
+        "pdf": "path/to/pdf1.pdf",
+        "webpage": "http://example.com/project1"
+      }
+    }
+  ]

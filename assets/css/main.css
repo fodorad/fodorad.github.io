@@ -203,7 +203,7 @@ input, select, textarea {
 			}
 
 		}
-
+	
 	h2, h3, h4, h5, h6 {
 		font-weight: 600;
 		line-height: 2;
@@ -276,7 +276,7 @@ input, select, textarea {
 	blockquote {
 		border-left: solid 4px #c9c9c9;
 		font-style: italic;
-		margin: 0 0 2em 0;
+		margin: 2em 0 2em 0;
 		padding: 0.5em 0 0.5em 2em;
 	}
 
@@ -2058,6 +2058,29 @@ input, select, textarea {
 
 		}
 
+/* About */
+
+	#about_header {
+		text-align: center;
+	}
+
+	#main .inner p {
+		margin-bottom: 1em;
+	}
+
+	#about_buttons {
+		display: flex;
+		justify-content: center;
+		cursor: default;
+		list-style: none;
+		padding-left: 0;
+	}
+	
+	#about_buttons li {
+		padding: 2em 0 0 2em;
+		vertical-align: middle;
+	}
+
 /* Icons section */
 
 	div.top_icon_holder {
@@ -2415,10 +2438,25 @@ input, select, textarea {
 
 			}
 	
+		.image.about_hero img {
+			max-width: 50%;
+			margin: auto;
+			display: block;
+			text-align: center;
+			padding: 0 0 2em 0;
+		}
+
+
 	#front-page-header .image.fit.right {
 		float: right;
 		padding: 0 0 0 8em;
-		margin: 0.25em 0 0 0;
+		margin: 0.25em 0 0 0em;
+		transform: scale(0.95);
+		transition: transform 0.5s ease-in-out;
+	}
+	
+	#front-page-header .image.fit.right:hover {
+		transform: scale(1);
 	}
 
 
