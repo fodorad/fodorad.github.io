@@ -1,0 +1,62 @@
+[
+  {
+    "src": "images/events/2023/08/14/hero_index.jpg",
+    "title": "Hero",
+    "caption": "Description for Hero",
+    "tags": ["2023", "conference"]
+  },
+  {
+    "src": "images/events/2023/08/14/pic04.jpg",
+    "title": "Image 1",
+    "caption": "Description for Image 1",
+    "tags": ["2023", "conference"]
+  },
+  {
+    "src": "images/events/2023/08/14/pic05.jpg",
+    "title": "Image 2",
+    "caption": "Description for Image 2",
+    "tags": ["2023", "conference"]
+  },
+  {
+    "src": "images/events/2023/08/14/pic06.jpg",
+    "title": "Image 3",
+    "caption": "Description for Image 3",
+    "tags": ["2023", "conference"]
+  },
+  {
+    "src": "images/events/2023/08/14/pic13.jpg",
+    "title": "Image 4",
+    "caption": "Description for Image 4",
+    "tags": ["2023", "conference"]
+  },
+  {
+    "src": "images/events/2023/08/15/hero_index_close.jpg",
+    "title": "Hero",
+    "caption": "Description for Hero Close",
+    "tags": ["2022", "conference2"]
+  },
+  {
+    "src": "images/events/2023/08/15/pic06.jpg",
+    "title": "Image 1",
+    "caption": "Description for Image 6",
+    "tags": ["2022", "conference2"]
+  },
+  {
+    "src": "images/events/2023/08/15/pic07.jpg",
+    "title": "Image 2",
+    "caption": "Description for Image 7",
+    "tags": ["2022", "conference2"]
+  },
+  {
+    "src": "images/events/2023/08/15/pic08.jpg",
+    "title": "Image 3",
+    "caption": "Description for Image 8",
+    "tags": ["2022", "conference3"]
+  },
+  {
+    "src": "images/events/2023/08/15/pic09.jpg",
+    "title": "Image 4",
+    "caption": "Description for Image 9",
+    "tags": ["2022", "conference3"]
+  }
+]

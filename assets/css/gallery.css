@@ -137,3 +137,23 @@
     grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
   }
 }
+
+.gallery_tag {
+  display: inline-block;
+  line-height: 2em;
+  text-transform: capitalize;
+  font-size: 0.8em;
+  border-radius: 0.6em;
+  padding: 0 1em 0 1em;
+  margin: 0 0.75em 0 -0.25em;
+  opacity: 0.85;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  transition: opacity .35s;
+  background: linear-gradient(90deg, #DFA878 0%, #6C3428 167%);
+}
+
+.gallery_tag.active {
+  background: linear-gradient(90deg, #a52903 0%, #470e01 167%);
+}
