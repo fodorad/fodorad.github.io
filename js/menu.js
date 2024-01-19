@@ -1,7 +1,7 @@
 (function($) {
-
     $body = $('body');
     $menu = $('#menu');
+    $themeSwitch = $('#themeSwitch');
 
     $menu.wrapInner('<div class="inner"></div>');
     $menu._locked = false;
@@ -26,6 +26,34 @@
     $menu._toggle = function() {
         if ($menu._lock()) $body.toggleClass('is-menu-visible');
     };
+
+    function handleThemeSwitch() {
+        $body.toggleClass('dark-theme');
+
+        if ($body.hasClass('dark-theme')) {
+            $themeSwitch.html('<i class="far fa-sun"></i>');
+        } else {
+            $themeSwitch.html('<i class="far fa-moon"></i>');
+        }
+
+        const currentTheme = $body.hasClass('dark-theme') ? 'dark' : 'light';
+        localStorage.setItem('theme', currentTheme);
+    }
+
+    function applyStoredTheme() {
+        const storedTheme = localStorage.getItem('theme');
+        if (storedTheme === 'dark') {
+            $body.addClass('dark-theme');
+            $themeSwitch.html('<i class="far fa-sun"></i>');
+        } else {
+            $body.removeClass('dark-theme');
+            $themeSwitch.html('<i class="far fa-moon"></i>');
+        }
+    }
+
+    $(document).ready(function () {
+        applyStoredTheme();
+    });
 
     $menu
         .appendTo($body)
@@ -56,5 +84,9 @@
         .on('keydown', function(event) {
             if (event.keyCode == 27) $menu._hide();
         });
+
+    $themeSwitch.on('click', function() {
+        handleThemeSwitch();
+    });
 
 })(jQuery);

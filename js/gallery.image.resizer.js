@@ -21,7 +21,7 @@ document.addEventListener('click', function (e) {
       const nextBtn = document.querySelector(".gg-next");
       const closeBtn = document.querySelector(".gg-close");
 
-      imgItem.innerHTML = '<img src="../' + route + '">';
+      imgItem.innerHTML = '<img src="' + route + '">';
 
       let currentIndex = Array.from(images).indexOf(currentImg);
 
@@ -41,13 +41,13 @@ document.addEventListener('click', function (e) {
       function prev() {
           currentIndex = (currentIndex - 1 + l) % l;
           const prevImg = images[currentIndex];
-          imgItem.innerHTML = '<img src="../' + prevImg.src + '">';
+          imgItem.innerHTML = '<img src="' + prevImg.src + '">';
       }
 
       function next() {
           currentIndex = (currentIndex + 1) % l;
           const nextImg = images[currentIndex];
-          imgItem.innerHTML = '<img src="../' + nextImg.src + '">';
+          imgItem.innerHTML = '<img src="' + nextImg.src + '">';
       }
 
       function hide() {
