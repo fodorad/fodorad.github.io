@@ -1,0 +1,86 @@
+.icon {
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1;
+}
+
+.icon.solid {
+    font-weight: 900;
+}
+
+.icon.brand {
+    font-family: 'Font Awesome 5 Brands';
+}
+
+.icon {
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    background-color: transparent;
+    border: 1px solid #a0a0a0;
+    border-radius: 4px;
+    width: 2.65rem;
+    height: 2.65rem;
+    text-align: center;
+    line-height: 2.65rem;
+    color: inherit;
+}
+
+.icon:before {
+    font-size: 1rem;
+}
+
+.icon span.label {
+    display: none;
+}
+
+.top-icons-container {
+    text-align: center;
+    margin-top: -1rem;
+    margin-bottom: 5rem;
+}
+
+.top-icons-list {
+    cursor: default;
+    list-style: none;
+}
+
+.top-icons-list li {
+    display: inline-block;
+    padding: 0 1rem 0 0;
+}
+
+.top-icons-list .icon:hover {
+    color: var(--hover-color-default);
+    border-color: var(--hover-color-default);
+}
+
+.top-icons-list .icon:active {
+    background-color: var(--active-bg-color-default);
+}
+
+.bottom-icons-list {
+    cursor: default;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.bottom-icons-list li {
+    display: inline-block;
+    padding: 0 0 0 1rem;
+}
+
+.bottom-icons-list a {
+    font-size: 0.75rem;
+}
+
+.bottom-icons-list .icon:hover {
+    color: var(--hover-color-default);
+    border-color: var(--hover-color-default);
+}
+
+.bottom-icons-list .icon:active {
+    background-color: var(--active-bg-color-default);
+}

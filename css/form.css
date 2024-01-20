@@ -17,6 +17,6 @@
 #footer input[type="text"].form-control:focus,
 #footer input[type="email"].form-control:focus,
 #footer textarea.form-control:focus {
-    border-bottom: 2px solid #4b4b4b;
+    border-bottom: 2px solid var(--hover-color-default);
     outline: none;
 }
