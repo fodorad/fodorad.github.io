@@ -1,0 +1,22 @@
+#footer .form-control {
+    margin-bottom: 2rem;
+}
+
+#footer textarea.form-control {
+    height: 5rem;
+}
+
+#footer input[type="text"].form-control,
+#footer input[type="email"].form-control,
+#footer textarea.form-control {
+    background-color: transparent !important;
+    border: none;
+    border-bottom: 2px solid #ccc;
+}
+
+#footer input[type="text"].form-control:focus,
+#footer input[type="email"].form-control:focus,
+#footer textarea.form-control:focus {
+    border-bottom: 2px solid #4b4b4b;
+    outline: none;
+}

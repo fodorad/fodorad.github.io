@@ -343,35 +343,45 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 				</div>
 			</div>
 
-			<footer id="footer">
-				<div class="inner">
-					<section id="contact">
-						<h3>Get in touch</h3>
-						<form method="post" action="https://formspree.io/f/xyyrykek">
-							<div class="fields">
-								<div class="field half"><input type="text" name="name" id="name" placeholder="Name" /></div>
-								<div class="field half"><input type="email" name="email" id="email" placeholder="Email" /></div>
-								<div class="field"><textarea name="message" id="message" placeholder="Message"></textarea></div>
-							</div>
-							<ul class="actions">
-								<li><input type="submit" value="Send" class="primary" /></li>
+			<footer id="footer" class="bg-light py-5">
+				<div class="container">
+					<div class="row">
+						<section id="contact" class="col-md-8 mb-8">
+							<h3>Get in touch</h3>
+							<form method="post" action="https://formspree.io/f/xyyrykek">
+								<div class="row g-3">
+									<div class="col-md-6">
+										<input type="text" name="name" id="name" class="form-control" placeholder="Name" />
+									</div>
+									<div class="col-md-6">
+										<input type="email" name="email" id="email" class="form-control" placeholder="Email" />
+									</div>
+								</div>
+								<div class="mb-3">
+									<textarea name="message" id="message" class="form-control" placeholder="Message"></textarea>
+								</div>
+								<ul class="list-inline">
+									<li class="list-inline-item">
+										<input type="submit" value="Send" class="btn btn-primary" />
+									</li>
+								</ul>
+							</form>
+						</section>
+			
+						<section id="follow" class="col-md-4">
+							<h3>Follow</h3>
+							<ul class="list-unstyled icons">
+								<li><a href="https://github.com/fodorad" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="https://www.linkedin.com/in/fodorad/" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://scholar.google.com/citations?hl=en&user=OdqswbsAAAAJ" class="icon brands style2 fa-google"><span class="label">Scholar</span></a></li>
+								<li><a href="https://orcid.org/my-orcid?orcid=0000-0001-7370-930X" class="icon brands style2 fa-orcid"><span class="label">ORCID</span></a></li>
+								<li><a href="mailto:fodorad201@gmail.com" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
 							</ul>
-						</form>
-					</section>
-
-					<section>
-						<h3>Follow</h3>
-						<ul class="icons">
-							<li><a href="https://github.com/fodorad" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
-							<li><a href="https://www.linkedin.com/in/fodorad/" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							<li><a href="https://scholar.google.com/citations?hl=en&user=OdqswbsAAAAJ" class="icon brands style2 fa-google"><span class="label">Scholar</span></a></li>
-							<li><a href="https://orcid.org/my-orcid?orcid=0000-0001-7370-930X" class="icon brands style2 fa-orcid"><span class="label">ORCID</span></a></li>
-							<li><a href="mailto:fodorad201@gmail.com" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
-						</ul>
-					</section>
-
-					<ul class="copyright">
-						<li>&copy; fodorad. All rights reserved</li>
+						</section>
+					</div>
+			
+					<ul class="list-inline text-center mt-4">
+						<li class="list-inline-item">&copy; fodorad. All rights reserved</li>
 					</ul>
 				</div>
 			</footer>
