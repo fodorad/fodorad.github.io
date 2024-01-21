@@ -12,11 +12,14 @@
     background-color: transparent !important;
     border: none;
     border-bottom: 2px solid #ccc;
+    outline: none;
+    box-shadow: none;
 }
 
 #footer input[type="text"].form-control:focus,
 #footer input[type="email"].form-control:focus,
 #footer textarea.form-control:focus {
-    border-bottom: 2px solid var(--hover-color-default);
+    border-bottom: 4px solid var(--hover-color-default);
     outline: none;
+    box-shadow: none;
 }

@@ -5,4 +5,5 @@
 	--text-color-dark: #ecf0f1; /* Dark theme text color */
 	--hover-color-default: #f2849e;
 	--active-bg-color-default: rgba(236, 123, 150, 0.185);
+    --button-color: #585858;
 }
