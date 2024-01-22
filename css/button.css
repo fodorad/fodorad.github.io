@@ -19,8 +19,8 @@ input[type="submit"],
     font-size: 0.8rem;
     font-weight: 900;
     height: 2.8rem;
-    letter-spacing: 0.2rem;
     line-height: 2.8rem;
+    letter-spacing: 0.2rem;
     overflow: hidden;
     padding: 0 1.25rem 0 1.25rem;
     text-align: center;
@@ -65,4 +65,27 @@ input[type="submit"].primary:active,
 
 .button.button-icon {
     padding: 0 1.25rem 0 0.45rem;
+}
+
+.d-flex {
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+    #button_contact {
+        font-size: 0.4rem;
+        height: 1.4rem;
+        line-height: 1.4rem;
+        letter-spacing: 0.1rem;
+        padding: 0 0.5rem 0 0.5rem;
+    }
+
+    #button_cv {
+        font-size: 0.4rem;
+        height: 1.4rem;
+        line-height: 1rem;
+        letter-spacing: 0.1rem;
+        padding: 0 0.5rem 0 0.25rem;
+    }
 }
