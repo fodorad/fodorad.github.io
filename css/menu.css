@@ -251,4 +251,5 @@ body.is-menu-visible #menu .close {
 	position: relative;
 	margin-left: 50%;
 	cursor: pointer;
+    display: none; /* Temporarly disable dark theme until style is correctly set */
 }
