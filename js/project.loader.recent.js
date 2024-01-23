@@ -22,7 +22,7 @@ fetch('content/projects.json')
             const projectBox = document.createElement('article');
             projectBox.classList.add(`style${getCyclicNumber(numbers, index)}`);
             projectBox.innerHTML =
-                `<span class="image">
+                `<span class="tile-image">
                      <img src="${item.image}" alt="" />
                  </span>
                  <a href="html/generic.html">

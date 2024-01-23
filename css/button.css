@@ -37,7 +37,7 @@ input[type="submit"]:hover,
 
 input[type="submit"]:active,
 .button:active {
-    background-color: var(--active-bg-color-default);
+    color: var(--active-color-default);
 }
 
 input[type="submit"].primary,
@@ -54,7 +54,7 @@ input[type="submit"].primary:hover,
 
 input[type="submit"].primary:active,
 .button.primary:active {
-    background-color: var(--active-bg-color-default);
+    background-color: var(--active-color-default);
 }
 
 .button.primary .icon.solid.fa-download {

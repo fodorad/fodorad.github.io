@@ -23,7 +23,7 @@
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
-.tiles article > .image {
+.tiles article > .tile-image {
     -moz-transition: -moz-transform 0.5s ease;
     -webkit-transition: -webkit-transform 0.5s ease;
     -ms-transition: -ms-transform 0.5s ease;
@@ -34,14 +34,14 @@
     overflow: hidden;
 }
 
-.tiles article > .image img {
+.tiles article > .tile-image img {
     display: block;
     width: 100%;
     border: 0;
     border-radius: 4px;
 }
 
-.tiles article > .image:before {
+.tiles article > .tile-image:before {
     pointer-events: none;
     -moz-transition: background-color 0.5s ease, opacity 0.5s ease;
     -webkit-transition: background-color 0.5s ease, opacity 0.5s ease;
@@ -59,7 +59,7 @@
     opacity: 0.8;
 }
 
-.tiles article > .image:after {
+.tiles article > .tile-image:after {
     pointer-events: none;
     -moz-transition: opacity 0.5s ease;
     -webkit-transition: opacity 0.5s ease;
@@ -138,43 +138,43 @@
     margin-bottom: 0;
 }
 
-.tiles article.style1 > .image:before {
+.tiles article.style1 > .tile-image:before {
     background-color: #f2849e;
 }
 
-.tiles article.style2 > .image:before {
+.tiles article.style2 > .tile-image:before {
     background-color: #7ecaf6;
 }
 
-.tiles article.style3 > .image:before {
+.tiles article.style3 > .tile-image:before {
     background-color: #7bd0c1;
 }
 
-.tiles article.style4 > .image:before {
+.tiles article.style4 > .tile-image:before {
     background-color: #c75b9b;
 }
 
-.tiles article.style5 > .image:before {
+.tiles article.style5 > .tile-image:before {
     background-color: #ae85ca;
 }
 
-.tiles article.style6 > .image:before {
+.tiles article.style6 > .tile-image:before {
     background-color: #8499e7;
 }
 
-body:not(.is-touch) .tiles article:hover > .image {
+body:not(.is-touch) .tiles article:hover > .tile-image {
     -moz-transform: scale(1.1);
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
     transform: scale(1.1);
 }
 
-body:not(.is-touch) .tiles article:hover > .image:before {
+body:not(.is-touch) .tiles article:hover > .tile-image:before {
     background-color: #333333;
     opacity: 0.35;
 }
 
-body:not(.is-touch) .tiles article:hover > .image:after {
+body:not(.is-touch) .tiles article:hover > .tile-image:after {
     opacity: 0;
 }
 
