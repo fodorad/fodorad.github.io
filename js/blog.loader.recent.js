@@ -17,11 +17,13 @@ fetch('content/blog_posts.json')
             blogPost.setAttribute('data-tags', item['data-tags']);
 
             blogPost.innerHTML =
-                `<img src="${item.image}" alt="${item.alt}">
+                `<a href="html/generic.html">
+                 <img src="../${item.image}" alt="${item.alt}">
+                 </a>
                  <ul>
                      ${item['data-tags'].split(' ').map(tag => `<li class="tag" data-filter="${tag}">${tag}</li>`).join('')}
                  </ul>
-                 <h3>${item.title}</h3>
+                 <h2>${item.title}</h2>
                  ${item.content.split('\n').map(sentence => `<p>${sentence}</p>`).join('')}`;
 
             blogContainer.appendChild(blogPost);

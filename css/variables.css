@@ -1,8 +1,8 @@
 :root {
-	--bg-color-default: #f5f5f5; /* Default background color */
-	--text-color-default: #4b4b4b; /* Default text color */
-	--bg-color-dark: #2c3e50; /* Dark theme background color */
-	--text-color-dark: #ecf0f1; /* Dark theme text color */
+	--bg-color-default: #ffffff;
+	--text-color-default: #333333;
+	--bg-color-dark: #2c3e50;
+	--text-color-dark: #ecf0f1;
 	--hover-color-default: #f2849e;
 	--active-bg-color-default: rgba(236, 123, 150, 0.185);
     --button-color: #585858;

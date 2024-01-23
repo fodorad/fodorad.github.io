@@ -86,7 +86,6 @@ function repopulateGallery() {
         });
 }
 
-
 function populateGallery(images) {
     const galleryBox = document.getElementById('gallery-box');
     galleryBox.innerHTML = '';

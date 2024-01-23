@@ -88,5 +88,12 @@
     $themeSwitch.on('click', function() {
         handleThemeSwitch();
     });
+    
+    $('#menu-header')
+        .on('click', 'a[href="#menu"]', function(event) {
+            event.stopPropagation();
+            event.preventDefault();
+            $menu._toggle();
+        });
 
 })(jQuery);

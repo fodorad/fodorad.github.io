@@ -1,0 +1,42 @@
+.image {
+    border-radius: 4px;
+    display: block;
+    border: 0;
+}
+
+.about_hero {
+    -moz-transition: -moz-transform 0.5s ease, opacity 0.5s ease;
+    -webkit-transition: -webkit-transform 0.5s ease, opacity 0.5s ease;
+    -ms-transition: -ms-transform 0.5s ease, opacity 0.5s ease;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transform: scale(1);
+    opacity: 1;
+    max-width: 50%;
+    margin: auto;
+    display: block;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.home_hero {
+    -moz-transition: -moz-transform 0.5s ease, opacity 0.5s ease;
+    -webkit-transition: -webkit-transform 0.5s ease, opacity 0.5s ease;
+    -ms-transition: -ms-transform 0.5s ease, opacity 0.5s ease;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    margin: 1rem 0 0 1rem;
+    transform: scale(1);
+    opacity: 1;
+}
+
+.home_hero:hover {
+    transform: scale(1.1);
+}
+
+body.is-preload .home_hero,
+body.is-preload .about_hero {
+    -moz-transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+    opacity: 0;
+}

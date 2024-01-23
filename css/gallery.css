@@ -18,22 +18,41 @@
 }
 
 .gg-box {
+  -moz-transition: -moz-transform 0.25s ease, opacity 0.25s ease;
+  -webkit-transition: -webkit-transform 0.25s ease, opacity 0.25s ease;
+  -ms-transition: -ms-transform 0.25s ease, opacity 0.25s ease;
+  transition: transform 0.25s ease, opacity 0.25s ease;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(var(--column-width), 1fr));
   grid-auto-rows: var(--row-height);
   grid-gap: var(--gap-length);
   margin: 20px 0;
+  transform: scale(0.95);
+  opacity: 1;
+}
+
+.gg-box img.filter-transition-out {
+  transform: scale(0.9);
+  opacity: 0;
+}
+
+.gg-box img.filter-transition-in {
+  transform: scale(1);
+  opacity: 1;
 }
 
 .gg-box img {
+  -moz-transition: -moz-transform 0.5s ease, opacity 0.5s ease;
+  -webkit-transition: -webkit-transform 0.5s ease, opacity 0.5s ease;
+  -ms-transition: -ms-transform 0.5s ease, opacity 0.5s ease;
+  transition: transform 0.5s ease, opacity 0.5s ease;
   object-fit: cover;
   cursor: pointer;
   width: 100%;
   height: 100%;
   border-radius: 10px;
+  transform: scale(0.9);
   opacity: 0.85;
-  transform: scale(0.95);
-  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
 .gg-box img:hover {
@@ -91,7 +110,7 @@
 .gg-close {
   transform: translateY(-50%);
   left: 50%;
-  margin-left: -20px; /* Half of the button width */
+  margin-left: -20px;
 }
 
 .gg-prev,
@@ -101,11 +120,11 @@
 }
 
 .gg-prev {
-  left: calc(50% - 70px); /* Half of the button width + 10px */
+  left: calc(50% - 70px);
 }
 
 .gg-next {
-  left: calc(50% + 30px); /* Half of the button width + 10px */
+  left: calc(50% + 30px);
 }
 
 @media (min-width: 478px) {
@@ -140,12 +159,12 @@
 
 .gallery_tag {
   display: inline-block;
-  line-height: 2em;
+  line-height: 1.75rem;
   text-transform: capitalize;
-  font-size: 0.8em;
-  border-radius: 0.6em;
-  padding: 0 1em 0 1em;
-  margin: 0 0.75em 0 -0.25em;
+  font-size: 0.8rem;
+  border-radius: 0.6rem;
+  padding: 0 1rem 0 1rem;
+  margin: 0 0.25rem 0 0.25rem;
   opacity: 0.85;
   color: #fff;
   cursor: pointer;
@@ -156,4 +175,12 @@
 
 .gallery_tag.active {
   background: linear-gradient(90deg, #a52903 0%, #470e01 167%);
+}
+
+body.is-preload .gg-box {
+  -moz-transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9);
+  opacity: 0;
 }
