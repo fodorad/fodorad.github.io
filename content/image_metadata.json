@@ -1,62 +1,188 @@
 [
-  {
-    "src": "images/events/2023/08/14/hero_index.jpg",
-    "title": "Hero",
-    "caption": "Description for Hero",
-    "tags": ["2023", "conference"]
-  },
-  {
-    "src": "images/events/2023/08/14/pic04.jpg",
-    "title": "Image 1",
-    "caption": "Description for Image 1",
-    "tags": ["2023", "conference"]
-  },
-  {
-    "src": "images/events/2023/08/14/pic05.jpg",
-    "title": "Image 2",
-    "caption": "Description for Image 2",
-    "tags": ["2023", "conference"]
-  },
-  {
-    "src": "images/events/2023/08/14/pic06.jpg",
-    "title": "Image 3",
-    "caption": "Description for Image 3",
-    "tags": ["2023", "conference"]
-  },
-  {
-    "src": "images/events/2023/08/14/pic13.jpg",
-    "title": "Image 4",
-    "caption": "Description for Image 4",
-    "tags": ["2023", "conference"]
-  },
-  {
-    "src": "images/events/2023/08/15/hero_index_close.jpg",
-    "title": "Hero",
-    "caption": "Description for Hero Close",
-    "tags": ["2022", "conference2"]
-  },
-  {
-    "src": "images/events/2023/08/15/pic06.jpg",
-    "title": "Image 1",
-    "caption": "Description for Image 6",
-    "tags": ["2022", "conference2"]
-  },
-  {
-    "src": "images/events/2023/08/15/pic07.jpg",
-    "title": "Image 2",
-    "caption": "Description for Image 7",
-    "tags": ["2022", "conference2"]
-  },
-  {
-    "src": "images/events/2023/08/15/pic08.jpg",
-    "title": "Image 3",
-    "caption": "Description for Image 8",
-    "tags": ["2022", "conference3"]
-  },
-  {
-    "src": "images/events/2023/08/15/pic09.jpg",
-    "title": "Image 4",
-    "caption": "Description for Image 9",
-    "tags": ["2022", "conference3"]
-  }
+    {
+        "src": "images/gallery/events/2023/08/09/Fodor_Adam_Hungarian_Machine_Learning_Meeting_20230809_1.jpg",
+        "title": "Hungarian Machine Learning Meeting",
+        "caption": "Poster presentation about eye blink detection using BlinkLinMulT",
+        "tags": ["2023", "Hungarian Machine Learning Meeting"]
+    },
+    {
+        "src": "images/gallery/events/2023/08/08/Fodor_Adam_Hungarian_Machine_Learning_Meeting_20230808_9.jpg",
+        "title": "Hungarian Machine Learning Meeting",
+        "caption": "Poster presentation about eye blink detection using BlinkLinMulT",
+        "tags": ["2023", "Hungarian Machine Learning Meeting"]
+    },
+    {
+        "src": "images/gallery/events/2023/08/08/Fodor_Adam_Hungarian_Machine_Learning_Meeting_20230808_8.jpg",
+        "title": "Hungarian Machine Learning Meeting",
+        "caption": "Poster presentation about eye blink detection using BlinkLinMulT",
+        "tags": ["2023", "Hungarian Machine Learning Meeting"]
+    },
+    {
+        "src": "images/gallery/events/2023/08/08/Fodor_Adam_Hungarian_Machine_Learning_Meeting_20230808_7.jpg",
+        "title": "Hungarian Machine Learning Meeting",
+        "caption": "Poster presentation about eye blink detection using BlinkLinMulT",
+        "tags": ["2023", "Hungarian Machine Learning Meeting"]
+    },
+    {
+        "src": "images/gallery/events/2023/08/08/Fodor_Adam_Hungarian_Machine_Learning_Meeting_20230808_6.jpg",
+        "title": "Hungarian Machine Learning Meeting",
+        "caption": "Poster presentation about eye blink detection using BlinkLinMulT",
+        "tags": ["2023", "Hungarian Machine Learning Meeting"]
+    },
+    {
+        "src": "images/gallery/events/2023/08/08/Fodor_Adam_Hungarian_Machine_Learning_Meeting_20230808_5.jpg",
+        "title": "Hungarian Machine Learning Meeting",
+        "caption": "Poster presentation about eye blink detection using BlinkLinMulT",
+        "tags": ["2023", "Hungarian Machine Learning Meeting"]
+    },
+    {
+        "src": "images/gallery/events/2023/08/08/Fodor_Adam_Hungarian_Machine_Learning_Meeting_20230808_4.jpg",
+        "title": "Hungarian Machine Learning Meeting",
+        "caption": "Poster presentation about eye blink detection using BlinkLinMulT",
+        "tags": ["2023", "Hungarian Machine Learning Meeting"]
+    },
+    {
+        "src": "images/gallery/events/2023/08/08/Fodor_Adam_Hungarian_Machine_Learning_Meeting_20230808_3.jpg",
+        "title": "Hungarian Machine Learning Meeting",
+        "caption": "Poster presentation about eye blink detection using BlinkLinMulT",
+        "tags": ["2023", "Hungarian Machine Learning Meeting"]
+    },
+    {
+        "src": "images/gallery/events/2023/08/08/Fodor_Adam_Hungarian_Machine_Learning_Meeting_20230808_2.jpg",
+        "title": "Hungarian Machine Learning Meeting",
+        "caption": "Poster presentation about eye blink detection using BlinkLinMulT",
+        "tags": ["2023", "Hungarian Machine Learning Meeting"]
+    },
+    {
+        "src": "images/gallery/events/2023/08/08/Fodor_Adam_Hungarian_Machine_Learning_Meeting_20230808_1.jpg",
+        "title": "Hungarian Machine Learning Meeting",
+        "caption": "Poster presentation about eye blink detection using BlinkLinMulT",
+        "tags": ["2023", "Hungarian Machine Learning Meeting"]
+    },
+    {
+        "src": "images/gallery/events/2023/05/18/Fodor_Adam_NJSZT_20230518_1.jpg",
+        "title": "John von Neumann Computer Society",
+        "caption": "Presentation about personality trait estimation and group affect",
+        "tags": ["2023", "John von Neumann Computer Society"]
+    },
+    {
+        "src": "images/gallery/teaching/blinking/Fodor_Adam_teaching_blinking_202303_5.jpg",
+        "title": "Teaching Deep Learning for ELTE IK MSc students",
+        "caption": "Topic: Eye blink detection using Linear-Complexity Multimodal Transformers",
+        "tags": ["2023", "teaching"]
+    },
+    {
+        "src": "images/gallery/teaching/blinking/Fodor_Adam_teaching_blinking_202303_4.jpg",
+        "title": "Teaching Deep Learning for ELTE IK MSc students",
+        "caption": "Topic: Eye blink detection using Linear-Complexity Multimodal Transformers",
+        "tags": ["2023", "teaching"]
+    },
+    {
+        "src": "images/gallery/teaching/blinking/Fodor_Adam_teaching_blinking_202303_3.jpg",
+        "title": "Teaching Deep Learning for ELTE IK MSc students",
+        "caption": "Topic: Eye blink detection using Linear-Complexity Multimodal Transformers",
+        "tags": ["2023", "teaching"]
+    },
+    {
+        "src": "images/gallery/teaching/blinking/Fodor_Adam_teaching_blinking_202303_2.jpg",
+        "title": "Teaching Deep Learning for ELTE IK MSc students",
+        "caption": "Topic: Eye blink detection using Linear-Complexity Multimodal Transformers",
+        "tags": ["2023", "teaching"]
+    },
+    {
+        "src": "images/gallery/teaching/blinking/Fodor_Adam_teaching_blinking_202303_1.jpg",
+        "title": "Teaching Deep Learning for ELTE IK MSc students",
+        "caption": "Topic: Eye blink detection using Linear-Complexity Multimodal Transformers",
+        "tags": ["2023", "teaching"]
+    },
+    {
+        "src": "images/gallery/teaching/personality/Fodor_Adam_teaching_personality_202303_15.jpg",
+        "title": "Teaching Deep Learning for ELTE IK MSc students",
+        "caption": "Topic: Big Five personality traits and group affect",
+        "tags": ["2023", "teaching"]
+    },
+    {
+        "src": "images/gallery/teaching/personality/Fodor_Adam_teaching_personality_202303_14.jpg",
+        "title": "Teaching Deep Learning for ELTE IK MSc students",
+        "caption": "Topic: Big Five personality traits and group affect",
+        "tags": ["2023", "teaching"]
+    },
+    {
+        "src": "images/gallery/teaching/personality/Fodor_Adam_teaching_personality_202303_13.jpg",
+        "title": "Teaching Deep Learning for ELTE IK MSc students",
+        "caption": "Topic: Big Five personality traits and group affect",
+        "tags": ["2023", "teaching"]
+    },
+    {
+        "src": "images/gallery/teaching/personality/Fodor_Adam_teaching_personality_202303_12.jpg",
+        "title": "Teaching Deep Learning for ELTE IK MSc students",
+        "caption": "Topic: Big Five personality traits and group affect",
+        "tags": ["2023", "teaching"]
+    },
+    {
+        "src": "images/gallery/teaching/personality/Fodor_Adam_teaching_personality_202303_11.jpg",
+        "title": "Teaching Deep Learning for ELTE IK MSc students",
+        "caption": "Topic: Big Five personality traits and group affect",
+        "tags": ["2023", "teaching"]
+    },
+    {
+        "src": "images/gallery/teaching/personality/Fodor_Adam_teaching_personality_202303_10.jpg",
+        "title": "Teaching Deep Learning for ELTE IK MSc students",
+        "caption": "Topic: Big Five personality traits and group affect",
+        "tags": ["2023", "teaching"]
+    },
+    {
+        "src": "images/gallery/teaching/personality/Fodor_Adam_teaching_personality_202303_9.jpg",
+        "title": "Teaching Deep Learning for ELTE IK MSc students",
+        "caption": "Topic: Big Five personality traits and group affect",
+        "tags": ["2023", "teaching"]
+    },
+    {
+        "src": "images/gallery/teaching/personality/Fodor_Adam_teaching_personality_202303_8.jpg",
+        "title": "Teaching Deep Learning for ELTE IK MSc students",
+        "caption": "Topic: Big Five personality traits and group affect",
+        "tags": ["2023", "teaching"]
+    },
+    {
+        "src": "images/gallery/teaching/personality/Fodor_Adam_teaching_personality_202303_7.jpg",
+        "title": "Teaching Deep Learning for ELTE IK MSc students",
+        "caption": "Topic: Big Five personality traits and group affect",
+        "tags": ["2023", "teaching"]
+    },
+    {
+        "src": "images/gallery/teaching/personality/Fodor_Adam_teaching_personality_202303_6.jpg",
+        "title": "Teaching Deep Learning for ELTE IK MSc students",
+        "caption": "Topic: Big Five personality traits and group affect",
+        "tags": ["2023", "teaching"]
+    },
+    {
+        "src": "images/gallery/teaching/personality/Fodor_Adam_teaching_personality_202303_5.jpg",
+        "title": "Teaching Deep Learning for ELTE IK MSc students",
+        "caption": "Topic: Big Five personality traits and group affect",
+        "tags": ["2023", "teaching"]
+    },
+    {
+        "src": "images/gallery/teaching/personality/Fodor_Adam_teaching_personality_202303_4.jpg",
+        "title": "Teaching Deep Learning for ELTE IK MSc students",
+        "caption": "Topic: Big Five personality traits and group affect",
+        "tags": ["2023", "teaching"]
+    },
+    {
+        "src": "images/gallery/teaching/personality/Fodor_Adam_teaching_personality_202303_3.jpg",
+        "title": "Teaching Deep Learning for ELTE IK MSc students",
+        "caption": "Topic: Big Five personality traits and group affect",
+        "tags": ["2023", "teaching"]
+    },
+    {
+        "src": "images/gallery/teaching/personality/Fodor_Adam_teaching_personality_202303_2.jpg",
+        "title": "Teaching Deep Learning for ELTE IK MSc students",
+        "caption": "Topic: Big Five personality traits and group affect",
+        "tags": ["2023", "teaching"]
+    },
+    {
+        "src": "images/gallery/teaching/personality/Fodor_Adam_teaching_personality_202303_1.jpg",
+        "title": "Teaching Deep Learning for ELTE IK MSc students",
+        "caption": "Topic: Big Five personality traits and group affect",
+        "tags": ["2023", "teaching"]
+    }
 ]

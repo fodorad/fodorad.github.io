@@ -1,58 +1,58 @@
 document.addEventListener('click', function (e) {
-  const clickedElement = e.target;
+    const clickedElement = e.target;
 
-  if (clickedElement.tagName === 'IMG' && clickedElement.closest('.gg-box')) {
-      const currentImg = clickedElement;
-      const container = document.querySelector('.gg-container');
-      const images = document.querySelectorAll(".gg-box > img");
-      const l = images.length;
+    if (clickedElement.tagName === 'IMG' && clickedElement.closest('.gg-box')) {
+        const currentImg = clickedElement;
+        const container = document.querySelector('.gg-container');
+        const images = document.querySelectorAll(".gg-box > img");
+        const l = images.length;
 
-      const parentItem = currentImg.parentElement, screenItem = document.createElement('div');
-      screenItem.id = "gg-screen";
-      container.prepend(screenItem);
+        const parentItem = currentImg.parentElement, screenItem = document.createElement('div');
+        screenItem.id = "gg-screen";
+        container.prepend(screenItem);
 
-      if (parentItem.hasAttribute('data-theme')) screenItem.setAttribute("data-theme", "dark");
-      const route = currentImg.src;
-      document.body.style.overflow = 'hidden';
+        if (parentItem.hasAttribute('data-theme')) screenItem.setAttribute("data-theme", "dark");
+        const route = currentImg.src;
+        document.body.style.overflow = 'hidden';
 
-      screenItem.innerHTML = '<div class="gg-image"></div><div class="gg-close gg-btn">&times;</div><div class="gg-prev gg-btn">&larr;</div><div class="gg-next gg-btn">&rarr;</div>';
-      const imgItem = document.querySelector(".gg-image");
-      const prevBtn = document.querySelector(".gg-prev");
-      const nextBtn = document.querySelector(".gg-next");
-      const closeBtn = document.querySelector(".gg-close");
+        screenItem.innerHTML = '<div class="gg-image"></div><div class="gg-close gg-btn">&times;</div><div class="gg-prev gg-btn">&larr;</div><div class="gg-next gg-btn">&rarr;</div>';
+        const imgItem = document.querySelector(".gg-image");
+        const prevBtn = document.querySelector(".gg-prev");
+        const nextBtn = document.querySelector(".gg-next");
+        const closeBtn = document.querySelector(".gg-close");
 
-      imgItem.innerHTML = '<img src="' + route + '">';
+        imgItem.innerHTML = '<img src="' + route + '">';
 
-      let currentIndex = Array.from(images).indexOf(currentImg);
+        let currentIndex = Array.from(images).indexOf(currentImg);
 
-      screenItem.addEventListener("click", function (e) {
-          if (e.target == this || e.target == closeBtn) hide();
-      });
+        screenItem.addEventListener("click", function (e) {
+            if (e.target == this || e.target == closeBtn) hide();
+        });
 
-      document.addEventListener("keydown", function (e) {
-          if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') prev();
-          if (e.key === 'ArrowRight' || e.key === 'ArrowDown') next();
-          if (e.key === 'Escape') hide();
-      });
+        document.addEventListener("keydown", function (e) {
+            if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') prev();
+            if (e.key === 'ArrowRight' || e.key === 'ArrowDown') next();
+            if (e.key === 'Escape') hide();
+        });
 
-      prevBtn.addEventListener("click", prev);
-      nextBtn.addEventListener("click", next);
+        prevBtn.addEventListener("click", prev);
+        nextBtn.addEventListener("click", next);
 
-      function prev() {
-          currentIndex = (currentIndex - 1 + l) % l;
-          const prevImg = images[currentIndex];
-          imgItem.innerHTML = '<img src="' + prevImg.src + '">';
-      }
+        function prev() {
+            currentIndex = (currentIndex - 1 + l) % l;
+            const prevImg = images[currentIndex];
+            imgItem.innerHTML = '<img src="' + prevImg.src + '">';
+        }
 
-      function next() {
-          currentIndex = (currentIndex + 1) % l;
-          const nextImg = images[currentIndex];
-          imgItem.innerHTML = '<img src="' + nextImg.src + '">';
-      }
+        function next() {
+            currentIndex = (currentIndex + 1) % l;
+            const nextImg = images[currentIndex];
+            imgItem.innerHTML = '<img src="' + nextImg.src + '">';
+        }
 
-      function hide() {
-          document.body.style.overflow = 'auto';
-          screenItem.remove();
-      }
-  }
+        function hide() {
+            document.body.style.overflow = 'auto';
+            screenItem.remove();
+        }
+    }
 });

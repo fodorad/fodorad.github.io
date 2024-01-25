@@ -4,7 +4,7 @@
     transform: scale(1);
     opacity: 1;
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, box-shadow 0.5s ease;
-    height: 25rem;
+    height: 30rem;
     overflow: hidden;
     margin-bottom: 3rem;
     min-width: 300px;
@@ -18,26 +18,29 @@
 }
 
 .tiles article.event-box:hover img {
-    height: 40%;
+    height: 35%;
 }
 
 .tiles article.event-box h2 {
-    font-size: 1.2rem;
-    line-height: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.3rem;
     margin: 0 0.25rem 0.5rem 1.25rem;
-    text-transform: capitalize;
 }
 
 .tiles article.event-box h3 {
     font-size: 0.9rem;
     line-height: 1.2rem;
     margin: 0 0.25rem 0.5rem 1.25rem;
-    text-transform: capitalize;
+}
+
+.tiles article.event-box h2::first-letter,
+.tiles article.event-box h3::first-letter {
+    text-transform: uppercase;
 }
 
 .tiles article.event-box p {
     font-size: 0.8em;
-    margin: 0 0.25rem 0 1.5em;
+    margin: 0 1rem 0 1.5em;
     opacity: 0;
     transition: opacity 0.5s ease;
     overflow: hidden;

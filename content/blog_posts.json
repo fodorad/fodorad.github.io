@@ -2,7 +2,7 @@
   {
     "date": "2023-03-23T12:20:40.001Z",
     "data-tags": "social code",
-    "image": "images/pic01.jpg",
+    "image": "images/placeholder/pic01.jpg",
     "alt": "description",
     "title": "Post about coding as a social activity",
     "content": "This is the first sentence.\nThis is the second sentence."
@@ -10,7 +10,7 @@
   {
     "date": "2023-04-22T12:20:40.001Z",
     "data-tags": "literature code",
-    "image": "images/pic01.jpg",
+    "image": "images/placeholder/pic02.jpg",
     "alt": "description",
     "title": "Post about social literature review and coding",
     "content": "This is the first sentence.\nThis is the second sentence."
@@ -18,7 +18,7 @@
   {
     "date": "2023-04-23T12:20:40.001Z",
     "data-tags": "literature social code",
-    "image": "images/pic01.jpg",
+    "image": "images/placeholder/pic03.jpg",
     "alt": "description",
     "title": "Post about social activity with literature review and coding",
     "content": "This is the first sentence.\nThis is the second sentence."
@@ -26,7 +26,7 @@
   {
     "date": "2023-05-21T12:20:40.001Z",
     "data-tags": "code",
-    "image": "images/pic01.jpg",
+    "image": "images/placeholder/pic05.jpg",
     "alt": "description",
     "title": "Post about coding",
     "content": "This is the first sentence.\nThis is the second sentence."
@@ -34,7 +34,7 @@
   {
     "date": "2023-06-21T12:20:40.001Z",
     "data-tags": "social",
-    "image": "images/pic01.jpg",
+    "image": "images/placeholder/pic06.jpg",
     "alt": "description",
     "title": "Post about social activity",
     "content": "This is the first sentence.\nThis is the second sentence."

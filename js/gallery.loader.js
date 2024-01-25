@@ -94,6 +94,7 @@ function populateGallery(images) {
         imgElement.src = '../' + image.src;
         imgElement.alt = image.title;
         imgElement.title = image.caption;
+        imgElement.loading = 'lazy';
         galleryBox.appendChild(imgElement);
     });
 }
