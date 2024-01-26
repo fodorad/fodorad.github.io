@@ -17,7 +17,7 @@
     },
     {
       "date": "2023-11-14T16:00:00.001Z",
-      "image": "images/gallery/events/2023/sztaki.jpg",
+      "image": "images/gallery/events/logo/sztaki.jpg",
       "alt": "MiLAB poster session #2 SZTAKI",
       "title": "WARWICK-MILAB WORKSHOP professional days IN BUDAPEST MiLAB poster session #2",
       "content": "BlinkLinMult: A transformer-based blink detection method-> Presenter: Fodor Adam",
@@ -25,7 +25,7 @@
     },
     {
       "date": "2023-10-19T14:00:00.001Z",
-      "image": "images/gallery/events/2023/sztaki.jpg",
+      "image": "images/gallery/events/logo/sztaki.jpg",
       "alt": "Student's Forum 15.0",
       "title": "Student's Forum 15.0",
       "content": "The 15.0 Students' Forum welcomed attendees with presentations covering various topics. Notable talks included Dr. Viharos Zsolt János discussing the strategic context of research, Dr. Kerepesi Csaba on aging research using machine learning. I shared advancements in two areas of my research during the event: the estimation of personality traits in social interactions and the progress made in eye blink detection.",
@@ -33,7 +33,7 @@
     },
     {
       "date": "2023-08-08T17:00:00.001Z",
-      "image": "images/gallery/events/2023/08/08/Fodor_Adam_Hungarian_Machine_Learning_Meeting_20230808_3.jpg",
+      "image": "images/gallery/events/2023/Hungarian_Machine_Learning_Meeting/Fodor_Adam_Hungarian_Machine_Learning_Meeting_20230808_3.jpg",
       "alt": "Poster presentation about eye blink detection using BlinkLinMulT",
       "title": "Poster presentation at Hungarian Machine Learning Meeting",
       "content": "A national event on machine learning and artificial intelligence was organised by MILAB, coordinated by SZTAKI.\nIt was an exceptional event, and I'm grateful for the opportunity to showcase my poster on eye blink detection using BlinkLinMulT.",
@@ -42,7 +42,7 @@
     },
     {
       "date": "2023-06-26T14:00:00.001Z",
-      "image": "images/gallery/events/2023/06/26/Fodor_Adam_CNC_20230626_1.jpg",
+      "image": "images/gallery/events/2023/Centre_for_Cognitive_Science_seminar/Fodor_Adam_CNC_20230626_1.jpg",
       "alt": "Presentation about Real-time Perceived Personality Estimation: Strong Group Formation in Goal-Oriented Collaborative Tasks at Centre for Cognitive Science seminar, Comenius University in Bratislava",
       "title": "Presentation at Centre for Cognitive Science seminar, Bratislava",
       "content": "In my presentation about perceived personality estimation, presented at the CNC seminar, Comenius University in Bratislava, I explored the links between personality traits, group dynamics, and shared recent insights into blink detection. The emphasis was on understanding how real-time personality assessments can influence collaborative tasks and enhance teamwork efficiency.",
@@ -57,7 +57,9 @@
     },
     {
       "date": "2023-05-18T16:00:00.001Z",
-      "image": "images/gallery/events/2023/05/18/Fodor_Adam_NJSZT_20230518_1.jpg",
+      "image": "images/gallery/events/2023/John_von_Neumann_Computer_Society/Fodor_Adam_NJSZT_20230518_1.jpg",
+      "thumbnail_square": "images/gallery/events/2023/John_von_Neumann_Computer_Society/Fodor_Adam_NJSZT_20230518_1_thumbnail_210x210.jpg",
+      "thumbnail_rectangle": "images/gallery/events/2023/John_von_Neumann_Computer_Society/Fodor_Adam_NJSZT_20230518_1_thumbnail_210x420.jpg",
       "alt": "Presentation about Multimodal estimation and possible use of \"Perceived Personality Traits\" in human-robot joint task solving",
       "title": "Presentation at AI Seminar of NJSZT and ELTE",
       "content": "As a guest presenter, I had the pleasure of contributing to the AI Seminar series organized by the John von Neumann Computer Society (NJSZT) and the Department of Artificial Intelligence at ELTE IK.\nThe event took a hybrid format.",
@@ -80,7 +82,7 @@
     },
     {
       "date": "2022-10-14T09:45:00.001Z",
-      "image": "images/gallery/events/2022/mppt.jpg",
+      "image": "images/gallery/events/logo/mppt.jpg",
       "alt": "Presentation about personality and group-personality estimation during task solving",
       "title": "Presentation at XVIII Hungarian Congress of Neuropsychopharmacology",
       "content": "I delivered a presentation on \"Personality and Group-Personality Estimation during Task Solving\" at the XVIII Hungarian Congress of Neuropsychopharmacology (MPPT), representing the ELTE Department of Artificial Intelligence.\nIt was an insightful event exploring the intersection of psychology and artificial intelligence in the context of task-solving dynamics.",
@@ -88,7 +90,7 @@
     },
     {
       "date": "2022-10-04T14:00:00.001Z",
-      "image": "images/gallery/events/2023/sztaki.jpg",
+      "image": "images/gallery/events/logo/sztaki.jpg",
       "alt": "Student's Forum 12.0",
       "title": "Student's Forum 12.0",
       "content": "The 12.0 Students' Forum welcomed attendees with presentations covering various topics. Notable talks included Dr. Viharos Zsolt János discussing the strategic context of research, ... todo",
@@ -96,7 +98,7 @@
     },
     {
       "date": "2022-07-04T14:00:00.001Z",
-      "image": "images/gallery/events/2023/sztaki.jpg",
+      "image": "images/gallery/events/logo/sztaki.jpg",
       "alt": "Student's Forum 11.0",
       "title": "Student's Forum 11.0",
       "content": "The 11.0 Students' Forum welcomed attendees with presentations covering various topics. invited speaker",

@@ -12,7 +12,7 @@ document.addEventListener('click', function (e) {
         container.prepend(screenItem);
 
         if (parentItem.hasAttribute('data-theme')) screenItem.setAttribute("data-theme", "dark");
-        const route = currentImg.src;
+        const route = currentImg.src_original;
         document.body.style.overflow = 'hidden';
 
         screenItem.innerHTML = '<div class="gg-image"></div><div class="gg-close gg-btn">&times;</div><div class="gg-prev gg-btn">&larr;</div><div class="gg-next gg-btn">&rarr;</div>';
