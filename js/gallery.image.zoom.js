@@ -41,13 +41,13 @@ document.addEventListener('click', function (e) {
         function prev() {
             currentIndex = (currentIndex - 1 + l) % l;
             const prevImg = images[currentIndex];
-            imgItem.innerHTML = '<img src="' + prevImg.src + '">';
+            imgItem.innerHTML = '<img src="' + prevImg.src_original + '">';
         }
 
         function next() {
             currentIndex = (currentIndex + 1) % l;
             const nextImg = images[currentIndex];
-            imgItem.innerHTML = '<img src="' + nextImg.src + '">';
+            imgItem.innerHTML = '<img src="' + nextImg.src_original + '">';
         }
 
         function hide() {

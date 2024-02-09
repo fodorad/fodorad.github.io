@@ -5,8 +5,8 @@
   --img-bg-color: rgba(240, 240, 240, 0.9);
   --backdrop-color: rgba(240, 240, 240, 0.9);
   --gap-length: 5px;
-  --row-height: 200px;
-  --column-width: 200px;
+  --row-height: 210px;
+  --column-width: 210px;
 }
 
 .gg-container *[data-theme="dark"] {
@@ -44,6 +44,7 @@
   transform: scale(0.9);
   opacity: 0.85;
   object-fit: cover;
+  object-position: 0% 10%;
 }
 
 .gg-box img:hover {
@@ -126,22 +127,6 @@
 
 .gg-next {
   left: calc(50% + 30px);
-}
-
-@media (min-width: 478px) {
-  .gg-box img:nth-child(2n):not(:last-of-type) {
-    grid-row-end: span 2;
-  }
-
-  [data-layout="horizontal"] img:nth-child(2n):not(:last-of-type) {
-    grid-column-end: span 2;
-    grid-row-end: span 1;
-  }
-
-  [data-layout="square"] img:nth-child(2n):not(:last-of-type) {
-    grid-row-end: span 1;
-    grid-column-end: span 1;
-  }
 }
 
 @media (max-width: 768px) {

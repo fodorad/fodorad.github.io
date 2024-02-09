@@ -88,44 +88,34 @@ function repopulateGallery() {
 
 function calculateImagesPerRow() {
     const galleryBox = document.getElementById('gallery-box');
-    const containerWidth = galleryBox.clientWidth; // Get the width of the container
-    const columnWidth = parseFloat(getComputedStyle(galleryBox).getPropertyValue('--column-width')); // Get the value of --column-width
+    const containerWidth = galleryBox.clientWidth;
+    const columnWidth = parseFloat(getComputedStyle(galleryBox).getPropertyValue('--column-width'));
 
     const imagesPerRow = Math.floor(containerWidth / columnWidth);
     console.log('Number of images per row:', imagesPerRow);
 }
 
+
 function populateGallery(images) {
+    console.log(images)
+
     const galleryBox = document.getElementById('gallery-box');
     galleryBox.innerHTML = '';
-
 
     images.forEach(image => {
         const imgElement = document.createElement('img');
 
-        if (images.length < 3) {
-            imgElement.style.maxWidth = '30%';
+        if (images.length == 1) {
+            imgElement.style.maxWidth = '20%';
             imgElement.style.minWidth = '210px';
-            imgElement.style.minHeight = '210px';
         }
 
+        imgElement.src = '../' + image.thumbnail_square;
         imgElement.src_original = '../' + image.src;
         imgElement.alt = image.title;
         imgElement.title = image.caption;
         imgElement.loading = 'lazy';
         galleryBox.appendChild(imgElement);
-
-        const styles = window.getComputedStyle(imgElement);
-        const width = parseFloat(styles.getPropertyValue('width'));
-        const height = parseFloat(styles.getPropertyValue('height'));
-        const aspectRatio = width / height;
-
-        console.log(aspectRatio)
-        if (aspectRatio < 0.8) {
-            imgElement.src = '../' + image.thumbnail_rectangle;
-        } else {
-            imgElement.src = '../' + image.thumbnail_square;
-        }
     });
 }
 

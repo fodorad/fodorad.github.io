@@ -58,7 +58,6 @@
     {
       "date": "2023-05-18T16:00:00.001Z",
       "image": "images/gallery/events/2023/John_von_Neumann_Computer_Society/Fodor_Adam_NJSZT_20230518_1.jpg",
-      "thumbnail_square": "images/gallery/events/2023/John_von_Neumann_Computer_Society/Fodor_Adam_NJSZT_20230518_1_thumbnail_210x210.jpg",
       "thumbnail_rectangle": "images/gallery/events/2023/John_von_Neumann_Computer_Society/Fodor_Adam_NJSZT_20230518_1_thumbnail_210x420.jpg",
       "alt": "Presentation about Multimodal estimation and possible use of \"Perceived Personality Traits\" in human-robot joint task solving",
       "title": "Presentation at AI Seminar of NJSZT and ELTE",
@@ -105,11 +104,13 @@
       "links": [""]
     },
     {
-      "date": "2021-11-19T09:00:00.001Z",
-      "image": "images/placeholder/pic01.jpg",
-      "alt": "HumanE-AI-Net event Berlin",
-      "title": "HumanE-AI event Berlin",
-      "content": "together with acai, workshop event... ideas for a new micro-projects including  proposals and project ideas. program:",
-      "links": ["https://www.humane-ai.eu/event/acai2021"]
+      "date": "2021-10-13T09:00:00.001Z",
+      "image": "images/gallery/events/2021/HumanE-AI-Net/HumanE-AI-Net_Berlin_20211013.jpg",
+      "thumbnail_rectangle": "images/gallery/events/2021/HumanE-AI-Net/HumanE-AI-Net_Berlin_20211013_1_thumbnail_event.jpg",
+      "alt": "HumanE-AI-Net workshop in Berlin",
+      "title": "HumanE-AI-Net workshop in Berlin",
+      "content": "Participating in the ACAI 2021 event was a game-changer for me; it was packed with enlightening microproject presentations, keynotes, and workshops all geared towards Human-Centered AI collaboration.\nIt not only broadened my understanding of microproject management but also connected me with fellow researchers across Europe, truly fostering a spirit of innovation in AI.",
+      "links": ["https://www.humane-ai.eu/event/acai2021"],
+      "gallery_tags": ["HumanE-AI-Net"]
     }
 ]
