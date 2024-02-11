@@ -105,6 +105,13 @@
         "tags": ["2023", "MiLab Meetup SZTAKI"]
     },
     {
+        "src": "images/gallery/events/2023/SZTAKI_Students_forum/Fodor_Adam_SZTAKI_Students_forum_15_20231019.jpg",
+        "thumbnail_square": "images/gallery/events/2023/SZTAKI_Students_forum/Fodor_Adam_SZTAKI_Students_forum_15_20231019_thumbnail_210x210.jpg",
+        "title": "MTA SZTAKI Students' Forum 15.0",
+        "caption": "MTA SZTAKI Students' Forum 15.0",
+        "tags": ["2023", "SZTAKI Students' Forum"]
+    },
+    {
         "src": "images/gallery/events/2023/Centre_for_Cognitive_Science_seminar/Fodor_Adam_CNC_20230626_3.jpg",
         "thumbnail_square": "images/gallery/events/2023/Centre_for_Cognitive_Science_seminar/Fodor_Adam_CNC_20230626_3_thumbnail_210x210.jpg",
         "title": "Centre for Cognitive Science (CNC) seminar, Comenius University, Bratislava",
@@ -290,6 +297,20 @@
         "title": "Teaching Deep Learning for ELTE IK MSc students",
         "caption": "Topic: Big Five personality traits and group affect",
         "tags": ["2023", "teaching"]
+    },
+    {
+        "src": "images/gallery/events/2022/SZTAKI_Students_forum/Fodor_Adam_SZTAKI_Students_forum_12_20221004.jpg",
+        "thumbnail_square": "images/gallery/events/2022/SZTAKI_Students_forum/Fodor_Adam_SZTAKI_Students_forum_12_20221004_thumbnail_210x210.jpg",
+        "title": "Invited speaker at MTA SZTAKI Students' Forum 12.0",
+        "caption": "MTA SZTAKI Students' Forum 12.0",
+        "tags": ["2022", "SZTAKI Students' Forum"]
+    },
+    {
+        "src": "images/gallery/events/2022/SZTAKI_Students_forum/Fodor_Adam_SZTAKI_Students_forum_11_20220704.jpg",
+        "thumbnail_square": "images/gallery/events/2022/SZTAKI_Students_forum/Fodor_Adam_SZTAKI_Students_forum_11_20220704_thumbnail_210x210.jpg",
+        "title": "Invited speaker at MTA SZTAKI Students' Forum 11.0",
+        "caption": "MTA SZTAKI Students' Forum 11.0",
+        "tags": ["2022", "SZTAKI Students' Forum"]
     },
     {
         "src": "images/gallery/events/2021/HumanE-AI-Net/HumanE-AI-Net_Berlin_20211013_1.jpg",

@@ -1,11 +1,13 @@
 [
     {
       "date": "2023-12-05T18:00:00.001Z",
-      "image": "images/placeholder/pic03.jpg",
-      "alt": "MiLAB #3",
-      "title": "MiLAB #3",
-      "content": "Behavioural characteristics and human-machine interaction: Demos and presentations, ELTE",
-      "links": [""]
+      "image": "images/gallery/events/2023/MiLab_Meetup_ELTE/MiLab_Meetup_ELTE_20231205_event.jpg",
+      "thumbnail_rectangle": "images/gallery/events/2023/MiLab_Meetup_ELTE/MiLab_Meetup_ELTE_20231205_event.jpg",
+      "alt": "MILAB Workshop in Budapest",
+      "title": "MILAB Workshop in Budapest",
+      "content": "At the MILAB event hosted by ELTE, I was fortunate to present two of my posters, focusing on the innovative BlinkLinMulT system and the dynamics of group personality in task-oriented settings.\nThe experience of showcasing my work, receiving feedback, and engaging in stimulating conversations was incredibly rewarding.\nI'm truly grateful for the opportunity to connect with other researchers who are exploring similar areas of interest.",
+      "links": ["https://www.inf.elte.hu/content/mesterseges-intelligencia-nemzeti-laboratorium-meetup-viselkedesi-jellemzok-ember-gep-kolcsonhatas.e.1306"],
+      "gallery_tags": ["MiLab Meetup ELTE"]
     },
     {
       "date": "2023-11-24T12:00:00.001Z",
@@ -17,36 +19,43 @@
     },
     {
       "date": "2023-11-14T16:00:00.001Z",
-      "image": "images/gallery/events/logo/sztaki.jpg",
-      "alt": "MiLAB poster session #2 SZTAKI",
-      "title": "WARWICK-MILAB WORKSHOP professional days IN BUDAPEST MiLAB poster session #2",
-      "content": "BlinkLinMult: A transformer-based blink detection method-> Presenter: Fodor Adam",
-      "links": ["https://mi.nemzetilabor.hu/events/warwick-milab-workshop-budapest"]
+      "image": "images/gallery/events/2023/MiLab_Meetup_SZTAKI/MiLab_Meetup_SZTAKI_20231114_3.jpg",
+      "thumbnail_rectangle": "images/gallery/events/2023/MiLab_Meetup_SZTAKI/MiLab_Meetup_SZTAKI_20231114_event.jpg",
+      "alt": "WARWICK-MILAB Workshop in Budapest",
+      "title": "WARWICK-MILAB Workshop in Budapest",
+      "content": "At the WARWICK-MILAB event hosted by SZTAKI, I had the privilege of presenting a poster on my BlinkLinMulT and group personality projects. This gathering offered an invaluable platform for showcasing my research outcomes and engaging with a community of experts deeply invested in advancing AI.",
+      "links": ["https://mi.nemzetilabor.hu/events/warwick-milab-workshop-budapest"],
+      "gallery_tags": ["MiLab Meetup SZTAKI"]
     },
     {
       "date": "2023-10-19T14:00:00.001Z",
-      "image": "images/gallery/events/logo/sztaki.jpg",
-      "alt": "Student's Forum 15.0",
-      "title": "Student's Forum 15.0",
+      "image": "images/gallery/events/2023/SZTAKI_Students_forum/Fodor_Adam_SZTAKI_Students_forum_15_20231019.jpg",
+      "thumbnail_rectangle": "images/gallery/events/2023/SZTAKI_Students_forum/Fodor_Adam_SZTAKI_Students_forum_15_20231019_event.jpg",
+      "alt": "MTA SZTAKI Students' Forum 15.0",
+      "title": "MTA SZTAKI Students' Forum 15.0",
       "content": "The 15.0 Students' Forum welcomed attendees with presentations covering various topics. Notable talks included Dr. Viharos Zsolt János discussing the strategic context of research, Dr. Kerepesi Csaba on aging research using machine learning. I shared advancements in two areas of my research during the event: the estimation of personality traits in social interactions and the progress made in eye blink detection.",
-      "links": ["https://sztaki.hun-ren.hu/tudomany/hirek/hallgatoi-forumot-tartott-viharos-zsolt-janos-hun-ren-sztaki-tudomanyos-fomunkatarsa"]
+      "links": ["https://sztaki.hun-ren.hu/tudomany/hirek/hallgatoi-forumot-tartott-viharos-zsolt-janos-hun-ren-sztaki-tudomanyos-fomunkatarsa"],
+      "gallery_tags": ["SZTAKI Students' Forum"]
     },
     {
       "date": "2023-08-08T17:00:00.001Z",
       "image": "images/gallery/events/2023/Hungarian_Machine_Learning_Meeting/Fodor_Adam_Hungarian_Machine_Learning_Meeting_20230808_3.jpg",
+      "thumbnail_rectangle": "images/gallery/events/2023/Hungarian_Machine_Learning_Meeting/Fodor_Adam_Hungarian_Machine_Learning_Meeting_20230808_event.jpg",
       "alt": "Poster presentation about eye blink detection using BlinkLinMulT",
       "title": "Poster presentation at Hungarian Machine Learning Meeting",
-      "content": "A national event on machine learning and artificial intelligence was organised by MILAB, coordinated by SZTAKI.\nIt was an exceptional event, and I'm grateful for the opportunity to showcase my poster on eye blink detection using BlinkLinMulT.",
+      "content": "At the national machine learning and AI event organized by MILAB and coordinated by SZTAKI, I had the amazing opportunity to present my work on BlinkLinMulT for eye blink detection and discuss my research on group affect during goal-oriented task solving. It was a fantastic experience to exchange ideas and connect with the community. I'm truly grateful for such a wonderful opportunity.",
       "links": ["https://mi.nemzetilabor.hu/magyar-machine-learning-talalkozo", "https://sztaki.hun-ren.hu/innovacio/hirek/tobb-mint-170-en-vettek-reszt-magyar-machine-learning-talalkozon"],
       "gallery_tags": ["Hungarian Machine Learning Meeting"]
     },
     {
       "date": "2023-06-26T14:00:00.001Z",
       "image": "images/gallery/events/2023/Centre_for_Cognitive_Science_seminar/Fodor_Adam_CNC_20230626_1.jpg",
+      "thumbnail_rectangle": "images/gallery/events/2023/Centre_for_Cognitive_Science_seminar/Fodor_Adam_CNC_20230626_event.jpg",
       "alt": "Presentation about Real-time Perceived Personality Estimation: Strong Group Formation in Goal-Oriented Collaborative Tasks at Centre for Cognitive Science seminar, Comenius University in Bratislava",
       "title": "Presentation at Centre for Cognitive Science seminar, Bratislava",
-      "content": "In my presentation about perceived personality estimation, presented at the CNC seminar, Comenius University in Bratislava, I explored the links between personality traits, group dynamics, and shared recent insights into blink detection. The emphasis was on understanding how real-time personality assessments can influence collaborative tasks and enhance teamwork efficiency.",
-      "links": ["https://cogsci.fmph.uniba.sk/cnc/?action=seminar"]
+      "content": "I'm sincerely thankful for the opportunity to share my work on perceived personality estimation at the CNC seminar, Comenius University in Bratislava. Delving into the intricacies of personality traits, group dynamics, and blink detection offered a chance to highlight the potential of real-time personality assessments in improving collaborative tasks and teamwork efficiency.",
+      "links": ["https://cogsci.fmph.uniba.sk/cnc/?action=seminar"],
+      "gallery_tags": ["Centre for Cognitive Science"]
     },
     {
       "date": "2023-05-31T14:00:00.001Z",
@@ -82,26 +91,30 @@
     {
       "date": "2022-10-14T09:45:00.001Z",
       "image": "images/gallery/events/logo/mppt.jpg",
+      "thumbnail_rectangle": "images/gallery/events/logo/mppt.jpg",
       "alt": "Presentation about personality and group-personality estimation during task solving",
       "title": "Presentation at XVIII Hungarian Congress of Neuropsychopharmacology",
-      "content": "I delivered a presentation on \"Personality and Group-Personality Estimation during Task Solving\" at the XVIII Hungarian Congress of Neuropsychopharmacology (MPPT), representing the ELTE Department of Artificial Intelligence.\nIt was an insightful event exploring the intersection of psychology and artificial intelligence in the context of task-solving dynamics.",
+      "content": "I had the opportunity to present on \"Personality and Group-Personality Estimation during Task Solving\" at the XVIII Hungarian Congress of Neuropsychopharmacology (MPPT), on behalf of the ELTE Department of Artificial Intelligence. The conference provided a unique platform to promote cross-disciplinary engagement.\nI'm grateful for this enriching experience that allowed me to broaden the dialogue between AI research and medical practice.",
       "links": ["https://mppt.hu/2022-2"]
     },
     {
       "date": "2022-10-04T14:00:00.001Z",
-      "image": "images/gallery/events/logo/sztaki.jpg",
-      "alt": "Student's Forum 12.0",
-      "title": "Student's Forum 12.0",
-      "content": "The 12.0 Students' Forum welcomed attendees with presentations covering various topics. Notable talks included Dr. Viharos Zsolt János discussing the strategic context of research, ... todo",
-      "links": [""]
+      "image": "images/gallery/events/2022/SZTAKI_Students_forum/Fodor_Adam_SZTAKI_Students_forum_12_20221004.jpg",
+      "thumbnail_rectangle": "images/gallery/events/2022/SZTAKI_Students_forum/Fodor_Adam_SZTAKI_Students_forum_12_20221004_event.jpg",
+      "alt": "MTA SZTAKI Students' Forum 12.0",
+      "title": "MTA SZTAKI Students' Forum 12.0",
+      "content": "At the 12.0 Students' Forum, I had the privilege of joining a diverse group of attendees for a series of engaging presentations on a wide range of topics.\nAmong the highlights was Dr. Viharos Zsolt János's insightful discussion on the strategic context of research, which provided valuable perspectives for advancing our work. \nI'm thankful for the opportunity to present my latest advances in personality estimation.",
+      "links": ["https://autonom.nemzetilabor.hu/news/drifting-autonomous-vehicles-12th-students-forum", "https://autonom.nemzetilabor.hu/hu/hirek/az-autonom-jarmuvek-driftelese-szoba-kerult-12-studentek-foruman"],
+      "gallery_tags": ["SZTAKI Students' Forum"]
     },
     {
       "date": "2022-07-04T14:00:00.001Z",
-      "image": "images/gallery/events/logo/sztaki.jpg",
-      "alt": "Student's Forum 11.0",
-      "title": "Student's Forum 11.0",
-      "content": "The 11.0 Students' Forum welcomed attendees with presentations covering various topics. invited speaker",
-      "links": [""]
+      "image": "images/gallery/events/2022/SZTAKI_Students_forum/Fodor_Adam_SZTAKI_Students_forum_11_20220704.jpg",
+      "thumbnail_rectangle": "images/gallery/events/2022/SZTAKI_Students_forum/Fodor_Adam_SZTAKI_Students_forum_11_20220704_event.jpg",
+      "alt": "MTA SZTAKI Students' Forum 11.0",
+      "title": "Invited speaker at MTA SZTAKI Students' Forum 11.0",
+      "content": "At the 11.0 Students' Forum, I was honored to be among the invited speakers, presenting my work on modeling human characteristics.\nIt was a great opportunity to contribute to a diverse array of discussions, from feature selection algorithms like AHFS to advanced concepts in outlier detection and modeling drifting with reinforcement learning.\nI'm grateful for the chance to share my insights and learn from others who are making significant strides in these fields.",
+      "gallery_tags": ["SZTAKI Students' Forum"]
     },
     {
       "date": "2021-10-13T09:00:00.001Z",
