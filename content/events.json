@@ -58,11 +58,22 @@
       "gallery_tags": ["Centre for Cognitive Science"]
     },
     {
+      "date": "2023-06-01T14:00:00.001Z",
+      "image": "images/gallery/events/logo/SZTE_TTIK.jpg",
+      "thumbnail_rectangle": "images/gallery/events/logo/SZTE_TTIK.jpg",
+      "alt": "Topic: Multimodal estimation of perceived personality traits and potential use in human-robot joint task solving",
+      "title": "Seminar about my PhD research at SZTE TTIK",
+      "content": "At an online seminar organized by the Faculty of Science and Informatics University of Szeged, I was thrilled to share my work on personality trait estimation and group affect. The presentation drew an incredible mix of students and experts across different fields, leading to a lively discussion full of insightful questions. This vibrant exchange fostered a dynamic discussion and a rich exchange of ideas, deepening the collective understanding of the topic.",
+      "links": ["https://sci.u-szeged.hu/english"]
+    },
+    {
       "date": "2023-05-31T14:00:00.001Z",
-      "image": "images/placeholder/pic09.jpg",
-      "alt": "Personality traits, group-personality and blinking estimation during goal-oriented tasks",
-      "title": "PE-MIK Seminar",
-      "content": "todo"
+      "image": "images/gallery/events/logo/MIK_FI.jpg",
+      "thumbnail_rectangle": "images/gallery/events/logo/MIK_FI.jpg",
+      "alt": "Topic: Personality traits, group-personality and blinking estimation during goal-oriented tasks",
+      "title": "Seminar about my PhD research at PE MIK",
+      "content": "At a seminar at Faculty of Information Technology University of Pannonia, I presented my research on personality trait estimation and group affect, with an eye toward incorporating the blinking modality, serving as a unique opportunity to connect with research groups from various universities. This experience was not only a platform to share my work but also a chance to explore potential collaborations and broaden my academic network.",
+      "links": ["https://mik.uni-pannon.hu/en"]
     },
     {
       "date": "2023-05-18T16:00:00.001Z",
@@ -76,17 +87,21 @@
     },
     {
       "date": "2023-05-12T14:15:00.001Z",
-      "image": "images/placeholder/pic07.jpg",
-      "alt": "Personality traits, group-personality and blinking estimation during goal-oriented tasks",
-      "title": "PPKE ITK Seminar",
-      "content": "todo"
+      "image": "images/gallery/events/logo/PPKE_ITK.jpg",
+      "thumbnail_rectangle": "images/gallery/events/logo/PPKE_ITK.jpg",
+      "alt": "Topic: Personality traits, group-personality and blinking estimation during goal-oriented tasks",
+      "title": "Seminar about my PhD research at PPKE ITK",
+      "content": "At an online seminar hosted by Pázmány Péter Catholic University Faculty of Information Technology and Bionics, I had the privilege of presenting my research on personality trait estimation and group affect, attracting a wide audience of students and experts from various research fields. The session sparked an engaging exchange of questions, offering valuable insights and perspectives. This experience not only expanded my academic network but also deepened my understanding through meaningful dialogue with professionals and peers alike.",
+      "links": ["https://itk.ppke.hu/en"]
     },
     {
       "date": "2023-05-10T12:00:40.001Z",
-      "image": "images/placeholder/pic05.jpg",
-      "alt": "Multimodal estimation of perceived personality traits and potential use in human-robot joint task solving",
-      "title": "DE-IK Seminar",
-      "content": "todo"
+      "image": "images/gallery/events/logo/DE_IK.jpg",
+      "thumbnail_rectangle": "images/gallery/events/logo/DE_IK.jpg",
+      "alt": "Topic: Multimodal estimation of perceived personality traits and potential use in human-robot joint task solving",
+      "title": "Seminar about my PhD research at DE IK",
+      "content": "I had the opportunity to showcase my work on personality trait estimation and group affect during a seminar at the University of Debrecen Faculty of Informatics, with a perspective on integrating blinking as an extra modality. This presentation led to interactions with professors from various research fields, specifically from the IT department, opening up avenues for future collaboration.",
+      "links": ["https://inf.unideb.hu/en/node"]
     },
     {
       "date": "2022-10-14T09:45:00.001Z",

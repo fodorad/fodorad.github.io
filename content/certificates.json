@@ -1,0 +1,16 @@
+[
+    {
+        "src": "images/gallery/events/2023/MiLab_Meetup_ELTE/MiLab_Meetup_ELTE_20231205_1.jpg",
+        "thumbnail_square": "images/gallery/events/2023/MiLab_Meetup_ELTE/MiLab_Meetup_ELTE_20231205_1_thumbnail_210x210.jpg",
+        "title": "Poster presentation at MiLab Meetup ELTE",
+        "caption": "Poster presentation about BlinkLinMulT: Transformer-based Eye Blink Detection",
+        "tags": ["2023", "MiLab Meetup ELTE"]
+    },
+    {
+        "src": "images/gallery/events/2023/MiLab_Meetup_ELTE/MiLab_Meetup_ELTE_20231205_2.jpg",
+        "thumbnail_square": "images/gallery/events/2023/MiLab_Meetup_ELTE/MiLab_Meetup_ELTE_20231205_2_thumbnail_210x210.jpg",
+        "title": "Poster presentation at MiLab Meetup ELTE",
+        "caption": "Poster presentation about BlinkLinMulT: Transformer-based Eye Blink Detection",
+        "tags": ["2023", "MiLab Meetup ELTE"]
+    }
+]
