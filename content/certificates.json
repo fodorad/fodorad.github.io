@@ -1,16 +1,80 @@
 [
     {
-        "src": "images/gallery/events/2023/MiLab_Meetup_ELTE/MiLab_Meetup_ELTE_20231205_1.jpg",
-        "thumbnail_square": "images/gallery/events/2023/MiLab_Meetup_ELTE/MiLab_Meetup_ELTE_20231205_1_thumbnail_210x210.jpg",
-        "title": "Poster presentation at MiLab Meetup ELTE",
-        "caption": "Poster presentation about BlinkLinMulT: Transformer-based Eye Blink Detection",
-        "tags": ["2023", "MiLab Meetup ELTE"]
+        "src": "images/gallery/certs/image/Coursera 6RGSFWDX3QKK-1.jpg",
+        "thumbnail": "images/gallery/certs/image/Coursera 6RGSFWDX3QKK-1.jpg",
+        "caption": "DeepLearning.AI: Neural Networks and Deep Learning",
+        "tags": ["DeepLearning.AI"]
     },
     {
-        "src": "images/gallery/events/2023/MiLab_Meetup_ELTE/MiLab_Meetup_ELTE_20231205_2.jpg",
-        "thumbnail_square": "images/gallery/events/2023/MiLab_Meetup_ELTE/MiLab_Meetup_ELTE_20231205_2_thumbnail_210x210.jpg",
-        "title": "Poster presentation at MiLab Meetup ELTE",
-        "caption": "Poster presentation about BlinkLinMulT: Transformer-based Eye Blink Detection",
-        "tags": ["2023", "MiLab Meetup ELTE"]
+        "src": "images/gallery/certs/image/Coursera VPRZXJGR7LXD-1.jpg",
+        "thumbnail": "images/gallery/certs/image/Coursera VPRZXJGR7LXD-1.jpg",
+        "caption": "DeepLearning.AI: Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization",
+        "tags": ["DeepLearning.AI"]
+    },
+    {
+        "src": "images/gallery/certs/image/Coursera SAL8TAR8AZSM-1.jpg",
+        "thumbnail": "images/gallery/certs/image/Coursera SAL8TAR8AZSM-1.jpg",
+        "caption": "DeepLearning.AI: Structuring Machine Learning Projects",
+        "tags": ["DeepLearning.AI"]
+    },
+    {
+        "src": "images/gallery/certs/image/Coursera 9Q48K44V5PZ7-1.jpg",
+        "thumbnail": "images/gallery/certs/image/Coursera 9Q48K44V5PZ7-1.jpg",
+        "caption": "DeepLearning.AI: Natural Language Processing with Attention Models",
+        "tags": ["DeepLearning.AI"]
+    },
+    {
+        "src": "images/gallery/certs/image/Coursera 2UFTWLP8X38R-1.jpg",
+        "thumbnail": "images/gallery/certs/image/Coursera 2UFTWLP8X38R-1.jpg",
+        "caption": "DeepLearning.AI: Convolutional Neural Networks",
+        "tags": ["DeepLearning.AI"]
+    },
+    {
+        "src": "images/gallery/certs/image/Coursera 73Z5S593JTMG-1.jpg",
+        "thumbnail": "images/gallery/certs/image/Coursera 73Z5S593JTMG-1.jpg",
+        "caption": "IBM: Generative AI: Introduction and Applications",
+        "tags": ["IBM"]
+    },
+    {
+        "src": "images/gallery/certs/image/Coursera CYD688G5KTAG-1.jpg",
+        "thumbnail": "images/gallery/certs/image/Coursera CYD688G5KTAG-1.jpg",
+        "caption": "IBM: Generative AI: Foundation Models and Platforms",
+        "tags": ["IBM"]
+    },
+    {
+        "src": "images/gallery/certs/image/Coursera QJQX7C4WVL4Q-1.jpg",
+        "thumbnail": "images/gallery/certs/image/Coursera QJQX7C4WVL4Q-1.jpg",
+        "caption": "IBM: Generative AI: Prompt Engineering Basics",
+        "tags": ["IBM"]
+    },
+    {
+        "src": "images/gallery/certs/image/Coursera ZJJD3VKNFJQV-1.jpg",
+        "thumbnail": "images/gallery/certs/image/Coursera ZJJD3VKNFJQV-1.jpg",
+        "caption": "IBM: Generative AI: Impact, Considerations, and Ethical Issues",
+        "tags": ["IBM"]
+    },
+    {
+        "src": "images/gallery/certs/image/Coursera 4F7JPX6V45BM-1.jpg",
+        "thumbnail": "images/gallery/certs/image/Coursera 4F7JPX6V45BM-1.jpg",
+        "caption": "Google Cloud: Introduction to Generative AI Learning Path",
+        "tags": ["Google Cloud"]
+    },
+    {
+        "src": "images/gallery/certs/image/Coursera RVK8XLVGCL9T-1.jpg",
+        "thumbnail": "images/gallery/certs/image/Coursera RVK8XLVGCL9T-1.jpg",
+        "caption": "Google Cloud: Introduction to Generative AI",
+        "tags": ["Google Cloud"]
+    },
+    {
+        "src": "images/gallery/certs/image/Coursera 3WQAY5QQ96NF-1.jpg",
+        "thumbnail": "images/gallery/certs/image/Coursera 3WQAY5QQ96NF-1.jpg",
+        "caption": "Google Cloud: Introduction to Large Language Models",
+        "tags": ["Google Cloud"]
+    },
+    {
+        "src": "images/gallery/certs/image/Coursera YFXAS6SW892Q-1.jpg",
+        "thumbnail": "images/gallery/certs/image/Coursera YFXAS6SW892Q-1.jpg",
+        "caption": "Google Cloud: Introduction to Responsible AI",
+        "tags": ["Google Cloud"]
     }
 ]
