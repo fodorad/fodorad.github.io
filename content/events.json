@@ -48,6 +48,15 @@
       "gallery_tags": ["Hungarian Machine Learning Meeting"]
     },
     {
+      "date": "2023-07-27T10:00:00.001Z",
+      "image": "images/gallery/events/2023/Students_Scientific_Conference/Fodor_Adam_TDK_Luqman_20230727_event.jpg",
+      "thumbnail_rectangle": "images/gallery/events/2023/Students_Scientific_Conference/Fodor_Adam_TDK_Luqman_20230727_event.jpg",
+      "alt": "Luqman's graduation ceremony",
+      "title": "Luqman's graduation ceremony",
+      "content": "Huge congratulations to Luqman on securing the 2nd place award at the Students' Scientific Conference for the impressive work on \"Personality Recognition based on Visual and Movement Features on the Face\"!\nWitnessing your dedication and creativity under my supervision was a truly joyful experience. Well done!",
+      "gallery_tags": ["Students' Scientific Conference"]
+    },
+    {
       "date": "2023-06-26T14:00:00.001Z",
       "image": "images/gallery/events/2023/Centre_for_Cognitive_Science_seminar/Fodor_Adam_CNC_20230626_1.jpg",
       "thumbnail_rectangle": "images/gallery/events/2023/Centre_for_Cognitive_Science_seminar/Fodor_Adam_CNC_20230626_event.jpg",
@@ -140,5 +149,15 @@
       "content": "Participating in the ACAI 2021 event was a game-changer for me; it was packed with enlightening microproject presentations, keynotes, and workshops all geared towards Human-Centered AI collaboration.\nIt not only broadened my understanding of microproject management but also connected me with fellow researchers across Europe, truly fostering a spirit of innovation in AI.",
       "links": ["https://www.humane-ai.eu/event/acai2021"],
       "gallery_tags": ["HumanE-AI-Net"]
+    },
+    {
+      "date": "2018-05-10T14:00:00.001Z",
+      "image": "images/gallery/events/2018/Students_Scientific_Conference/Fodor_Adam_Morgan_Stanley_special_award_20180510.jpg",
+      "thumbnail_rectangle": "images/gallery/events/2018/Students_Scientific_Conference/Fodor_Adam_Morgan_Stanley_special_award_20180510_thumbnail_500x500.jpg",
+      "alt": "1st place at Students' Scientific Conference and Morgan Stanley Special Award",
+      "title": "1st place at Students' Scientific Conference and Morgan Stanley Special Award",
+      "content": "I'm super excited to share that we won 1st place at the Students' Scientific Conference, along with snagging the Morgan Stanley Special Award for our project on voice de-identification using deep neural networks. Teaming up with László Kopácsi was amazing. It's such an honor to have our hard work acknowledged, and I'm really thankful for the chance to present our research to the academic world.",
+      "gallery_tags": ["Students' Scientific Conference"],
+      "links": ["../html/projects/deidentification.html"]
     }
 ]

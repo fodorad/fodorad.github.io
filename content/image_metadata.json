@@ -203,6 +203,20 @@
         "tags": ["2023", "Hungarian Machine Learning Meeting"]
     },
     {
+        "src": "images/gallery/events/2023/Students_Scientific_Conference/Fodor_Adam_TDK_Luqman_20230727_2.jpg",
+        "thumbnail_square": "images/gallery/events/2023/Students_Scientific_Conference/Fodor_Adam_TDK_Luqman_20230727_2_thumbnail_210x210.jpg",
+        "title": "Luqman's graduation ceremony",
+        "caption": "Luqman's graduation ceremony",
+        "tags": ["2023", "Students' Scientific Conference"]
+    },
+    {
+        "src": "images/gallery/events/2023/Students_Scientific_Conference/Fodor_Adam_TDK_supervisor_Luqman_20230419.jpg",
+        "thumbnail_square": "images/gallery/events/2023/Students_Scientific_Conference/Fodor_Adam_TDK_supervisor_Luqman_20230419_thumbnail.jpg",
+        "title": "Certificate of Supervision for Luqman's Research Project",
+        "caption": "Certificate of Supervision for Luqman's Research Project",
+        "tags": ["2023", "Students' Scientific Conference"]
+    },
+    {
         "src": "images/gallery/events/2023/John_von_Neumann_Computer_Society/Fodor_Adam_NJSZT_20230518_1.jpg",
         "thumbnail_square": "images/gallery/events/2023/John_von_Neumann_Computer_Society/Fodor_Adam_NJSZT_20230518_1_thumbnail_210x210.jpg",
         "thumbnail_rectangle": "images/gallery/events/2023/John_von_Neumann_Computer_Society/Fodor_Adam_NJSZT_20230518_1_thumbnail_210x420.jpg",
@@ -339,5 +353,12 @@
         "title": "HumanE-AI-Net microproject management workshop in Berlin",
         "caption": "Microproject management workshop",
         "tags": ["2021", "HumanE-AI-Net"]
+    },
+    {
+        "src": "images/gallery/events/2018/Students_Scientific_Conference/Fodor_Adam_Morgan_Stanley_special_award_20180510.jpg",
+        "thumbnail_square": "images/gallery/events/2018/Students_Scientific_Conference/Fodor_Adam_Morgan_Stanley_special_award_20180510_thumbnail_500x500.jpg",
+        "title": "Morgan Stanley Special Award for Students' Scientific Conference 1st place.",
+        "caption": "Morgan Stanley Special Award for Students' Scientific Conference 1st place.",
+        "tags": ["2018", "Students' Scientific Conference"]
     }
 ]
