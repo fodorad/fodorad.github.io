@@ -5,8 +5,8 @@
   --img-bg-color: rgba(240, 240, 240, 0.9);
   --backdrop-color: rgba(240, 240, 240, 0.9);
   --gap-length: 5px;
-  --row-height: 210px;
-  --column-width: 210px;
+  --row-height: 250px;
+  --column-width: 250px;
 }
 
 .gg-container *[data-theme="dark"] {
@@ -141,6 +141,10 @@
   .gg-box {
     grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
   }
+}
+
+.tag-info-container {
+  margin: 1rem 0;
 }
 
 .gallery_tag {

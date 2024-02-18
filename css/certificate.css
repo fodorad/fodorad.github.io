@@ -1,0 +1,60 @@
+.cert-container {
+  --main-color: #00000081;
+  --secondary-color: #111;
+  --txt-color: #fff;
+  --img-bg-color: rgba(240, 240, 240, 0.9);
+  --backdrop-color: rgba(240, 240, 240, 0.9);
+}
+
+.cert-container *[data-theme="dark"] {
+  --main-color: #ddd;
+  --secondary-color: #eee;
+  --txt-color: #111;
+  --img-bg-color: rgba(20, 20, 20, 0.9);
+  --backdrop-color: rgba(30, 30, 30, 0.9);
+}
+
+.cert-box {
+  -moz-transition: -moz-transform 0.25s ease, opacity 0.25s ease;
+  -webkit-transition: -webkit-transform 0.25s ease, opacity 0.25s ease;
+  -ms-transition: -ms-transform 0.25s ease, opacity 0.25s ease;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.cert-box img {
+  -moz-transition: -moz-transform 0.25s ease, opacity 0.25s ease;
+  -webkit-transition: -webkit-transform 0.25s ease, opacity 0.25s ease;
+  -ms-transition: -ms-transform 0.25s ease, opacity 0.25s ease;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 10px;
+  transform: scale(0.9);
+  opacity: 0.85;
+  object-fit: cover;
+  object-position: 0% 0%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cert-box img:hover {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.cert-box img.filter-transition-out {
+  transform: scale(0.9);
+  opacity: 0;
+}
+
+.cert-box img.filter-transition-in {
+  transform: scale(1);
+  opacity: 1;
+}
+
+body.is-preload .cert-box {
+  -moz-transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9);
+  opacity: 0;
+}

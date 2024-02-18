@@ -81,38 +81,28 @@ function repopulateGallery() {
         });
 }
 
-function calculateImagesPerRow() {
-    const galleryBox = document.getElementById('gallery-box');
-    const containerWidth = galleryBox.clientWidth;
-    const columnWidth = parseFloat(getComputedStyle(galleryBox).getPropertyValue('--column-width'));
-
-    const imagesPerRow = Math.floor(containerWidth / columnWidth);
-    console.log('Number of images per row:', imagesPerRow);
-}
-
-
 function populateGallery(images) {
-    console.log(images)
-
-    const galleryBox = document.getElementById('gallery-box');
+    console.log(images);
+  
+    const galleryBox = document.getElementById('cert-container');
     galleryBox.innerHTML = '';
-
+  
     images.forEach(image => {
-        const imgElement = document.createElement('img');
-
-        if (images.length == 1) {
-            imgElement.style.maxWidth = '20%';
-            imgElement.style.minWidth = '210px';
-        }
-
-        imgElement.src = '../' + image.thumbnail;
-        imgElement.src_original = '../' + image.src;
-        imgElement.alt = image.caption;
-        imgElement.title = image.caption;
-        imgElement.loading = 'lazy';
-        galleryBox.appendChild(imgElement);
+      const colDiv = document.createElement('div');
+      colDiv.className = 'col-12 col-sm-6 col-md-3 mb-4 cert-box';
+  
+      const imgElement = document.createElement('img');
+      imgElement.className = 'img-fluid';
+      imgElement.src = '../' + image.thumbnail;
+      imgElement.src_original = '../' + image.src;
+      imgElement.alt = image.caption;
+      imgElement.title = image.caption;
+      imgElement.loading = 'lazy';
+  
+      colDiv.appendChild(imgElement);
+      galleryBox.appendChild(colDiv);
     });
-}
+  }
 
 document.addEventListener('DOMContentLoaded', () => {
     collectTags();
