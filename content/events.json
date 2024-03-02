@@ -119,7 +119,9 @@
       "alt": "Presentation about personality and group-personality estimation during task solving",
       "title": "Presentation at XVIII Hungarian Congress of Neuropsychopharmacology",
       "content": "I had the opportunity to present on \"Personality and Group-Personality Estimation during Task Solving\" at the XVIII Hungarian Congress of Neuropsychopharmacology (MPPT), on behalf of the ELTE Department of Artificial Intelligence. The conference provided a unique platform to promote cross-disciplinary engagement.\nI'm grateful for this enriching experience that allowed me to broaden the dialogue between AI research and medical practice.",
-      "links": ["https://mppt.hu/2022-2"]
+      "links": ["https://mppt.hu/2022-2"],
+      "zoom_position": "50% 20%",
+      "full_view_position": "center center"
     },
     {
       "date": "2022-10-04T14:00:00.001Z",

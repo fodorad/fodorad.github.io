@@ -28,7 +28,7 @@ fetch('../content/events.json')
                  ${item.content.split('\n').map(sentence => `<p>${sentence}</p>`).join('')}
                  ${galleryTagsLink ? `<p><a href="${galleryTagsLink}">[Gallery]</a></p>` : ''}
                  ${siteLink? `<p>${siteLink}</p>`: ''}`;
-
+            
             eventContainer.appendChild(eventBox);
         });
 
