@@ -35,7 +35,7 @@ fetch('../content/projects.json')
                 `<span class="tile-image">
                      <img src="../${item.image}" alt="" />
                  </span>
-                 <a href="generic.html">
+                 <a href="${item.page}">
                      <h2>${item.title}</h2>
                      <div class="content">
                          <p>${item.content}</p>

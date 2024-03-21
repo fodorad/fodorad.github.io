@@ -1,7 +1,7 @@
 document.addEventListener('click', function (e) {
     const clickedElement = e.target;
 
-    if (clickedElement.tagName === 'IMG') {
+    if (clickedElement.tagName === 'IMG' && clickedElement.id !== 'hero_index_close') {
         const currentImg = clickedElement;
         const container = document.querySelector('#cert-container');
         const images = document.querySelectorAll(".cert-box > img");

@@ -51,7 +51,8 @@
     "year": 2020,
     "image": "images/placeholder/pic03.jpg",
     "title": "Skeletonization",
-    "content": "Skeletonization Combined with Deep Neural Networks for Superpixel Temporal Propagation."
+    "content": "Skeletonization Combined with Deep Neural Networks for Superpixel Temporal Propagation.",
+    "page": "projects/skeletonization.html"
   },
   {
     "year": 2020,
