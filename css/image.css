@@ -16,47 +16,37 @@ img.middle {
     margin-bottom: 2rem;
 }
 
-img.middle-small {
-    margin: 1rem 2rem 1rem 2rem;
-    width: 40%;
-    display: block;
-    margin: auto;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+img.middle.medium {
+    width: 60%;
 }
 
-img.middle-very-small {
-    margin: 1rem 2rem 1rem 2rem;
+img.middle.small {
+    width: 40%;
+}
+
+img.middle.very-small {
     width: 15%;
-    display: block;
-    margin: auto;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+}
+
+img.left,
+img.right {
+    margin: 0rem 2rem 0rem 2rem;
+    width: 40%;
 }
 
 img.left {
     float: left;
-    margin: 0rem 2rem 0rem 2rem;
-    width: 40%;
-}
-
-img.left-small {
-    float: left;
-    margin: 0rem 2rem 0rem 2rem;
-    width: 30%;
 }
 
 img.right {
     float: right;
-    margin: 0rem 2rem 0rem 2rem;
-    width: 40%;
 }
 
-img.right-small {
-    float: right;
-    margin: 0rem 2rem 0rem 2rem;
+img.left.small,
+img.right.small {
     width: 30%;
 }
+
 
 .about_hero {
     -moz-transition: -moz-transform 0.5s ease, opacity 0.5s ease;

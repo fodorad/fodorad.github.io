@@ -62,6 +62,12 @@ input[type="submit"].primary:active,
     box-shadow: none !important;
 }
 
+.button.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
 .button.button-icon {
     padding: 0 1.25rem 0 0.45rem;
 }
