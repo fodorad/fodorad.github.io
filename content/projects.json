@@ -58,6 +58,7 @@
     "year": 2020,
     "image": "images/placeholder/pic04.jpg",
     "title": "Supervoxel segmentation",
-    "content": "Common Fate Based Episodic Segmentation by Combining Supervoxels with Deep Neural Networks."
+    "content": "Common Fate Based Episodic Segmentation by Combining Supervoxels with Deep Neural Networks.",
+    "page": "projects/supervoxel_segmentation.html"
   }
 ]
