@@ -3,43 +3,50 @@
     "year": 2023,
     "image": "images/placeholder/pic01.jpg",
     "title": "BlinkLinMulT",
-    "content": "Transformer-based Eye Blink Detection."
+    "content": "Transformer-based Eye Blink Detection.",
+    "page": "projects/blinklinmult.html"
   },
   {
     "year": 2023,
     "image": "images/placeholder/pic02.jpg",
     "title": "Exordium",
-    "content": "Collection of preprocessing functions and deep learning methods."
+    "content": "Collection of preprocessing functions and deep learning methods.",
+    "page": "projects/exordium.html"
   },
   {
     "year": 2023,
     "image": "images/placeholder/pic03.jpg",
     "title": "Personality Questionnaires",
-    "content": "Personality questionnaire processing methods for various experiments."
+    "content": "Personality questionnaire processing methods for various experiments.",
+    "page": "projects/personality_questionnaires.html"
   },
   {
     "year": 2022,
     "image": "images/placeholder/pic04.jpg",
     "title": "PersonalityLinMulT",
-    "content": "Multimodal Sentiment and Personality Perception Under Speech: A Comparison of Transformer-based Architectures."
+    "content": "Multimodal Sentiment and Personality Perception Under Speech: A Comparison of Transformer-based Architectures.",
+    "page": "projects/personalitylinmult.html"
   },
   {
     "year": 2022,
     "image": "images/placeholder/pic05.jpg",
     "title": "LinMulT",
-    "content": "General-purpose Multimodal Transformer with Linear Complexity Attention Mechanism."
+    "content": "General-purpose Multimodal Transformer with Linear Complexity Attention Mechanism.",
+    "page": "projects/linmult.html"
   },
   {
     "year": 2021,
     "image": "images/placeholder/pic06.jpg",
     "title": "Siamese",
-    "content": "Enhancing Apparent Personality Trait Analysis with Cross-Modal Embeddings."
+    "content": "Enhancing Apparent Personality Trait Analysis with Cross-Modal Embeddings.",
+    "page": "projects/siamese.html"
   },
   {
     "year": 2021,
     "image": "images/placeholder/pic01.jpg",
     "title": "AHFS",
-    "content": "Adaptive, hybrid feature selection."
+    "content": "Adaptive, hybrid feature selection.",
+    "page": "projects/ahfs.html"
   },
   {
     "year": 2021,
