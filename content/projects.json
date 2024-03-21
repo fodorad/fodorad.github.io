@@ -45,7 +45,8 @@
     "year": 2021,
     "image": "images/placeholder/pic02.jpg",
     "title": "De-identification",
-    "content": "Speech de-identification with deep neural networks."
+    "content": "Speech de-identification with deep neural networks.",
+    "page": "projects/deidentification.html"
   },
   {
     "year": 2020,

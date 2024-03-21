@@ -126,6 +126,11 @@ pre code.bibtex {
 	overflow-x: auto;
 }
 
+video {
+	width: 40%;
+	margin: 1rem 2rem 1rem 2rem;
+}
+
 hr {
 	border: 0;
 	border-bottom: solid 1px #c9c9c9;

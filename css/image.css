@@ -25,6 +25,15 @@ img.middle-small {
     margin-bottom: 2rem;
 }
 
+img.middle-very-small {
+    margin: 1rem 2rem 1rem 2rem;
+    width: 15%;
+    display: block;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
 img.left {
     float: left;
     margin: 0rem 2rem 0rem 2rem;

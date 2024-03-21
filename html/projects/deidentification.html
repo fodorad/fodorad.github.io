@@ -37,20 +37,133 @@
 		</header>
 
 		<div class="container">
-			<h1>De-identification with Deep Neural Networks</h1>
-			<img class="img-fluid rounded" src="../../images/placeholder/pic13.jpg" alt=""/>
-			<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique.</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel venenatis mauris vehicula hendrerit.</p>
-			<pre><code>i = 0;
+			<h1>Speech de-identification with deep neural networks</h1>
+			<img class="img-fluid rounded middle" src="../../images/projects/deidentification/pipeline.png" alt=""/>
+			<div class="d-flex mt-4 mb-4">
+				<a id="button_contact" href="../../pdf/2021_Fodor_Adam_CSCS_Deidentification.pdf" class="button mx-3">Paper</a>
+				<a id="button_contact" href="../../pdf/2018_Fodor_Adam_Kopacsi_Laszlo_Students_Scientific_Conference_Deidentification.pdf" class="button mx-3">Thesis</a>
+				<a id="button_contact" href="https://github.com/lkopi/deidentification" class="button primary mx-3">Code</a>
+			</div>
+			<h1>Abstract</h1>
+			<p>Cloud-based speech services are powerful practical tools but the privacy
+				of the speakers raises important legal concerns when exposed to the Internet.</p>
+			<p>We propose a deep neural network solution that removes personal characteristics 
+				from human speech by converting it to the voice of a Text-to-Speech
+				(TTS) system before sending the utterance to the cloud. The network learns
+				to transcode sequences of vocoder parameters, delta and delta-delta features
+				of human speech to those of the TTS engine.</p>
+			<p>We evaluated several TTS
+				systems, vocoders and audio alignment techniques. We measured the per-
+				formance of our method by (i) comparing the result of speech recognition
+				on the de-identified utterances with the original texts, (ii) computing the
+				Mel-Cepstral Distortion of the aligned TTS and the transcoded sequences,
+				and (iii) questioning human participants in A-not-B, 2AFC and 6AFC (Alternative 
+				Forced-Choice) tasks. Our approach achieves the level required by
+				diverse applications.</p>
 
-while (!deck.isInOrder()) {
-	print 'Iteration ' + i;
-	deck.shuffle();
-	i++;
-}
+			<div class="row">
+				<div class="col d-flex justify-content-center align-items-center">
+					<video controls>
+						<source src="../../images/projects/deidentification/0070999.mp4" type="video/mp4">
+						Your browser does not support the video tag.
+					</video>
+					<video controls>
+						<source src="../../images/projects/deidentification/0071000.mp4" type="video/mp4">
+						Your browser does not support the video tag.
+					</video>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col d-flex justify-content-center align-items-center">
+					<video controls>
+						<source src="../../images/projects/deidentification/0071001.mp4" type="video/mp4">
+						Your browser does not support the video tag.
+					</video>
+					<video controls>
+						<source src="../../images/projects/deidentification/0071002.mp4" type="video/mp4">
+						Your browser does not support the video tag.
+					</video>
+				</div>
+			</div>
 
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-			<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
+			<h1>Task and motivation</h1>
+				<p>Cloud-based speech services have improved recently due to the large amount of voice
+					data that is exploited by deep learning technology, giving rise to superhuman 
+					performance in several tasks. Consequently, it seems reasonable to use such utilities
+					in practice.</p>
+				<p>Unfortunately, many speech applications involve legal concerns regarding privacy.
+					Several methods have been proposed to eliminate personal information from
+					samples without spoiling the linguistic content before uploading. We should also
+					mention, that in many cases the private information is carried by the linguistic
+					content and not by the voice of the speaker. For example, when a doctor dictates
+					medical records, the private content is the medical content and not the identity
+					of the doctor. But in the case of diagnostic sessions with autistic people, it is
+					the speaker whose identity should remain hidden. If an external ASR is used on
+					the transformed speech of a patient, the identity will remain concealed, and the
+					linguistic content can be generated safely.</p>
+				<p>Voice conversion (VC) operates by altering certain features of human speech.
+					Voice transformation (VT) converts the signal as if it was uttered by a target
+					speaker. De-identification is the process that intends to remove any personal
+					information from the data that could be associated with identity. VC and VT may
+					be applied to solve de-identification. </p>
+				
+			<h1>Proposed method</h1>
+				<p>For de-identification, we propose to transform
+					utterances to a generic voice of a Text-to-Speech (TTS) engine, by taking advantage of utterance-text sample pairs. 
+					We use an end-to-end trainable Deep Neural
+					Network (DNN) to learn the many-to-one VT task. We suggest to learn the mapping at vocoder level.</p>
+				<p>Vocoders are speech analysis and synthesis tools. With their help we can encode the
+					raw waveform to a more compressed representation that takes the human auditory
+					system into consideration. This is why the resulted features are generally better to
+					work with. We used the WORLD vocoder in our experiments.</p>
+			
+				<div class="row">
+					<div class="col d-flex justify-content-center align-items-center">
+						<img class="img-fluid rounded left-small" src="../../images/projects/deidentification/preprocess.png" alt=""/>
+						<img class="img-fluid rounded middle-very-small" src="../../images/projects/deidentification/dense.png" alt=""/>
+						<img class="img-fluid rounded right-small" src="../../images/projects/deidentification/postprocess.png" alt=""/>
+					</div>
+				</div>
+
+				
+				
+
+			<h1>Results</h1>
+				<p>We show that the trained network gives rise to tolerable
+					distortions at utterance level by conducting two experiments: comparing the outputs of Google’s Automatic Speech Recognition (ASR) system for the original TTS
+					output and the de-identified utterance and measuring the Mel-Cepstral Distortion
+					(MCD).</p>
+				<img class="img-fluid rounded middle" src="../../images/projects/deidentification/table.png" alt=""/>
+				<p>To confirm de-identification success, we further performed three kind
+					of perceptual listening studies with human subjects (A-not-B test: distinguishing
+					transformed utterances of different speakers, 2-Alternative Forced-Choice (2AFC)
+					test: classifying utterances from female/male speakers, and 6-Alternative Forced-Choice (6AFC) test: 
+					estimating the number of speakers). Our proposal is irreversible and it requires only speech-transcript sample pairs for training, which are
+					readily accessible in the literature.</p>
+				<div class="row">
+					<div class="col d-flex justify-content-center align-items-center">
+						<img class="img-fluid rounded left" src="../../images/projects/deidentification/objective.png" alt=""/>
+						<img class="img-fluid rounded right" src="../../images/projects/deidentification/subjective.png" alt=""/>
+					</div>
+				</div>
+				<p>Our technique enables privacy-aware speech recognition. The proposed method is lightweight 
+					and can be used for collecting de-identified databases
+					when the privacy of the user is important, for example in cloud-based speech
+					services or in medical records. The fact that our method requires only speech-
+					transcript sample pairs is a very promising aspect for deep learning, which requires
+					large and high quality databases.</p>
+				<h1>BibTex</h1>
+				<pre><code class="bibtex">@article{fodor2021deidentification,
+   author={Fodor, Ádám and Kopácsi, László and Milacski, Zoltán Ádám and Lőrincz, András},
+   title={Speech De-identification with Deep Neural Networks},
+   journal={Acta Cybernetica},
+   volume={25},
+   number={2},
+   pages={257-269},
+   year={2021},
+   DOI={10.14232/actacyb.288282},
+   url={https://cyber.bibl.u-szeged.hu/index.php/actcybern/article/view/4178}
+}</code></pre>
 		</div>
 
 		<div id="footer-container"></div>
