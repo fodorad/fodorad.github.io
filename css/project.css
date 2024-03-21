@@ -9,6 +9,7 @@
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     position: relative;
+    justify-content: center;
 }
 
 .tiles article {

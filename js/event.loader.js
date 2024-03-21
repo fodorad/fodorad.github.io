@@ -22,12 +22,15 @@ fetch('../content/events.json')
             const formattedDate = `${originalDate.getUTCFullYear()}.${(originalDate.getUTCMonth() + 1).toString().padStart(2, '0')}.${originalDate.getUTCDate().toString().padStart(2, '0')}`;
 
             eventBox.innerHTML =
-                `<img src="../${item.thumbnail_rectangle}" alt="${item.alt}">
+                `<img src="../${item.image}" alt="${item.alt}">
                  <h2>${item.title}</h2>
                  <h3>${formattedDate}</h3>
                  ${item.content.split('\n').map(sentence => `<p>${sentence}</p>`).join('')}
-                 ${galleryTagsLink ? `<p><a href="${galleryTagsLink}">[Gallery]</a></p>` : ''}
-                 ${siteLink? `<p>${siteLink}</p>`: ''}`;
+                 <p>
+                 ${galleryTagsLink ? `<a href="html/${galleryTagsLink}">[Gallery]</a>` : ''}
+                 ${siteLink? `${siteLink}`: ''}
+                 </p>`;
+ 
             
             eventContainer.appendChild(eventBox);
         });

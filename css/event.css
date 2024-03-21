@@ -4,27 +4,31 @@
     transform: scale(1);
     opacity: 1;
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, box-shadow 0.5s ease;
-    height: 30rem;
+    height: 25rem;
+    width: calc(25rem * 0.72);
+    min-height: 20rem;
+    min-width: calc(20rem * 0.72);
     overflow: hidden;
     margin-bottom: 3rem;
 }
 
 .tiles article.event-box img {
     border-radius: 8px;
+    height: 70%;
     width: 100%;
-    height: 80%;
     transition: height 0.5s ease-in-out, object-position 0.5s ease-in-out;
     object-fit: cover;
-    object-position: 0% 50%;
+    object-position: 50% 50%;
 }
 
 .tiles article.event-box:hover img {
-    height: 35%;
-    object-position: 0% 50%;
+    height: 30%;
+    width: 100%;
+    object-position: 50% 50%;
 }
 
 .tiles article.event-box h2 {
-    font-size: 1rem;
+    font-size: 1.0rem;
     line-height: 1.3rem;
     margin: 0 0.25rem 0.5rem 1.25rem;
 }
@@ -32,7 +36,7 @@
 .tiles article.event-box h3 {
     font-size: 0.9rem;
     line-height: 1.2rem;
-    margin: 0 0.25rem 0.5rem 1.25rem;
+    margin: 0 0.25rem 0.3rem 1.25rem;
 }
 
 .tiles article.event-box h2::first-letter,
@@ -41,9 +45,9 @@
 }
 
 .tiles article.event-box p {
-    font-size: 0.8rem;
-    line-height: 1.3rem;
-    margin: 0 1rem 0 1.5rem;
+    font-size: 0.7rem;
+    line-height: 1.1rem;
+    margin: 0 1rem 0 1.25rem;
     opacity: 0;
     transition: opacity 0.5s ease;
     overflow: hidden;
