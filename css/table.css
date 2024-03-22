@@ -17,6 +17,10 @@ table td {
     vertical-align: middle;
 }
 
+table tr .top {
+    vertical-align: top;
+}
+
 table th {
     font-size: 1rem;
     font-weight: 900;
