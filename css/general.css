@@ -75,6 +75,10 @@ h3 {
 	line-height: 1.5rem;
 }
 
+strong {
+	font-weight: 600;
+}
+
 sub {
 	font-size: 0.8rem;
 	position: relative;
