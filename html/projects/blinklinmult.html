@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Adam Fodor portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../../css/styles.css" />
+		<noscript><div class="alert alert-warning" role="alert"><h2>Warning!</h2><p>This website requires JavaScript to function. Please enable JavaScript in your browser settings.</p></div></noscript>
+	</head>
+
+	<body class="is-preload">
+		<header>
+			<div id="menu-header">
+				<nav>
+					<ul>
+						<li><a href="#menu">Menu</a></li>
+					</ul>
+				</nav>
+			</div>
+
+			<nav id="menu">
+				<h2>
+					Menu
+					<span id="themeSwitch" class="theme-icon" aria-label="Toggle Theme"><i class="far fa-moon"></i></span>
+				</h2>
+				<ul>
+					<li><a href="../../index.html">Home</a></li>
+					<li><a href="../projects.html">Projects</a></li>
+					<li><a href="../blog.html">Blog</a></li>
+					<li><a href="../events.html">Events</a></li>
+					<li><a href="../teaching.html">Teaching</a></li>
+					<li><a href="../gallery.html">Gallery</a></li>
+					<li><a href="../about.html">About</a></li>
+				</ul>
+			</nav>		
+		</header>
+
+		<div class="container">
+			<div class="paper">
+				<h1>BlinkLinMulT: Transformer-Based Eye Blink Detection</h1>
+				<p>Ádám Fodor, Kristian Fenech, András Lőrincz</p>
+			</div>
+				
+			<img class="img-fluid rounded middle" src="../../images/projects/blinklinmult/pipeline.png" alt=""/>
+			<div class="d-flex mt-4 mb-4">
+				<a id="button_contact" href="../../pdf/2023_Fodor_Adam_MDPI_BlinkLinMulT.pdf" class="button mx-3">Paper</a>
+				<a id="button_contact" href="https://github.com/fodorad/BlinkLinMulT" class="button primary mx-3">Code</a>
+			</div>
+
+			<div class="row">
+				<div class="col"></div>
+				<div class="col-6 abstract-container">
+					<div class="abstract">
+						<h2>Abstract</h2>
+						<p>This work presents BlinkLinMulT, a transformer-based framework for eye blink detection. 
+							While most existing approaches rely on frame-wise eye state classification, 
+							recent advancements in transformer-based sequence models have not been explored 
+							in the blink detection literature. Our approach effectively combines low- and 
+							high-level feature sequences with linear complexity cross-modal attention 
+							mechanisms and addresses challenges such as lighting changes and a wide 
+							range of head poses. Our work is the first to leverage the transformer architecture 
+							for blink presence detection and eye state recognition while successfully implementing 
+							an efficient fusion of input features. In our experiments, we utilized several publicly 
+							available benchmark datasets (CEW, ZJU, MRL Eye, RT-BENE, EyeBlink8, 
+							Researcher’s Night, and TalkingFace) to extensively show the state-of-the-art 
+							performance and generalization capability of our trained model. We hope the proposed 
+							method can serve as a new baseline for further research.</p>
+					</div>
+				</div>
+				<div class="col"></div>
+			</div>
+
+			<h2>Contribution</h2>
+				<ul>
+					<li>We propose a novel transformer-based blink detection model called BlinkLinMulT that efficiently combines low- and high-level features from video sequences using linear complexity attention mechanisms.</li>
+					<li>Cross-dataset evaluations are performed to quantify the robustness of BlinkLinMulT on unseen samples and it is found that a single network trained on a union of datasets improves the results obtained on all datasets separately.</li>
+					<li>We present a feature fusion ablation study and show that the proposed method works well even on extreme head poses.</li>
+					<li>The proposed approach is evaluated on blink presence detection and eye state recognition tasks and multiple public benchmark datasets. The results obtained are similar to or better than those provided by state-of-the-art models on the respective tasks and databases.</li>
+				</ul>
+
+			<h2>Proposed method</h2>
+				<p>In this work, we propose a fast transformer-based framework for eye blink detection
+					that can effectively combine low- and high-level feature sequences considering several
+					challenges, such as lighting changes, and a variety of head poses, and also utilizes motion
+					information from sequences of the aforementioned features. We present a modified 
+					multimodal transformer with linear attention (LinMulT), which considers multiple inputs,
+					such as RGB texture, iris and eye landmarks, ear, and head pose angles. To our knowledge,
+					this is the first work to use transformer architecture and implement an efficient fusion
+					of input features, including head pose angles.</p>
+				<img class="img-fluid rounded middle" src="../../images/projects/blinklinmult/model.png" alt=""/>
+				
+			<h2>Visualization</h2>
+				<div class="row">
+					<div class="col d-flex justify-content-center align-items-center">
+						<div class="row">
+							<p>Head pose angle dependence of BlinkLinMulT in the case of blink presence detection
+								task. The head poses are predicted by 3DDFA_V2; the colors represent the F1 score calculated for the
+								blink presence task, which is also written within the boxes together with the number of samples (in
+								parenthesis) considered during the metric evaluations. F1 score cannot be calculated for those extreme
+								cases, where closed-eye samples are not available.</p>
+							<p>Test samples from all 5 sequence datasets are used for
+								the experiment. Blinks can be predicted accurately in the case of frontal faces, and while the participant
+								is looking up. Performance slightly decreases when the monitored person is looking down.</p>
+						</div>
+						<img class="img-fluid rounded right small" src="../../images/projects/blinklinmult/headpose.png" alt=""/>
+					</div>
+				</div>
+
+			<h2>BibTex</h2>
+			<p>If you found our research helpful or influential please consider citing:</p>
+			<pre><code class="bibtex">@Article{fodor2023blinklinmult,
+   AUTHOR = {Fodor, Ádám and Fenech, Kristian and Lőrincz, András},
+   TITLE = {BlinkLinMulT: Transformer-Based Eye Blink Detection},
+   JOURNAL = {Journal of Imaging},
+   VOLUME = {9},
+   YEAR = {2023},
+   NUMBER = {10},
+   ARTICLE-NUMBER = {196},
+   URL = {https://www.mdpi.com/2313-433X/9/10/196},
+   PubMedID = {37888303},
+   ISSN = {2313-433X},
+   DOI = {10.3390/jimaging9100196}
+}</code></pre>
+		</div>
+
+		<div class="d-flex mt-4 mb-4"><a id="button_contact" href="#" class="button mx-3">Details at the Top: Paper</a></div>
+		<div id="footer-container"></div>
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>	
+		<script src="https://kit.fontawesome.com/a8f44bbdfa.js"></script>
+		<script src="../../js/menu.js"></script>
+		<script src="../../js/pre-load.js"></script>
+		<script src="../../js/footer.loader.js"></script>
+	</body>
+</html>

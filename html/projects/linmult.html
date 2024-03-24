@@ -37,7 +37,7 @@
 		</header>
 
 		<div class="container">
-			<h1>LinMulT: General-Purpose Multimodal Transformer with Linear Complexity Attention Mechanism</h1>
+			<div class="paper"><h1>LinMulT: General-Purpose Multimodal Transformer with Linear Complexity Attention Mechanism</h1></div>
 			<img class="img-fluid rounded middle" src="../../images/projects/linmult/LinMulT.jpg" alt=""/>
 			<div class="d-flex mt-4 mb-4">
 				<a id="button_contact" href="personalitylinmult" class="button mx-3">Project 1: PersonalityLinMulT</a>
@@ -45,23 +45,23 @@
 				<a id="button_contact" href="https://github.com/fodorad/LinMulT" class="button primary mx-3">Code</a>
 			</div>
 
-			<h1>Motivation</h1>
+			<h2>Motivation</h2>
 				<p>This repository presents LinMulT, a general-purpose Multimodal Transformer with Linear complexity attention mechanism, offering a versatile solution for various multimodal learning tasks.  
 				   It seamlessly handles multiple modalities, be it vectors or sequences, and is trainable for both classification tasks and sequential predictions.</p>
 
-			<h1>Setup</h1>
-			<h2>Install package from PyPI</h2>
+			<h2>Setup</h2>
+			<h3>Install package from PyPI</h3>
 				<pre><code>pip install linmult</code></pre>
 
-			<h2>Install package for development</h2>
+			<h3>Install package for development</h3>
 				<pre><code>git clone https://github.com/fodorad/LinMulT
 cd LinMulT
 pip install -e .
 pip install -U -r requirements.txt
 python -m unittest</code></pre>
 
-			<h1>Quick start</h1>
-			<h2>Example 1:</h2>		
+			<h2>Quick start</h2>
+			<h3>Example 1:</h3>		
 				<p>Simple transformer encoder with linear attention. The forward pass is performed using an input sequence.</p>
 				<pre><code>import torch
 from linmult import LinT
@@ -75,7 +75,7 @@ y_pred_seq = model(x)
 assert y_pred_seq.size() == torch.Size([32, 15, 5])
 </code></pre>
 
-			<h2>Example 2:</h2>
+			<h3>Example 2:</h3>
 				<p>Multimodal Transformer with Linear Attention. The forward pass is performed using 2 input sequences. Both input sequences have the same time dimension.</p>
 				<pre><code>import torch
 from linmult import LinMulT
@@ -93,7 +93,7 @@ assert y_pred_cls.size() == torch.Size([32, 5])
 assert y_pred_seq.size() == torch.Size([32, 15, 5])
 </code></pre>
 
-			<h2>Example 3:</h2>
+			<h3>Example 3:</h3>
 				<p>Multimodal Transformer with Linear Attention. The forward pass is performed using 3 input sequences with different time dimensions.</p>
 				<pre><code>import torch
 from linmult import LinMulT
@@ -112,15 +112,15 @@ y_pred_cls = model([x_1, x_2, x_3])
 assert y_pred_cls.size() == torch.Size([16, 5])
 </code></pre>
 				
-			<h1>Similar projects using LinMulT</h1>
-				<h2>(2023) BlinkLinMulT</h2>
+			<h2>Similar projects using LinMulT</h2>
+				<h3>(2023) BlinkLinMulT</h3>
 					<p>LinMulT is trained for blink presence detection and eye state recognition tasks. Our results demonstrate comparable or superior performance compared to state-of-the-art models on 2 tasks, using 7 public benchmark databases.</p>
 					<ul>
 						<li><strong>paper</strong>: BlinkLinMulT: Transformer-based Eye Blink Detection</li>
 						<li><strong>code</strong>: https://github.com/fodorad/BlinkLinMulT</li>
 					</ul>
 
-				<h2>(2022) PersonalityLinMulT</h2>
+				<h3>(2022) PersonalityLinMulT</h3>
 					<p>LinMulT is trained for Big Five personality trait estimation using the First Impressions V2 dataset and sentiment estimation using the MOSI and MOSEI datasets.</p>
 					<ul>
 						<li><strong>paper</strong>: Multimodal Sentiment and Personality Perception Under Speech: A Comparison of Transformer-based Architectures</li>
@@ -128,7 +128,7 @@ assert y_pred_cls.size() == torch.Size([16, 5])
 					</ul>
 
 
-			<h1>BibTex</h1>
+			<h2>BibTex</h2>
 				<p>If you found our research helpful or influential please consider citing:</p>
 					
 				<h3>(2023) LinMulT for blink presence detection and eye state recognition</h3>
@@ -155,20 +155,21 @@ assert y_pred_cls.size() == torch.Size([16, 5])
    url = {https://proceedings.mlr.press/v173/fodor22a.html}
 }</code></pre>
 
-			<h1>Acknowledgement</h1>
+			<h2>Acknowledgement</h2>
 			<p>The code is inspired by the following two materials:</p>
-			<h2>Multimodal Transformer</h2>
+			<h3>Multimodal Transformer</h3>
 			<ul>
 				<li><strong>paper</strong>: Multimodal Transformer for Unaligned Multimodal Language Sequences (1906.00295)</li>
 				<li><strong>code</strong>: https://github.com/yaohungt/Multimodal-Transformer</li>
 			</ul>	
-			<h2>Linear Attention</h2>
+			<h3>Linear Attention</h3>
 			<ul>
 				<li><strong>paper</strong>: Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention (2006.16236)</li>
 				<li><strong>code</strong>: https://github.com/idiap/fast-transformers</li>
 			</ul>
 		</div>
 
+		<div class="d-flex mt-4 mb-4"><a id="button_contact" href="#" class="button mx-3">Details at the Top: Code</a></div>
 		<div id="footer-container"></div>
 
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

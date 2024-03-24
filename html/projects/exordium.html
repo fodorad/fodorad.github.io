@@ -37,7 +37,7 @@
 		</header>
 
 		<div class="container">
-			<h1>Exordium</h1>
+			<div class="paper"><h1>Exordium</h1></div>
 			<img class="img-fluid rounded middle small" src="../../images/projects/exordium/cover.jpg" alt=""/>
 			<div class="d-flex mt-4 mb-4">
 				<a id="button_contact" href="personalitylinmult" class="button mx-3">Project 1: PersonalityLinMulT</a>
@@ -45,12 +45,12 @@
 				<a id="button_contact" href="https://github.com/fodorad/LinMulT" class="button primary mx-3">Code</a>
 			</div>
 
-			<h1>Motivation</h1>
+			<h2>Motivation</h2>
 				<p>This repository offers a comprehensive collection of preprocessing functions and deep learning techniques. 
 					It supports various features including audio processing, video analysis, text feature extraction, 
 					utility functions, and visualization tools, making it a versatile toolkit for multimodal data processing and analysis.</p>
 
-			<h1>Features</h1>
+			<h2>Supported Features</h2>
 			<table>
 				<tr>
 					<th>Audio</th>
@@ -111,14 +111,14 @@
 				</tr>
 			</table>
 
-			<h1>Setup</h1>
-			<h2>Install package with all base and optional dependencies from PyPI</h2>
+			<h2>Setup</h2>
+				<h3>Install package with all base and optional dependencies from PyPI</h3>
 				<pre><code>pip install exordium[all]</code></pre>
 
-				<h2>Install package with base dependencies from PyPI</h2>
+				<h3>Install package with base dependencies from PyPI</h3>
 				<pre><code>pip install exordium</code></pre>
 
-				<h2>Install optional dependencies for specific modules</h2>
+				<h3>Install optional dependencies for specific modules</h3>
 				<p>The following extras will install the base and specific dependencies for using TDDFA_V2.</p>
 				<pre><code>pip install exordium[tddfa]</code></pre>
 				<p>You can install multiple optional dependencies as well.</p>
@@ -157,28 +157,30 @@
 
 				<p>Note: If you are not sure which tag should be used, just go with the all-mighty "all".</p>
 
-			<h2>Install package for development</h2>
+			<h3>Install package for development</h3>
 			<pre><code>git clone https://github.com/fodorad/exordium
 cd exordium
 pip install -e .[all]
 pip install -U -r requirements.txt
 python -m unittest discover -s test</code></pre>
 
-			<h1>Projects using exordium</h1>
-				<h2>(2023) BlinkLinMulT</h2>
+			<h2>Projects using exordium</h2>
+				<h3>(2023) BlinkLinMulT</h3>
 					<p>LinMulT is trained for blink presence detection and eye state recognition tasks. Our results demonstrate comparable or superior performance compared to state-of-the-art models on 2 tasks, using 7 public benchmark databases.</p>
 					<ul>
 						<li><strong>paper</strong>: BlinkLinMulT: Transformer-based Eye Blink Detection</li>
 						<li><strong>code</strong>: https://github.com/fodorad/BlinkLinMulT</li>
 					</ul>
 
-				<h2>(2022) PersonalityLinMulT</h2>
+				<h3>(2022) PersonalityLinMulT</h3>
 					<p>LinMulT is trained for Big Five personality trait estimation using the First Impressions V2 dataset and sentiment estimation using the MOSI and MOSEI datasets.</p>
 					<ul>
 						<li><strong>paper</strong>: Multimodal Sentiment and Personality Perception Under Speech: A Comparison of Transformer-based Architectures</li>
 						<li><strong>code</strong>: https://github.com/fodorad/PersonalityLinMulT</li>
 					</ul>
 		</div>
+
+		<div class="d-flex mt-4 mb-4"><a id="button_contact" href="#" class="button mx-3">Details at the Top: Code</a></div>
 		<div id="footer-container"></div>
 
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

@@ -1,0 +1,48 @@
+
+.paper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.paper p {
+	margin: 0 0 1rem 0;
+	font-size: 1.4rem;
+	line-height: 1.6rem;
+	font-weight: 600;
+	text-align: center;
+}
+
+.paper h1 {
+	font-size: 2.5rem;
+}
+
+.abstract-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: justify;
+	margin: 0 0 2rem 0;
+}
+
+.abstract-container h2 {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+@media (max-width: 900px) {
+	.abstract-container {
+		width: 90%;
+	}
+}
+
+@media (min-width: 900px) {
+	.abstract-container {
+		width: 60%;
+	}
+}

@@ -120,6 +120,12 @@
 
 .tiles article > a h2 {
     margin: 0;
+    font-size: 1.8rem;
+}
+
+.tiles article > a p {
+    text-align: center;
+    font-size: 1.2rem;
 }
 
 .tiles article > a .content {

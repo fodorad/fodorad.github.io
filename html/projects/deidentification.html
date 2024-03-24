@@ -37,29 +37,77 @@
 		</header>
 
 		<div class="container">
-			<h1>Speech de-identification with deep neural networks</h1>
-			<img class="img-fluid rounded middle" src="../../images/projects/deidentification/pipeline.png" alt=""/>
+			<div class="paper">
+				<h1>Speech de-identification with deep neural networks</h1>
+				<p>Ádám Fodor, László Kopácsi, Zoltán Á. Milacski, András Lőrincz</p>
+			</div>
+
+			<img class="img-fluid rounded middle fit" src="../../images/projects/deidentification/pipeline.png" alt=""/>
 			<div class="d-flex mt-4 mb-4">
 				<a id="button_contact" href="../../pdf/2021_Fodor_Adam_CSCS_Deidentification.pdf" class="button mx-3">Paper</a>
 				<a id="button_contact" href="../../pdf/2018_Fodor_Adam_Kopacsi_Laszlo_Students_Scientific_Conference_Deidentification.pdf" class="button mx-3">Thesis</a>
 				<a id="button_contact" href="https://github.com/lkopi/deidentification" class="button primary mx-3">Code</a>
 			</div>
-			<h1>Abstract</h1>
-			<p>Cloud-based speech services are powerful practical tools but the privacy
-				of the speakers raises important legal concerns when exposed to the Internet.</p>
-			<p>We propose a deep neural network solution that removes personal characteristics 
-				from human speech by converting it to the voice of a Text-to-Speech
-				(TTS) system before sending the utterance to the cloud. The network learns
-				to transcode sequences of vocoder parameters, delta and delta-delta features
-				of human speech to those of the TTS engine.</p>
-			<p>We evaluated several TTS
-				systems, vocoders and audio alignment techniques. We measured the per-
-				formance of our method by (i) comparing the result of speech recognition
-				on the de-identified utterances with the original texts, (ii) computing the
-				Mel-Cepstral Distortion of the aligned TTS and the transcoded sequences,
-				and (iii) questioning human participants in A-not-B, 2AFC and 6AFC (Alternative 
-				Forced-Choice) tasks. Our approach achieves the level required by
-				diverse applications.</p>
+			
+			<div class="row">
+				<div class="col"></div>
+				<div class="col-6 abstract-container">
+					<div class="abstract">
+						<h2>Abstract</h2>
+						<p>Cloud-based speech services are powerful practical tools but the privacy
+							of the speakers raises important legal concerns when exposed to the Internet.
+							We propose a deep neural network solution that removes personal characteristics 
+							from human speech by converting it to the voice of a Text-to-Speech
+							(TTS) system before sending the utterance to the cloud. The network learns
+							to transcode sequences of vocoder parameters, delta and delta-delta features
+							of human speech to those of the TTS engine.
+							We evaluated several TTS
+							systems, vocoders and audio alignment techniques. We measured the per-
+							formance of our method by (i) comparing the result of speech recognition
+							on the de-identified utterances with the original texts, (ii) computing the
+							Mel-Cepstral Distortion of the aligned TTS and the transcoded sequences,
+							and (iii) questioning human participants in A-not-B, 2AFC and 6AFC (Alternative 
+							Forced-Choice) tasks. Our approach achieves the level required by
+							diverse applications.
+						</p>
+					</div>
+				</div>
+				<div class="col"></div>
+			</div>
+
+			<h2>Contribution</h2>
+				<ul>
+					<li>For de-identification, we propose to transform utterances to a generic voice of a Text-to-Speech (TTS) engine, by taking advantage of utterance-text sample pairs.
+						We use an end-to-end trainable Deep Neural Network (DNN) to learn the many-to-one VT task. We suggest to learn the mapping at vocoder level.</li>
+					<li>We show that the trained network gives rise to tolerable distortions at utterance level by conducting two experiments:
+						<ul>
+							<li>comparing the outputs of Google’s Automatic Speech Recognition (ASR) system for the original TTS output and the de-identified utterance and measuring the Mel-Cepstral Distortion (MCD).</li>
+							<li>To confirm de-identification success, we further performed three kind of perceptual listening studies with human subjects:
+								(A-not-B test: distinguishing transformed utterances of different speakers;
+								2-Alternative Forced-Choice (2AFC) test: classifying utterances from female/male speakers;
+								6-Alternative Forced-Choice (6AFC) test: estimating the number of speakers)
+						</ul>
+					</li>
+					<li>Our proposal is irreversible and it requires only speech-transcript sample pairs for training, which are readily accessible in the literature. We argue that our method performs favorably compared to several baseline methods.</li>
+				</ul>
+
+			<h2>Proposed method</h2>
+				<p>The proposed method combines preprocessing and deep learning for voice conversion and synthesis. 
+					Initially, TTS voices are generated using Festival and aligned with original speech via DTW. Data augmentation, like speed warping, enriches the dataset. 
+					Feature transformation employs diverse deep learning architectures such as Dense, ConvNet, and C-BLSTM. 
+					The pipeline involves TTS synthesis, alignment, augmentation, and feature transformation, aiming for high-fidelity voice conversion and synthesis.</p>
+			
+				<div class="row">
+					<div class="col d-flex justify-content-center align-items-center">
+						<img class="img-fluid rounded left small" src="../../images/projects/deidentification/preprocess.png" alt=""/>
+						<img class="img-fluid rounded middle very-small" src="../../images/projects/deidentification/dense.png" alt=""/>
+						<img class="img-fluid rounded right small" src="../../images/projects/deidentification/postprocess.png" alt=""/>
+					</div>
+				</div>
+
+			<h2>Visualization</h2>
+			<p>Explore the network's transformations: original inputs on the left, modified results on the right.
+				This straightforward presentation unveils the network's refining prowess, offering a practical view of its capabilities.</p>
 
 			<div class="row">
 				<div class="col d-flex justify-content-center align-items-center">
@@ -86,74 +134,9 @@
 				</div>
 			</div>
 
-			<h1>Task and motivation</h1>
-				<p>Cloud-based speech services have improved recently due to the large amount of voice
-					data that is exploited by deep learning technology, giving rise to superhuman 
-					performance in several tasks. Consequently, it seems reasonable to use such utilities
-					in practice.</p>
-				<p>Unfortunately, many speech applications involve legal concerns regarding privacy.
-					Several methods have been proposed to eliminate personal information from
-					samples without spoiling the linguistic content before uploading. We should also
-					mention, that in many cases the private information is carried by the linguistic
-					content and not by the voice of the speaker. For example, when a doctor dictates
-					medical records, the private content is the medical content and not the identity
-					of the doctor. But in the case of diagnostic sessions with autistic people, it is
-					the speaker whose identity should remain hidden. If an external ASR is used on
-					the transformed speech of a patient, the identity will remain concealed, and the
-					linguistic content can be generated safely.</p>
-				<p>Voice conversion (VC) operates by altering certain features of human speech.
-					Voice transformation (VT) converts the signal as if it was uttered by a target
-					speaker. De-identification is the process that intends to remove any personal
-					information from the data that could be associated with identity. VC and VT may
-					be applied to solve de-identification. </p>
-				
-			<h1>Proposed method</h1>
-				<p>For de-identification, we propose to transform
-					utterances to a generic voice of a Text-to-Speech (TTS) engine, by taking advantage of utterance-text sample pairs. 
-					We use an end-to-end trainable Deep Neural
-					Network (DNN) to learn the many-to-one VT task. We suggest to learn the mapping at vocoder level.</p>
-				<p>Vocoders are speech analysis and synthesis tools. With their help we can encode the
-					raw waveform to a more compressed representation that takes the human auditory
-					system into consideration. This is why the resulted features are generally better to
-					work with. We used the WORLD vocoder in our experiments.</p>
-			
-				<div class="row">
-					<div class="col d-flex justify-content-center align-items-center">
-						<img class="img-fluid rounded left small" src="../../images/projects/deidentification/preprocess.png" alt=""/>
-						<img class="img-fluid rounded middle very-small" src="../../images/projects/deidentification/dense.png" alt=""/>
-						<img class="img-fluid rounded right small" src="../../images/projects/deidentification/postprocess.png" alt=""/>
-					</div>
-				</div>
-
-				
-				
-
-			<h1>Results</h1>
-				<p>We show that the trained network gives rise to tolerable
-					distortions at utterance level by conducting two experiments: comparing the outputs of Google’s Automatic Speech Recognition (ASR) system for the original TTS
-					output and the de-identified utterance and measuring the Mel-Cepstral Distortion
-					(MCD).</p>
-				<img class="img-fluid rounded middle" src="../../images/projects/deidentification/table.png" alt=""/>
-				<p>To confirm de-identification success, we further performed three kind
-					of perceptual listening studies with human subjects (A-not-B test: distinguishing
-					transformed utterances of different speakers, 2-Alternative Forced-Choice (2AFC)
-					test: classifying utterances from female/male speakers, and 6-Alternative Forced-Choice (6AFC) test: 
-					estimating the number of speakers). Our proposal is irreversible and it requires only speech-transcript sample pairs for training, which are
-					readily accessible in the literature.</p>
-				<div class="row">
-					<div class="col d-flex justify-content-center align-items-center">
-						<img class="img-fluid rounded left" src="../../images/projects/deidentification/objective.png" alt=""/>
-						<img class="img-fluid rounded right" src="../../images/projects/deidentification/subjective.png" alt=""/>
-					</div>
-				</div>
-				<p>Our technique enables privacy-aware speech recognition. The proposed method is lightweight 
-					and can be used for collecting de-identified databases
-					when the privacy of the user is important, for example in cloud-based speech
-					services or in medical records. The fact that our method requires only speech-
-					transcript sample pairs is a very promising aspect for deep learning, which requires
-					large and high quality databases.</p>
-				<h1>BibTex</h1>
-				<pre><code class="bibtex">@article{fodor2021deidentification,
+			<h2>BibTex</h2>
+			<p>If you found our research helpful or influential please consider citing:</p>
+			<pre><code class="bibtex">@article{fodor2021deidentification,
    author={Fodor, Ádám and Kopácsi, László and Milacski, Zoltán Ádám and Lőrincz, András},
    title={Speech De-identification with Deep Neural Networks},
    journal={Acta Cybernetica},
@@ -166,6 +149,7 @@
 }</code></pre>
 		</div>
 
+		<div class="d-flex mt-4 mb-4"><a id="button_contact" href="#" class="button mx-3">Details at the Top: Paper</a></div>
 		<div id="footer-container"></div>
 
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

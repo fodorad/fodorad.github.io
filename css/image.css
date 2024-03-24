@@ -1,37 +1,18 @@
-img.fit {
-    display: block;
-    text-align: center;
-    margin: auto;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    width: 100%;
-}
-
 img.middle {
-    margin: 1rem 2rem 1rem 2rem;
-    width: 80%;
     display: block;
     margin: auto;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 80%;
 }
 
-img.middle.medium {
-    width: 60%;
-}
-
-img.middle.small {
-    width: 40%;
-}
-
-img.middle.very-small {
-    width: 15%;
+img.middle.fit {
+    width: 100%;
 }
 
 img.left,
 img.right {
-    margin: 0rem 2rem 0rem 2rem;
-    width: 40%;
+    margin: 1rem 2rem 1rem 2rem;
 }
 
 img.left {
@@ -42,11 +23,29 @@ img.right {
     float: right;
 }
 
-img.left.small,
-img.right.small {
-    width: 30%;
+img.left.medium,
+img.right.medium,
+img.middle.medium {
+    width: 60%;
 }
 
+img.left.small-ish,
+img.right.small-ish,
+img.middle.small-ish {
+    width: 50%;
+}
+
+img.left.small,
+img.right.small,
+img.middle.small {
+    width: 40%;
+}
+
+img.left.very-small,
+img.right.very-small,
+img.middle.very-small {
+    width: 20%;
+}
 
 .about_hero {
     -moz-transition: -moz-transform 0.5s ease, opacity 0.5s ease;
