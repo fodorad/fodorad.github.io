@@ -37,55 +37,58 @@
 		</header>
 
 		<div class="container">
-			<h1>Enhancing Apparent Personality Trait Analysis with Cross-Modal Embeddings</h1>
-			<img class="img-fluid rounded middle" src="../../images/projects/siamese/proposed-final.png" alt=""/>
+			<div class="paper">
+				<h1>Enhancing Apparent Personality Trait Analysis <br> with Cross-Modal Embeddings</h1>
+				<p>Ádám Fodor, Rachid R. Saboundji, András Lőrincz</p>
+			</div>
+			<img class="img-fluid rounded middle fit" src="../../images/projects/siamese/proposed-final.png" alt=""/>
 			<div class="d-flex mt-4 mb-4">
 				<a id="button_contact" href="../../pdf/2020_Fodor_Adam_MACS_Siamese.pdf" class="button mx-3">Paper</a>
 				<a id="button_contact" href="" class="button primary mx-3 disabled">Code is under refactoring</a>
 			</div>
 
-			<h1>Abstract</h1>
-				<p>Automatic personality trait assessment is essential for high-quality human-machine interactions. 
-					Systems capable of human behavior analysis could be used for self-driving cars,
-					medical research, and surveillance, among many others. We present a multimodal deep neural
-					network with a Siamese extension for apparent personality trait prediction trained on short
-					video recordings and exploiting modality invariant embeddings. Acoustic, visual, and textual
-					information are utilized to reach high-performance solutions in this task. 
-					Due to the highly centralized target distribution of the analyzed dataset, the changes in the third digit are relevant.
-					Our proposed method addresses the challenge of under-represented extreme values, achieves
-					0.0033 MAE average improvement, and shows a clear advantage over the baseline multimodal
-					DNN without the introduced module</p>
+			<div class="row">
+				<div class="col"></div>
+				<div class="col-6 abstract-container">
+					<div class="abstract">
+						<h2>Abstract</h2>
+						<p>Automatic personality trait assessment is essential for high-quality human-machine interactions. 
+							Systems capable of human behavior analysis could be used for self-driving cars,
+							medical research, and surveillance, among many others. We present a multimodal deep neural
+							network with a Siamese extension for apparent personality trait prediction trained on short
+							video recordings and exploiting modality invariant embeddings. Acoustic, visual, and textual
+							information are utilized to reach high-performance solutions in this task. 
+							Due to the highly centralized target distribution of the analyzed dataset, the changes in the third digit are relevant.
+							Our proposed method addresses the challenge of under-represented extreme values, achieves
+							0.0033 MAE average improvement, and shows a clear advantage over the baseline multimodal
+							DNN without the introduced module.</p>
+					</div>
+				</div>
+				<div class="col"></div>
+			</div>
 
-			<h1>Task and motivation</h1>
-				<p>Prediction of personality traits is an important task since it is useful for predicting decision-making
-					patterns of people with stable personality traits in diverse situations and detecting changes due
-					to, e.g., stress, drinking, drugs, and so on. One of the most studied model to describe personality
-					is the Big Five personality traits. The theory identifies five factors: EXTraversion, NEUroticism, AGReeableness, CONscientiousness, and OPEnness. 
-					Each personality trait represents a range
-					bounded by two extremes, e.g., for extraversion, the two ends are extreme extraversion and extreme
-					introversion.</p>
-				<p>Although multimodal systems offer advantages compared to monomodal systems, they raise
-					several challenges as well. For example, one faces the problems of selecting from the modalities to
-					be included into multimodal systems, deriving the architecture to fuse them, and attenuating errors
-					from noisy, missing, or underrepresented data. One specific characteristic of the First Impression V2
-					database is its unbalanced data distribution with fewer extreme samples. However, these examples
-					have much more significance and have priority in several use cases, including medication.</p>
+			<h2>Contribution</h2>
+				<ul>
+					<li>We propose a general-purpose learning framework to extract modality-invariant embeddings from multiple information sources with a Siamese network, emphasizing extreme examples and implicitly improving the multimodal fusion process.</li>
+					<li>We extended the Multi-Similarity loss to handle multiple apparent personality trait class labels simultaneously, besides using various input modalities. The problem with non-extreme examples is that one or more modalities contain inadequate information to aid the deep embedding process. To overcome this issue, we modified the sample selection of the so-called "online hard example mining procedure" of the triplet loss evaluation and put the emphasis onto the extreme samples to be detailed in the paper.</li>
+					<li>Although samples having lower or higher personality trait values are less frequent in the database, high-quality prediction of their values is desired in various situations. We show that cross-modal embedding enhances the prediction of the Big Five personality traits in the extreme cases.</li>
+				</ul>
 
-			<h1>Proposed method</h1>
-				<p>We propose a general-purpose learning framework to extract modality-invariant embeddings
-				from multiple information sources with a Siamese network, emphasizing extreme examples
-				and implicitly improving the multimodal fusion process.</p>
-				<p>We extended the Multi-Similarity loss to handle multiple apparent personality trait
-				class labels simultaneously, besides using various input modalities. The problem with nonextreme examples that one or more modalities contain inadequate information to aid the
-				deep embedding process. To overcome this issue, we modified the sample selection of the
-				so called "online hard example mining procedure" of the triplet loss evaluation and put the
-				emphasis onto the extreme samples to be detailed in the paper.</p>
-				<p>Although samples having lower or higher personality trait values are less frequent in the
-				database, high quality prediction of their values is desired in various situations. We show
-				that cross-modal embedding enhances the prediction of the Big Five personality traits in the
-				extreme cases.</p>
+			<h2>Proposed method</h2>
+			<p>In this work, we propose a multimodal deep neural network that combines features from visual,
+				acoustic, and textual clues to predict apparent Big-Five personality traits using short video clips
+				from the ChaLearn challenges. 
+			<p>We aim to create a shared coordinate space, transforming the audio, video, and text descriptors
+				into a semantically relevant form using a Siamese network. The triplet-based loss functions are
+				designed to encourage positive examples as close as possible to the so called anchor sample, and
+				negative examples to be separated from each other over a given threshold. Embedded vector and
+				auxiliary vector are interchangeably used for the outputs of the Siamese network. Higher precision
+				estimation of the extremes is one of our goals and we expect that multi-modal data enrichment
+				is advantageous in each trait. We use a DNN that combines tri-modal features along with the
+				embedded vectors to predict apparent personality traits from the short video clips.</p>
+			<p>To our best knowledge, this is the first work that introduces cross-modal embedding for personality trait prediction.</p>
 
-			<h1>Results</h1>
+			<h2>Visualization</h2>
 			<div class="row">
 				<div class="col d-flex justify-content-center align-items-center">
 					<div class="row">
@@ -94,9 +97,9 @@
 							study, we used the extended and revised dataset (V2). The dataset contains 10,000 video clips
 							extracted from more than 3,000 different YouTube high-definition videos of people mostly facing
 							and speaking to a camera.</p>
-							<p>Examples of the First Impression V2 dataset. For each video the ground truth Big Five
-								scores are provided. For each trait, the first two samples instantiate the high extremes, and the
-								last two examples demonstrate the low extremes of a given trait.</p>
+						<p>Examples of the First Impression V2 dataset. For each video the ground truth Big Five
+							scores are provided. For each trait, the first two samples instantiate the high extremes, and the
+							last two examples demonstrate the low extremes of a given trait.</p>
 						<p>One specialty of this dataset is that the target variables have unbalanced data distribution. The
 							regression-to-the-mean problem is emphasized because the scores follow a Gaussian distribution,
 							and the optimization process likely produces predictions near the mean of ground truth values to
@@ -104,13 +107,13 @@
 							Squared Error, however, it can produce higher gradients when the prediction is closer to the ground
 							truth.</p>
 						</div>
-					<img class="img-fluid rounded right" src="../../images/projects/siamese/db_samples.png" alt=""/>
+					<img class="img-fluid rounded right small" src="../../images/projects/siamese/db_samples.png" alt=""/>
 				</div>
 			</div>
-			
+
 			<div class="row">
 				<div class="col d-flex justify-content-center align-items-center">
-					<img class="img-fluid rounded left" src="../../images/projects/siamese/db_hists.png" alt=""/>
+					<img class="img-fluid rounded left small-ish" src="../../images/projects/siamese/db_hists.png" alt=""/>
 					<p>Annotation regarding the First Impressions V2 dataset consists of 5 continuous variables. Samples
 						can be grouped into different classes by splitting the [0, 1] interval to equal, smaller intervals. In
 						this work, we aim to differentiate extreme examples from ordinary samples based on the ground
@@ -131,30 +134,12 @@
 							(C4). In the (b) and (c), we emphasize embeddings within the two extreme poles of NEUroticism.</p>
 						<p></p>
 					</div>
-					<img class="img-fluid rounded right" src="../../images/projects/siamese/cross_2pca_reorder.png" alt=""/>
+					<img class="img-fluid rounded right small" src="../../images/projects/siamese/cross_2pca_reorder.png" alt=""/>
 				</div>
 			</div>
-			<p>We performed an ablation study with the used modalities to measure the added values of information sources. 
-				For the sake of comparison, a prior model obtained directly from the training labels
-				(by averaging) on this dataset was capable of obtaining close to 0.88 of R_acc at test stage
-				due to the highly centralized distribution. In turn, changes in the third digit are relevant. 
-				<p>The table
-				indicates that the video modality contains the most information, with an average score of 0.9074.
-				Apparent personality traits can be determined accurately using only a single frame: 0.9056 score
-				over the test set strengthens the statement of trait assignment among human observers can be as
-				fast as 100ms.</p>
-				<p>The bi-modal systems produce a clear performance jump in every single case
-				compared to the monomodal configurations. Furthermore, the "Audio + Video + Text" model
-				performed the expected best result: the different modalities supplement each other.</p>
-				<p>Thus, we can fairly compare the proposed method to the "Audio + Video + Text" baseline.
-				The table shows that our method performs more superior overall, emphasizing the improvement
-				produced by cross-modal embeddings from 0.9094 to 0.9127.</p>
-			<img class="img-fluid rounded middle medium" src="../../images/projects/siamese/table.png" alt=""/>
-			<p>To our best knowledge, this is the first work that introduces cross-modal embedding for per-
-			sonality trait prediction. The proposed learning framework is far from perfect. It could be further
-			developed, which is planned for future works.</p>
 
-			<h1>BibTex</h1>
+			<h2>BibTex</h2>
+			<p>If you found our research helpful or influential please consider citing:</p>
 			<pre><code class="bibtex">@article{fodor2021siamese,
    author = {Ádám Fodor, Rachid R. Saboundji, András Lőrincz},
    title = {Enhancing Apparent Personality Trait Analysis with Cross-Modal Embeddings},

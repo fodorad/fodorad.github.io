@@ -37,40 +37,59 @@
 		</header>
 
 		<div class="container">
-			<h1>Common Fate Based Episodic Segmentation by Combining Supervoxels with Deep Neural Networks</h1>
+			<div class="paper">
+				<h1>Common Fate Based Episodic Segmentation by Combining Supervoxels with Deep Neural Networks</h1>
+				<p>László Kopácsi, Áron Fóthi, Ádám Fodor, Ellák Somfai, András Lőrincz</p>
+			</div>
 			<img class="img-fluid rounded middle" src="../../images/projects/supervoxel_segmentation/segmentation.png" alt=""/>
 			<div class="d-flex mt-4 mb-4">
 				<a id="button_contact" href="../../pdf/2019_Fodor_Adam_IJCNN_SuperVoxel_OF.pdf" class="button mx-3">Paper</a>
 				<a id="button_contact" href="https://github.com/lkopi/common-fate-segmentation" class="button primary mx-3">Code</a>
 			</div>
-			<h1>Abstract  - TODO</h1>
-			<div class="col d-flex justify-content-center align-items-center">
-				<div class="row d-flex">
-				<p>We estimated the contribution of different factors in
-					segmentation tasks by means of deep neural networks. Results
-					indicated that texture and optical flow have similar power, but
-					they seem not to add up. In turn, we decided to study the
-					‘Common Fate Principle’ of the 100 years gestaltism suggesting
-					that elements that move together belong together. 
-					<p>We developed
-					a simple, fast, and efficient episodic segmentation method that
-					– to some extent – resembles the ‘how system’ of the visual
-					processing: we dropped every piece of information except motion,
-					and started from pure optical flow estimations on 2D videos.
-					For the sake of segmentation, we used a parallel and fast
-					hierarchical supervoxel algorithm.</p>
-					<p>We studied (i) grid topology
-					in space and time, (ii) 2D grid in space and topology dictated
-					by the optical flow in time, and (iii) added deep network based
-					depth estimation from 2D images. We measure performances on
-					episodic foreground-background segmentation task of the Davis
-					benchmark videos. Results are competitive to state-of-the-art
-					segmentation techniques.</p>
+
+			<div class="row">
+				<div class="col"></div>
+				<div class="col-6 abstract-container">
+					<div class="abstract">
+						<h2>Abstract</h2>
+						<p>We estimated the contribution of different factors in
+							segmentation tasks by means of deep neural networks. Results
+							indicated that texture and optical flow have similar power, but
+							they seem not to add up. In turn, we decided to study the
+							‘Common Fate Principle’ of the 100 years gestaltism suggesting
+							that elements that move together belong together. We developed
+							a simple, fast, and efficient episodic segmentation method that
+							– to some extent – resembles the ‘how system’ of the visual
+							processing: we dropped every piece of information except motion,
+							and started from pure optical flow estimations on 2D videos.
+							For the sake of segmentation, we used a parallel and fast
+							hierarchical supervoxel algorithm. We studied (i) grid topology
+							in space and time, (ii) 2D grid in space and topology dictated
+							by the optical flow in time, and (iii) added deep network based
+							depth estimation from 2D images. We measure performances on
+							episodic foreground-background segmentation task of the Davis
+							benchmark videos. Results are competitive to state-of-the-art
+							segmentation techniques.</p>
+					</div>
 				</div>
-				<img class="img-fluid rounded right small" src="../../images/projects/supervoxel_segmentation/dog-agility_OF.png" alt=""/>
+				<div class="col"></div>
 			</div>
-			<h1>Task and motivation</h1>
-				<p>We investigated the Common Fate Principle from gestaltism - which proposes that elements moving together belong together - and developed an episodic segmentation method based on motion, optical flow, and hierarchical supervoxel algorithm. The study utilized deep neural networks to estimate the contribution of different factors in segmentation tasks, showing that texture and optical flow have similar power but do not necessarily add up.</p>
+
+			<h2>Contribution</h2>
+			<ul>
+				<li>We introduce a novel, but simple method for episodic segmentation motivated by Gestalt principles with competitive performance on a benchmark problem. The method changes the topology of space according to motion.</li>
+				<li>We show the application of deep networks as adaptable sensors for optical flow and depth estimation and presenting their effects.</li>
+				<li>We also point to additional information pieces that should improve the performance of the method.</li>
+			</ul>
+
+			<h2>Proposed method</h2>
+				<p>We investigated the Common Fate Principle from gestaltism - which proposes that elements moving together belong together - 
+					and developed an episodic segmentation method based on motion, optical flow, and hierarchical supervoxel algorithm.</p>
+				<p>We used the novel deep learning PWC-Net method
+					for the estimation of the optical flow. This method exploits
+					a pyramidal computation that regularizes the optical flow by
+					diminishing the aperture problem through the pyramid based
+					spatial context.</p>
 				<p>For the sake of segmentation, we apply Boruvka’s algorithm,
 					a highly parallel and hierarchical supervoxel method that
 					can be seen as a special kind of spreading activation that finds
@@ -81,72 +100,43 @@
 					instants can be connected by means of the optical flow itself.
 					We study both cases. We also add monocular depth estimation
 					via a trained deep neural network.</p>
-				<p>Our contributions include (i) the introduction of a novel, but
-					simple method for episodic segmentation motivated by Gestalt
-					principles with competitive performance on a benchmark problem, (ii) changes to the topology of space according to motion,
-					(iii) the application of deep networks as adaptable sensors for
-					optical flow and depth estimation, and (iv) the studying of
-					their effects. We also point to additional information pieces
-					that should improve the performance of the method.</p>
+				<p>For a 2D image the vertices of the graph are the pixels, and
+					the edges connect neighboring pixels in the pixel grid.
+					In a sequence of video frames the pixels of the frames form
+					a 3D structure and elements of the structure become voxels.
+					A contiguous group of similar voxels, which has both spatial
+					and temporal extent, is a supervoxel.</p>
+				<p>We used two methods for computing supervoxels. 
+					In the first case, the topology of the
+					graph was defined by neighboring pixels within each frame
+					and the ‘neighboring’ pixels in time was also connected if
+					they had the same spatial position. In the other case, the edges
+					connecting pixels within a frame are the same as above, but
+					the edges connecting pixels in neighboring frames follow the
+					optical flow. The weights of the connections were determined
+					by considering the absolute values of the differences of the
+					optical flow components. In some experiments we also added
+					the differences of depth estimations to the weights.</p>
 
-			<h1>Proposed method</h1>
-			<p>We used the novel deep learning PWC-Net method
-				for the estimation of the optical flow. This method exploits
-				a pyramidal computation that regularizes the optical flow by
-				diminishing the aperture problem through the pyramid based
-				spatial context. It also uses a coarse-to-fine warping layer
-				for the CNN features to improve optical flow estimation:
-				warped features contribute to flow estimation via forming the
-				so called partial cost volumes, a concept borrowed from stereo
-				matching.</p>
-			<p>Boruvka’s Algorithm is a graph-based 2D superpixel segmentation algorithm has
-				been suggested by Wei et al. in 2018. The method is
-				based on building a hierarchy of merged regions, from which
-				a segmentation into an arbitrary number of superpixels can
-				be queried quickly. The order of the merges is determined by
-				Boruvka’s minimum spanning tree algorithm, where the most
-				similar regions are merged first.
-				For a 2D image the vertices of the graph are the pixels, and
-				the edges connect neighboring pixels in the pixel grid.
-				In a sequence of video frames the pixels of the frames form
-				a 3D structure and elements of the structure become voxels.
-				A contiguous group of similar voxels, which has both spatial
-				and temporal extent, is a supervoxel.</p>
-			<p>We used two methods for computing supervoxels. 
-				In the first case, the topology of the
-				graph was defined by neighboring pixels within each frame
-				and the ‘neighboring’ pixels in time was also connected if
-				they had the same spatial position. In the other case, the edges
-				connecting pixels within a frame are the same as above, but
-				the edges connecting pixels in neighboring frames follow the
-				optical flow. The weights of the connections were determined
-				by considering the absolute values of the differences of the
-				optical flow components. In some experiments we also added
-				the differences of depth estimations to the weights.</p>
-
-			<h1>Results</h1>
+			<h2>Visualization</h2>
+			<p>High quality examples for Common Fate Principle based segmentation. Middle row: case where occlusion spoils the
+			result. Columns in order from left to right: RGB image, supervoxel masks on the 1st, 4th, 8th, 12th and 16th frames.</p>
 			<img class="img-fluid rounded middle" src="../../images/projects/supervoxel_segmentation/examples.png" alt=""/>
 			<p>We presented that optical flow based segmentation has
 				strength by its own. We also found that optical flow based
 				information may spoil texture based segmentation in both
 				supervised and unsupervised settings, possibly due to the noise
 				content of optical flow estimation as well as to occlusions.</p>
-			<img class="img-fluid rounded middle" src="../../images/projects/supervoxel_segmentation/table.png" alt=""/>
-			<p>Our results suggest that episodic segmentation can take
-				advantage of the Common Fate Principle by using motion
-				information alone. Here we studied properties related strictly
-				to pattern coherence and left out information concerning
-				causality, occlusions and disocclusions. The pure motion based
-				information should gain considerable strength upon exploiting
-				textural information.</p>
-			<h1>BibTex</h1>
+
+			<h2>BibTex</h2>
+			<p>If you found our research helpful or influential please consider citing:</p>
 			<pre><code class="bibtex">@INPROCEEDINGS{8851697,
-	author={Kopácsi, László and Fóthi, Áron and Fodor, Ádám and Somfai, Ellák and Lőrincz, András},
-	booktitle={2019 International Joint Conference on Neural Networks (IJCNN)}, 
-	title={Common Fate Based Episodic Segmentation by Combining Supervoxels with Deep Neural Networks}, 
-	year={2019},
-	pages={1-7},
-	doi={10.1109/IJCNN.2019.8851697}
+   author={Kopácsi, László and Fóthi, Áron and Fodor, Ádám and Somfai, Ellák and Lőrincz, András},
+   booktitle={2019 International Joint Conference on Neural Networks (IJCNN)}, 
+   title={Common Fate Based Episodic Segmentation by Combining Supervoxels with Deep Neural Networks}, 
+   year={2019},
+   pages={1-7},
+   doi={10.1109/IJCNN.2019.8851697}
 }</code></pre>
 		</div>
 

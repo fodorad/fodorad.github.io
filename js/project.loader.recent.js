@@ -25,7 +25,7 @@ fetch('content/projects.json')
                 `<span class="tile-image">
                      <img src="${item.image}" alt="" />
                  </span>
-                 <a href="${item.page}">
+                 <a href="html/${item.page}">
                      <h2>${item.title}</h2>
                      <div class="content">
                          <p>${item.content}</p>

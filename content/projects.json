@@ -1,5 +1,12 @@
 [
   {
+    "year": 2024,
+    "image": "images/placeholder/pic06.jpg",
+    "title": "Group Personality",
+    "content": "Perceived Personality State Estimation in Dyadic and Small Group Interaction with Deep Learning Methods",
+    "page": "projects/grouppersonality.html"
+  },
+  {
     "year": 2023,
     "image": "images/placeholder/pic01.jpg",
     "title": "BlinkLinMulT",

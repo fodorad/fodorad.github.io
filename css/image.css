@@ -41,6 +41,12 @@ img.middle.small {
     width: 40%;
 }
 
+img.left.smaller,
+img.right.smaller,
+img.middle.smaller {
+    width: 30%;
+}
+
 img.left.very-small,
 img.right.very-small,
 img.middle.very-small {

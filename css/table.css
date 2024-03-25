@@ -17,8 +17,8 @@ table td {
     vertical-align: middle;
 }
 
-table tr .top {
-    vertical-align: top;
+table td {
+    vertical-align: right;
 }
 
 table th {
