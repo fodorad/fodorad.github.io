@@ -35,10 +35,11 @@
     "content": "Visualization.\nOpenGraphAU."
   },
   {
-    "date": "2023-04-23T12:20:40.001Z",
-    "data-tags": "literature code",
-    "image": "images/placeholder/pic05.jpg",
-    "title": "Convolutional filter visualization techniques",
-    "content": "This is the first sentence.\nThis is the second sentence."
+    "date": "2021-06-23T10:00:00.001Z",
+    "data-tags": "literature",
+    "image": "images/blog/saliency1/cover.PNG",
+    "title": "Saliency Maps I.",
+    "content": "This tutorial explores saliency map techniques in deep neural networks, aiding understanding and practical application.",
+    "page": "blog/saliency1.html"
   }
 ]

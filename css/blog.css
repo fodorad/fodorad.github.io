@@ -36,8 +36,10 @@
 }
 
 .tiles article.blog-post p {
-    font-size: 1rem;
-    margin: 0 0 0 1.25rem;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+    margin: 0 1.25rem 0 1.25rem;
+    text-align: justify;
 }
 
 .tiles article.blog-post ul {

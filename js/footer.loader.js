@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
         footerPath = "html/footer.html"
     } else if (fullPath.includes('/projects/')) {
         footerPath = "../../html/footer.html"
+    } else if (fullPath.includes('/blog/')) {
+        footerPath = "../../html/footer.html"
     }
 
     fetch(footerPath)
