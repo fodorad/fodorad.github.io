@@ -1,43 +1,44 @@
 [
   {
+    "date": "2023-04-23T12:20:40.001Z",
+    "data-tags": "literature code",
+    "image": "images/placeholder/pic04.jpg",
+    "title": "Return of heroes: HOTS Drafter",
+    "content": "Visualization.\nOpenGraphAU."
+  },
+  {
     "date": "2023-03-23T12:20:40.001Z",
-    "data-tags": "social code",
+    "data-tags": "code",
     "image": "images/placeholder/pic01.jpg",
-    "alt": "description",
-    "title": "Post about coding as a social activity",
+    "title": "Heart Rate Variability (HRV) preprocessing and visualization",
     "content": "This is the first sentence.\nThis is the second sentence."
   },
   {
     "date": "2023-04-22T12:20:40.001Z",
-    "data-tags": "literature code",
+    "data-tags": "code",
     "image": "images/placeholder/pic02.jpg",
-    "alt": "description",
-    "title": "Post about social literature review and coding",
-    "content": "This is the first sentence.\nThis is the second sentence."
+    "title": "Unconstrained gaze estimation with L2CS-Net",
+    "content": "Preprocessing and visualization.\nThis is the second sentence."
   },
   {
     "date": "2023-04-23T12:20:40.001Z",
-    "data-tags": "literature social code",
+    "data-tags": "literature code",
     "image": "images/placeholder/pic03.jpg",
-    "alt": "description",
-    "title": "Post about social activity with literature review and coding",
-    "content": "This is the first sentence.\nThis is the second sentence."
+    "title": "Gaze benchmark databases",
+    "content": "Visualization.\nInformation."
   },
   {
-    "date": "2023-05-21T12:20:40.001Z",
-    "data-tags": "code",
+    "date": "2023-04-23T12:20:40.001Z",
+    "data-tags": "literature code",
+    "image": "images/placeholder/pic04.jpg",
+    "title": "Action Units in action",
+    "content": "Visualization.\nOpenGraphAU."
+  },
+  {
+    "date": "2023-04-23T12:20:40.001Z",
+    "data-tags": "literature code",
     "image": "images/placeholder/pic05.jpg",
-    "alt": "description",
-    "title": "Post about coding",
+    "title": "Convolutional filter visualization techniques",
     "content": "This is the first sentence.\nThis is the second sentence."
-  },
-  {
-    "date": "2023-06-21T12:20:40.001Z",
-    "data-tags": "social",
-    "image": "images/placeholder/pic06.jpg",
-    "alt": "description",
-    "title": "Post about social activity",
-    "content": "This is the first sentence.\nThis is the second sentence.",
-    "page": "blog/saliency1.html"
   }
 ]
