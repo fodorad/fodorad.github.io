@@ -37,6 +37,7 @@
     "image": "images/placeholder/pic06.jpg",
     "alt": "description",
     "title": "Post about social activity",
-    "content": "This is the first sentence.\nThis is the second sentence."
+    "content": "This is the first sentence.\nThis is the second sentence.",
+    "page": "blog/saliency1.html"
   }
 ]

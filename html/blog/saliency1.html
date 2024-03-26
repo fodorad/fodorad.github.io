@@ -1,0 +1,162 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Adam Fodor portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../../css/styles.css" />
+		<noscript><div class="alert alert-warning" role="alert"><h2>Warning!</h2><p>This website requires JavaScript to function. Please enable JavaScript in your browser settings.</p></div></noscript>
+	</head>
+
+	<body class="is-preload">
+		<header>
+			<div id="menu-header">
+				<nav>
+					<ul>
+						<li><a href="#menu">Menu</a></li>
+					</ul>
+				</nav>
+			</div>
+
+			<nav id="menu">
+				<h2>
+					Menu
+					<span id="themeSwitch" class="theme-icon" aria-label="Toggle Theme"><i class="far fa-moon"></i></span>
+				</h2>
+				<ul>
+					<li><a href="../../index.html">Home</a></li>
+					<li><a href="../projects.html">Projects</a></li>
+					<li><a href="../blog.html">Blog</a></li>
+					<li><a href="../events.html">Events</a></li>
+					<li><a href="../teaching.html">Teaching</a></li>
+					<li><a href="../gallery.html">Gallery</a></li>
+					<li><a href="../about.html">About</a></li>
+				</ul>
+			</nav>		
+		</header>
+
+		<div class="container">
+			<div class="paper"><h1>Saliency Maps I.</h1></div>
+			<img class="img-fluid rounded middle small" src="../../images/" alt=""/>
+			<div class="d-flex mt-4 mb-4">
+				<a id="button_contact" href="" class="button mx-3">TODO</a>
+				<a id="button_contact" href="https://github.com/fodorad" class="button primary mx-3">Code</a>
+			</div>
+
+			<h2>Introduction</h2>
+				<p>Understanding the inner workings of deep neural networks (DNNs) is crucial for improving their performance and interpretability.
+					In recent years, the development of visualization techniques, particularly saliency maps, has provided insights into how DNNs make decisions.
+					Saliency maps highlight regions of input data that contribute most to the network's output, offering valuable interpretability in various applications,
+					particularly in computer vision tasks.</p>
+
+			<h2>Visualization techniques</h2>
+				<p>Saliency maps aim to uncover the features and patterns in input data that drive the decisions made by DNNs.
+					These maps provide visual explanations, aiding in understanding model behavior and improving trust in automated systems.
+					Through techniques such as Deconvolutional Network Approach, Gradient-Based Approach, Guided Backpropagation Algorithm, Class Activation Mapping (CAM),
+					Grad-CAM, Guided Grad-CAM, SmoothGrad, Grad x Image, and D-RISE, researchers have made significant strides in enhancing the interpretability of DNNs.</p>
+
+				<table>
+					<tr>
+						<th>Method</th>
+						<th>Description</th>
+						<th>Link</th>
+					</tr>
+					<tr>
+						<td>Deconvolutional Network Approach</td>
+						<td>Utilizes a multi-layered Deconvolutional Network to project feature activations back to the input pixel space.</td>
+						<td><a href="https://arxiv.org/pdf/1311.2901.pdf">Paper</a></td>
+					</tr>
+					<tr>
+						<td>Gradient-Based Approach (Vanilla)</td>
+						<td>Generates image-specific class saliency maps using back-propagation through a classification ConvNet.</td>
+						<td><a href="https://arxiv.org/pdf/1311.2901.pdf">Paper</a></td>
+					</tr>
+					<tr>
+						<td>Guided Backpropagation Algorithm</td>
+						<td>Performs a backward pass of activations to visualize the part of an image that activates a given neuron.</td>
+						<td><a href="https://arxiv.org/pdf/1412.6806.pdf">Paper</a></td>
+					</tr>
+					<tr>
+						<td>Class Activation Mapping (CAM) Approach</td>
+						<td>Highlights discriminative image regions used by a CNN to identify specific categories.</td>
+						<td><a href="https://arxiv.org/pdf/1512.04150.pdf">Paper</a></td>
+					</tr>
+					<tr>
+						<td>Grad-CAM</td>
+						<td>Utilizes gradients of a target concept flowing into the final convolutional layer to produce a coarse localization map.</td>
+						<td><a href="https://arxiv.org/pdf/1610.02391.pdf">Paper</a></td>
+					</tr>
+					<tr>
+						<td>Guided Grad-CAM</td>
+						<td>Extends Grad-CAM by combining fine-grained visualization techniques with its coarse-grained output.</td>
+						<td><a href="https://arxiv.org/pdf/1610.02391.pdf">Paper</a></td>
+					</tr>
+					<tr>
+						<td>SmoothGrad</td>
+						<td>Smooths sensitivity maps based on raw gradients using a Gaussian kernel to reduce noise.</td>
+						<td><a href="https://arxiv.org/pdf/1706.03825.pdf">Paper</a></td>
+					</tr>
+					<tr>
+						<td>Grad x Image</td>
+						<td>Produces saliency maps by taking the element-wise product of the input image and the gradient.</td>
+						<td><a href="https://arxiv.org/pdf/1311.2901.pdf">Paper</a></td>
+					</tr>
+					<tr>
+						<td>D-RISE</td>
+						<td>A black-box attribution technique for explaining object detectors via saliency maps, using input masking.</td>
+						<td><a href="https://arxiv.org/pdf/2006.03204.pdf">Paper</a></td>
+					</tr>
+				</table>
+			
+			<h2>Problem Definition</h2>
+				<p>Convolutional Neural Networks (CNNs) have become indispensable in computer vision, shining in tasks like CIFAR-10 and ImageNet 2012 classification. Yet, unraveling how they achieve such feats remains a puzzle. Despite their stellar performance, understanding their inner workings is still a challenge.</p>
+				<p>Imagine CNNs as layered puzzles. While we can easily see the outer layers, understanding the deeper ones is tougher. This lack of clarity hampers our ability to improve these models effectively.</p>
+				<p>Saliency maps are handy tools, that offer a clearer view of CNNs' internal operations by analyzing network activations. Let's embark on this journey together and decode the secrets of CNNs' success. Ready? Let's dive in!</p>
+			
+			<h2>Problem Definition</h2>
+				<p>The Deconvolutional Network Approach offers valuable insights into understanding higher-level representations within a CNN.
+					By employing a multi-layered Deconvolutional Network (DeconvNet), this technique projects feature activations back to the input pixel space,
+					shedding light on which patterns activate specific feature maps through top-down projections.</p>
+
+				<p>Let's illustrate this with an example. Suppose we have a 2D input image x<sub>i</sub>,
+					which is processed by a multi-layered CNN, such as VGG16, to generate a probability vector y<sub>i</sub> across 
+					C different classes. In the CNN architecture, each layer in the feature extractor applies operations like convolution, 
+					ReLU activation, or max pooling. Subsequently, fully-connected layers with ReLU activation produce logits, 
+					followed by a softmax function to derive class probabilities.</p>
+			
+				<p>Now, to map convolutional feature activities back to the input pixel space, we employ a Deconvolutional Network (DeconvNet).
+					The architecture of DeconvNet mirrors that of the backbone model, with layers arranged in reverse order. Notably, 
+					DeconvNet is not trained separately; instead, it utilizes the same weights as the corresponding layers in the backbone ConvNet.</p>
+			
+				<p>To reconstruct activation patterns in the backbone CNN, we isolate a specific feature map activation and input it into the corresponding DeconvNet layer.
+					Through a series of operations including unpooling, rectification, and filtering, activations from lower layers can be reconstructed.
+					This process offers valuable insights into the inner workings of the CNN, revealing how features are extracted and processed across different layers.</p>
+			
+			<h2>DeconvNet method</h2>
+				<img class="img-fluid rounded right small-ish" src="../../images/blog/saliency1/deconvnet_architecture.PNG" alt=""/>
+
+				<p>To achieve activation reconstruction, the Deconvolutional Network Approach employs several key strategies:</p>
+
+				<ul>
+					<li>Handling Max Pooling: Max pooling, while effective for down-sampling, is non-invertible. To approximate its inverse, the approach records the locations of max values within each pooling region, storing them as "switches" for later unpooling.</li>
+					<li>Ensuring Positivity: Convolutional Neural Networks (CNNs) typically utilize ReLU activation functions, ensuring that feature maps remain positive. This positivity is crucial for DeconvNet reconstructions, where ReLU activations are also employed.</li>
+					<li>Utilizing Learned Filters: CNNs employ learned filters to extract feature maps at each layer. In contrast, DeconvNet utilizes transposed versions of these filters. However, these filters are applied to rectified maps rather than the output of the layer beneath.</li>
+				</ul>
+
+				<p>When projecting down from higher layers, the switch settings generated by max pooling in the ConvNet are utilized. These settings, specific to each input image, guide the reconstruction process. As a result, the reconstruction obtained from a single activation resembles a portion of the original input image, with structures weighted based on their contribution to the feature activation.</p>
+				<p>Examining reconstructed features from top activations alongside corresponding input images provides valuable insights. It's important to note that these reconstructions aren't generated samples; rather, they are reconstructed patterns that induce high activations in specific feature maps. This approach doesn't involve a generative process but instead reconstructs patterns to understand their contribution to feature activations.</p>
+
+		</div>
+
+		<div class="d-flex mt-4 mb-4"><a id="button_contact" href="#" class="button mx-3">To the top</a></div>
+		<div id="footer-container"></div>
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>	
+		<script src="https://kit.fontawesome.com/a8f44bbdfa.js"></script>
+		<script src="../../js/menu.js"></script>
+		<script src="../../js/pre-load.js"></script>
+		<script src="../../js/footer.loader.js"></script>
+	</body>
+</html>
