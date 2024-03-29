@@ -1,5 +1,13 @@
 [
   {
+    "date": "2021-06-23T10:00:00.001Z",
+    "data-tags": "literature",
+    "image": "images/blog/saliency1/cover.PNG",
+    "title": "Unlocking the Black Box with Saliency Maps",
+    "content": "Unravel the mystery of AI decisions with saliency maps, a pivotal tool in making artificial intelligence transparent and understandable.",
+    "page": "blog/saliency.html"
+  },
+  {
     "date": "2023-04-23T12:20:40.001Z",
     "data-tags": "literature code",
     "image": "images/placeholder/pic04.jpg",
@@ -33,13 +41,5 @@
     "image": "images/placeholder/pic04.jpg",
     "title": "Action Units in action",
     "content": "Visualization.\nOpenGraphAU."
-  },
-  {
-    "date": "2021-06-23T10:00:00.001Z",
-    "data-tags": "literature",
-    "image": "images/blog/saliency1/cover.PNG",
-    "title": "Saliency Maps I.",
-    "content": "This tutorial explores saliency map techniques in deep neural networks, aiding understanding and practical application.",
-    "page": "blog/saliency1.html"
   }
 ]

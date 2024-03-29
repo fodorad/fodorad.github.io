@@ -17,7 +17,7 @@ fetch('content/blog_posts.json')
             blogPost.setAttribute('data-tags', item['data-tags']);
 
             blogPost.innerHTML =
-                `<a href="html/generic.html">
+                `<a href="html/${item.page}">
                  <img src="../${item.image}" alt="${item.alt}">
                  </a>
                  <ul>
