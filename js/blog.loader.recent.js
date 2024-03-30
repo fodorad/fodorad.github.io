@@ -8,7 +8,7 @@ fetch('content/blog_posts.json')
 
         data.forEach((item, index) => {
 
-            if (index >= breakAfterIndex) {
+            if (index >= breakAfterIndex || !item.date) {
                 return;
             }
 
