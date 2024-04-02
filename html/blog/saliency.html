@@ -41,7 +41,7 @@
 			<img class="img-fluid rounded middle" src="../../images/blog/saliency1/cover2.PNG" alt=""/>
 			<div class="d-flex mt-4 mb-4">
 				<a id="button_contact" href="https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=saliency+maps+cnn&btnG=&oq=saliency+maps" class="button mx-3">More literature</a>
-				<a id="button_contact" href="https://github.com/fodorad" class="button primary mx-3">Code</a>
+				<a id="button_contact" href="https://github.com/fodorad/exordium/blob/main/exordium/visualization/saliency.py" class="button primary mx-3">Code</a>
 			</div>
 
 			<h2>Introduction</h2>
@@ -63,47 +63,47 @@
 						<th>Link</th>
 					</tr>
 					<tr>
-						<td>Deconvolutional Network Approach</td>
+						<td><a href="#Deconvolutional Network Approach">Deconvolutional Network Approach</a></td>
 						<td>Utilizes a multi-layered Deconvolutional Network to project feature activations back to the input pixel space.</td>
 						<td><a href="https://arxiv.org/pdf/1311.2901.pdf">Paper</a></td>
 					</tr>
 					<tr>
-						<td>Gradient-Based Approach (Vanilla)</td>
+						<td><a href="#Gradient-Based Approach (Vanilla)">Gradient-Based Approach (Vanilla)</a></td>
 						<td>Generates image-specific class saliency maps using back-propagation through a classification ConvNet.</td>
 						<td><a href="https://arxiv.org/pdf/1311.2901.pdf">Paper</a></td>
 					</tr>
 					<tr>
-						<td>Guided Backpropagation Algorithm</td>
+						<td><a href="#Guided Backpropagation Algorithm">Guided Backpropagation Algorithm</a></td>
 						<td>Performs a backward pass of activations to visualize the part of an image that activates a given neuron.</td>
 						<td><a href="https://arxiv.org/pdf/1412.6806.pdf">Paper</a></td>
 					</tr>
 					<tr>
-						<td>Class Activation Mapping (CAM) Approach</td>
+						<td><a href="#Class Activation Mapping (CAM) Approach">Class Activation Mapping (CAM) Approach</a></td>
 						<td>Highlights discriminative image regions used by a CNN to identify specific categories.</td>
 						<td><a href="https://arxiv.org/pdf/1512.04150.pdf">Paper</a></td>
 					</tr>
 					<tr>
-						<td>Grad-CAM</td>
+						<td><a href="#Grad-CAM">Grad-CAM</a></td>
 						<td>Utilizes gradients of a target concept flowing into the final convolutional layer to produce a coarse localization map.</td>
 						<td><a href="https://arxiv.org/pdf/1610.02391.pdf">Paper</a></td>
 					</tr>
 					<tr>
-						<td>Guided Grad-CAM</td>
+						<td><a href="#Grad-CAM">Guided Grad-CAM</a></td>
 						<td>Extends Grad-CAM by combining fine-grained visualization techniques with its coarse-grained output.</td>
 						<td><a href="https://arxiv.org/pdf/1610.02391.pdf">Paper</a></td>
 					</tr>
 					<tr>
-						<td>SmoothGrad</td>
+						<td><a href="#SmoothGrad">SmoothGrad</a></td>
 						<td>Smooths sensitivity maps based on raw gradients using a Gaussian kernel to reduce noise.</td>
 						<td><a href="https://arxiv.org/pdf/1706.03825.pdf">Paper</a></td>
 					</tr>
 					<tr>
-						<td>Grad x Image</td>
+						<td><a href="#Grad x Image">Grad x Image</a></td>
 						<td>Produces saliency maps by taking the element-wise product of the input image and the gradient.</td>
 						<td><a href="https://arxiv.org/pdf/1311.2901.pdf">Paper</a></td>
 					</tr>
 					<tr>
-						<td>D-RISE</td>
+						<td><a href="#D-RISE">D-RISE</a></td>
 						<td>A black-box attribution technique for explaining object detectors via saliency maps, using input masking.</td>
 						<td><a href="https://arxiv.org/pdf/2006.03204.pdf">Paper</a></td>
 					</tr>
@@ -114,7 +114,7 @@
 				<p>Imagine CNNs as layered puzzles. While we can easily see the outer layers, understanding the deeper ones is tougher. This lack of clarity hampers our ability to improve these models effectively.</p>
 				<p>Saliency maps are handy tools, that offer a clearer view of CNNs' internal operations by analyzing network activations. Let's embark on this journey together and decode the secrets of CNNs' success. Ready? Let's dive in!</p>
 
-			<h2>Deconvolutional Network Approach</h2>
+			<h2 id="Deconvolutional Network Approach">Deconvolutional Network Approach</h2>
 				<div class="row">
 					<div class="col d-flex justify-content-center align-items-center">
 						<div class="row">
@@ -134,7 +134,8 @@
 				<p>By employing DeconvNet, we can isolate and reconstruct the activations of specific features. This not only helps us understand the feature extraction process but also illustrates the model's focus on particular aspects of the input image. Such insights are vital for improving model interpretability and trustworthiness.</p>
 				<img class="img-fluid rounded middle" src="../../images/blog/saliency1/deconvnet_activations.PNG" alt=""/>
 
-			<h2>Gradient-Based Approach (Vanilla)</h2>
+				
+			<h2 id="Gradient-Based Approach (Vanilla)">Gradient-Based Approach (Vanilla)</h2>
 				<p>The Gradient-Based Approach enriches our understanding of CNNs by producing class-specific saliency maps through a single back-propagation pass. It highlights influential areas in an image for specific classifications.</p>
 				
 				<p>Advantages include:</p>
@@ -154,7 +155,7 @@
 				
 				<p>The Gradient-Based Approach is versatile, applicable to any CNN layer type, and provides a foundation for further visualization techniques, bridging the understanding between direct input influence and model output.</p>
 
-			<h2>Guided Backpropagation Algorithm</h2>
+			<h2 id="Guided Backpropagation Algorithm">Guided Backpropagation Algorithm</h2>
 				<div class="row">
 					<div class="col d-flex justify-content-center align-items-center">
 						<div class="row">
@@ -174,7 +175,7 @@
 				<img class="img-fluid rounded middle" src="../../images/blog/saliency1/guided_backprop_out.PNG" alt=""/>
 				<p>This method uniquely contributes by introducing a guiding signal from the output layer back through the network, improving the interpretability of CNNs by highlighting the parts of the input image most relevant to the model's decision-making process.</p>
 				
-			<h2>Class Activation Mapping (CAM) Approach</h2>
+			<h2 id="Class Activation Mapping (CAM) Approach">Class Activation Mapping (CAM) Approach</h2>
 				<p>CAM offers insights into how different units in a CNN's last convolutional layer influence class identification. By analyzing the activations \( f_k(x, y) \) of unit \( k \) at each spatial location \( (x, y) \) and performing global average pooling, we can gauge the overall importance of each unit \( k \) for the model's decision-making process.</p>
 				
 				<p>The essence of CAM lies in how it links these activations to specific classes. The model's prediction for class \( c \) is influenced by the weighted sum of all unit activations, where each weight \( w_k^c \) signifies the relevance of unit \( k \)'s activation to class \( c \). The resulting CAM saliency map visually represents this relationship, highlighting areas of the image most pertinent to its classification.</p>
@@ -182,7 +183,7 @@
 				<img class="img-fluid rounded middle" src="../../images/blog/saliency1/cam_method.PNG" alt=""/>
 				<p>CAM effectively demonstrates the specialization of network units in recognizing classes. Utilizing Global Average Pooling (GAP) and weighted contributions, it reveals class-specific feature importance, enhancing our understanding of how CNNs discern and categorize visual information.</p>
 				
-			<h2>Grad-CAM and Guided Grad-CAM</h2>
+			<h2 id="Grad-CAM">Grad-CAM and Guided Grad-CAM</h2>
 				<div class="row">
 					<div class="col d-flex justify-content-center align-items-center">
 						<div class="row">
@@ -216,7 +217,7 @@
 					</div>
 				</div>
 
-			<h2>SmoothGrad method</h2>
+			<h2 id="SmoothGrad">SmoothGrad method</h2>
 				<p>SmoothGrad enhances traditional gradient-based saliency maps by addressing their common issue of visual noise. By integrating Gaussian noise into the input image and averaging the outcomes, SmoothGrad produces clearer, more reliable sensitivity maps.</p>
 				<p>At its core, SmoothGrad applies a simple yet effective technique to improve map clarity:</p>
 				<ul class="blog">
@@ -234,13 +235,13 @@
 				</div>
 				<p>This method effectively reduces the noise in gradient-based visualizations, making it easier to identify the features most relevant to the model's predictions.</p>
 
-			<h2>Grad x Image method</h2>
+			<h2 id="Grad x Image">Grad x Image method</h2>
 				<p>Another approach to generating saliency maps involves taking the element-wise product of the input image \( x_0 \) and the gradient, which effectively mitigates "gradient saturation" and diminishes visual diffusion.</p>
 				<img class="img-fluid rounded middle" src="../../images/blog/saliency1/grad_x_image_output.PNG" alt=""/>
 				<p>To implement this straightforward method, simply multiply the outcome of the Guided Backpropagation Algorithm with the input image. It's a simple yet potent combination — truly the best of both worlds!</p>
 			
 
-			<h2>D-RISE method</h2>
+			<h2 id="D-RISE">D-RISE method</h2>
 				<p>D-RISE (Detector Randomized Input Sampling for Explanation) addresses the challenge of explaining object detection models, extending the input masking technique from RISE to analyze complex detection tasks. This method allows for the exploration of model decisions without intricate gradient analyses or model-specific assumptions.</p>
 				<img class="img-fluid rounded middle" src="../../images/blog/saliency1/drise_method.PNG" alt=""/>
 				<p>D-RISE is a black-box attribution technique that uses randomized input masking to elucidate how object detectors make decisions. It generates saliency maps by assessing the impact of masked regions on the model's output, offering a generalized and straightforward approach to model explanation.</p>
