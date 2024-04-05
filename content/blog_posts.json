@@ -1,13 +1,20 @@
 [
   {
-    "date": "",
-    "data-tags": "code",
-    "image": "images/placeholder/pic02.jpg",
-    "title": "Unconstrained gaze estimation with L2CS-Net",
-    "content": "Preprocessing and visualization.\nApplication!"
+    "date": "2024-06-14T14:00:00.001Z",
+    "data-tags": "demo code",
+    "image": "images/placeholder/soon.jpg",
+    "title": "L2CS-Net Knows Where You Look!",
+    "content": "Unconstrained gaze estimation with L2CS-Net. \nStay tuned, it's just around the corner!"
   },
   {
-    "date": "2021-12-06T10:00:00.001Z",
+    "date": "2024-08-14T14:00:00.001Z",
+    "data-tags": "demo code",
+    "image": "images/placeholder/soon.jpg",
+    "title": "Decoding Silence: Unveiling the Art of Lip Reading!",
+    "content": "Lip reading in the wild. \nStay tuned, it's just around the corner!"
+  },
+  {
+    "date": "2023-12-06T10:00:00.001Z",
     "data-tags": "literature",
     "image": "images/blog/saliency1/cover.PNG",
     "title": "Unlocking the Black Box with Saliency Maps",
