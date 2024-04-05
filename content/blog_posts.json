@@ -1,6 +1,13 @@
 [
   {
     "date": "",
+    "data-tags": "literature code",
+    "image": "images/placeholder/pic04.jpg",
+    "title": "Action Units in action",
+    "content": "Visualization.\nOpenGraphAU."
+  },
+  {
+    "date": "",
     "data-tags": "code",
     "image": "images/placeholder/pic02.jpg",
     "title": "Unconstrained gaze estimation with L2CS-Net",
@@ -39,7 +46,14 @@
     "date": "",
     "data-tags": "literature code",
     "image": "images/placeholder/pic04.jpg",
-    "title": "Action Units in action",
-    "content": "Visualization.\nOpenGraphAU."
+    "title": "AV Sync",
+    "content": "Visualization.\nInformation."
+  },
+  {
+    "date": "",
+    "data-tags": "literature code",
+    "image": "images/placeholder/pic05.jpg",
+    "title": "lip reading",
+    "content": "Visualization.\nInformation."
   }
 ]

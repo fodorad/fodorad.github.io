@@ -12,6 +12,9 @@ fetch('content/blog_posts.json')
                 return;
             }
 
+            const originalDate = new Date(item.date);
+            const formattedDate = `${originalDate.getUTCFullYear()}.${(originalDate.getUTCMonth() + 1).toString().padStart(2, '0')}.${originalDate.getUTCDate().toString().padStart(2, '0')}`;
+
             const blogPost = document.createElement('article');
             blogPost.classList.add('blog-post');
             blogPost.setAttribute('data-tags', item['data-tags']);
@@ -24,6 +27,7 @@ fetch('content/blog_posts.json')
                      ${item['data-tags'].split(' ').map(tag => `<li class="tag" data-filter="${tag}">${tag}</li>`).join('')}
                  </ul>
                  <h2>${item.title}</h2>
+                 <h3>${formattedDate}</h3>
                  ${item.content.split('\n').map(sentence => `<p>${sentence}</p>`).join('')}`;
 
             blogContainer.appendChild(blogPost);

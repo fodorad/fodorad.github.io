@@ -35,6 +35,13 @@
     text-transform: capitalize;
 }
 
+.tiles article.blog-post h3 {
+    font-size: 1.0rem;
+    line-height: 1.2rem;
+    margin: 0 0.25rem 0.5rem 1.25rem;
+    text-transform: capitalize;
+}
+
 .tiles article.blog-post p {
     font-size: 0.8rem;
     line-height: 1.2rem;
