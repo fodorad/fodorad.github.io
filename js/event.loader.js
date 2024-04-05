@@ -27,7 +27,7 @@ fetch('../content/events.json')
                  <h3>${formattedDate}</h3>
                  ${item.content.split('\n').map(sentence => `<p>${sentence}</p>`).join('')}
                  <p>
-                 ${galleryTagsLink ? `<a href="html/${galleryTagsLink}">[Gallery]</a>` : ''}
+                 ${galleryTagsLink ? `<a href="${galleryTagsLink}">[Gallery]</a>` : ''}
                  ${siteLink? `${siteLink}`: ''}
                  </p>`;
  
