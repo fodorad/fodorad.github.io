@@ -24,6 +24,13 @@
   {
     "date": "",
     "data-tags": "literature code",
+    "image": "images/placeholder/pic03.jpg",
+    "title": "Action Units in action",
+    "content": "Visualization.\nOpenGraphAU."
+  },
+  {
+    "date": "",
+    "data-tags": "literature code",
     "image": "images/placeholder/pic04.jpg",
     "title": "Return of heroes: HOTS Drafter",
     "content": "Visualization.\nOpenGraphAU."
@@ -46,7 +53,14 @@
     "date": "",
     "data-tags": "literature code",
     "image": "images/placeholder/pic04.jpg",
-    "title": "Action Units in action",
-    "content": "Visualization.\nOpenGraphAU."
+    "title": "AV Sync",
+    "content": "Visualization.\nInformation."
+  },
+  {
+    "date": "",
+    "data-tags": "literature code",
+    "image": "images/placeholder/pic05.jpg",
+    "title": "lip reading",
+    "content": "Visualization.\nInformation."
   }
 ]
