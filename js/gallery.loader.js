@@ -28,10 +28,19 @@ function populateTagContainer() {
         tagElement.textContent = tag;
         tagElement.classList.add('gallery_tag');
         tagElement.addEventListener('click', () => filterByTag(tag));
+
+        const tagExistsInContainer = (container) => {
+            return Array.from(container.children).some(child => child.textContent === tag);
+        };
+
         if (/^\d{4}$/.test(tag)) {
-            tagYearContainer.appendChild(tagElement);
+            if (!tagExistsInContainer(tagYearContainer)) {
+                tagYearContainer.appendChild(tagElement);
+            }
         } else {
-            tagInfoContainer.appendChild(tagElement);
+            if (!tagExistsInContainer(tagInfoContainer)) {
+                tagInfoContainer.appendChild(tagElement);
+            }
         }
 
         if (activeTags.includes(tag)) {

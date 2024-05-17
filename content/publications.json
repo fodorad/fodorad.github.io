@@ -6,7 +6,8 @@
     "details": "MDPI Journal of Imaging, vol. 9-10, 196, 2023",
     "link": {
       "pdf": "pdf/2023_Fodor_Adam_MDPI_BlinkLinMulT.pdf",
-      "webpage": "https://www.mdpi.com/2313-433X/9/10/196"
+      "webpage": "https://www.mdpi.com/2313-433X/9/10/196",
+      "project": "projects/blinklinmult.html"
     }
   },
   {
@@ -16,7 +17,8 @@
     "details": "arXiv preprint arXiv:2211.04979, 2022",
     "link": {
       "pdf": "pdf/2022_Fodor_Adam_Group_Personality.pdf",
-      "webpage": "https://arxiv.org/abs/2211.04979"
+      "webpage": "https://arxiv.org/abs/2211.04979",
+      "project": "projects/group_affect.html"
     }
   },
   {
@@ -26,7 +28,8 @@
     "details": "Understanding Social Behavior in Dyadic and Small Group Interactions (PMLR), pp. 218-241, 2022",
     "link": {
       "pdf": "pdf/2021_Fodor_Adam_PMLR_Personality_LinMulT.pdf",
-      "webpage": "https://proceedings.mlr.press/v173/fodor22a.html"
+      "webpage": "https://proceedings.mlr.press/v173/fodor22a.html",
+      "project": "projects/personalitylinmult.html"
     }
   },
   {
@@ -36,7 +39,8 @@
     "details": "Acta Cybernetica, vol. 25-2, pp. 257-269, 2021",
     "link": {
       "pdf": "pdf/2021_Fodor_Adam_CSCS_Deidentification.pdf",
-      "webpage": "https://cyber.bibl.u-szeged.hu/index.php/actcybern/article/view/4178"
+      "webpage": "https://cyber.bibl.u-szeged.hu/index.php/actcybern/article/view/4178",
+      "project": "projects/deidentification.html"
     }
   },
   {
@@ -46,7 +50,8 @@
     "details": "Pattern Recognition, vol. 116, 107932, 2021",
     "link": {
       "pdf": "pdf/2021_Fodor_Adam_PR_AHFS.pdf",
-      "webpage": "https://www.sciencedirect.com/science/article/pii/S0031320321001199"
+      "webpage": "https://www.sciencedirect.com/science/article/pii/S0031320321001199",
+      "project": "projects/ahfs.html"
     }
   },
   {
@@ -55,7 +60,9 @@
     "title": "Enhancing Apparent Personality Trait Analysis with Cross-Modal Embeddings",
     "details": "13th Joint Conference on Mathematics and Computer Science, pp. 1-14, 2020",
     "link": {
-      "pdf": "pdf/2020_Fodor_Adam_MACS_Siamese.pdf"
+      "pdf": "pdf/2020_Fodor_Adam_MACS_Multimodal.pdf",
+      "webpage": "https://arxiv.org/abs/2405.03846",
+      "project": "projects/deep_metric_learning.html"
     }
   },
   {
@@ -65,7 +72,8 @@
     "details": "International Joint Conference on Neural Networks (IJCNN), pp. 1-7, 2019",
     "link": {
       "pdf": "pdf/2019_Fodor_Adam_IJCNN_Skeleton.pdf",
-      "webpage": "https://ieeexplore.ieee.org/abstract/document/8852391"
+      "webpage": "https://ieeexplore.ieee.org/abstract/document/8852391",
+      "project": "projects/skeletonization.html"
     }
   },
   {
@@ -75,7 +83,8 @@
     "details": "International Joint Conference on Neural Networks (IJCNN), pp. 1-7, 2019",
     "link": {
       "pdf": "pdf/2019_Fodor_Adam_IJCNN_SuperVoxel_OF.pdf",
-      "webpage": "https://ieeexplore.ieee.org/abstract/document/8851697"
+      "webpage": "https://ieeexplore.ieee.org/abstract/document/8851697",
+      "project": "projects/supervoxel_segmentation.html"
     }
   },
   {

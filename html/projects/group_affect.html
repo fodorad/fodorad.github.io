@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Adam Fodor portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../../css/styles.css" />
+		<noscript><div class="alert alert-warning" role="alert"><h2>Warning!</h2><p>This website requires JavaScript to function. Please enable JavaScript in your browser settings.</p></div></noscript>
+	</head>
+
+	<body class="is-preload">
+		<header>
+			<div id="menu-header">
+				<nav>
+					<ul>
+						<li><a href="#menu">Menu</a></li>
+					</ul>
+				</nav>
+			</div>
+
+			<nav id="menu">
+				<h2>
+					Menu
+					<span id="themeSwitch" class="theme-icon" aria-label="Toggle Theme"><i class="far fa-moon"></i></span>
+				</h2>
+				<ul>
+					<li><a href="../../index.html">Home</a></li>
+					<li><a href="../projects.html">Projects</a></li>
+					<li><a href="../blog.html">Blog</a></li>
+					<li><a href="../events.html">Events</a></li>
+					<li><a href="../teaching.html">Teaching</a></li>
+					<li><a href="../gallery.html">Gallery</a></li>
+					<li><a href="../about.html">About</a></li>
+				</ul>
+			</nav>		
+		</header>
+
+		<div class="container">
+			<div class="paper">
+				<h1>Perceived Personality State Estimation in Dyadic and Small Group Interaction with Deep Learning Methods</h1>
+				<p>Kristian Fenech, Ádám Fodor, Sean P. Bergeron, <br> Rachid R. Saboundji, Catharine Oertel, András Lőrincz</p>
+			</div>
+			<img class="img-fluid rounded middle" src="../../images/projects/group_affect/cover.png" alt=""/>
+			<div class="d-flex mt-4 mb-4">
+				<a id="button_contact" target="_blank" href="../../pdf/2022_Fodor_Adam_Group_Personality.pdf" class="button mx-3">Paper</a>
+				<a id="button_contact" target="_blank" href="" class="button primary mx-3 disabled">Code will be released upon acceptance</a>
+			</div>
+
+			<div class="row">
+				<div class="col"></div>
+				<div class="col-6 abstract-container">
+					<div class="abstract">
+						<h2>Abstract</h2>
+						<p>Dyadic and small group collaboration is an evolutionary advantageous behaviour and the need for
+							such collaboration is a regular occurrence in day to day life. In this paper we estimate the perceived
+							personality traits of individuals in dyadic and small groups over thin-slices of interaction on four
+							multimodal datasets. We find that our transformer based predictive model performs similarly to
+							human annotators tasked with predicting the perceived big-five personality traits of participants.
+							Using this model we analyse the estimated perceived personality traits of individuals performing tasks
+							in small groups and dyads. Permutation analysis shows that in the case of small groups undergoing
+							collaborative tasks, the perceived personality of group members clusters, this is also observed for
+							dyads in a collaborative problem solving task, but not in dyads under non-collaborative task settings.
+							Additionally, we find that the group level average perceived personality traits provide a better predictor
+							of group performance than the group level average self-reported personality traits.</p>
+					</div>
+				</div>
+				<div class="col"></div>
+			</div>
+
+			<h2>Research Questions</h2>
+				<p>Using estimates on perceived personality applied to both small groups and dyads involved in a task
+				oriented interaction we examine the time-averaged personality states of group members in order to address
+				the following research questions:</p>
+				<ul>
+					<li>How reliably does the perceived personality estimator perform in out-of-domain sessions compared to human annotators?</li>
+					<li>Does the perceived personality of members within a group cluster?</li>
+					<li>Is the group-level perceived personality a stronger predictor of group performance than self-reported personality?</li>
+				</ul>
+
+			<h2>Proposed method</h2>
+			<p>In order to approach these research questions we examine multiple datasets which focus on dyadic and
+				small group interaction. Importantly, we justify the generalisability of the developed method we make
+				use of the provided perceived personality annotations present in the MULTISIMO dataset. For the dyadic
+				case we analyse the UDIVA dataset and for small groups the Emergent Leader
+				(ELEA) and AMI meeting corpus. Both the UDIVA
+				and AMI meeting corpus provide the opportunity to explore the potential changes in perceived personality
+				over different tasks. Despite the limitation that the ELEA dataset provides only a single interaction session
+				for each group, it provides a useful metric of group performance for the completed task.</p>
+			<p>These features are used with a transformer based model. The architecture is built on multi-head attention units
+				that transform one modality to another. As we utilise three unique modalities, the model comprises of six
+				cross-modal transformers. The final output of the network is the prediction of the big-five personality traits,
+				however we use emotional stability represented as the inverse neuroticism score.</p>
+			<img class="img-fluid rounded middle" src="../../images/projects/group_affect/model.png" alt=""/>
+			<p>Estimation of the big-five traits is made over a sliding window of duration 15 seconds and a stride
+				duration of 1 second, providing a snap-shot of the perceived personality traits. From the big-five traits
+				we determine a higher-order two-factor meta-trait representation of personality.
+				These meta-traits are plasticity (PLA) and stability (STA), the former combining the traits of openness
+				and extroversion and the latter conscientiousness, agreeableness and emotional stability.</p>
+
+			<h2>Visualization</h2>
+			<p>Illustrative sample of the temporal changes in the perceived personality meta-traits of plasticity (left) and
+				stability (right). Coloured curves: Trait estimation for individual participants, where each participant is assigned a
+				letter in place of a name for anonymisation in the dataset. Missing line segments: non-speaking intervals. Dashed
+				line: average over participants. The grey shaded area gives the standard deviation of the individual values. Perceived
+				personality tend to move together over time.</p>
+			<img class="img-fluid rounded middle" src="../../images/projects/group_affect/trajectory.png" alt=""/>
+			<p>On the following figure stability and plasticity values are visualized. a) First-impression personality state averaged over the full session duration.
+				b) Each subplot shows the original averages as seen in a). Traits corresponding to the members of other group are
+				highlighted by the red circles. c) Plasticity and stability determined from self reported big-five traits, re-scaled between
+				0 and 1. d) Each subplot shows the original averages as seen in c). Traits corresponding to the members of other group
+				are highlighted by the red circles. The observed group effect is strong in the first-impression personality state.</p>
+			<img class="img-fluid rounded middle" src="../../images/projects/group_affect/group_personality.png" alt=""/>
+
+			<h2>BibTex</h2>
+			<p>If you found our research helpful or influential please consider citing:</p>
+			<pre><code class="bibtex">@misc{fenech2022perceived,
+   title = {Perceived personality state estimation in dyadic and small group interaction with deep learning methods}, 
+   author = {Kristian Fenech and Ádám Fodor and Sean P. Bergeron and Rachid R. Saboundji and Catharine Oertel and András Lőrincz},
+   year = {2022},
+   eprint = {2211.04979},
+   archivePrefix = {arXiv},
+   primaryClass = {cs.HC},
+   doi = {10.48550/arXiv.2211.04979}
+}</code></pre>
+		</div>
+
+		<div class="d-flex mt-4 mb-4"><a id="button_contact" href="#" class="button mx-3">Details at the Top: Paper</a></div>
+		<div id="footer-container"></div>
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>	
+		<script src="https://kit.fontawesome.com/a8f44bbdfa.js"></script>
+		<script src="../../js/menu.js"></script>
+		<script src="../../js/pre-load.js"></script>
+		<script src="../../js/footer.loader.js"></script>
+	</body>
+</html>

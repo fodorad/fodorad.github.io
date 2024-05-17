@@ -4,7 +4,7 @@
     "image": "images/placeholder/pic06.jpg",
     "title": "Group Personality",
     "content": "Perceived Personality State Estimation in Dyadic and Small Group Interaction with Deep Learning Methods",
-    "page": "projects/grouppersonality.html"
+    "page": "projects/group_affect.html"
   },
   {
     "year": 2023,
@@ -44,9 +44,9 @@
   {
     "year": 2021,
     "image": "images/placeholder/pic06.jpg",
-    "title": "Siamese",
+    "title": "Deep Metric Learning",
     "content": "Enhancing Apparent Personality Trait Analysis with Cross-Modal Embeddings.",
-    "page": "projects/siamese.html"
+    "page": "projects/deep_metric_learning.html"
   },
   {
     "year": 2021,

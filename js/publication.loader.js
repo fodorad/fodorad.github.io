@@ -41,6 +41,15 @@ document.addEventListener('DOMContentLoaded', function () {
                         linkCell.appendChild(document.createTextNode(', '));
                         linkCell.appendChild(webpageLink);
                     }
+
+                    if (entry['link'].project) {
+                        const projectLink = document.createElement('a');
+                        projectLink.href = entry['link'].project;
+                        projectLink.textContent = 'Project';
+                        projectLink.setAttribute('target', '_blank');
+                        linkCell.appendChild(document.createTextNode(', '));
+                        linkCell.appendChild(projectLink);
+                    }
                 }
 
                 row.appendChild(linkCell);
