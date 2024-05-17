@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Adam Fodor portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../../css/styles.css" />
+		<noscript><div class="alert alert-warning" role="alert"><h2>Warning!</h2><p>This website requires JavaScript to function. Please enable JavaScript in your browser settings.</p></div></noscript>
+	</head>
+
+	<body class="is-preload">
+		<header>
+			<div id="menu-header">
+				<nav>
+					<ul>
+						<li><a href="#menu">Menu</a></li>
+					</ul>
+				</nav>
+			</div>
+
+			<nav id="menu">
+				<h2>
+					Menu
+					<span id="themeSwitch" class="theme-icon" aria-label="Toggle Theme"><i class="far fa-moon"></i></span>
+				</h2>
+				<ul>
+					<li><a href="../../index.html">Home</a></li>
+					<li><a href="../projects.html">Projects</a></li>
+					<li><a href="../blog.html">Blog</a></li>
+					<li><a href="../events.html">Events</a></li>
+					<li><a href="../teaching.html">Teaching</a></li>
+					<li><a href="../gallery.html">Gallery</a></li>
+					<li><a href="../about.html">About</a></li>
+				</ul>
+			</nav>		
+		</header>
+
+		<div class="container">
+			<div class="paper">
+				<h1>Adaptive, Hybrid Feature Selection (AHFS)</h1>
+				<p>Zsolt János Viharos, Krisztián Balázs Kis, Ádám Fodor, Máté István Büki</p>
+			</div>
+			<img class="img-fluid rounded middle small" src="../../images/projects/ahfs/method.png" alt=""/>
+			<div class="d-flex mt-4 mb-4">
+				<a id="button_contact" target="_blank" href="../../pdf/2021_Fodor_Adam_PR_AHFS.pdf" class="button mx-3">Paper</a>
+				<a id="button_contact" target="_blank" href="https://github.com/viharoszsolt/AHFS" class="button primary mx-3">Code</a>
+			</div>
+
+			<div class="row">
+				<div class="col"></div>
+				<div class="col-6 abstract-container">
+					<div class="abstract">
+						<h2>Abstract</h2>
+						<p>This paper deals with the problem of integrating the most suitable feature selection methods for a given
+							problem in order to achieve the best feature order. A new, adaptive and hybrid feature selection approach
+							is proposed, which combines and utilizes multiple individual methods in order to achieve a more generalized solution. 
+							Various state-of-the-art feature selection methods are presented in detail with examples
+							of their applications and an exhaustive evaluation is conducted to measure and compare the their performance with the proposed approach. 
+							Results prove that while the individual feature selection methods
+							may perform with high variety on the test cases, the combined algorithm steadily provides noticeably
+							better solution.</p>
+					</div>
+				</div>
+				<div class="col"></div>
+			</div>
+			
+			<h2>Contribution</h2>
+			<ul>
+				<li>We propose a new, adaptive and hybrid feature selection approach, which combines and utilizes multiple individual methods in order to achieve a more generalized solution. It minimizes the shortcomings of each incorporated algorithms by choosing dynamically the most suitable one for a given assignment and dataset.</li>
+				<li>The main aim is to ensure with the adaptivity of the proposed algorithm at each iteration step of the applied Sequential Forward Search (SFS) iteration. At a certain SFS step a set of already selected variables (features) are given and the method evaluates each possible extension of this dataset by one additional variable.</li>
+				<li>In the state-of-the-art solutions it uses (only) one feature selection measure for selecting an additional variable for the final extension, so, the state-of-the-art algorithms iterate in the space of the variables. Adaptivity of the proposed algorithm is realized in such a way that at an individual step of the feature selection algorithm it iterates not only in the space of the variables but in the space of available features selection techniques, too.</li>
+			</ul>
+
+			<h2>Proposed method</h2>
+			<p>The proposed algorithm combines different feature selection methods by allowing each algorithm to suggest the next potential 
+				best feature in the sequential forward selection process. This concept is independent of the search method being used. 
+				The algorithm utilizes a forward selection technique with a sequential search strategy to find the best feature subset/order. 
+				The termination criterion is reaching a predetermined subset size, which can be specified by a human expert.</p>
+			<p>The algorithm consists of two important phases:</p>
+			<ul>
+				<li>First one is the feature selection part, which iterates through the predetermined feature selection algorithms, 
+					invoking them with the already selected feature set S. Every algorithm propose one feature as the next potential best 
+					feature to be selected according to its own measure. The candidate features are collected to S<sub>p</sub> feature set in every iteration.</li>
+				<li>Having candidates for an additional feature inherited from the different feature selection methods, the aim of the 
+					second phase is to select one from them, so, in the next phase it iterates through the promising additional feature space. 
+					This selection is based on the (highest) accuracy of the trained artificial neural network models. Features from set S and 1 candidate 
+					feature from set S<sub>p</sub> will be used as inputs, as well as the target variable as a single output. In this way as many models as 
+					unique features are in S<sub>p</sub> are generated. As S<sub>p</sub> is not a multiset, this quantity is just the same as |S<sub>p</sub>|. 
+					In order to evaluate the performance of a candidate features, the MLP models with the generated configurations are trained. 
+					In every iteration only one feature is selected and added to the output set S, until the expected number of features is reached.</li>
+			</ul>
+
+			<h2>Visualization</h2>
+			<p>There are various applied test cases, the UCI machine learning repository 
+				is the probably most frequently applied by the Artificial Intelligence/Machine Learning community. 
+				<strong>Iris</strong> as the most frequently used, well-known dataset was selected for having as one of the first classification test assignment. 
+				For regression oriented tests another dataset named <strong>Housing</strong> (also named as Boston) was selected as a public benchmark case. 
+				In order for having noise free dataset together with also noisy data from the same domain <strong>Calculated cutting</strong> and <strong>Measured cutting</strong> is applied, respectively. 
+				<strong>Wind turbine monitoring</strong> and <strong>Situation detection during special machining</strong> are test cases for higher data amount and for high
+				data complexity/variety, with various levels of noisy data, incorporating party redundancy, high non-linearity, outliers, non-uniform
+				data distribution and many other disturbing, industrial real-life effects.</p>
+			<img class="img-fluid rounded middle medium" src="../../images/projects/ahfs/datasets.png" alt=""/>
+			<p>The figure shows the average of the individual feature selection
+				performances measured on each assignment. Each line describes
+				the performance of a single, individual feature selection method,
+				where the x axis shows the number of features used for building
+				the model and the y axis shows the normalized model error.
+				The overall performance diagram 
+				mirrors, that the proposed algorithm significantly outperforms the
+				individual methods in general. Furthermore, the biggest difference reveals itself in the case of the first 4 to 25 selected features which
+				means that the new method finds the most important features earlier than the other methods</p>
+			<img class="img-fluid rounded middle medium" src="../../images/projects/ahfs/performance.png" alt=""/>
+			
+			<p>All in all, the proposed AHFS algorithm already proved to be
+			superior to other state-of-the-art feature selection methods for
+			the reasons that, 1) it is significantly less sensitive to the varying properties of the dataset it is applied to, and 
+			2) it provides a significantly better feature order for model building.</p>
+
+			<h2>BibTex</h2>
+			<p>If you found our research helpful or influential please consider citing:</p>
+			<pre><code class="bibtex">@article{VIHAROS2021107932,
+   author = {Zsolt János Viharos and Krisztián Balázs Kis and Ádám Fodor and Máté István Büki},
+   title = {Adaptive, Hybrid Feature Selection (AHFS)},
+   journal = {Pattern Recognition},
+   volume = {116},
+   pages = {107932},
+   year = {2021},
+   issn = {0031-3203},
+   doi = {https://doi.org/10.1016/j.patcog.2021.107932},
+   url = {https://www.sciencedirect.com/science/article/pii/S0031320321001199}
+}</code></pre>
+		</div>
+
+		<div class="d-flex mt-4 mb-4"><a id="button_contact" href="#" class="button mx-3">Details at the Top: Paper</a></div>
+		<div id="footer-container"></div>
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>	
+		<script src="https://kit.fontawesome.com/a8f44bbdfa.js"></script>
+		<script src="../../js/menu.js"></script>
+		<script src="../../js/pre-load.js"></script>
+		<script src="../../js/footer.loader.js"></script>
+	</body>
+</html>

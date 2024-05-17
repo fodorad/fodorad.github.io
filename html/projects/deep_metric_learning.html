@@ -1,0 +1,163 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Adam Fodor portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../../css/styles.css" />
+		<noscript><div class="alert alert-warning" role="alert"><h2>Warning!</h2><p>This website requires JavaScript to function. Please enable JavaScript in your browser settings.</p></div></noscript>
+	</head>
+
+	<body class="is-preload">
+		<header>
+			<div id="menu-header">
+				<nav>
+					<ul>
+						<li><a href="#menu">Menu</a></li>
+					</ul>
+				</nav>
+			</div>
+
+			<nav id="menu">
+				<h2>
+					Menu
+					<span id="themeSwitch" class="theme-icon" aria-label="Toggle Theme"><i class="far fa-moon"></i></span>
+				</h2>
+				<ul>
+					<li><a href="../../index.html">Home</a></li>
+					<li><a href="../projects.html">Projects</a></li>
+					<li><a href="../blog.html">Blog</a></li>
+					<li><a href="../events.html">Events</a></li>
+					<li><a href="../teaching.html">Teaching</a></li>
+					<li><a href="../gallery.html">Gallery</a></li>
+					<li><a href="../about.html">About</a></li>
+				</ul>
+			</nav>		
+		</header>
+
+		<div class="container">
+			<div class="paper">
+				<h1>Enhancing Apparent Personality Trait Analysis <br> with Cross-Modal Embeddings</h1>
+				<p>Ádám Fodor, Rachid R. Saboundji, András Lőrincz</p>
+			</div>
+			<img class="img-fluid rounded middle fit" src="../../images/projects/deep_metric_learning/macs_dln.jpg" alt=""/>
+			<div class="d-flex mt-4 mb-4">
+				<a id="button_contact" target="_blank" href="../../pdf/2020_Fodor_Adam_MACS_Multimodal.pdf" class="button mx-3">Paper</a>
+				<a id="button_contact" target="_blank" href="" class="button primary mx-3 disabled">Code is under refactoring</a>
+			</div>
+
+			<div class="row">
+				<div class="col"></div>
+				<div class="col-6 abstract-container">
+					<div class="abstract">
+						<h2>Abstract</h2>
+						<p>Automatic personality trait assessment is essential for high-quality human-machine interactions. 
+							Systems capable of human behavior analysis could be used for self-driving cars,
+							medical research, and surveillance, among many others. We present a multimodal deep neural
+							network with a deep metric learning extension for apparent personality trait prediction trained on short
+							video recordings and exploiting modality invariant embeddings. Acoustic, visual, and textual
+							information are utilized to reach high-performance solutions in this task. 
+							Due to the highly centralized target distribution of the analyzed dataset, the changes in the third digit are relevant.
+							Our proposed method addresses the challenge of under-represented extreme values, achieves
+							0.0033 MAE average improvement, and shows a clear advantage over the baseline multimodal
+							DNN without the introduced module.</p>
+					</div>
+				</div>
+				<div class="col"></div>
+			</div>
+
+			<h2>Contribution</h2>
+				<ul>
+					<li>We propose a multimodal deep neural network to extract modality-invariant embeddings from multiple information sources with a DLN network, emphasizing extreme examples and implicitly improving the multimodal fusion process.</li>
+					<li>We extended the Multi-Similarity loss to handle multiple apparent personality trait class labels simultaneously, besides using various input modalities. The problem with non-extreme examples is that one or more modalities contain inadequate information to aid the deep embedding process. To overcome this issue, we modified the sample selection of the online semi-hard negative mining procedure of the triplet loss evaluation and put the emphasis onto the extreme samples.</li>
+					<li>Although samples having lower or higher personality trait values are less frequent in the database, high-quality prediction of their values is desired in various situations. We show that cross-modal embedding enhances the prediction of the Big Five personality traits in the extreme cases.</li>
+				</ul>
+
+			<h2>Proposed method</h2>
+			<p>In this work, we propose a multimodal deep neural network that combines features from visual,
+				acoustic, and textual clues to predict apparent Big-Five personality traits using short video clips
+				from the ChaLearn challenges. 
+			<p>We aim to create a shared coordinate space, transforming the audio, video, and text descriptors
+				into a semantically relevant form using a Distance Learning Network (DLN) network. The triplet-based loss functions are
+				designed to encourage positive examples as close as possible to the so called anchor sample, and
+				negative examples to be separated from each other over a given threshold. Embedded vector and
+				auxiliary vector are interchangeably used for the outputs of the DLN network. Higher precision
+				estimation of the extremes is one of our goals and we expect that multi-modal data enrichment
+				is advantageous in each trait. We use a DNN that combines tri-modal features along with the
+				embedded vectors to predict apparent personality traits from the short video clips.</p>
+			<p>To our best knowledge, this is the first work that introduces cross-modal embedding for personality trait prediction.</p>
+
+			<h2>Visualization</h2>
+			<div class="row">
+				<div class="col d-flex justify-content-center align-items-center">
+					<div class="row">
+						<p>Audio-visual personality trait prediction has become of high-interest due to high-quality
+							databases released in the ChaLearn challenges, i.e., in First Impressions V1 and V2. In this
+							study, we used the extended and revised dataset (V2). The dataset contains 10,000 video clips
+							extracted from more than 3,000 different YouTube high-definition videos of people mostly facing
+							and speaking to a camera.</p>
+						<p>Examples of the First Impression V2 dataset. For each video the ground truth Big Five
+							scores are provided. For each trait, the first two samples instantiate the high extremes, and the
+							last two examples demonstrate the low extremes of a given trait.</p>
+						<p>One specialty of this dataset is that the target variables have unbalanced data distribution. The
+							regression-to-the-mean problem is emphasized because the scores follow a Gaussian distribution,
+							and the optimization process likely produces predictions near the mean of ground truth values to
+							minimize the loss. We alleviated this problem with the Bell loss, which is similar to the Mean
+							Squared Error, however, it can produce higher gradients when the prediction is closer to the ground
+							truth.</p>
+						</div>
+					<img class="img-fluid rounded right small" src="../../images/projects/deep_metric_learning/first_impressions.jpg" alt=""/>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col d-flex justify-content-center align-items-center">
+					<img class="img-fluid rounded left small-ish" src="../../images/projects/deep_metric_learning/first_impressions_hists.jpg" alt=""/>
+					<p>Annotation regarding the First Impressions V2 dataset consists of 5 continuous variables. Samples
+						can be grouped into different classes by splitting the [0, 1] interval to equal, smaller intervals. In
+						this work, we aim to differentiate extreme examples from ordinary samples based on the ground
+						truth values. We determine 4 classes per trait, and we are focusing on the two extremes, which can
+						be monitored in various clinical sessions later on: the low-extreme and high-extreme classes, which
+						are labeled as C1 and C4, respectively.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col d-flex justify-content-center align-items-center">
+					<div class="row">
+						<p>We transformed the acoustic, visual, and textual features to a shared coordinate space with a
+							DLN network. The figure shows a two-component Principal Component Analysis (PCA) calculated on the multimodal inputs as visualization, 
+							using only the NEUroticism ground truth values
+							and trait classes within plots.</p>
+						<p>The four personality classes are
+							represented with colors, where the blue is the low extreme (C1), and the red is the high extreme class
+							(C4). In the (b) and (c), we emphasize embeddings within the two extreme poles of NEUroticism.</p>
+						<p></p>
+					</div>
+					<img class="img-fluid rounded right small" src="../../images/projects/deep_metric_learning/cross_2pca_reorder.png" alt=""/>
+				</div>
+			</div>
+
+			<h2>BibTex</h2>
+			<p>If you found our research helpful or influential please consider citing:</p>
+			<pre><code class="bibtex">@article{fodor2021multimodal,
+   author = {Ádám Fodor, Rachid R. Saboundji, András Lőrincz},
+   title = {Enhancing Apparent Personality Trait Analysis with Cross-Modal Embeddings},
+   journal = {Annales Universitatis Scientiarium Budapestinensis de Rolando Eötvös Nominatae. Sectio Computatorica, MaCS 2020 Special Issue},
+   pages = {1-14},
+   year = {2021},
+   doi = {10.48550/arXiv.2405.03846}
+}</code></pre>
+		</div>
+
+		<div class="d-flex mt-4 mb-4"><a id="button_contact" href="#" class="button mx-3">Details at the Top: Paper</a></div>
+		<div id="footer-container"></div>
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>	
+		<script src="https://kit.fontawesome.com/a8f44bbdfa.js"></script>
+		<script src="../../js/menu.js"></script>
+		<script src="../../js/pre-load.js"></script>
+		<script src="../../js/footer.loader.js"></script>
+	</body>
+</html>

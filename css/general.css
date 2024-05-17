@@ -1,0 +1,161 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+	background-color: var(--bg-color-default);
+	color: var(--text-color-default);
+}
+
+body.dark-theme {
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-dark);
+}
+
+body.is-preload *,
+body.is-preload *:before,
+body.is-preload *:after {
+	-moz-animation: none !important;
+	-webkit-animation: none !important;
+	-ms-animation: none !important;
+	animation: none !important;
+	-moz-transition: none !important;
+	-webkit-transition: none !important;
+	-ms-transition: none !important;
+	transition: none !important;
+}
+
+body, input, textarea {
+	color: #202020;
+	font-family: "Source Sans Pro", Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 1.75rem;
+}
+
+a {
+	-moz-transition: border-bottom-color 0.2s ease, color 0.2s ease;
+	-webkit-transition: border-bottom-color 0.2s ease, color 0.2s ease;
+	-ms-transition: border-bottom-color 0.2s ease, color 0.2s ease;
+	transition: border-bottom-color 0.2s ease, color 0.2s ease;
+	text-decoration: none;
+	color: #585858;
+	border-bottom: dotted 1px rgba(88, 88, 88, 0.5);
+}
+
+a:hover {
+	border-bottom-color: transparent;
+	color: var(--hover-color-default) !important;
+}
+
+p {
+	margin: 1rem 0 1rem 0;
+    font-size: 1rem;
+	text-align: justify;
+}
+
+h1, h2, h3, h4 {
+	font-weight: 600;
+	margin: 2rem 0 1rem 0;
+	letter-spacing: 0.05rem;
+}
+
+h1 {
+	font-size: 3rem;
+	line-height: 3.7rem;
+	font-weight: 600;
+	margin: 1rem 0 1rem 0;
+}
+
+h2 {
+	font-size: 2.2rem;
+	line-height: 2.2rem;
+}
+
+h3 {
+	font-size: 1.8rem;
+	line-height: 1.8rem;
+}
+
+h4 {
+	font-size: 1.5rem;
+	line-height: 1.5rem;
+}
+
+strong {
+	font-weight: 600;
+}
+
+sub {
+	font-size: 0.8rem;
+	position: relative;
+	top: 0.2rem;
+}
+
+sup {
+	font-size: 0.8rem;
+	position: relative;
+	top: -0.2rem;
+}
+
+blockquote {
+	border-left: solid 4px #c9c9c9;
+	font-style: italic;
+	margin: 2rem 0 2rem 0;
+	padding: 0.5rem 0 0.5rem 2rem;
+}
+
+code {
+	background: rgba(144, 144, 144, 0.075);
+	border-radius: 4px;
+	border: solid 1px #c9c9c9;
+	font-family: "Courier New", monospace;
+	font-size: 0.9rem;
+	margin: 0 0.25rem;
+	padding: 0.25rem 0.65rem;
+}
+
+pre {
+	-webkit-overflow-scrolling: touch;
+	font-family: "Courier New", monospace;
+	font-size: 0.9rem;
+	margin: 0 0 2rem 0;
+}
+
+pre code {
+	display: block;
+	line-height: 1.75rem;
+	padding: 1rem 1.5rem;
+	overflow-x: auto;
+}
+
+pre code.bibtex {
+	display: block;
+	font-size: 0.8rem;
+	line-height: 1.2rem;
+	padding: 1rem 1.5rem;
+	overflow-x: auto;
+}
+
+video {
+	width: 40%;
+	margin: 1rem 2rem 1rem 2rem;
+}
+
+hr {
+	border: 0;
+	border-bottom: solid 1px #c9c9c9;
+	margin: 2rem 0;
+}
+
+footer {
+	margin: 6rem 0 0 0;
+}
+
+.unformatted {
+	all: unset;
+}
+
+.cursor-pointer {
+	cursor: pointer;
+}

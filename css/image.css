@@ -1,0 +1,91 @@
+img.middle {
+    display: block;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 80%;
+}
+
+img.middle.fit {
+    width: 100%;
+}
+
+img.left,
+img.right {
+    margin: 1rem 2rem 1rem 2rem;
+}
+
+img.left {
+    float: left;
+}
+
+img.right {
+    float: right;
+}
+
+img.left.medium,
+img.right.medium,
+img.middle.medium {
+    width: 60%;
+}
+
+img.left.small-ish,
+img.right.small-ish,
+img.middle.small-ish {
+    width: 50%;
+}
+
+img.left.small,
+img.right.small,
+img.middle.small {
+    width: 40%;
+}
+
+img.left.smaller,
+img.right.smaller,
+img.middle.smaller {
+    width: 30%;
+}
+
+img.left.very-small,
+img.right.very-small,
+img.middle.very-small {
+    width: 20%;
+}
+
+.about_hero {
+    -moz-transition: -moz-transform 0.5s ease, opacity 0.5s ease;
+    -webkit-transition: -webkit-transform 0.5s ease, opacity 0.5s ease;
+    -ms-transition: -ms-transform 0.5s ease, opacity 0.5s ease;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transform: scale(1);
+    opacity: 1;
+    max-width: 50%;
+    margin: auto;
+    display: block;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.home_hero {
+    -moz-transition: -moz-transform 0.5s ease, opacity 0.5s ease;
+    -webkit-transition: -webkit-transform 0.5s ease, opacity 0.5s ease;
+    -ms-transition: -ms-transform 0.5s ease, opacity 0.5s ease;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    margin: 1rem 0 0 1rem;
+    transform: scale(1);
+    opacity: 1;
+}
+
+.home_hero:hover {
+    transform: scale(1.1);
+}
+
+body.is-preload .home_hero,
+body.is-preload .about_hero {
+    -moz-transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+    opacity: 0;
+}

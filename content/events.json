@@ -1,0 +1,153 @@
+[
+    {
+      "date": "2024-04-15T12:00:00.001Z",
+      "image": "images/gallery/events/logo/kh.jpg",
+      "alt": "Generative AI presentation at K&H",
+      "title": "Generative AI presentation at K&H",
+      "content": "I'm grateful to have had the opportunity to present on Generative AI at K&H, a truly enriching experience. This event didn't just allow me to connect with new people and forge valuable connections; it also expanded my perspectives and paved the way for potential future collaborations."
+    },
+    {
+      "date": "2023-12-05T18:00:00.001Z",
+      "image": "images/gallery/events/2023/MiLab_Meetup_ELTE/MiLab_Meetup_ELTE_20231205_event.jpg",
+      "alt": "MILAB Workshop in Budapest",
+      "title": "MILAB Workshop in Budapest",
+      "content": "At the MILAB event hosted by ELTE, I was fortunate to present two of my posters, focusing on the innovative BlinkLinMulT system and the dynamics of group personality in task-oriented settings.\nThe experience of showcasing my work, receiving feedback, and engaging in stimulating conversations was incredibly rewarding.\nI'm truly grateful for the opportunity to connect with other researchers who are exploring similar areas of interest.",
+      "links": ["https://www.inf.elte.hu/content/mesterseges-intelligencia-nemzeti-laboratorium-meetup-viselkedesi-jellemzok-ember-gep-kolcsonhatas.e.1306"],
+      "gallery_tags": ["MiLab Meetup ELTE"]
+    },
+    {
+      "date": "2023-11-24T12:00:00.001Z",
+      "image": "images/gallery/events/2023/Bosch_BEST/Fodor_Adam_Bosch_BEST_20231124_event.jpg",
+      "alt": "Bosch BEST event",
+      "title": "Bosch BEST event",
+      "content": "I recently attended a Bosch BEST event, which was an amazing experience where students from all sorts of research areas showcased their incredible work. It was such a great chance for me to meet new people, make connections, and really broaden my horizons in terms of interests and knowledge.\nThe event also opened up the possibility for potential future collaborations, making it an even more exciting opportunity for my career and academic journey."
+    },
+    {
+      "date": "2023-11-14T16:00:00.001Z",
+      "image": "images/gallery/events/2023/MiLab_Meetup_SZTAKI/MiLab_Meetup_SZTAKI_20231114_event.jpg",
+      "alt": "WARWICK-MILAB Workshop in Budapest",
+      "title": "WARWICK-MILAB Workshop in Budapest",
+      "content": "At the WARWICK-MILAB event hosted by SZTAKI, I had the privilege of presenting a poster on my BlinkLinMulT and group personality projects. This gathering offered an invaluable platform for showcasing my research outcomes and engaging with a community of experts deeply invested in advancing AI.",
+      "links": ["https://mi.nemzetilabor.hu/events/warwick-milab-workshop-budapest"],
+      "gallery_tags": ["MiLab Meetup SZTAKI"]
+    },
+    {
+      "date": "2023-10-19T14:00:00.001Z",
+      "image": "images/gallery/events/2023/SZTAKI_Students_forum/Fodor_Adam_SZTAKI_Students_forum_15_20231019_event.jpg",
+      "alt": "MTA SZTAKI Students' Forum 15.0",
+      "title": "MTA SZTAKI Students' Forum 15.0",
+      "content": "The 15.0 Students' Forum welcomed attendees with presentations covering various topics. Notable talks included Dr. Viharos Zsolt János discussing the strategic context of research, Dr. Kerepesi Csaba on aging research using machine learning. I shared advancements in two areas of my research during the event: the estimation of personality traits in social interactions and the progress made in eye blink detection.",
+      "links": ["https://sztaki.hun-ren.hu/tudomany/hirek/hallgatoi-forumot-tartott-viharos-zsolt-janos-hun-ren-sztaki-tudomanyos-fomunkatarsa"],
+      "gallery_tags": ["SZTAKI Students' Forum"]
+    },
+    {
+      "date": "2023-08-08T17:00:00.001Z",
+      "image": "images/gallery/events/2023/Hungarian_Machine_Learning_Meeting/Fodor_Adam_Hungarian_Machine_Learning_Meeting_20230808_event.jpg",
+      "alt": "Poster presentation about eye blink detection using BlinkLinMulT",
+      "title": "Poster presentation at Hungarian Machine Learning Meeting",
+      "content": "At the national machine learning and AI event organized by MILAB and coordinated by SZTAKI, I had the amazing opportunity to present my work on BlinkLinMulT for eye blink detection and discuss my research on group affect during goal-oriented task solving. It was a fantastic experience to exchange ideas and connect with the community. I'm truly grateful for such a wonderful opportunity.",
+      "links": ["https://mi.nemzetilabor.hu/magyar-machine-learning-talalkozo", "https://sztaki.hun-ren.hu/innovacio/hirek/tobb-mint-170-en-vettek-reszt-magyar-machine-learning-talalkozon"],
+      "gallery_tags": ["Hungarian Machine Learning Meeting"]
+    },
+    {
+      "date": "2023-07-27T10:00:00.001Z",
+      "image": "images/gallery/events/2023/Students_Scientific_Conference/Fodor_Adam_TDK_Luqman_20230727_event.jpg",
+      "alt": "Luqman's graduation ceremony",
+      "title": "Luqman's graduation ceremony",
+      "content": "Huge congratulations to Luqman on securing the 2nd place award at the Students' Scientific Conference for the impressive work on \"Personality Recognition based on Visual and Movement Features on the Face\"!\nWitnessing your dedication and creativity under my supervision was a truly joyful experience. Well done!",
+      "gallery_tags": ["Students' Scientific Conference"]
+    },
+    {
+      "date": "2023-06-26T14:00:00.001Z",
+      "image": "images/gallery/events/2023/Centre_for_Cognitive_Science_seminar/Fodor_Adam_CNC_20230626_event.jpg",
+      "alt": "Presentation about Real-time Perceived Personality Estimation: Strong Group Formation in Goal-Oriented Collaborative Tasks at Centre for Cognitive Science seminar, Comenius University in Bratislava",
+      "title": "Presentation at Centre for Cognitive Science seminar, Bratislava",
+      "content": "I'm sincerely thankful for the opportunity to share my work on perceived personality estimation at the CNC seminar, Comenius University in Bratislava. Delving into the intricacies of personality traits, group dynamics, and blink detection offered a chance to highlight the potential of real-time personality assessments in improving collaborative tasks and teamwork efficiency.",
+      "links": ["https://cogsci.fmph.uniba.sk/cnc/?action=seminar"],
+      "gallery_tags": ["Centre for Cognitive Science"]
+    },
+    {
+      "date": "2023-06-01T14:00:00.001Z",
+      "image": "images/gallery/events/logo/SZTE_TTIK.jpg",
+      "alt": "Topic: Multimodal estimation of perceived personality traits and potential use in human-robot joint task solving",
+      "title": "Seminar about my PhD research at SZTE TTIK",
+      "content": "At an online seminar organized by the Faculty of Science and Informatics University of Szeged, I was thrilled to share my work on personality trait estimation and group affect. The presentation drew an incredible mix of students and experts across different fields, leading to a lively discussion full of insightful questions. This vibrant exchange fostered a dynamic discussion and a rich exchange of ideas, deepening the collective understanding of the topic.",
+      "links": ["https://sci.u-szeged.hu/english"]
+    },
+    {
+      "date": "2023-05-31T14:00:00.001Z",
+      "image": "images/gallery/events/logo/MIK_FI.jpg",
+      "alt": "Topic: Personality traits, group-personality and blinking estimation during goal-oriented tasks",
+      "title": "Seminar about my PhD research at PE MIK",
+      "content": "At a seminar at Faculty of Information Technology University of Pannonia, I presented my research on personality trait estimation and group affect, with an eye toward incorporating the blinking modality, serving as a unique opportunity to connect with research groups from various universities. This experience was not only a platform to share my work but also a chance to explore potential collaborations and broaden my academic network.",
+      "links": ["https://mik.uni-pannon.hu/en"]
+    },
+    {
+      "date": "2023-05-18T16:00:00.001Z",
+      "image": "images/gallery/events/2023/John_von_Neumann_Computer_Society/Fodor_Adam_NJSZT_20230518_1_event.jpg",
+      "alt": "Presentation about Multimodal estimation and possible use of \"Perceived Personality Traits\" in human-robot joint task solving",
+      "title": "Presentation at AI Seminar of NJSZT and ELTE",
+      "content": "As a guest presenter, I had the pleasure of contributing to the AI Seminar series organized by the John von Neumann Computer Society (NJSZT) and the Department of Artificial Intelligence at ELTE IK.\nThe event took a hybrid format.",
+      "links": ["https://njszt.hu/hu/event/2023-05-18/mi-szeminarium", "https://njszt.hu/hu/news/2023-05-24/mi-szeminariumot-tartottunk-az-ember-robot-interakciorol"],
+      "gallery_tags": ["John von Neumann Computer Society"]
+    },
+    {
+      "date": "2023-05-12T14:15:00.001Z",
+      "image": "images/gallery/events/logo/PPKE_ITK.jpg",
+      "alt": "Topic: Personality traits, group-personality and blinking estimation during goal-oriented tasks",
+      "title": "Seminar about my PhD research at PPKE ITK",
+      "content": "At an online seminar hosted by Pázmány Péter Catholic University Faculty of Information Technology and Bionics, I had the privilege of presenting my research on personality trait estimation and group affect, attracting a wide audience of students and experts from various research fields.\nThis experience not only expanded my academic network but also deepened my understanding through meaningful dialogue with professionals and peers alike.",
+      "links": ["https://itk.ppke.hu/en"]
+    },
+    {
+      "date": "2023-05-10T12:00:40.001Z",
+      "image": "images/gallery/events/logo/DE_IK.jpg",
+      "alt": "Topic: Multimodal estimation of perceived personality traits and potential use in human-robot joint task solving",
+      "title": "Seminar about my PhD research at DE IK",
+      "content": "I had the opportunity to showcase my work on personality trait estimation and group affect during a seminar at the University of Debrecen Faculty of Informatics, with a perspective on integrating blinking as an extra modality. This presentation led to interactions with professors from various research fields, specifically from the IT department, opening up avenues for future collaboration.",
+      "links": ["https://inf.unideb.hu/en/node"]
+    },
+    {
+      "date": "2022-10-14T09:45:00.001Z",
+      "image": "images/gallery/events/logo/mppt.jpg",
+      "alt": "Presentation about personality and group-personality estimation during task solving",
+      "title": "Presentation at XVIII Hungarian Congress of Neuropsychopharmacology",
+      "content": "I had the opportunity to present on \"Personality and Group-Personality Estimation during Task Solving\" at the XVIII Hungarian Congress of Neuropsychopharmacology (MPPT). \nThe conference provided a valuable opportunity to connect diverse fields, and I'm grateful for the chance it gave me to establish connections between AI research and medical practice.",
+      "links": ["https://mppt.hu/2022-2"]
+    },
+    {
+      "date": "2022-10-04T14:00:00.001Z",
+      "image": "images/gallery/events/2022/SZTAKI_Students_forum/Fodor_Adam_SZTAKI_Students_forum_12_20221004_event.jpg",
+      "alt": "MTA SZTAKI Students' Forum 12.0",
+      "title": "MTA SZTAKI Students' Forum 12.0",
+      "content": "At the 12.0 Students' Forum, I had the privilege of joining a diverse group of attendees for a series of engaging presentations on a wide range of topics.\nAmong the highlights was Dr. Viharos Zsolt János's insightful discussion on the strategic context of research, which provided valuable perspectives for advancing our work. \nI'm thankful for the opportunity to present my latest advances in personality estimation.",
+      "links": ["https://autonom.nemzetilabor.hu/news/drifting-autonomous-vehicles-12th-students-forum", "https://autonom.nemzetilabor.hu/hu/hirek/az-autonom-jarmuvek-driftelese-szoba-kerult-12-studentek-foruman"],
+      "gallery_tags": ["SZTAKI Students' Forum"]
+    },
+    {
+      "date": "2022-07-04T14:00:00.001Z",
+      "image": "images/gallery/events/2022/SZTAKI_Students_forum/Fodor_Adam_SZTAKI_Students_forum_11_20220704_event.jpg",
+      "alt": "MTA SZTAKI Students' Forum 11.0",
+      "title": "Invited speaker at MTA SZTAKI Students' Forum 11.0",
+      "content": "At the 11.0 Students' Forum, I was honored to be among the invited speakers, presenting my work on modeling human characteristics.\nIt was a great opportunity to contribute to a diverse array of discussions, from feature selection algorithms like AHFS to advanced concepts in outlier detection and modeling drifting with reinforcement learning.\nI'm grateful for the chance to share my insights and learn from others who are making significant strides in these fields.",
+      "gallery_tags": ["SZTAKI Students' Forum"]
+    },
+    {
+      "date": "2021-10-13T09:00:00.001Z",
+      "image": "images/gallery/events/2021/HumanE-AI-Net/HumanE-AI-Net_Berlin_20211013_1_thumbnail_event.jpg",
+      "alt": "HumanE-AI-Net workshop in Berlin",
+      "title": "HumanE-AI-Net workshop in Berlin",
+      "content": "Participating in the ACAI 2021 event was a game-changer for me; it was packed with enlightening microproject presentations, keynotes, and workshops all geared towards Human-Centered AI collaboration.\nIt not only broadened my understanding of microproject management but also connected me with fellow researchers across Europe, truly fostering a spirit of innovation in AI.",
+      "links": ["https://www.humane-ai.eu/event/acai2021"],
+      "gallery_tags": ["HumanE-AI-Net"]
+    },
+    {
+      "date": "2018-05-10T14:00:00.001Z",
+      "image": "images/gallery/events/2018/Students_Scientific_Conference/Fodor_Adam_Morgan_Stanley_special_award_20180510_event.jpg",
+      "alt": "1st place at Students' Scientific Conference and Morgan Stanley Special Award",
+      "title": "1st place at Students' Scientific Conference and Morgan Stanley Special Award",
+      "content": "I'm super excited to share that we won 1st place at the Students' Scientific Conference, along with snagging the Morgan Stanley Special Award for our project on voice de-identification using deep neural networks. Teaming up with László Kopácsi was amazing. It's such an honor to have our hard work acknowledged, and I'm really thankful for the chance to present our research to the academic world.",
+      "gallery_tags": ["Students' Scientific Conference"],
+      "links": ["../html/projects/deidentification.html"]
+    }
+]

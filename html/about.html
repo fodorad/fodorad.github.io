@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Adam Fodor portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../css/styles.css" />
+		<noscript><div class="alert alert-warning" role="alert"><h2>Warning!</h2><p>This website requires JavaScript to function. Please enable JavaScript in your browser settings.</p></div></noscript>
+	</head>
+
+	<body class="is-preload">
+		<header>
+			<div id="menu-header">
+				<nav>
+					<ul>
+						<li><a href="#menu">Menu</a></li>
+					</ul>
+				</nav>
+			</div>
+
+			<nav id="menu">
+				<h2>
+					Menu
+					<span id="themeSwitch" class="theme-icon" aria-label="Toggle Theme"><i class="far fa-moon"></i></span>
+				</h2>
+				<ul>
+					<li><a href="../index.html">Home</a></li>
+					<li><a href="projects.html">Projects</a></li>
+					<li><a href="blog.html">Blog</a></li>
+					<li><a href="events.html">Events</a></li>
+					<li><a href="teaching.html">Teaching</a></li>
+					<li><a href="gallery.html">Gallery</a></li>
+					<li><a href="about.html">About</a></li>
+				</ul>
+			</nav>		
+		</header>
+
+		<div class="container">
+			<h1 class="text-center">About</h1>
+			<img id="hero_index_close" class="img-fluid rounded about_hero" src="../images/Adam_Fodor.jpg" alt=""/>
+			<p>Adam Fodor is a dedicated PhD candidate at Eötvös Loránd University (ELTE) in Budapest, where he delves into the complexities of Machine Learning, Computer Vision, Affective Behavior, and Social Interaction Analysis. Adam's journey is marked by significant achievements, including publications in renowned journals from Pattern Recognition to the Journal of Imaging, and presentations at notable conferences such as IJCNN. His mastery in his master's thesis was recognized at the Scientific Student Conference at ELTE, where he received a first-place award and a Special Award from Morgan Stanley for his insightful contribution.</p>
+			<p>In his role as a researcher at the Neural Information Processing Group (NIPG), Adam focuses on the nuanced study of human behavior in social experiments. His work is aimed at developing human-centered applications that span the realms of personality research and healthcare, demonstrating a commitment to leveraging technology for the betterment of society. Through his research, Adam seeks to uncover insights that not only advance technological innovation but also have tangible impacts on healthcare practices.</p>
+			<p>Adam's passion for knowledge extends beyond research; he is deeply involved in educating the next generation of technologists and thinkers. By teaching advanced subjects such as the Mathematical Basis of Deep Neural Networks, State-of-the-Art Applications of Deep Neural Networks, and Advanced Deep Network Development at ELTE, he imparts critical technical skills and ethical perspectives necessary for the responsible advancement of artificial intelligence.</p>
+			<p>His tenure at MTA SZTAKI -- Institute for Computer Science and Control at Hungarian Academy of Sciences -- has enriched Adam's expertise and underscored the value of collaborative research in tackling complex issues. Furthermore, Adam is a firm believer in lifelong learning, consistently broadening his knowledge through online courses from leading institutions like MIT and Stanford University, alongside comprehensive Coursera courses. This dedication to self-improvement reflects his understanding of the importance of staying abreast of technological and methodological advancements in a rapidly evolving field.</p>
+			<blockquote>A man spends his whole life learning. - Vesimir</blockquote>
+			<p>Adam's life outside the lab and classroom is equally vibrant and fulfilling. He finds joy and relaxation in dancing with his wife, immersing himself in the rich fantasy world of Andrzej Sapkowski's "The Witcher," and engaging in social board games with friends and colleagues. These activities not only offer him a respite from his intensive research and teaching schedule but also keep him grounded and connected to his loved ones and the world around him.</p>
+			<div class="d-flex mt-4 mb-4">
+				<a id="button_contact" href="#contact" class="button mx-3">Get in touch</a>
+				<a id="button_cv" target="_blank" href="../pdf/Adam_Fodor_CV.pdf" class="button primary button-icon mx-3">
+					<span class="icon solid fa-download"></span>Download my CV
+				</a>
+			</div>
+
+			<h2>Publications</h2>
+			<table id="publications-table">
+				<thead>
+				<tr>
+					<th>Year</th>
+					<th>Citation</th>
+					<th>Link</th>
+				</tr>
+				</thead>
+				<tbody id="publications-tbody"></tbody>
+			</table>
+			
+			<h2>Coursera</h2>
+			<h3>Badges</h2>
+			<div class="row">
+				<div class="col d-flex justify-content-center align-items-center">
+					<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="7547981d-8ba6-47b1-b676-829e95d953fd" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+				</div>
+				<div class="col d-flex justify-content-center align-items-center">
+					<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="0211fc6c-bef9-46fe-bcdd-780e4c6d4de4" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+				</div>
+				<div class="col d-flex justify-content-center align-items-center">
+					<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="067c7d78-7401-466f-a5f2-88f011b3e857" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+				</div>
+			</div>
+			
+			<h3>Certificates</h2>
+			<div class="tag-info-container" id="tag-info-container"></div>
+			<div class="row cert-container" id="cert-container"></div>
+		</div>
+
+		<div class="d-flex mt-4 mb-4"><a id="button_contact" href="#" class="button mx-3">Back to top</a></div>
+		<div id="footer-container"></div>
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>	
+		<script src="https://kit.fontawesome.com/a8f44bbdfa.js"></script>
+		<script src="../js/menu.js"></script>
+		<script src="../js/pre-load.js"></script>
+		<script src="../js/publication.loader.js"></script>
+		<script src="../js/gallery.certificate.loader.js"></script>
+		<script src="../js/gallery.certificate.zoom.js"></script>
+		<script src="../js/footer.loader.js"></script>
+	</body>
+</html>

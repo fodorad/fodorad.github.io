@@ -1,0 +1,193 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Adam Fodor portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../../css/styles.css" />
+		<noscript><div class="alert alert-warning" role="alert"><h2>Warning!</h2><p>This website requires JavaScript to function. Please enable JavaScript in your browser settings.</p></div></noscript>
+	</head>
+
+	<body class="is-preload">
+		<header>
+			<div id="menu-header">
+				<nav>
+					<ul>
+						<li><a href="#menu">Menu</a></li>
+					</ul>
+				</nav>
+			</div>
+
+			<nav id="menu">
+				<h2>
+					Menu
+					<span id="themeSwitch" class="theme-icon" aria-label="Toggle Theme"><i class="far fa-moon"></i></span>
+				</h2>
+				<ul>
+					<li><a href="../../index.html">Home</a></li>
+					<li><a href="../projects.html">Projects</a></li>
+					<li><a href="../blog.html">Blog</a></li>
+					<li><a href="../events.html">Events</a></li>
+					<li><a href="../teaching.html">Teaching</a></li>
+					<li><a href="../gallery.html">Gallery</a></li>
+					<li><a href="../about.html">About</a></li>
+				</ul>
+			</nav>		
+		</header>
+
+		<div class="container">
+			<div class="paper"><h1>Exordium</h1></div>
+			<img class="img-fluid rounded middle small" src="../../images/projects/exordium/cover.jpg" alt=""/>
+			<div class="d-flex mt-4 mb-4">
+				<a id="button_contact" href="personalitylinmult.html" class="button mx-3">Project 1: PersonalityLinMulT</a>
+				<a id="button_contact" href="blinklinmult.html" class="button mx-3">Project 2: BlinkLinMulT</a>
+				<a id="button_contact" target="_blank" href="https://github.com/fodorad/LinMulT" class="button primary mx-3">Code</a>
+			</div>
+
+			<h2>Motivation</h2>
+				<p>This repository offers a comprehensive collection of preprocessing functions and deep learning techniques. 
+					It supports various features including audio processing, video analysis, text feature extraction, 
+					utility functions, and visualization tools, making it a versatile toolkit for multimodal data processing and analysis.</p>
+
+			<h2>Supported Features</h2>
+			<table>
+				<tr>
+					<th>Audio</th>
+					<th>Video</th>
+					<th>Text</th>
+					<th>Utils</th>
+					<th>Visualization</th>
+				</tr>
+				<tr>
+					<td class="top">
+						<ul>
+							<li>frequently used io for audio files</li>
+							<li>openSMILE feature extraction</li>
+							<li>spectrogram calculation</li>
+							<li>Wav2Vec2 feature extraction</li>
+						</ul>
+					</td>
+					<td class="top">
+						<ul>
+							<li>frequently used io for videos and frames</li>
+							<li>bounding box manipulation methods</li>
+							<li>face detection with RetinaFace</li>
+							<li>face landmarks and head pose with 3DDFA_V2</li>
+							<li>body pose estimation with max-human-pose-estimator</li>
+							<li>categorical and dimensional emotion estimation with EmoNet</li>
+							<li>iris and pupil landmark estimation with MediaPipe Iris</li>
+							<li>fine eye landmark estimation with MediaPipe FaceMesh</li>
+							<li>eye gaze vector estimation with L2CS-Net</li>
+							<li>tracking using IoU and DeepFace</li>
+							<li>FAb-Net feature extraction</li>
+							<li>OpenFace feature extraction</li>
+							<li>R2+1D feature extraction</li>
+						</ul>
+					</td>
+					<td class="top">
+						<ul>
+							<li>BERT feature extraction</li>
+							<li>RoBERTa feature extraction</li>
+						</ul>
+					</td>
+					<td class="top">
+						<ul>
+							<li>parallel processing</li>
+							<li>io decorators</li>
+							<li>loss functions</li>
+							<li>normalization</li>
+						</ul>
+					</td>
+					<td class="top">
+						<ul>
+							<li>graphs</li>
+							<li>3D headpose</li>
+							<li>2D landmarks</li>
+							<li>gaze</li>
+							<li>dataframes to images</li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+
+			<h2>Setup</h2>
+				<h3>Install package with all base and optional dependencies from PyPI</h3>
+				<pre><code>pip install exordium[all]</code></pre>
+
+				<h3>Install package with base dependencies from PyPI</h3>
+				<pre><code>pip install exordium</code></pre>
+
+				<h3>Install optional dependencies for specific modules</h3>
+				<p>The following extras will install the base and specific dependencies for using TDDFA_V2.</p>
+				<pre><code>pip install exordium[tddfa]</code></pre>
+				<p>You can install multiple optional dependencies as well.</p>
+				<pre><code>pip install exordium[tddfa,audio]</code></pre>
+			
+				<table>
+					<tr>
+						<th>Extras Tag</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>audio</td>
+						<td>dependencies to process audio data</td>
+					</tr>
+					<tr>
+						<td>text</td>
+						<td>dependency to process textual data</td>
+					</tr>
+					<tr>
+						<td>tddfa</td>
+						<td>dependencies of TDDFA_V2 for landmark and headpose estimation, or related transformations</td>
+					</tr>
+					<tr>
+						<td>detection</td>
+						<td>dependencies for automatic face detection and tracking in videos</td>
+					</tr>
+					<tr>
+						<td>video</td>
+						<td>dependencies for various video feature extraction methods</td>
+					</tr>
+					<tr>
+						<td>all</td>
+						<td>all previously described extras will be installed</td>
+					</tr>
+				</table>
+
+				<p>Note: If you are not sure which tag should be used, just go with the all-mighty "all".</p>
+
+			<h3>Install package for development</h3>
+			<pre><code>git clone https://github.com/fodorad/exordium
+cd exordium
+pip install -e .[all]
+pip install -U -r requirements.txt
+python -m unittest discover -s test</code></pre>
+
+			<h2>Projects using exordium</h2>
+				<h3>(2023) BlinkLinMulT</h3>
+					<p>LinMulT is trained for blink presence detection and eye state recognition tasks. Our results demonstrate comparable or superior performance compared to state-of-the-art models on 2 tasks, using 7 public benchmark databases.</p>
+					<ul>
+						<li><strong>paper</strong>: BlinkLinMulT: Transformer-based Eye Blink Detection</li>
+						<li><strong>code</strong>: https://github.com/fodorad/BlinkLinMulT</li>
+					</ul>
+
+				<h3>(2022) PersonalityLinMulT</h3>
+					<p>LinMulT is trained for Big Five personality trait estimation using the First Impressions V2 dataset and sentiment estimation using the MOSI and MOSEI datasets.</p>
+					<ul>
+						<li><strong>paper</strong>: Multimodal Sentiment and Personality Perception Under Speech: A Comparison of Transformer-based Architectures</li>
+						<li><strong>code</strong>: https://github.com/fodorad/PersonalityLinMulT</li>
+					</ul>
+		</div>
+
+		<div class="d-flex mt-4 mb-4"><a id="button_contact" href="#" class="button mx-3">Details at the Top: Code</a></div>
+		<div id="footer-container"></div>
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>	
+		<script src="https://kit.fontawesome.com/a8f44bbdfa.js"></script>
+		<script src="../../js/menu.js"></script>
+		<script src="../../js/pre-load.js"></script>
+		<script src="../../js/footer.loader.js"></script>
+	</body>
+</html>

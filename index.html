@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Adam Fodor portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/styles.css" />
+		<noscript><div class="alert alert-warning" role="alert"><h2>Warning!</h2><p>This website requires JavaScript to function. Please enable JavaScript in your browser settings.</p></div></noscript>
+	</head>
+
+	<body class="is-preload">
+		<header>
+			<div id="menu-header">
+				<nav>
+					<ul>
+						<li><a href="#menu">Menu</a></li>
+					</ul>
+				</nav>
+			</div>
+
+			<nav id="menu">
+				<h2>
+					Menu
+					<span id="themeSwitch" class="theme-icon" aria-label="Toggle Theme"><i class="far fa-moon"></i></span>
+				</h2>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="html/projects.html">Projects</a></li>
+					<li><a href="html/blog.html">Blog</a></li>
+					<li><a href="html/events.html">Events</a></li>
+					<li><a href="html/teaching.html">Teaching</a></li>
+					<li><a href="html/gallery.html">Gallery</a></li>
+					<li><a href="html/about.html">About</a></li>
+				</ul>
+			</nav>		
+		</header>
+
+		<div class="container">
+			<div class="top-icons-container">
+				<ul class="list-unstyled top-icons-list">
+					<li><a href="https://github.com/fodorad" target="_blank" class="icon brand fa-github mb-3"><span class="label">GitHub</span></a></li>
+					<li><a href="https://www.linkedin.com/in/fodorad/" target="_blank" class="icon brand fa-linkedin mb-3"><span class="label">LinkedIn</span></a></li>
+					<li><a href="https://scholar.google.com/citations?hl=en&user=OdqswbsAAAAJ" target="_blank" class="icon brand fa-google-scholar mb-3"><span class="label">Scholar</span></a></li>
+					<li><a href="https://orcid.org/my-orcid?orcid=0000-0001-7370-930X" target="_blank" class="icon brand fa-orcid mb-3"><span class="label">ORCID</span></a></li>
+					<li><a href="mailto:fodorad201@gmail.com" target="_blank" class="icon solid fa-envelope mb-3"><span class="label">Email</span></a></li>
+				</ul>
+			</div>
+
+			<div class="row">
+				<div class="col-md-8">
+					<h1>Hi there, I am<br /> Adam Fodor</h1>
+					<p>Computer scientist and machine learning enthusiast.</p>
+					<p>
+						A PhD candidate at Eötvös Loránd University in Budapest, diving deep into the fascinating worlds of Human-Centered Artificial Intelligence (HCAI), Affective Behavior and Social Interaction Analysis. My journey is marked by milestones like publishing in top journals (Pattern Recognition) and conferences (IJCNN). At the Neural Information Processing Group (NIPG), I'm passionate about creating technology that serves society, especially in psychology and healthcare. Sharing knowledge is close to my heart: I love teaching and believe in lifelong learning, constantly seeking new insights.
+					</p>
+					<div class="d-flex mt-4">
+						<a id="button_contact" href="#contact" class="button mx-3">Get in touch</a>
+						<a id="button_cv" target="_blank" href="pdf/Adam_Fodor_CV.pdf" class="button primary button-icon mx-3">
+							<span class="icon solid fa-download"></span>Download my CV
+						</a>
+					</div>
+				</div>
+				<div class="col-md-4 mt-4 mb-4">
+					<a href="html/about.html" class="unformatted cursor-pointer">
+						<img src="images/Adam_Fodor.jpg" alt="About Me" class="img-fluid rounded home_hero">
+					</a>
+				</div>
+			</div>
+
+			<div class="recent_section">
+				<div class="recent_head">
+					<h2>Recent works</h2>
+					<a href="html/projects.html">View all</a>
+				</div>
+				<div class="recent_description">
+					<p>Explore the latest updates on my recent experiences as I share insights and details about my personal journey.</p>
+				</div>
+				<section id="project-container-recent"></section>
+			</div>
+
+			<div class="recent_section">
+				<div class="recent_head">
+					<h2>Recent posts</h2>
+					<a href="html/blog.html">View all</a>
+				</div>
+				<div class="recent_description">
+					<p>Collection of tutorials and interesting materials that I played with recently.</p>
+				</div>
+			</div>
+			<section id="blog-container-recent"></section>
+
+			<div class="recent_section">
+				<div class="recent_head">
+					<h2>Recent events</h2>
+					<a href="html/events.html">View all</a>
+				</div>
+				<div class="recent_description">
+					<p>Join me in reflecting on the moments and activities that have shaped my recent days, offering a sneak peek at the authentic perspective on my individual adventures.</p>
+				</div>
+			</div>
+			<section id="events-container-recent"></section>
+		</div>
+
+		<div class="d-flex mt-4 mb-4"><a id="button_contact" href="#" class="button mx-3">Back to top</a></div>
+		<div id="footer-container"></div>
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>	
+		<script src="https://kit.fontawesome.com/a8f44bbdfa.js"></script>
+		<script src="js/menu.js"></script>
+		<script src="js/pre-load.js"></script>
+		<script src="js/project.loader.recent.js"></script>
+		<script src="js/blog.loader.recent.js"></script>
+		<script src="js/event.loader.recent.js"></script>
+		<script src="js/footer.loader.js"></script>
+	</body>
+</html>

@@ -1,0 +1,99 @@
+[
+  {
+    "year": "2023",
+    "authors": "Ádám Fodor, Kristian Fenech, András Lőrincz",
+    "title": "BlinkLinMulT: Transformer-Based Eye Blink Detection",
+    "details": "MDPI Journal of Imaging, vol. 9-10, 196, 2023",
+    "link": {
+      "pdf": "pdf/2023_Fodor_Adam_MDPI_BlinkLinMulT.pdf",
+      "webpage": "https://www.mdpi.com/2313-433X/9/10/196",
+      "project": "projects/blinklinmult.html"
+    }
+  },
+  {
+    "year": "2022",
+    "authors": "Kristian Fenech, Ádám Fodor, Sean P Bergeron, Rachid R Saboundji, Catharine Oertel, András Lőrincz",
+    "title": "Perceived personality state estimation in dyadic and small group interaction with deep learning methods",
+    "details": "arXiv preprint arXiv:2211.04979, 2022",
+    "link": {
+      "pdf": "pdf/2022_Fodor_Adam_Group_Personality.pdf",
+      "webpage": "https://arxiv.org/abs/2211.04979",
+      "project": "projects/group_affect.html"
+    }
+  },
+  {
+    "year": "2022",
+    "authors": "Ádám Fodor, Rachid R Saboundji, Julio CS Jacques Junior, Sergio Escalera, David Gallardo-Pujol, András Lőrincz",
+    "title": "Multimodal Sentiment and Personality Perception Under Speech: A Comparison of Transformer-based Architectures",
+    "details": "Understanding Social Behavior in Dyadic and Small Group Interactions (PMLR), pp. 218-241, 2022",
+    "link": {
+      "pdf": "pdf/2021_Fodor_Adam_PMLR_Personality_LinMulT.pdf",
+      "webpage": "https://proceedings.mlr.press/v173/fodor22a.html",
+      "project": "projects/personalitylinmult.html"
+    }
+  },
+  {
+    "year": "2021",
+    "authors": "Ádám Fodor, László Kopácsi, Zoltán Á Milacski, András Lőrincz",
+    "title": "Speech de-identification with deep neural networks",
+    "details": "Acta Cybernetica, vol. 25-2, pp. 257-269, 2021",
+    "link": {
+      "pdf": "pdf/2021_Fodor_Adam_CSCS_Deidentification.pdf",
+      "webpage": "https://cyber.bibl.u-szeged.hu/index.php/actcybern/article/view/4178",
+      "project": "projects/deidentification.html"
+    }
+  },
+  {
+    "year": "2021",
+    "authors": "Zsolt János Viharos, Krisztián Balázs Kis, Ádám Fodor, Máté István Büki",
+    "title": "Adaptive, hybrid feature selection (AHFS)",
+    "details": "Pattern Recognition, vol. 116, 107932, 2021",
+    "link": {
+      "pdf": "pdf/2021_Fodor_Adam_PR_AHFS.pdf",
+      "webpage": "https://www.sciencedirect.com/science/article/pii/S0031320321001199",
+      "project": "projects/ahfs.html"
+    }
+  },
+  {
+    "year": "2020",
+    "authors": "Ádám Fodor, Rachid R. Saboundji, András Lőrincz",
+    "title": "Enhancing Apparent Personality Trait Analysis with Cross-Modal Embeddings",
+    "details": "13th Joint Conference on Mathematics and Computer Science, pp. 1-14, 2020",
+    "link": {
+      "pdf": "pdf/2020_Fodor_Adam_MACS_Multimodal.pdf",
+      "webpage": "https://arxiv.org/abs/2405.03846",
+      "project": "projects/deep_metric_learning.html"
+    }
+  },
+  {
+    "year": "2019",
+    "authors": "László Kopácsi, Áron Fóthi, Ádám Fodor, Ellák Somfai, András Lőrincz",
+    "title": "Skeletonization Combined with Deep Neural Networks for Superpixel Temporal Propagation",
+    "details": "International Joint Conference on Neural Networks (IJCNN), pp. 1-7, 2019",
+    "link": {
+      "pdf": "pdf/2019_Fodor_Adam_IJCNN_Skeleton.pdf",
+      "webpage": "https://ieeexplore.ieee.org/abstract/document/8852391",
+      "project": "projects/skeletonization.html"
+    }
+  },
+  {
+    "year": "2019",
+    "authors": "László Kopácsi, Áron Fóthi, Ádám Fodor, Ellák Somfai, András Lőrincz",
+    "title": "Common Fate Based Episodic Segmentation by Combining Supervoxels with Deep Neural Networks",
+    "details": "International Joint Conference on Neural Networks (IJCNN), pp. 1-7, 2019",
+    "link": {
+      "pdf": "pdf/2019_Fodor_Adam_IJCNN_SuperVoxel_OF.pdf",
+      "webpage": "https://ieeexplore.ieee.org/abstract/document/8851697",
+      "project": "projects/supervoxel_segmentation.html"
+    }
+  },
+  {
+    "year": "2016",
+    "authors": "Zsolt János Viharos, Jenő Csanaki, János Nacsa, Márton Edelényi, Csaba Péntek, Krisztián Balázs Kis, Ádám Fodor, János Csempesz",
+    "title": "Production trend identification and forecast for shop-floor business intelligence",
+    "details": "Acta Imeko, vol 5-4, pp. 49-55, 2016",
+    "link": {
+      "pdf": "pdf/2016_Fodor_Adam_IMEKO_Production_Trend.pdf"
+    }
+  }
+]

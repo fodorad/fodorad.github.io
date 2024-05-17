@@ -1,0 +1,66 @@
+[
+  {
+    "date": "2024-06-14T14:00:00.001Z",
+    "data-tags": "demo code",
+    "image": "images/placeholder/soon.jpg",
+    "title": "L2CS-Net Knows Where You Look!",
+    "content": "Unconstrained gaze estimation with L2CS-Net. \nStay tuned, it's just around the corner!"
+  },
+  {
+    "date": "2024-08-14T14:00:00.001Z",
+    "data-tags": "demo code",
+    "image": "images/placeholder/soon.jpg",
+    "title": "Decoding Silence: Unveiling the Art of Lip Reading!",
+    "content": "Lip reading in the wild. \nStay tuned, it's just around the corner!"
+  },
+  {
+    "date": "2023-12-06T10:00:00.001Z",
+    "data-tags": "literature",
+    "image": "images/blog/saliency1/cover.PNG",
+    "title": "Unlocking the Black Box with Saliency Maps",
+    "content": "Unravel the mystery of AI decisions with saliency maps, a pivotal tool in making artificial intelligence transparent and understandable.",
+    "page": "blog/saliency.html"
+  },
+  {
+    "date": "",
+    "data-tags": "literature code",
+    "image": "images/placeholder/pic03.jpg",
+    "title": "Action Units in action",
+    "content": "Visualization.\nOpenGraphAU."
+  },
+  {
+    "date": "",
+    "data-tags": "literature code",
+    "image": "images/placeholder/pic04.jpg",
+    "title": "Return of heroes: HOTS Drafter",
+    "content": "Visualization.\nOpenGraphAU."
+  },
+  {
+    "date": "",
+    "data-tags": "code",
+    "image": "images/placeholder/pic01.jpg",
+    "title": "Heart Rate Variability (HRV) preprocessing and visualization",
+    "content": "This is the first sentence.\nThis is the second sentence."
+  },
+  {
+    "date": "",
+    "data-tags": "literature code",
+    "image": "images/placeholder/pic03.jpg",
+    "title": "Gaze benchmark databases",
+    "content": "Visualization.\nInformation."
+  },
+  {
+    "date": "",
+    "data-tags": "literature code",
+    "image": "images/placeholder/pic04.jpg",
+    "title": "AV Sync",
+    "content": "Visualization.\nInformation."
+  },
+  {
+    "date": "",
+    "data-tags": "literature code",
+    "image": "images/placeholder/pic05.jpg",
+    "title": "lip reading",
+    "content": "Visualization.\nInformation."
+  }
+]

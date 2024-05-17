@@ -1,0 +1,15 @@
+ul {
+    list-style: disc;
+    margin: 0 0 2em 0;
+    padding-left: 1em;
+}
+
+ul li {
+    padding-left: 0.5em;
+	text-align: justify;
+}
+
+ul.blog {
+    margin: -1rem 0 0 0;
+    padding: 0 1rem 0 2rem;
+}

@@ -1,0 +1,9 @@
+:root {
+	--bg-color-default: #ffffff;
+	--text-color-default: #333333;
+	--hover-color-default: #DF7861;
+	--active-color-default: #e04825;
+    --button-color: #585858;
+	--bg-color-dark: #2c3e50;
+	--text-color-dark: #ecf0f1;
+}
