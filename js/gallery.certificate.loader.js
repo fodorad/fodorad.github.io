@@ -27,7 +27,14 @@ function populateTagContainer() {
         tagElement.textContent = tag;
         tagElement.classList.add('gallery_tag');
         tagElement.addEventListener('click', () => filterByTag(tag));
-        tagInfoContainer.appendChild(tagElement);
+
+        const tagExistsInContainer = (container) => {
+            return Array.from(container.children).some(child => child.textContent === tag);
+        };
+
+        if (!tagExistsInContainer(tagInfoContainer)) {
+            tagInfoContainer.appendChild(tagElement);
+        }
 
         if (activeTags.includes(tag)) {
             tagElement.classList.add('active');
