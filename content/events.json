@@ -1,7 +1,16 @@
 [
     {
+      "date": "2024-07-30T16:00:00.001Z",
+      "image": "images/gallery/events/2024/Hungarian_Machine_Learning_Meeting/Fodor_Adam_Hungarian_Machine_Learning_Meeting_20240730_event.jpg",
+      "alt": "Poster presentation about emotion recognition and emotion estimation using EmotionLinMulT",
+      "title": "Poster presentation at Hungarian Machine Learning Meeting",
+      "content": "At the national machine learning and AI event organized by MILAB and coordinated by SZTAKI, I had the opportunity to showcase my work on EmotionLinMulT for emotion recognition and emotion estimation. It was a fantastic experience to share ideas and connect with the community.",
+      "links": ["https://mi.nemzetilabor.hu/news/years-machine-learning-days-event-was-exceptional-success"],
+      "gallery_tags": ["Hungarian Machine Learning Meeting"]
+    },
+    {
       "date": "2024-04-15T12:00:00.001Z",
-      "image": "images/gallery/events/logo/kh.jpg",
+      "image": "images/gallery/events/logo/kh2.jpg",
       "alt": "Generative AI presentation at K&H",
       "title": "Generative AI presentation at K&H",
       "content": "I'm grateful to have had the opportunity to present on Generative AI at K&H, a truly enriching experience. This event didn't just allow me to connect with new people and forge valuable connections; it also expanded my perspectives and paved the way for potential future collaborations."
@@ -46,7 +55,7 @@
       "alt": "Poster presentation about eye blink detection using BlinkLinMulT",
       "title": "Poster presentation at Hungarian Machine Learning Meeting",
       "content": "At the national machine learning and AI event organized by MILAB and coordinated by SZTAKI, I had the amazing opportunity to present my work on BlinkLinMulT for eye blink detection and discuss my research on group affect during goal-oriented task solving. It was a fantastic experience to exchange ideas and connect with the community. I'm truly grateful for such a wonderful opportunity.",
-      "links": ["https://mi.nemzetilabor.hu/magyar-machine-learning-talalkozo", "https://sztaki.hun-ren.hu/innovacio/hirek/tobb-mint-170-en-vettek-reszt-magyar-machine-learning-talalkozon"],
+      "links": ["https://mi.nemzetilabor.hu/news/hungarian-machine-learning-meeting-milab-organises-national-event-machine-learning-and-ai", "https://sztaki.hun-ren.hu/innovacio/hirek/tobb-mint-170-en-vettek-reszt-magyar-machine-learning-talalkozon"],
       "gallery_tags": ["Hungarian Machine Learning Meeting"]
     },
     {
