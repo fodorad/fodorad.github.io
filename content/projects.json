@@ -1,5 +1,19 @@
 [
   {
+    "year": 2025,
+    "image": "images/placeholder/pic04.jpg",
+    "title": "EmotionLinMulT",
+    "content": "Transformer-based Emotion Sensing.",
+    "page": "projects/emotionlinmult.html"
+  },
+  {
+    "year": 2025,
+    "image": "images/placeholder/pic05.jpg",
+    "title": "Autism",
+    "content": "Multimodal framework for Automatic Behavior Analysis of Children with Autism during ADOS-2.",
+    "page": "projects/autism.html"
+  },
+  {
     "year": 2024,
     "image": "images/placeholder/pic06.jpg",
     "title": "Group Personality",
