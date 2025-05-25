@@ -1,5 +1,12 @@
 [
     {
+        "src": "images/gallery/events/2024/TECHXPO/Fodor_Adam_TECHXPO_20241121_1.jpg",
+        "thumbnail_square": "images/gallery/events/2024/TECHXPO/Fodor_Adam_TECHXPO_20241121_1_thumbnail_210x210.jpg",
+        "title": "TECHXPO",
+        "caption": "TECHXPO event in Budapest",
+        "tags": ["2024", "TECHXPO"]
+    },
+    {
         "src": "images/gallery/events/2024/Hungarian_Machine_Learning_Meeting/Fodor_Adam_Hungarian_Machine_Learning_Meeting_20240730_1.jpg",
         "thumbnail_square": "images/gallery/events/2024/Hungarian_Machine_Learning_Meeting/Fodor_Adam_Hungarian_Machine_Learning_Meeting_20240730_1_thumbnail_210x210.jpg",
         "title": "Hungarian Machine Learning Meeting",

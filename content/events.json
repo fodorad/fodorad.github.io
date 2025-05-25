@@ -1,5 +1,14 @@
 [
     {
+      "date": "2024-11-21T10:00:00.001Z",
+      "image": "images/gallery/events/2024/TECHXPO/Fodor_Adam_TECHXPO_20241121_event.jpg",
+      "alt": "TECHXPO event in Budapest",
+      "title": "TECHXPO event in Budapest",
+      "content": "I had the pleasure of attending TECHXPO 2024, an outstanding international technology conference featuring over 500 professionals and leading presenters such as Németh Balázs from K&H and Hong-Eng Koh from Huawei. It was a truly inspiring experience to be part of such a forward-thinking gathering.",
+      "links": ["https://techxpo.hu/en/conference-moments/"],
+      "gallery_tags": ["TECHXPO"]
+    },
+    {
       "date": "2024-07-30T16:00:00.001Z",
       "image": "images/gallery/events/2024/Hungarian_Machine_Learning_Meeting/Fodor_Adam_Hungarian_Machine_Learning_Meeting_20240730_event.jpg",
       "alt": "Poster presentation about emotion recognition and emotion estimation using EmotionLinMulT",
