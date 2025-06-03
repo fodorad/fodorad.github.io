@@ -77,6 +77,31 @@ img.middle.very-small {
     opacity: 1;
 }
 
+@media (max-width: 767.98px) {
+    .home_hero {
+        width: 80% !important;
+        max-width: 80% !important;
+    }
+    
+    .home_hero_container {
+        margin-top: 0rem !important;
+        margin-bottom: 1rem !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .home_hero {
+        width: 90% !important;
+        max-width: 90% !important;
+    }
+
+    .home_hero_container {
+        margin-top: -10rem !important;
+        margin-bottom: 2rem !important;
+    }
+}
+
+
 .home_hero:hover {
     transform: scale(1.1);
 }

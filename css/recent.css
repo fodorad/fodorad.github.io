@@ -16,11 +16,29 @@
     align-items: center;
 }
 
+.recent_head a {
+    padding-top: 1.5rem;
+    font-size: 1.3rem;
+    color: var(--text-color-default);
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.recent_head a:hover {
+    color: var(--hover-color-default);
+}
+
 .recent_head h2 {
     margin-bottom: 0.5rem;
 }
 
 .recent_section .recent_description {
-    max-width: 70%;
+    width: 100%;
     margin: 0 0 1rem 0;
+}
+
+@media (min-width: 768px) {
+    .recent_section .recent_description {
+        width: 60%;
+    }
 }
