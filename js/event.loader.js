@@ -17,6 +17,13 @@ fetch('../content/events.json')
             const siteLink = item.links
                 ? `${item.links.map(link => `<a href="${link}" target="_blank">[Link]</a>`).join(', ')}`
                 : '';
+            
+            const pdfLink = item.pdf
+                ? `<a href="${item.pdf}" class="event-pdf-link" target="_blank" rel="noopener">
+                    <i class="fa-solid fa-file-pdf"></i>
+                    <i class="fa-solid fa-arrow-up-right-from-square newtab-icon"></i>
+                  </a>`
+                : '';
 
             const originalDate = new Date(item.date);
             const formattedDate = `${originalDate.getUTCFullYear()}.${(originalDate.getUTCMonth() + 1).toString().padStart(2, '0')}.${originalDate.getUTCDate().toString().padStart(2, '0')}`;
@@ -29,9 +36,9 @@ fetch('../content/events.json')
                  <p>
                  ${galleryTagsLink ? `<a href="${galleryTagsLink}">[Gallery]</a>` : ''}
                  ${siteLink? `${siteLink}`: ''}
+                 ${pdfLink? `${pdfLink}`: ''}
                  </p>`;
  
-            
             eventContainer.appendChild(eventBox);
         });
 

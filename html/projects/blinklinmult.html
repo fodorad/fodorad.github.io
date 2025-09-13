@@ -72,41 +72,70 @@
 				<div class="col"></div>
 			</div>
 
-			<h2>Contribution</h2>
-				<ul>
-					<li>We propose a novel transformer-based blink detection model called BlinkLinMulT that efficiently combines low- and high-level features from video sequences using linear complexity attention mechanisms.</li>
-					<li>Cross-dataset evaluations are performed to quantify the robustness of BlinkLinMulT on unseen samples and it is found that a single network trained on a union of datasets improves the results obtained on all datasets separately.</li>
-					<li>We present a feature fusion ablation study and show that the proposed method works well even on extreme head poses.</li>
-					<li>The proposed approach is evaluated on blink presence detection and eye state recognition tasks and multiple public benchmark datasets. The results obtained are similar to or better than those provided by state-of-the-art models on the respective tasks and databases.</li>
-				</ul>
-
-			<h2>Proposed method</h2>
-				<p>In this work, we propose a fast transformer-based framework for eye blink detection
-					that can effectively combine low- and high-level feature sequences considering several
-					challenges, such as lighting changes, and a variety of head poses, and also utilizes motion
-					information from sequences of the aforementioned features. We present a modified 
-					multimodal transformer with linear attention (LinMulT), which considers multiple inputs,
-					such as RGB texture, iris and eye landmarks, ear, and head pose angles. To our knowledge,
-					this is the first work to use transformer architecture and implement an efficient fusion
-					of input features, including head pose angles.</p>
-				<img class="img-fluid rounded middle" src="../../images/projects/blinklinmult/model.png" alt=""/>
-				
-			<h2>Visualization</h2>
-				<div class="row">
-					<div class="col d-flex justify-content-center align-items-center">
-						<div class="row">
-							<p>Head pose angle dependence of BlinkLinMulT in the case of blink presence detection
-								task. The head poses are predicted by 3DDFA_V2; the colors represent the F1 score calculated for the
-								blink presence task, which is also written within the boxes together with the number of samples (in
-								parenthesis) considered during the metric evaluations. F1 score cannot be calculated for those extreme
-								cases, where closed-eye samples are not available.</p>
-							<p>Test samples from all 5 sequence datasets are used for
-								the experiment. Blinks can be predicted accurately in the case of frontal faces, and while the participant
-								is looking up. Performance slightly decreases when the monitored person is looking down.</p>
-						</div>
-						<img class="img-fluid rounded right small" src="../../images/projects/blinklinmult/headpose.png" alt=""/>
+			<div class="container my-5">
+				<div class="row g-4">
+				<div class="col-md-6">
+					<div class="project-card card-task h-100 text-center">
+						<div class="project-title">Task</div>
+						<ul class="text-start">
+							<li>Develop a fast and accurate transformer-based framework for eye blink detection and eye state recognition using video sequences.</li>
+							<li>Combine low- and high-level multimodal features including RGB texture, iris and eye landmarks, eye aspect ratio, and head pose angles.</li>
+							<li>Handle challenges like lighting changes, extreme head poses, and noisy input data.</li>
+						</ul>
 					</div>
 				</div>
+				<div class="col-md-6">
+					<div class="project-card card-challenges h-100 text-center">
+						<div class="project-title">Challenges</div>
+						<ul class="text-start">
+							<li>Detecting subtle and transient blink events that last only a few frames.</li>
+							<li>Dealing with large variations in head pose, gaze angle, and occlusions.</li>
+							<li>Ensuring robustness across multiple diverse datasets and real-world scenarios.</li>
+							<li>Balancing model accuracy with computational efficiency for real-time applications.</li>
+							<li>Fusing heterogeneous features (texture, landmarks, head pose angles) effectively.</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="project-card card-method h-100 text-center">
+						<div class="project-title">Proposed Method</div>
+						<ul class="text-start">
+							<li>Introduce BlinkLinMulT, a multimodal transformer architecture with linear attention mechanisms for efficient fusion of input feature sequences.</li>
+							<li>Input features include RGB eye patches extracted via CNN backbones, iris and eye landmarks, eye aspect ratio computations, and head pose angles estimated by specialized neural nets.</li>
+							<li>Cross-modal transformers translate features between modalities, followed by self-attention layers for enhancing temporal information.</li>
+							<li>Final head consists of a fully connected layer producing blink presence and eye state predictions at frame and sequence levels.</li>
+							<li>Utilize linear complexity attention to reduce computation time and memory consumption compared to quadratic attention.</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="project-card card-results h-100 text-center">
+						<div class="project-title">Main Results</div>
+						<ul class="text-start">
+							<li>BlinkLinMulT achieves state-of-the-art or highly competitive performance on multiple public benchmark datasets including CEW, ZJU, MRL Eye, RT-BENE, EyeBlink8, Researcher’s Night, and TalkingFace.</li>
+							<li>Cross-dataset evaluations demonstrate robustness, with models trained on unioned datasets outperforming those trained on single datasets separately.</li>
+							<li>Ablation studies highlight the importance of combining RGB texture with eye and iris landmarks and head pose for best performance.</li>
+							<li>Accuracy slightly decreases for large yaw and pitch angles, but remains acceptable for extreme head poses.</li>
+							<li>Sequence modeling with transformer layers outperforms frame-wise methods, especially in recognizing temporal blink patterns.</li>
+							<li>Linear attention significantly reduces inference time and memory usage, enabling practical real-time eye blink detection.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<h2>Visualization</h2>
+			<img class="img-fluid rounded middle" src="../../images/projects/blinklinmult/model.png" alt=""/>
+			<p>Head pose angle dependence of BlinkLinMulT in the case of blink presence detection
+				task. The head poses are predicted by 3DDFA_V2; the colors represent the F1 score calculated for the
+				blink presence task, which is also written within the boxes together with the number of samples (in
+				parenthesis) considered during the metric evaluations. F1 score cannot be calculated for those extreme
+				cases, where closed-eye samples are not available.</p>
+			<p>Test samples from all 5 sequence datasets are used for
+				the experiment. Blinks can be predicted accurately in the case of frontal faces, and while the participant
+				is looking up. Performance slightly decreases when the monitored person is looking down.</p>
+			<img class="img-fluid rounded middle small" src="../../images/projects/blinklinmult/headpose.png" alt=""/>
+				
 
 			<h2>BibTex</h2>
 			<p>If you found our research helpful or influential please consider citing:</p>

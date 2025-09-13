@@ -1,5 +1,19 @@
 [
     {
+        "src": "images/gallery/events/2025/Hungarian_Machine_Learning_Meeting/Fodor_Adam_Hungarian_Machine_Learning_Meeting_20250812_1.jpg",
+        "thumbnail_square": "images/gallery/events/2025/Hungarian_Machine_Learning_Meeting/Fodor_Adam_Hungarian_Machine_Learning_Meeting_20250812_1_thumbnail_210x210.jpg",
+        "title": "Hungarian Machine Learning Days",
+        "caption": "Poster presentation about a multimodal multi-task transformer for emotion understanding in videos.",
+        "tags": ["2025", "Hungarian Machine Learning Meeting"]
+    },
+    {
+        "src": "images/gallery/events/2025/Hungarian_Machine_Learning_Meeting/Fodor_Adam_Hungarian_Machine_Learning_Meeting_20250812_2.jpg",
+        "thumbnail_square": "images/gallery/events/2025/Hungarian_Machine_Learning_Meeting/Fodor_Adam_Hungarian_Machine_Learning_Meeting_20250812_2_thumbnail_210x210.jpg",
+        "title": "Hungarian Machine Learning Days",
+        "caption": "Poster presentation about a multimodal multi-task transformer for emotion understanding in videos.",
+        "tags": ["2025", "Hungarian Machine Learning Meeting"]
+    },
+    {
         "src": "images/gallery/events/2024/TECHXPO/Fodor_Adam_TECHXPO_20241121_1.jpg",
         "thumbnail_square": "images/gallery/events/2024/TECHXPO/Fodor_Adam_TECHXPO_20241121_1_thumbnail_210x210.jpg",
         "title": "TECHXPO",

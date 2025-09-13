@@ -63,6 +63,21 @@ table th {
     width: 60%;
 }
 
+#supervising-table th:first-child,
+#supervising-table td:first-child {
+    width: 10%;
+}
+
+#supervising-table th:nth-child(2),
+#supervising-table td:nth-child(2) {
+    width: 20%;
+}
+
+#supervising-table th:last-child,
+#supervising-table td:last-child {
+    width: 50%;
+}
+
 table thead {
     border-bottom: solid 2px #c9c9c9;
 }

@@ -69,49 +69,74 @@
 				<div class="col"></div>
 			</div>
 
-			<h2>Research Questions</h2>
-				<p>Using estimates on perceived personality applied to both small groups and dyads involved in a task
-				oriented interaction we examine the time-averaged personality states of group members in order to address
-				the following research questions:</p>
-				<ul>
-					<li>How reliably does the perceived personality estimator perform in out-of-domain sessions compared to human annotators?</li>
-					<li>Does the perceived personality of members within a group cluster?</li>
-					<li>Is the group-level perceived personality a stronger predictor of group performance than self-reported personality?</li>
-				</ul>
-
-			<h2>Proposed method</h2>
-			<p>In order to approach these research questions we examine multiple datasets which focus on dyadic and
-				small group interaction. Importantly, we justify the generalisability of the developed method we make
-				use of the provided perceived personality annotations present in the MULTISIMO dataset. For the dyadic
-				case we analyse the UDIVA dataset and for small groups the Emergent Leader
-				(ELEA) and AMI meeting corpus. Both the UDIVA
-				and AMI meeting corpus provide the opportunity to explore the potential changes in perceived personality
-				over different tasks. Despite the limitation that the ELEA dataset provides only a single interaction session
-				for each group, it provides a useful metric of group performance for the completed task.</p>
-			<p>These features are used with a transformer based model. The architecture is built on multi-head attention units
-				that transform one modality to another. As we utilise three unique modalities, the model comprises of six
-				cross-modal transformers. The final output of the network is the prediction of the big-five personality traits,
-				however we use emotional stability represented as the inverse neuroticism score.</p>
-			<img class="img-fluid rounded middle" src="../../images/projects/group_affect/model.png" alt=""/>
-			<p>Estimation of the big-five traits is made over a sliding window of duration 15 seconds and a stride
-				duration of 1 second, providing a snap-shot of the perceived personality traits. From the big-five traits
-				we determine a higher-order two-factor meta-trait representation of personality.
-				These meta-traits are plasticity (PLA) and stability (STA), the former combining the traits of openness
-				and extroversion and the latter conscientiousness, agreeableness and emotional stability.</p>
+			<div class="container my-5">
+				<div class="row g-4">
+					<div class="col-md-6">
+						<div class="project-card card-task h-100 text-center">
+							<div class="project-title">Task</div>
+							<ul class="text-start">
+								<li>Analyze perceived personality traits of individuals during dyadic and small group interactions.</li>
+								<li>Investigate the emergence of group affect in collaborative social settings using multimodal data.</li>
+								<li>Examine whether perceived personality traits cluster within groups and assess relations with group performance.</li>
+								<li>Predict group performance based on aggregated perceived and self-reported personality traits.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="project-card card-challenges h-100 text-center">
+							<div class="project-title">Challenges</div>
+							<ul class="text-start">
+								<li>Modeling dynamic personality expression influenced by social context and task demands.</li>
+								<li>Handling variability in data including occlusions, diverse head poses, and incomplete multimodal observations.</li>
+								<li>Ensuring reliability and generalizability of perceived personality estimations compared to human raters.</li>
+								<li>Addressing limitations of current datasets which may not fully capture variations in personality states during interactions.</li>
+								<li>Analyzing groups with differing communication styles, including collaborative versus competitive tasks.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="project-card card-method h-100 text-center">
+							<div class="project-title">Proposed Method</div>
+							<ul class="text-start">
+								<li>Use a Multimodal Transformer with Linear Complexity Attention (LinMulT) to estimate perceived personality traits from audiovisual and transcript data.</li>
+								<li>Apply LinMulT to generate time-series predictions of personality traits over sliding analysis windows.</li>
+								<li>Exclude non-speaking segments to improve estimation accuracy.</li>
+								<li>Calculate higher-level personality metatraits such as Plasticity and Stability from estimated Big Five traits.</li>
+								<li>Evaluate group-level convergence using cluster analysis and Permutational MANOVA tests on perceived personality data.</li>
+								<li>Predict group performance with Gradient Boosted Trees using aggregated perceived and self-reported personality features.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="project-card card-results h-100 text-center">
+							<div class="project-title">Main Results</div>
+							<ul class="text-start">
+								<li>The LinMulT model's performance in estimating perceived personality traits is comparable to human annotators, with good reliability across traits.</li>
+								<li>Statistically significant personality convergence (group affect) is observed in collaborative tasks across multiple datasets, but not in competitive or passive interaction tasks.</li>
+								<li>Perceived personality traits form tighter clusters within groups than self-reported traits, indicating dynamic adaptation during social interaction.</li>
+								<li>Aggregated perceived personality metatraits predict group performance more accurately than self-reported personality, highlighting the importance of external perception in group effectiveness.</li>
+								<li>Results support the view that personality expression is dynamic and influenced by task context and interactions, with implications for understanding group dynamics.</li>
+								<li>Limitations include dataset constraints and variability in observation conditions, calling for further research with richer data and enhanced methodologies.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
 
 			<h2>Visualization</h2>
-			<p>Illustrative sample of the temporal changes in the perceived personality meta-traits of plasticity (left) and
-				stability (right). Coloured curves: Trait estimation for individual participants, where each participant is assigned a
-				letter in place of a name for anonymisation in the dataset. Missing line segments: non-speaking intervals. Dashed
-				line: average over participants. The grey shaded area gives the standard deviation of the individual values. Perceived
-				personality tend to move together over time.</p>
-			<img class="img-fluid rounded middle" src="../../images/projects/group_affect/trajectory.png" alt=""/>
-			<p>On the following figure stability and plasticity values are visualized. a) First-impression personality state averaged over the full session duration.
-				b) Each subplot shows the original averages as seen in a). Traits corresponding to the members of other group are
-				highlighted by the red circles. c) Plasticity and stability determined from self reported big-five traits, re-scaled between
-				0 and 1. d) Each subplot shows the original averages as seen in c). Traits corresponding to the members of other group
-				are highlighted by the red circles. The observed group effect is strong in the first-impression personality state.</p>
-			<img class="img-fluid rounded middle" src="../../images/projects/group_affect/group_personality.png" alt=""/>
+				<img class="img-fluid rounded middle" src="../../images/projects/group_affect/model.png" alt=""/>
+				<p>Illustrative sample of the temporal changes in the perceived personality meta-traits of plasticity (left) and
+					stability (right). <br> Coloured curves: Trait estimation for individual participants, where each participant is assigned a
+					letter in place of a name for anonymisation in the dataset. <br> Missing line segments: non-speaking intervals. <br> Dashed
+					line: average over participants. <br> The grey shaded area gives the standard deviation of the individual values. <br> Perceived
+					personality tend to move together over time.</p>
+				<img class="img-fluid rounded middle" src="../../images/projects/group_affect/trajectory.png" alt=""/>
+				<p>On the following figure stability and plasticity values are visualized. <br> a) First-impression personality state averaged over the full session duration.
+					<br> b) Each subplot shows the original averages as seen in a). Traits corresponding to the members of other group are
+					highlighted by the red circles. <br> c) Plasticity and stability determined from self reported big-five traits, re-scaled between
+					0 and 1. <br> d) Each subplot shows the original averages as seen in c). Traits corresponding to the members of other group
+					are highlighted by the red circles. <br> The observed group effect is strong in the first-impression personality state.</p>
+				<img class="img-fluid rounded middle" src="../../images/projects/group_affect/group_personality.png" alt=""/>
 
 			<h2>BibTex</h2>
 			<p>If you found our research helpful or influential please consider citing:</p>

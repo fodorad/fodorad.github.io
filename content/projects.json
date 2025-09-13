@@ -3,7 +3,7 @@
     "year": 2025,
     "image": "images/placeholder/pic04.jpg",
     "title": "EmotionLinMulT",
-    "content": "Transformer-based Emotion Sensing.",
+    "content": "A Multimodal Multi-Task Transformer for Emotion Understanding from Videos.",
     "page": "projects/emotionlinmult.html"
   },
   {
@@ -16,8 +16,8 @@
   {
     "year": 2024,
     "image": "images/placeholder/pic06.jpg",
-    "title": "Group Personality",
-    "content": "Perceived Personality State Estimation in Dyadic and Small Group Interaction with Deep Learning Methods",
+    "title": "Group Affect",
+    "content": "Perceived Personality State Analysis in Dyadic and Small Group Interaction.",
     "page": "projects/group_affect.html"
   },
   {
@@ -31,21 +31,21 @@
     "year": 2023,
     "image": "images/placeholder/pic02.jpg",
     "title": "Exordium",
-    "content": "Collection of preprocessing functions and deep learning methods.",
+    "content": "Collection of Preprocessing Functions and Deep Learning Methods.",
     "page": "projects/exordium.html"
   },
   {
     "year": 2023,
     "image": "images/placeholder/pic03.jpg",
     "title": "Personality Questionnaires",
-    "content": "Personality questionnaire processing methods for various experiments.",
+    "content": "Personality questionnaires for various experiments.",
     "page": "projects/personality_questionnaires.html"
   },
   {
     "year": 2022,
     "image": "images/placeholder/pic04.jpg",
     "title": "PersonalityLinMulT",
-    "content": "Multimodal Sentiment and Personality Perception Under Speech: A Comparison of Transformer-based Architectures.",
+    "content": "Multimodal Sentiment and Personality Perception.",
     "page": "projects/personalitylinmult.html"
   },
   {
@@ -66,14 +66,14 @@
     "year": 2021,
     "image": "images/placeholder/pic01.jpg",
     "title": "AHFS",
-    "content": "Adaptive, hybrid feature selection.",
+    "content": "Adaptive, Hybrid Feature Selection.",
     "page": "projects/ahfs.html"
   },
   {
     "year": 2021,
     "image": "images/placeholder/pic02.jpg",
     "title": "De-identification",
-    "content": "Speech de-identification with deep neural networks.",
+    "content": "Speech de-identification with Deep Neural Networks.",
     "page": "projects/deidentification.html"
   },
   {

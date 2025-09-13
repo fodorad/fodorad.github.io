@@ -1,5 +1,16 @@
 [
   {
+    "year": "2025",
+    "authors": "Bruno Carlos Dos Santos Melício, Kaan Karaköse, Ádám Fodor, Linyun Xiang, Viktor Varga, Latha Soorya, Emily Dillon, Péter Kun, András Sárkány, Mohamed Chetouani, Kristian Fenech",
+    "title": "Multimodal Framework for Automatic Behavior Analysis of Children with Autism During ADOS-2",
+    "details": "Cognitive Computation, vol. 17, 137, 2025",
+    "link": {
+      "pdf": "pdf/2025_Fodor_Adam_CC_ASD.pdf",
+      "webpage": "https://link.springer.com/article/10.1007/s12559-025-10481-7",
+      "project": "projects/autism.html"
+    }
+  },
+  {
     "year": "2023",
     "authors": "Ádám Fodor, Kristian Fenech, András Lőrincz",
     "title": "BlinkLinMulT: Transformer-Based Eye Blink Detection",

@@ -76,64 +76,88 @@
 				<div class="col"></div>
 			</div>
 
-			<h2>Contribution</h2>
-				<ul>
-					<li>For de-identification, we propose to transform utterances to a generic voice of a Text-to-Speech (TTS) engine, by taking advantage of utterance-text sample pairs.
-						We use an end-to-end trainable Deep Neural Network (DNN) to learn the many-to-one VT task. We suggest to learn the mapping at vocoder level.</li>
-					<li>We show that the trained network gives rise to tolerable distortions at utterance level by conducting two experiments:
-						<ul>
-							<li>comparing the outputs of Google’s Automatic Speech Recognition (ASR) system for the original TTS output and the de-identified utterance and measuring the Mel-Cepstral Distortion (MCD).</li>
-							<li>To confirm de-identification success, we further performed three kind of perceptual listening studies with human subjects:
-								(A-not-B test: distinguishing transformed utterances of different speakers;
-								2-Alternative Forced-Choice (2AFC) test: classifying utterances from female/male speakers;
-								6-Alternative Forced-Choice (6AFC) test: estimating the number of speakers)
-						</ul>
-					</li>
-					<li>Our proposal is irreversible and it requires only speech-transcript sample pairs for training, which are readily accessible in the literature. We argue that our method performs favorably compared to several baseline methods.</li>
-				</ul>
-
-			<h2>Proposed method</h2>
-				<p>The proposed method combines preprocessing and deep learning for voice conversion and synthesis. 
-					Initially, TTS voices are generated using Festival and aligned with original speech via DTW. Data augmentation, like speed warping, enriches the dataset. 
-					Feature transformation employs diverse deep learning architectures such as Dense, ConvNet, and C-BLSTM. 
-					The pipeline involves TTS synthesis, alignment, augmentation, and feature transformation, aiming for high-fidelity voice conversion and synthesis.</p>
-			
-				<div class="row">
-					<div class="col d-flex justify-content-center align-items-center">
-						<img class="img-fluid rounded left small" src="../../images/projects/deidentification/preprocess.png" alt=""/>
-						<img class="img-fluid rounded middle very-small" src="../../images/projects/deidentification/dense.png" alt=""/>
-						<img class="img-fluid rounded right small" src="../../images/projects/deidentification/postprocess.png" alt=""/>
+			<div class="container my-5">
+				<div class="row g-4">
+					<div class="col-md-6">
+						<div class="project-card card-task h-100 text-center">
+							<div class="project-title">Task</div>
+							<ul class="text-start">
+								<li>Speech de-identification by transforming human speech into a generic Text-to-Speech (TTS) voice to protect speaker privacy.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="project-card card-challenges h-100 text-center">
+							<div class="project-title">Challenges</div>
+							<ul class="text-start">
+								<li>Removing personal speaker characteristics without losing linguistic content.</li>
+								<li>Ensuring irreversibility of transformation to guarantee privacy.</li>
+								<li>Preserving speech intelligibility and quality after transformation.</li>
+								<li>Limited availability of parallel speaker data for training traditional voice conversion systems.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="project-card card-method h-100 text-center">
+							<div class="project-title">Proposed Method</div>
+							<ul class="text-start">
+								<li>Train a deep neural network (DNN) to map vocoder parameters of human speech to those of a generic TTS engine voice using speech-text sample pairs.</li>
+								<li>Learn the many-to-one voice transformation at the vocoder feature level, including Mel-Cepstral Coefficients (MCEP), fundamental frequency (F0), and aperiodicity features.</li>
+								<li>Use Dynamic Time Warping (DTW) to align TTS outputs with original utterances for supervised learning.</li>
+								<li>Test several DNN architectures including Dense, ConvNet, C-BLSTM, ResNet, and Wav2Letter models.</li>
+								<li>Evaluate de-identification success via ASR accuracy drop, Mel-Cepstral Distortion (MCD), and human perceptual listening tests (A-not-B, 2AFC, 6AFC tasks).</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="project-card card-results h-100 text-center">
+							<div class="project-title">Main Results</div>
+							<ul class="text-start">
+								<li>The method achieves strong de-identification with only minor degradation in automatic speech recognition accuracy (approx. 80-85% vs. 93% for aligned TTS baseline).</li>
+								<li>Mel-Cepstral Distortion values indicate comparable or better performance than baseline voice conversion methods, confirming quality retention.</li>
+								<li>Human listening tests show subjects are unable to reliably distinguish or identify speakers, confirming effective privacy protection.</li>
+								<li>The approach requires only speech-transcript pairs for training, making it practical for large-scale applications.</li>
+								<li>Limitations include inherited speech dynamics due to DTW alignment, suggesting future work to incorporate DTW in loss functions for improvement.</li>
+							</ul>
+						</div>
 					</div>
 				</div>
+			</div>
 
 			<h2>Visualization</h2>
-			<p>Explore the network's transformations: original inputs on the left, modified results on the right.
-				This straightforward presentation unveils the network's refining prowess, offering a practical view of its capabilities.</p>
+				<div class="row">
+				<div class="col d-flex justify-content-center align-items-center">
+				<img class="img-fluid rounded left small" src="../../images/projects/deidentification/preprocess.png" alt=""/>
+				<img class="img-fluid rounded middle very-small" src="../../images/projects/deidentification/dense.png" alt=""/>
+				<img class="img-fluid rounded right small" src="../../images/projects/deidentification/postprocess.png" alt=""/>
+				</div>
+				</div>
 
-			<div class="row">
-				<div class="col d-flex justify-content-center align-items-center">
-					<video controls>
-						<source src="../../images/projects/deidentification/0070999.mp4" type="video/mp4">
-						Your browser does not support the video tag.
-					</video>
-					<video controls>
-						<source src="../../images/projects/deidentification/0071000.mp4" type="video/mp4">
-						Your browser does not support the video tag.
-					</video>
+				<p>Explore the network's transformations: original inputs on the left, modified results on the right.</p>
+				<div class="row">
+					<div class="col d-flex justify-content-center align-items-center">
+						<video controls>
+							<source src="../../images/projects/deidentification/0070999.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+						<video controls>
+							<source src="../../images/projects/deidentification/0071000.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+					</div>
 				</div>
-			</div>
-			<div class="row">
-				<div class="col d-flex justify-content-center align-items-center">
-					<video controls>
-						<source src="../../images/projects/deidentification/0071001.mp4" type="video/mp4">
-						Your browser does not support the video tag.
-					</video>
-					<video controls>
-						<source src="../../images/projects/deidentification/0071002.mp4" type="video/mp4">
-						Your browser does not support the video tag.
-					</video>
+				<div class="row">
+					<div class="col d-flex justify-content-center align-items-center">
+						<video controls>
+							<source src="../../images/projects/deidentification/0071001.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+						<video controls>
+							<source src="../../images/projects/deidentification/0071002.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+					</div>
 				</div>
-			</div>
 
 			<h2>BibTex</h2>
 			<p>If you found our research helpful or influential please consider citing:</p>

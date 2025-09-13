@@ -76,37 +76,57 @@
 				<div class="col"></div>
 			</div>
 
-			<h2>Contribution</h2>
-				<ul>
-					<li>We compare different Transformer-based architectures, with the aim of finding the trade-off between accuracy and efficiency, as well as the best competitive architecture that works well for both sentiment and personality perception;</li>
-					<li>We use Action Units as inputs for the visual modality, which are supposed to be invariant to some appearance-based features (e.g., skin-tone or hair-style). Thus, mitigating possible sources of bias toward under-represented groups/categories while promoting cross-dataset/domain/scenario generalization.</li>
-					<li>We consider memory and speed parameters as required by real-time processing in human-machine, human-robot interactions, an important goal of future developments.</li>
-					<li>The proposed approach was evaluated on different tasks and datasets. The results obtained are similar to those given by state-of-the-art models on the respective tasks and datasets.</li>
-				</ul>
+			<div class="container my-5">
+				<div class="row g-4">
+					<div class="col-md-6">
+						<div class="project-card card-task h-100 text-center">
+							<div class="project-title">Task</div>
+							<ul class="text-start">
+								<li>Develop and compare transformer-based architectures for real-time multimodal sentiment analysis and personality perception under speech.</li>
+								<li>Focus on fusing audio, visual, and textual modalities in a way that balances accuracy, efficiency, and fairness.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="project-card card-challenges h-100 text-center">
+							<div class="project-title">Challenges</div>
+							<ul class="text-start">
+								<li>Managing complex temporal dynamics and interdependencies in multimodal data during speech.</li>
+								<li>Handling appearance-related bias by using appearance-invariant features such as Action Units.</li>
+								<li>Addressing the computational and memory limitations of quadratic attention in transformers for real-time processing.</li>
+								<li>Navigating the regression-to-mean problem in personality trait prediction due to unbalanced label distributions.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="project-card card-method h-100 text-center">
+							<div class="project-title">Proposed Method</div>
+							<ul class="text-start">
+								<li>Evaluate and compare three architectures: Multimodal Transformer (MulT) with quadratic attention, Linear Multimodal Transformer (LinMulT) with linear attention, and Self-Supervised Embeddings Transformer (SSE-FT).</li>
+								<li>Use modality-specific preprocessing: handcrafted features (e.g., eGeMAPS, Action Units, BERT) and self-supervised embeddings (e.g., Wav2Vec, Fab-Net, RoBERTa).</li>
+								<li>Fuse modalities through cross-modal attention and self-attention layers operating on temporal embedded sequences.</li>
+								<li>Train models on large-scale datasets for sentiment (CMU-MOSI, CMU-MOSEI) and personality perception (ChaLearn First Impressions), employing loss functions addressing label imbalance.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="project-card card-results h-100 text-center">
+							<div class="project-title">Main Results</div>
+							<ul class="text-start">
+								<li>On CMU-MOSI and CMU-MOSEI sentiment datasets, SSE-FT (with self-supervised embeddings) achieved the best overall performance.</li>
+								<li>MulT outperformed LinMulT on mean absolute error but LinMulT showed improved precision/recall balance and better scalability to larger datasets.</li>
+								<li>For personality perception on the First Impressions dataset, all architectures yielded similar results due to label centralization; however, LinMulT with combined features and trait-wise training outperformed others in overall accuracy.</li>
+								<li>Cross-modal ablation showed no dominant modality for prediction, with varying effectiveness depending on the target modality and architecture.</li>
+								<li>LinMulT offered significant efficiency gains in memory and speed, making it suitable for real-time applications despite slightly lower accuracy compared to quadratic transformers.</li>
+								<li>Reported results achieve performance competitive with state-of-the-art, while promoting reduced bias through use of appearance-invariant features.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
 
-			<h2>Proposed method</h2>
-				<p>Our method revolves around a cross-modal transformer, with its core being the single-head transformer. 
-					This transformer uses an attention model to process input from one modality and transform it into another. 
-					We simplify the quadratic transformer to its linear version, as described in related literature. 
-					We work with three data modalities: acoustic, visual, and textual components. 
-					Each modality undergoes transformation using the other two as sources. 
-					The outputs are combined and processed through self-attention to highlight and weigh related elements. 
-					This process repeats for each modality before a final prediction is made using a fully-connected layer. 
-					Our model builds upon the Multimodal Transformer, which extends the standard Transformer network to accommodate various data types.
-					Additionally, we've modified the attention mechanism to a linear complexity alternative.</p>
-
-				<p>Single head of a transformer. Transformers translate one information source
-					(e.g., β, here associated with the acoustic modality) to another one (e.g., α, here
-					associated with the visual modality). Embeddings indicated by darker striped
-					columns can be features derived from the raw data or the outputs of a pretrained deep model. 
-					Transformers learn keys (K<sub>β</sub>) and values (V<sub>β</sub>) of modality
-					β and the queries (Q<sub>α</sub>) from the α modality. These three quantities denoted by
-					lighter striped columns form the core of the attention system of a single head.
-					Attention is computed differently in linear and quadratic transformers, sketched
-					in the boxes on the right.</p>
-				<img class="img-fluid rounded middle" src="../../images/projects/personalitylinmult/head.png" alt=""/>
-				
-				<p>(a) Standard Multi-head attention unit. (b) Multimodal transformer: source
+			<h2>Visualization</h2>
+				<p>(a) Standard Multi-head attention unit. <br> (b) Multimodal transformer: source
 					modalities i and j are transformed to target modality k. Such two units are
 					combined by another transformer network that utilizes self-attention to fuse the
 					information pieces to form a branch within the multimodal network before outputting the predicted score(s).</p>

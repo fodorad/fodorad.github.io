@@ -69,39 +69,62 @@
 				<div class="col"></div>
 			</div>
 
-			<h2>Contribution</h2>
-			<div class="row">
-				<div class="col d-flex justify-content-center align-items-center">
-					<ul>
-						<li>The study, motivated by the "law of common fate" Gestalt principle, 
-							extends the superpixel algorithm by incorporating the medial axis 
-							transformation, deep neural network-based optical flow and depth estimation 
-							for temporal propagation. It introduces two temporal extensions: the 
-							‘multi-skeleton’ method and the ‘single-skeleton’ method, which have been shown 
-							to improve the quality of the propagation, indicating the relevance of these 
-							methods in visual processing.</li>
-						<li>We discuss the relevance of the medial axis representation in visual processing, 
-							with evidence from previous studies showing its presence in early visual 
-							processing areas of the brain and its role in figure-ground segregation.</li>
-						<li>The experimental results support the effectiveness of these methods in 
-							improving the quality of temporal propagation, particularly through the 
-							combination of skeletonization, superpixel computation, optical flow, and 
-							edge enhancements.</li>
-					</ul>
-				
-					<img class="img-fluid rounded right small" src="../../images/projects/skeletonization/visualization.png" alt=""/>
+			<div class="container my-5">
+				<div class="row g-4">
+					<div class="col-md-6">
+						<div class="project-card card-task h-100 text-center">
+							<div class="project-title">Task</div>
+							<ul class="text-start">
+								<li>Temporal propagation of superpixels for video object segmentation using shape skeletons.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="project-card card-challenges h-100 text-center">
+							<div class="project-title">Challenges</div>
+							<ul class="text-start">
+								<li>Noisy optical flow can degrade temporal propagation accuracy.</li>
+								<li>Precise superpixel segmentation and object boundary preservation are critical.</li>
+								<li>Handling occlusions and irregularities in shape boundaries complicate skeletonization.</li>
+								<li>Efficient and robust methods are needed to propagate object masks accurately across video frames.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="project-card card-method h-100 text-center">
+							<div class="project-title">Proposed Method</div>
+							<ul class="text-start">
+								<li>Combine deep neural networks for optical flow (PWC-Net) and depth estimation (MegaDepth) with medial axis (shape skeleton) transformation.</li>
+								<li>Use Borůvka’s minimum spanning tree algorithm for hierarchical superpixel segmentation.</li>
+								<li>Two skeleton-based temporal propagation strategies:
+								<ul>
+								<li>Multi-skeleton: propagate skeletons of individual superpixels and use them as seeds to label next frame.</li>
+								<li>Single-skeleton: propagate the skeleton of the entire object mask using optical flow, create a draft mask with disks around skeleton points, and refine with superpixel segmentation.</li>
+								</ul>
+								</li>
+								<li>Refine propagation using optical flow and depth information, and enhance edges via deep networks.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="project-card card-results h-100 text-center">
+							<div class="project-title">Main Results</div>
+							<ul class="text-start">
+								<li>Both skeleton-based methods significantly outperform baseline methods without skeletons.</li>
+								<li>The single-skeleton method achieves the best results, exceeding 50% accuracy on intersection over union (IoU) and boundary accuracy on the DAVIS 2016 benchmark.</li>
+								<li>Using Lab color space and adding depth information moderately improves performance.</li>
+								<li>Occlusions remain a challenge; performance improves notably on occlusion-free videos.</li>
+								<li>The combined approach is biologically inspired and offers a promising, parallelizable, and efficient solution for video propagation tasks, with room for future extensions to handle occlusions better.</li>
+							</ul>
+						</div>
+					</div>
 				</div>
 			</div>
 
-			<h2>Proposed method</h2>
-			<p>The "Law of common fate" Gestalt principle says that elements which move in the same direction are more likely considered as belonging together than elements which move in different directions or don’t move at all. It informs the design of tracking algorithms to prioritize moving objects and maintain their continuity across frames.</p>
-			<p>Integrating these elements — superpixels, depth cues, edge detection, and the Gestalt principle — can significantly improve the reliability and efficiency of temporal object tracking systems, enhancing their applicability in various real-world scenarios such as surveillance, autonomous driving, and human-computer interaction.</p>
+			<h2>Visualization</h2>
 			<div class="row">
 				<div class="col d-flex justify-content-center align-items-center">
-					<div class="row">
-						<p>The proposed 'Single-skeleton' method for video propagation is a sophisticated algorithm that combines the medial axis transform, optical flow estimation, and superpixel refinement to propagate visual objects across video frames.</p>
-						<p>By first extracting the skeleton of the mask using the medial axis transform and then translating each skeleton pixel based on the local optical flow between frames, the algorithm effectively morphs the mask over time. The use of distance fields and disk drawing around translated skeleton pixels ensures accurate and smooth propagation of the object mask.</p>
-					</div>	
+					<img class="img-fluid rounded right small" src="../../images/projects/skeletonization/visualization.png" alt=""/>
 					<img class="img-fluid rounded right medium" src="../../images/projects/skeletonization/method.png" alt=""/>
 				</div>
 			</div>

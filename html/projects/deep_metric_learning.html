@@ -42,7 +42,7 @@
 				<h1>Enhancing Apparent Personality Trait Analysis <br> with Cross-Modal Embeddings</h1>
 				<p>Ádám Fodor, Rachid R. Saboundji, András Lőrincz</p>
 			</div>
-			<img class="img-fluid rounded middle fit" src="../../images/projects/deep_metric_learning/macs_dln.jpg" alt=""/>
+			<img class="img-fluid rounded middle fit" src="../../images/projects/deep_metric_learning/model.png" alt=""/>
 			<div class="d-flex mt-4 mb-4">
 				<a id="button_contact" target="_blank" href="../../pdf/2020_Fodor_Adam_MACS_Multimodal.pdf" class="button mx-3">Paper</a>
 			</div>
@@ -67,77 +67,68 @@
 				<div class="col"></div>
 			</div>
 
-			<h2>Contribution</h2>
-				<ul>
-					<li>We propose a multimodal deep neural network to extract modality-invariant embeddings from multiple information sources with a DLN network, emphasizing extreme examples and implicitly improving the multimodal fusion process.</li>
-					<li>We extended the Multi-Similarity loss to handle multiple apparent personality trait class labels simultaneously, besides using various input modalities. The problem with non-extreme examples is that one or more modalities contain inadequate information to aid the deep embedding process. To overcome this issue, we modified the sample selection of the online semi-hard negative mining procedure of the triplet loss evaluation and put the emphasis onto the extreme samples.</li>
-					<li>Although samples having lower or higher personality trait values are less frequent in the database, high-quality prediction of their values is desired in various situations. We show that cross-modal embedding enhances the prediction of the Big Five personality traits in the extreme cases.</li>
-				</ul>
-
-			<h2>Proposed method</h2>
-			<p>In this work, we propose a multimodal deep neural network that combines features from visual,
-				acoustic, and textual clues to predict apparent Big-Five personality traits using short video clips
-				from the ChaLearn challenges. 
-			<p>We aim to create a shared coordinate space, transforming the audio, video, and text descriptors
-				into a semantically relevant form using a Distance Learning Network (DLN) network. The triplet-based loss functions are
-				designed to encourage positive examples as close as possible to the so called anchor sample, and
-				negative examples to be separated from each other over a given threshold. Embedded vector and
-				auxiliary vector are interchangeably used for the outputs of the DLN network. Higher precision
-				estimation of the extremes is one of our goals and we expect that multi-modal data enrichment
-				is advantageous in each trait. We use a DNN that combines tri-modal features along with the
-				embedded vectors to predict apparent personality traits from the short video clips.</p>
-			<p>To our best knowledge, this is the first work that introduces cross-modal embedding for personality trait prediction.</p>
-
-			<h2>Visualization</h2>
-			<div class="row">
-				<div class="col d-flex justify-content-center align-items-center">
-					<div class="row">
-						<p>Audio-visual personality trait prediction has become of high-interest due to high-quality
-							databases released in the ChaLearn challenges, i.e., in First Impressions V1 and V2. In this
-							study, we used the extended and revised dataset (V2). The dataset contains 10,000 video clips
-							extracted from more than 3,000 different YouTube high-definition videos of people mostly facing
-							and speaking to a camera.</p>
-						<p>Examples of the First Impression V2 dataset. For each video the ground truth Big Five
-							scores are provided. For each trait, the first two samples instantiate the high extremes, and the
-							last two examples demonstrate the low extremes of a given trait.</p>
-						<p>One specialty of this dataset is that the target variables have unbalanced data distribution. The
-							regression-to-the-mean problem is emphasized because the scores follow a Gaussian distribution,
-							and the optimization process likely produces predictions near the mean of ground truth values to
-							minimize the loss. We alleviated this problem with the Bell loss, which is similar to the Mean
-							Squared Error, however, it can produce higher gradients when the prediction is closer to the ground
-							truth.</p>
+			
+			<div class="container my-5">
+				<div class="row g-4">
+					<div class="col-md-6">
+						<div class="project-card card-task h-100 text-center">
+							<div class="project-title">Task</div>
+							<ul class="text-start">
+								<li>Predict apparent personality traits (Big Five) from short video clips using multimodal  audio, visual, and textual information.</li>
+								<li>Enhance prediction accuracy, especially for under-represented extreme trait values, by exploiting modality-invariant embeddings with a Siamese network.</li>
+							</ul>
 						</div>
-					<img class="img-fluid rounded right small" src="../../images/projects/deep_metric_learning/first_impressions.jpg" alt=""/>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col d-flex justify-content-center align-items-center">
-					<img class="img-fluid rounded left small-ish" src="../../images/projects/deep_metric_learning/first_impressions_hists.jpg" alt=""/>
-					<p>Annotation regarding the First Impressions V2 dataset consists of 5 continuous variables. Samples
-						can be grouped into different classes by splitting the [0, 1] interval to equal, smaller intervals. In
-						this work, we aim to differentiate extreme examples from ordinary samples based on the ground
-						truth values. We determine 4 classes per trait, and we are focusing on the two extremes, which can
-						be monitored in various clinical sessions later on: the low-extreme and high-extreme classes, which
-						are labeled as C1 and C4, respectively.</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col d-flex justify-content-center align-items-center">
-					<div class="row">
-						<p>We transformed the acoustic, visual, and textual features to a shared coordinate space with a
-							DLN network. The figure shows a two-component Principal Component Analysis (PCA) calculated on the multimodal inputs as visualization, 
-							using only the NEUroticism ground truth values
-							and trait classes within plots.</p>
-						<p>The four personality classes are
-							represented with colors, where the blue is the low extreme (C1), and the red is the high extreme class
-							(C4). In the (b) and (c), we emphasize embeddings within the two extreme poles of NEUroticism.</p>
-						<p></p>
 					</div>
-					<img class="img-fluid rounded right small" src="../../images/projects/deep_metric_learning/cross_2pca_reorder.png" alt=""/>
+					<div class="col-md-6">
+						<div class="project-card card-challenges h-100 text-center">
+							<div class="project-title">Challenges</div>
+							<ul class="text-start">
+								<li>Multimodal fusion complexity: selecting modalities, designing architectures for fusion, and managing noisy, missing, or unbalanced data.</li>
+								<li>Highly centralized target distribution causing the regression-to-the-mean problem, limiting accuracy on extreme trait values.</li>
+								<li>Non-contextual and noisy textual transcripts limiting the quality of semantic features.</li>
+								<li>Leveraging complementary intra- and inter-modal information robustly and effectively.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="project-card card-method h-100 text-center">
+							<div class="project-title">Proposed Method</div>
+							<ul class="text-start">
+								<li>Use modality-specific subnetworks for audio (eGeMAPS features), visual (ResNet-50 extracted frame features), and text (GloVe embeddings processed by Bi-GRU with attention).</li>
+								<li>Train a Siamese network with a modified multi-similarity loss to generate modality-invariant embeddings emphasizing extreme samples for robust cross-modal learning.</li>
+								<li>Fuse original modality-specific features and cross-modal embeddings through fully connected layers for final Big Five trait prediction.</li>
+								<li>Adopt Bell loss function combined with MAE and MSE to address regression-to-the-mean and improve optimization stability.</li>
+								<li>Evaluate on ChaLearn First Impressions V2 dataset with 15-second video clips and crowdsourced trait annotations.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="project-card card-results h-100 text-center">
+							<div class="project-title">Main Results</div>
+							<ul class="text-start">
+								<li>Multimodal models outperform monomodal ones; combining audio, video, and text achieves the best overall prediction accuracy.</li>
+								<li>Proposed cross-modal embeddings improve average accuracy (1-MAE) from 0.9094 to 0.9127 on the full test set.</li>
+								<li>Enhanced prediction of extreme personality trait cases (both low and high extremes) compared to baseline multimodal models.</li>
+								<li>Visualization of embeddings shows clear separation of extreme trait classes in the shared embedding space.</li>
+								<li>Method surpasses prior systems on this challenging dataset and offers a novel framework for robust, explainable apparent personality prediction.</li>
+							</ul>
+						</div>
+					</div>
 				</div>
 			</div>
-
+			
+			<h2>Visualization</h2>
+				<p>Examples of the First Impression V2 dataset. For each video the ground truth Big Five
+					scores are provided. <br> For each trait, the first two samples instantiate the high extremes, and the
+					last two examples demonstrate the low extremes of a given trait.</p>
+				<img class="img-fluid rounded middle small" src="../../images/projects/deep_metric_learning/first_impressions.jpg" alt=""/>
+				<p>The figure shows a two-component Principal Component Analysis (PCA) calculated on the multimodal inputs as visualization, 
+					using only the NEUroticism ground truth values
+					and trait classes within plots. The four personality classes are
+					represented with colors, where the blue is the low extreme (C1), and the red is the high extreme class
+					(C4). In the (b) and (c), we emphasize embeddings within the two extreme poles of NEUroticism.</p>
+				<img class="img-fluid rounded middle small" src="../../images/projects/deep_metric_learning/cross_2pca_reorder.png" alt=""/>
+			
 			<h2>BibTex</h2>
 			<p>If you found our research helpful or influential please consider citing:</p>
 			<pre><code class="bibtex">@article{fodor2021multimodal,

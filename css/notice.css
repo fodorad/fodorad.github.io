@@ -1,0 +1,32 @@
+.notice-box {
+    display: flex;
+    align-items: flex-start;
+    background: #fff9db;
+    border-left: 4px solid #ffe066;
+    padding: 16px 20px;
+    border-radius: 6px;
+    margin: 24px 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  }
+  
+.notice-icon {
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+    min-width: 32px;
+    min-height: 32px;
+}
+
+.notice-content p {
+    margin: 0;
+    color: #553a00;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.notice-content a {
+    color: #e6b800;
+    text-decoration: underline;
+    font-weight: 500;
+}
+  

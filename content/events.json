@@ -1,5 +1,22 @@
 [
     {
+      "date": "2025-08-25T10:00:00.001Z",
+      "image": "images/gallery/events/2025/PhD_Department_Defense/Fodor_Adam_PhD_event.jpg",
+      "alt": "PhD Thesis Departmental Defense",
+      "title": "PhD Thesis Departmental Defense",
+      "content": "I successfully defended my PhD thesis titled \"Affective Behavior and Social Interaction Analysis\" during the departmental defense. I am grateful for the support throughout this journey and excited to share my research contributions.",
+      "pdf": ["../pdf/2025_Fodor_Adam_PhD_thesis.pdf"]
+    },
+    {
+      "date": "2025-08-12T16:00:00.001Z",
+      "image": "images/gallery/events/2025/Hungarian_Machine_Learning_Meeting/Fodor_Adam_Hungarian_Machine_Learning_Meeting_20250812_event.jpg",
+      "alt": "Poster presentation about a multimodal multi-task transformer for emotion understanding in videos.",
+      "title": "Poster presentation at Hungarian Machine Learning Days",
+      "content": "I took part in a national AI event organized by the Hungarian National Artificial Intelligence Laboratory, where I presented my work called \"A Multimodal Multi-Task Transformer for Emotion Understanding from Videos\". It was a great chance to share ideas and connect with other people in the AI community.",
+      "links": ["https://mi.nemzetilabor.hu/magyar-machine-learning-talalkozo-2025/"],
+      "gallery_tags": ["Hungarian Machine Learning Meeting"]
+    },
+    {
       "date": "2024-11-21T10:00:00.001Z",
       "image": "images/gallery/events/2024/TECHXPO/Fodor_Adam_TECHXPO_20241121_event.jpg",
       "alt": "TECHXPO event in Budapest",
@@ -158,6 +175,14 @@
       "content": "Participating in the ACAI 2021 event was a game-changer for me; it was packed with enlightening microproject presentations, keynotes, and workshops all geared towards Human-Centered AI collaboration.\nIt not only broadened my understanding of microproject management but also connected me with fellow researchers across Europe, truly fostering a spirit of innovation in AI.",
       "links": ["https://www.humane-ai.eu/event/acai2021"],
       "gallery_tags": ["HumanE-AI-Net"]
+    },
+    {
+      "date": "2018-07-13T10:00:00.001Z",
+      "image": "images/gallery/events/2018/MSc_Thesis/Fodor_Adam_MSc_Thesis_20180813_event.jpg",
+      "alt": "MSc milestone reached",
+      "title": "MSc milestone reached",
+      "content": "I have completed my MSc studies, and reaching this important milestone means a lot to me. I sincerely appreciate all the encouragement, guidance, and support I received along the way.",
+      "pdf": ["../pdf/2018_Fodor_Adam_Kopacsi_Laszlo_Students_Scientific_Conference_Deidentification.pdf"]
     },
     {
       "date": "2018-05-10T14:00:00.001Z",
