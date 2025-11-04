@@ -1,5 +1,17 @@
 [
     {
+        "src": "images/gallery/certificates/image/Coursera 91D4NHSVYPSV-1.jpg",
+        "thumbnail": "images/gallery/certificates/image/Coursera 91D4NHSVYPSV-1.jpg",
+        "caption": "Packt: Communication Skills",
+        "tags": ["Packt"]
+    },
+    {
+        "src": "images/gallery/certificates/image/Coursera ICTUP5QFOIOA-1.jpg",
+        "thumbnail": "images/gallery/certificates/image/Coursera ICTUP5QFOIOA-1.jpg",
+        "caption": "Packt: Assertiveness Skills",
+        "tags": ["Packt"]
+    },
+    {
         "src": "images/gallery/certificates/image/Coursera 6RGSFWDX3QKK-1.jpg",
         "thumbnail": "images/gallery/certificates/image/Coursera 6RGSFWDX3QKK-1.jpg",
         "caption": "DeepLearning.AI: Neural Networks and Deep Learning",
