@@ -1,5 +1,23 @@
 [
     {
+        "src": "images/gallery/certificates/image/Coursera 6RTSKGBYDV9D.jpg",
+        "thumbnail": "images/gallery/certificates/image/Coursera 6RTSKGBYDV9D.jpg",
+        "caption": "IBM DevOps and Software Engineering",
+        "tags": ["IBM"]
+    },
+    {
+        "src": "images/gallery/certificates/image/Coursera DCH3RWK6YIZS.jpg",
+        "thumbnail": "images/gallery/certificates/image/Coursera DCH3RWK6YIZS.jpg",
+        "caption": "Operationalizing ML Models: MLOps for Scalable AI",
+        "tags": ["Coursera"]
+    },
+    {
+        "src": "images/gallery/certificates/image/Coursera 5RXVYEZ9GRM1.jpg",
+        "thumbnail": "images/gallery/certificates/image/Coursera 5RXVYEZ9GRM1.jpg",
+        "caption": "IBM: DevOps Capstone project",
+        "tags": ["IBM"]
+    },
+    {
         "src": "images/gallery/certificates/image/Coursera 91D4NHSVYPSV-1.jpg",
         "thumbnail": "images/gallery/certificates/image/Coursera 91D4NHSVYPSV-1.jpg",
         "caption": "Packt: Communication Skills",
