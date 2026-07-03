@@ -1,5 +1,12 @@
 [
   {
+    "year": 2026,
+    "image": "images/placeholder/pic02.jpg",
+    "title": "Annie",
+    "content": "Local-first browser UI to explore, inspect, and validate a video annotation dataset.",
+    "page": "projects/annie.html"
+  },
+  {
     "year": 2025,
     "image": "images/placeholder/pic04.jpg",
     "title": "EmotionLinMulT",

@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Adam Fodor portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+		<link rel="stylesheet" href="../../css/styles.css" />
+		<noscript><div class="alert alert-warning" role="alert"><h2>Warning!</h2><p>This website requires JavaScript to function. Please enable JavaScript in your browser settings.</p></div></noscript>
+	</head>
+
+	<body class="is-preload">
+		<header>
+			<div id="menu-header">
+				<nav>
+					<ul>
+						<li><a href="#menu">Menu</a></li>
+					</ul>
+				</nav>
+			</div>
+
+			<nav id="menu">
+				<h2>
+					Menu
+					<span id="themeSwitch" class="theme-icon" aria-label="Toggle Theme"><i class="far fa-moon"></i></span>
+				</h2>
+				<ul>
+					<li><a href="../../index.html">Home</a></li>
+					<li><a href="../projects.html">Projects</a></li>
+					<li><a href="../blog.html">Blog</a></li>
+					<li><a href="../events.html">Events</a></li>
+					<li><a href="../teaching.html">Teaching</a></li>
+					<li><a href="../gallery.html">Gallery</a></li>
+					<li><a href="../about.html">About</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<div class="container">
+			<div class="paper">
+				<h1>Annie</h1>
+				<p>Local-first browser UI to explore, inspect, and validate a video annotation dataset</p>
+			</div>
+
+			<img class="img-fluid rounded middle" src="../../images/projects/annie/home.png" alt="Annie home tab"/>
+			<div class="d-flex flex-wrap justify-content-center mt-4 mb-4">
+				<a target="_blank" href="https://github.com/fodorad/Annie" class="button primary mx-2 my-1">GitHub</a>
+				<a target="_blank" href="https://pypi.org/project/annie/" class="button mx-2 my-1">PyPI</a>
+				<a target="_blank" href="https://hub.docker.com/r/fodorad/annie" class="button mx-2 my-1">Docker</a>
+				<a target="_blank" href="https://fodorad.github.io/Annie/" class="button mx-2 my-1">Docs</a>
+			</div>
+
+			<h2>Why I built it</h2>
+			<p>I kept running into the same problem while working with video datasets: the videos live in one folder,
+				the annotations live in a pile of CSVs and detection files somewhere else, and there is no simple way to
+				actually <em>look</em> at them together. Checking whether a face track is correct, or whether the labels
+				line up with the right person, usually meant writing a throwaway script every single time.</p>
+			<p>Annie is my answer to that. It is a small, local-first web app that puts a video dataset and its frame-wise
+				annotations side by side in the browser, so you can explore, sanity-check, and correct them in one place.
+				Everything runs on a single machine — no server, no upload, no cloud. The datasets I had in mind are
+				<strong>CMU-MOSEI</strong> and <strong>First Impressions V2</strong> (face detections plus derived face
+				tracks), but Annie is dataset-agnostic and built around extensible data sources.</p>
+
+			<h2>What you can do with it</h2>
+			<div class="container my-5">
+				<div class="row g-4">
+					<div class="col-md-6">
+						<div class="project-card card-task h-100 text-center">
+							<div class="project-title">Convert</div>
+							<ul class="text-start">
+								<li>Re-encode audio and video into a consistent, torchcodec-validated format.</li>
+								<li>Constant frame rate H.264 with uniform audio, so decoding stays frame-accurate.</li>
+								<li>Progress is tracked live while it runs.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="project-card card-method h-100 text-center">
+							<div class="project-title">Dataset</div>
+							<ul class="text-start">
+								<li>Compose a dataset from multiple sources: a videos folder, detection and track directories, and any number of label or main-character CSVs.</li>
+								<li>Automatic video-to-annotation pairing via stem matching.</li>
+								<li>Coverage metrics update instantly as you add sources.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="project-card card-challenges h-100 text-center">
+							<div class="project-title">Browse</div>
+							<ul class="text-start">
+								<li>Scroll through the dataset sample by sample.</li>
+								<li>Filter by name, media presence, review status, or label values.</li>
+								<li>See the original clip, an annotated frame strip, and a full rendered preview side by side.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="project-card card-results h-100 text-center">
+							<div class="project-title">Annotator</div>
+							<ul class="text-start">
+								<li>Review and correct the main-character track for each queued video.</li>
+								<li>Changes are applied and saved instantly; the pristine source records stay untouched.</li>
+								<li>Export a corrected data source as CSV at any time.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<h2>See it in action</h2>
+			<p>The home tab (above) is a plain landing page that summarizes each tab and points you at a sensible starting
+				workflow: convert your videos for consistency, define a dataset, then browse and review.</p>
+			<p>Browse is where most of the work happens. Each row is one sample: the original clip on the left, a strip of
+				frames with the face detections drawn on them in the middle, and a full rendered preview on the right.
+				The colored chips carry the annotations — subset, per-frame counts, tracks, and the label values for that
+				sample. You can thumbs-up / thumbs-down, leave a note, and push anything questionable into the Annotator.</p>
+			<img class="img-fluid rounded middle" src="../../images/projects/annie/browse.png" alt="Annie browse tab showing video samples with face detections and annotation chips"/>
+
+			<h2>Try it</h2>
+			<h3>From PyPI</h3>
+			<pre><code>uv pip install "annie[all]"
+annie</code></pre>
+			<p>That launches the UI at <code>http://127.0.0.1:8080</code>. You will need FFmpeg (4–8) on your machine for
+				frame decode and rendering — <code>ffprobe</code> ships with it.</p>
+
+			<h3>With Docker</h3>
+			<p>No local Python or FFmpeg required — the <a target="_blank" href="https://hub.docker.com/r/fodorad/annie">image on Docker Hub</a> bundles everything.</p>
+			<pre><code>docker pull fodorad/annie
+docker compose up</code></pre>
+			<p>Then open <code>http://localhost:8080</code>.</p>
+
+			<h3>From source</h3>
+			<pre><code>git clone https://github.com/fodorad/Annie
+cd Annie
+make dev
+make run</code></pre>
+
+			<div class="notice-box">
+				<span class="notice-icon" aria-label="Notice">
+				  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffd600" viewBox="0 0 16 16">
+					<path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767z"/>
+					<path d="M8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" fill="#333"/>
+				  </svg>
+				</span>
+				<div class="notice-content">
+				  <p>Early days — but usable today.</p> <br>
+				  <p>
+					Annie is a young project I published as a personal tool, so expect rough edges and fast-moving
+					internals. The explore, inspect, and validate loop already works end to end; richer authoring is on
+					the way. If you try it and something breaks or feels off, issues and feedback are very welcome.
+				  </p>
+				  <br>
+				  <p>
+					Stack: Python 3.12+, torchcodec for frame-accurate decode, FFmpeg for rendering. MIT licensed.
+				  </p>
+				</div>
+			  </div>
+
+		</div>
+
+		<div class="d-flex mt-4 mb-4"><a id="button_contact" href="https://github.com/fodorad/Annie" target="_blank" class="button mx-3">Star it on GitHub</a></div>
+		<div id="footer-container"></div>
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<script src="https://kit.fontawesome.com/a8f44bbdfa.js"></script>
+		<script src="../../js/menu.js"></script>
+		<script src="../../js/pre-load.js"></script>
+		<script src="../../js/footer.loader.js"></script>
+	</body>
+</html>
