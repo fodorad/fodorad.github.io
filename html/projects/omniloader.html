@@ -1,0 +1,214 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Adam Fodor portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+		<link rel="stylesheet" href="../../css/styles.css" />
+		<noscript><div class="alert alert-warning" role="alert"><h2>Warning!</h2><p>This website requires JavaScript to function. Please enable JavaScript in your browser settings.</p></div></noscript>
+	</head>
+
+	<body class="is-preload">
+		<header>
+			<div id="menu-header">
+				<nav>
+					<ul>
+						<li><a href="#menu">Menu</a></li>
+					</ul>
+				</nav>
+			</div>
+
+			<nav id="menu">
+				<h2>
+					Menu
+					<span id="themeSwitch" class="theme-icon" aria-label="Toggle Theme"><i class="far fa-moon"></i></span>
+				</h2>
+				<ul>
+					<li><a href="../../index.html">Home</a></li>
+					<li><a href="../projects.html">Projects</a></li>
+					<li><a href="../blog.html">Blog</a></li>
+					<li><a href="../events.html">Events</a></li>
+					<li><a href="../teaching.html">Teaching</a></li>
+					<li><a href="../gallery.html">Gallery</a></li>
+					<li><a href="../about.html">About</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<div class="container">
+			<div class="paper">
+				<img class="img-fluid middle big" src="../../images/projects/omniloader/logo-icon_with_name.svg" alt="OmniLoader logo: three disjoint lanes merging into one unified stream"/>
+
+				<p>A PyTorch meta data loader that unifies disjoint, multi-task datasets for joint training</p>
+			</div>
+
+			<div class="d-flex flex-wrap justify-content-center mt-4 mb-4">
+				<a target="_blank" href="https://github.com/fodorad/OmniLoader" class="button primary mx-2 my-1">GitHub</a>
+				<a target="_blank" href="https://pypi.org/project/omniloader/" class="button mx-2 my-1">PyPI</a>
+				<a target="_blank" href="https://fodorad.github.io/OmniLoader/" class="button mx-2 my-1">Docs</a>
+			</div>
+
+			<blockquote class="text-center fst-italic mt-3 mb-4">
+				<p>"One loader to load them all, one schema to find them, one batch to bring them all, and in the mask bind them."</p>
+			</blockquote>
+
+			<h2>Problem definition</h2>
+			<p>Multi-task learning wants one model to learn many related tasks at once. In practice the supervision for
+				those tasks is scattered across separate datasets that annotate completely different things: one corpus
+				has a single label per sample (say, sentiment), another has a per-step label sequence (valence/arousal),
+				a third has categorical class ids — and each one only covers its own slice of the features. You cannot
+				just concatenate them and call <code>DataLoader</code>; the samples do not even share a shape.</p>
+			<p>OmniLoader builds the <strong>union</strong> of every feature and target across your datasets and yields
+				each sample in that one shared format. It copies the keys a dataset provides, pads or crops sequences to
+				the lengths you declare, and fills in the keys a dataset is missing with placeholder tensors plus an
+				all-<code>False</code> mask — so your model always knows what was real and what was absent. It is
+				modality-agnostic: video, audio, text, or anything else, as long as it is vectors and sequences.</p>
+
+			<h2>Tasks it solves</h2>
+			<div class="container my-5">
+				<div class="row g-4">
+					<div class="col-md-6">
+						<div class="project-card card-task h-100 text-center">
+							<div class="project-title">Dataset unification</div>
+							<ul class="text-start">
+								<li>Merge structurally incompatible datasets — different features, targets, and sequence lengths — into one batchable schema.</li>
+								<li>Missing keys are filled with placeholders and marked by <code>False</code> masks, so nothing silently leaks into the loss.</li>
+								<li>Building blocks: <code>OmniLoader</code>, <code>SampleUnifier</code>, <code>UnifiedSchema</code>, <code>unified_collate</code>.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="project-card card-method h-100 text-center">
+							<div class="project-title">Dataset balancing</div>
+							<ul class="text-start">
+								<li>Stop a huge dataset from drowning out a small one during joint training.</li>
+								<li>Configurable mixing: proportional, temperature-scaled, annealed-temperature, fixed-weight, and round-robin strategies.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="project-card card-challenges h-100 text-center">
+							<div class="project-title">Class imbalance</div>
+							<ul class="text-start">
+								<li>Handle skewed label distributions from either side.</li>
+								<li>Resampling helpers for the sampler and reweighting helpers for the loss: <code>class_weights_for_sampler</code>, <code>class_weights_for_loss</code>, <code>class_histogram</code>.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="project-card card-results h-100 text-center">
+							<div class="project-title">Robustness &amp; efficiency</div>
+							<ul class="text-start">
+								<br>
+								<li>Train models that tolerate missing modalities via masks and feature-level augmentation.</li>
+								<li>Per-dataset normalization removes annotation-source leakage across corpora.</li>
+								<li>Variable-length batching and length bucketing cut padding overhead; the whole pipeline is config-driven for reproducibility.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<h2>What's in the box</h2>
+			<table>
+				<colgroup>
+					<col style="width: 18%;">
+					<col style="width: 32%;">
+					<col style="width: 50%;">
+				</colgroup>
+				<tr>
+					<th>Category</th>
+					<th>Components</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td class="top"><strong>Schema &amp; unification</strong></td>
+					<td class="top"><code>OmniLoader</code>, <code>SampleUnifier</code>, <code>TensorSpec</code>, <code>DatasetSchema</code>, <code>UnifiedSchema</code>, <code>unified_collate</code></td>
+					<td class="top">Declare each dataset's tensors and build the union schema every sample is mapped into, filling missing keys with placeholders and masks.</td>
+				</tr>
+				<tr>
+					<td class="top"><strong>Dataset loading</strong></td>
+					<td class="top"><code>HDF5Dataset</code>, <code>NpyFolderDataset</code>, <code>DictTensorDataset</code>, <code>split_indices</code></td>
+					<td class="top">Read your features from disk or memory in the usual layouts, and carve reproducible train/val/test splits.</td>
+				</tr>
+				<tr>
+					<td class="top"><strong>Mixing strategies</strong></td>
+					<td class="top"><code>ProportionalStrategy</code>, <code>TemperatureStrategy</code>, <code>AnnealedTemperatureStrategy</code>, <code>FixedWeightStrategy</code>, <code>RoundRobinStrategy</code></td>
+					<td class="top">Decide how often each dataset is sampled so large corpora do not drown out small ones during joint training.</td>
+				</tr>
+				<tr>
+					<td class="top"><strong>Class balance</strong></td>
+					<td class="top"><code>class_weights_for_sampler</code>, <code>class_weights_for_loss</code>, <code>class_histogram</code></td>
+					<td class="top">Inspect label distributions and derive weights to counter class imbalance on either the sampler or the loss side.</td>
+				</tr>
+				<tr>
+					<td class="top"><strong>Normalization</strong></td>
+					<td class="top"><code>Normalize</code>, <code>MinMax</code>, <code>Robust</code>, <code>Instance</code>, <code>PerDatasetNormalize</code>, <code>compute_stats</code>, <code>compute_dataset_stats</code></td>
+					<td class="top">Scale features with global or per-dataset statistics to remove annotation-source leakage across corpora.</td>
+				</tr>
+				<tr>
+					<td class="top"><strong>Augmentation</strong></td>
+					<td class="top"><code>GaussianNoise</code>, <code>FeatureDropout</code>, <code>SpanMasking</code>, <code>FeatureMasking</code>, <code>TimeWarp</code>, <code>RandomCrop</code>, <code>CenterCrop</code>, <code>MixupCollator</code>, <code>Compose</code></td>
+					<td class="top">Perturb features and sequences to regularize training and build tolerance to missing or corrupted inputs.</td>
+				</tr>
+				<tr>
+					<td class="top"><strong>Batching</strong></td>
+					<td class="top"><code>DynamicCollator</code>, <code>LengthBucketBatchSampler</code></td>
+					<td class="top">Group variable-length samples and bucket by length to keep batches padding-efficient.</td>
+				</tr>
+				<tr>
+					<td class="top"><strong>Distributed</strong></td>
+					<td class="top"><code>OmniSampler</code>, <code>OmniDataModule</code> (Lightning integration)</td>
+					<td class="top">Scale the unified stream across multiple GPUs and plug straight into a PyTorch Lightning training loop.</td>
+				</tr>
+				<tr>
+					<td class="top"><strong>Config &amp; CLI</strong></td>
+					<td class="top"><code>OmniConfig</code>, <code>build_dataloader()</code>, <code>omniloader</code> CLI commands</td>
+					<td class="top">Specify an entire data pipeline from a config file and build it in code or from the command line for reproducible runs.</td>
+				</tr>
+			</table>
+
+			<h2>Try it</h2>
+			<h3>With uv (recommended)</h3>
+			<pre><code>uv add omniloader
+uv add "omniloader[lightning]"</code></pre>
+
+			<h3>Or with pip</h3>
+			<pre><code>pip install omniloader
+pip install "omniloader[lightning]"</code></pre>
+
+			<p>Requirements: Python 3.12+, PyTorch 2.12.1+, numpy, h5py, pyyaml.</p>
+
+			<div class="notice-box">
+				<span class="notice-icon" aria-label="Notice">
+				  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffd600" viewBox="0 0 16 16">
+					<path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767z"/>
+					<path d="M8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" fill="#333"/>
+				  </svg>
+				</span>
+				<div class="notice-content">
+				  <p>Built for my own multi-task experiments — shared in case it saves you the same plumbing.</p> <br>
+				  <p>
+					OmniLoader came out of needing to train a single model across several datasets that annotate
+					different things. Instead of writing yet another bespoke collate function per project, I turned the
+					union-and-mask idea into a reusable, config-driven library. It is MIT licensed, so use it, fork it,
+					or open an issue if something is missing.
+				  </p>
+				</div>
+			  </div>
+
+		</div>
+
+		<div class="d-flex mt-4 mb-4"><a id="button_contact" href="https://github.com/fodorad/OmniLoader" target="_blank" class="button mx-3">Star it on GitHub</a></div>
+		<div id="footer-container"></div>
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<script src="https://kit.fontawesome.com/a8f44bbdfa.js"></script>
+		<script src="../../js/menu.js"></script>
+		<script src="../../js/pre-load.js"></script>
+		<script src="../../js/footer.loader.js"></script>
+	</body>
+</html>

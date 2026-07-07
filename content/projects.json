@@ -1,6 +1,13 @@
 [
   {
     "year": 2026,
+    "image": "images/placeholder/pic01.jpg",
+    "title": "OmniLoader",
+    "content": "A PyTorch meta data loader that unifies disjoint, multi-task datasets for joint training.",
+    "page": "projects/omniloader.html"
+  },
+  {
+    "year": 2026,
     "image": "images/placeholder/pic02.jpg",
     "title": "Annie",
     "content": "Local-first browser UI to explore, inspect, and validate a video annotation dataset.",
