@@ -59,4 +59,10 @@ fetch('content/projects.json')
             document.getElementById('project-container-recent')
         );
     })
-    .catch(error => console.error('Error:', error));
+    .catch(error => {
+        console.error('Recent projects loader error:', error);
+        const featuredContainer = document.getElementById('project-container-featured');
+        const recentContainer = document.getElementById('project-container-recent');
+        if (featuredContainer) featuredContainer.innerHTML = '<p class="error">Failed to load featured projects.</p>';
+        if (recentContainer) recentContainer.innerHTML = '<p class="error">Failed to load recent projects.</p>';
+    });

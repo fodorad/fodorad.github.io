@@ -128,4 +128,17 @@ fetch('../content/software.json')
         renderEarlierPackages(data.packages, document.getElementById('earlier-container'));
         renderPractices(data.practices, document.getElementById('practice-container'));
     })
-    .catch(error => console.error('Error:', error));
+    .catch(error => {
+        console.error('Software loader error:', error);
+        const containers = [
+            'demo-container-hosted',
+            'demo-container-showcase',
+            'package-container',
+            'earlier-container',
+            'practice-container'
+        ];
+        containers.forEach(id => {
+            const el = document.getElementById(id);
+            if (el) el.innerHTML = '<p class="error">Failed to load software data.</p>';
+        });
+    });

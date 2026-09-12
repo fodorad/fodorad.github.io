@@ -16,6 +16,7 @@ fetch('../content/projects.json')
     .then(response => response.json())
     .then(data => {
         const projectContainer = document.getElementById('project-container')
+        if (!projectContainer) return;
         let currentContainer = null;
         let currentTheme = null;
         const numbers = [1, 2, 3, 4, 5, 6];
@@ -43,7 +44,7 @@ fetch('../content/projects.json')
             projectBox.classList.add(`style${getCyclicNumber(numbers, index)}`);
             projectBox.innerHTML =
                 `<span class="tile-image">
-                     <img src="../${item.image}" alt="" />
+                     <img src="../${item.image}" alt="${item.title}" />
                  </span>
                  <a href="${item.page}">
                      <h2>${item.title}</h2>
@@ -57,4 +58,7 @@ fetch('../content/projects.json')
             currentContainer.appendChild(projectBox);
         });
     })
-    .catch(error => console.error('Error:', error));
+    .catch(error => {
+        console.error('Project loader error:', error);
+        projectContainer.innerHTML = '<p class="error">Failed to load projects. Please try again later.</p>';
+    });

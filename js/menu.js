@@ -50,9 +50,14 @@
 
         /* Fall back to the operating system preference on a first visit, but
            never override a choice the visitor has already made here. */
-        const isDark = storedTheme
-            ? storedTheme === 'dark'
-            : window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        let isDark;
+        if (storedTheme) {
+            isDark = storedTheme === 'dark';
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            isDark = true;
+        } else {
+            isDark = false;
+        }
 
         $body.toggleClass('dark-theme', isDark);
         renderThemeSwitch(isDark);
