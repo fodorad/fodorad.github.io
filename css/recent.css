@@ -19,7 +19,10 @@
 .recent_head a {
     padding-top: 1.5rem;
     font-size: 1.3rem;
-    color: var(--text-color-default);
+    /* Overrides the muted global link colour: this is a section action and
+       needs to read at full strength in both themes. */
+    color: var(--text);
+    border-bottom-color: var(--accent);
     text-decoration: none;
     transition: all 0.2s ease;
 }

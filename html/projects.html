@@ -1,13 +1,32 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 	<head>
-		<title>Adam Fodor portfolio</title>
+<!-- seo:begin -->
+		<title>Projects, Packages &amp; Live Demos — Adam Fodor</title>
+		<meta name="description" content="Nine published PyPI packages, live demos, and the MLOps practices behind them: ONNX optimization, Docker and Cloud Run deployment, MLflow model registry." />
+		<meta name="author" content="Adam Fodor" />
+		<link rel="canonical" href="https://adamfodor.com/html/projects.html" />
+		<meta property="og:type" content="article" />
+		<meta property="og:title" content="Projects, Packages &amp; Live Demos — Adam Fodor" />
+		<meta property="og:description" content="Nine published PyPI packages, live demos, and the MLOps practices behind them: ONNX optimization, Docker and Cloud Run deployment, MLflow model registry." />
+		<meta property="og:url" content="https://adamfodor.com/html/projects.html" />
+		<meta property="og:image" content="https://adamfodor.com/images/Adam_Fodor.jpg" />
+		<meta property="og:site_name" content="Adam Fodor" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="Projects, Packages &amp; Live Demos — Adam Fodor" />
+		<meta name="twitter:description" content="Nine published PyPI packages, live demos, and the MLOps practices behind them: ONNX optimization, Docker and Cloud Run deployment, MLflow model registry." />
+		<meta name="twitter:image" content="https://adamfodor.com/images/Adam_Fodor.jpg" />
+		<!-- seo:end -->
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 		<link rel="stylesheet" href="../css/styles.css" />
 		<noscript><div class="alert alert-warning" role="alert"><h2>Warning!</h2><p>This website requires JavaScript to function. Please enable JavaScript in your browser settings.</p></div></noscript>
+		<!-- analytics:begin -->
+		<script data-goatcounter="https://fodorad.goatcounter.com/count"
+		        async src="//gc.zgo.at/count.js"></script>
+		<!-- analytics:end -->
 	</head>
 
 	<body class="is-preload">
@@ -21,10 +40,7 @@
 			</div>
 
 			<nav id="menu">
-				<h2>
-					Menu
-					<span id="themeSwitch" class="theme-icon" aria-label="Toggle Theme"><i class="far fa-moon"></i></span>
-				</h2>
+				<h2>Menu</h2>
 				<ul>
 					<li><a href="../index.html">Home</a></li>
 					<li><a href="projects.html">Projects</a></li>
@@ -34,14 +50,64 @@
 					<li><a href="gallery.html">Gallery</a></li>
 					<li><a href="about.html">About</a></li>
 				</ul>
+				<span id="themeSwitch" class="theme-icon" role="button" tabindex="0" aria-label="Toggle colour theme"><i class="far fa-moon"></i></span>
 			</nav>		
 		</header>
 
 		<div class="container">
 			<header>
 				<h1>My works</h1>
-				<p>I show only my best works built completely with passion and simplicity considering future science projects!</p>
+				<p class="narrow">
+					I take ideas from a research question through to software other people can install and run.
+					Below are the packages and live demos I ship and maintain, the engineering practices behind them,
+					and the research projects they grew out of.
+				</p>
 			</header>
+
+			<div class="software-section" id="demos">
+				<h2 class="text-center">Live demos</h2>
+				<p class="software-lead">
+					Hosted models you can try in the browser right now &mdash; no install needed.
+				</p>
+				<div id="demo-container-hosted"></div>
+
+				<h3 class="text-center mt-5">Application showcase</h3>
+				<p class="software-lead">
+					Local-first applications: full products, but built to run on your own machine
+					rather than a public server. The screenshots below show how they work.
+				</p>
+				<div id="demo-container-showcase"></div>
+			</div>
+
+			<div class="software-section" id="packages">
+				<h2 class="text-center">Published packages</h2>
+				<p class="software-lead">
+					Nine libraries released on PyPI. The seven below are actively maintained, each with
+					continuous integration, Codecov-enforced coverage, and published API documentation.
+				</p>
+				<div id="package-container"></div>
+
+				<h3 class="text-center mt-5">Early Access</h3>
+				<p class="software-lead">Published and installable, still under active construction.</p>
+				<div id="earlier-container"></div>
+			</div>
+
+			<div class="software-section" id="engineering">
+				<h2 class="text-center">Engineering &amp; MLOps practices</h2>
+				<p class="software-lead">
+					How the models get from a training run to something deployable &mdash; and how I check
+					that a result is real before reporting it.
+				</p>
+				<div id="practice-container"></div>
+			</div>
+
+			<div class="software-section" id="research">
+				<h2 class="text-center">Research projects</h2>
+				<p class="software-lead">
+					The research behind the software: multimodal, affective computing systems, <br> and the
+					machine learning models and tools they are built on.
+				</p>
+			</div>
 			<section id="project-container"></section>
 		</div>
 
@@ -53,6 +119,7 @@
 		<script src="https://kit.fontawesome.com/a8f44bbdfa.js"></script>
 		<script src="../js/menu.js"></script>
 		<script src="../js/pre-load.js"></script>
+		<script src="../js/software.loader.js"></script>
 		<script src="../js/project.loader.js"></script>
 		<script src="../js/footer.loader.js"></script>
 	</body>

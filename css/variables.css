@@ -1,10 +1,14 @@
+/* Backwards-compatible aliases for the original variable names.
+   All real colour values live in theme.css - do not add values here. */
+
 :root {
-	--bg-color-default: #ffffff;
-	--bg-color-footer-default: #efefef;
-	--text-color-default: #333333;
-	--hover-color-default: #DF7861;
-	--active-color-default: #e04825;
-    --button-color: #585858;
-	--bg-color-dark: #2c3e50;
-	--text-color-dark: #ecf0f1;
+	--bg-color-default: var(--bg);
+	--bg-color-footer-default: var(--bg-footer);
+	--text-color-default: var(--text);
+	--hover-color-default: var(--accent);
+	--active-color-default: var(--accent-hover);
+	--bg-color-dark: var(--bg);
+	--text-color-dark: var(--text);
+	--accent-color: var(--accent);
+	--accent-color-soft: var(--accent-soft);
 }

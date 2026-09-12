@@ -1,17 +1,17 @@
 .cert-container {
-  --main-color: #00000081;
-  --secondary-color: #111;
-  --txt-color: #fff;
-  --img-bg-color: rgba(240, 240, 240, 0.9);
-  --backdrop-color: rgba(240, 240, 240, 0.9);
+  --main-color: var(--overlay-scrim);
+  --secondary-color: var(--overlay-surface);
+  --txt-color: var(--overlay-text);
+  --img-bg-color: var(--overlay-image-bg);
+  --backdrop-color: var(--overlay-image-bg);
 }
 
 .cert-container *[data-theme="dark"] {
-  --main-color: #ddd;
-  --secondary-color: #eee;
-  --txt-color: #111;
-  --img-bg-color: rgba(20, 20, 20, 0.9);
-  --backdrop-color: rgba(30, 30, 30, 0.9);
+  --main-color: var(--overlay-scrim);
+  --secondary-color: var(--overlay-surface);
+  --txt-color: var(--overlay-text);
+  --img-bg-color: var(--overlay-image-bg);
+  --backdrop-color: var(--overlay-image-bg);
 }
 
 .cert-box {
@@ -33,7 +33,7 @@
   opacity: 0.85;
   object-fit: cover;
   object-position: 0% 0%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px var(--shadow);
 }
 
 .cert-box img:hover {

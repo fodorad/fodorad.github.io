@@ -1,20 +1,20 @@
 .gg-container {
-  --main-color: #00000081;
-  --secondary-color: #111;
-  --txt-color: #fff;
-  --img-bg-color: rgba(240, 240, 240, 0.9);
-  --backdrop-color: rgba(240, 240, 240, 0.9);
+  --main-color: var(--overlay-scrim);
+  --secondary-color: var(--overlay-surface);
+  --txt-color: var(--overlay-text);
+  --img-bg-color: var(--overlay-image-bg);
+  --backdrop-color: var(--overlay-image-bg);
   --gap-length: 5px;
   --row-height: 250px;
   --column-width: 250px;
 }
 
 .gg-container *[data-theme="dark"] {
-  --main-color: #ddd;
-  --secondary-color: #eee;
-  --txt-color: #111;
-  --img-bg-color: rgba(20, 20, 20, 0.9);
-  --backdrop-color: rgba(30, 30, 30, 0.9);
+  --main-color: var(--overlay-scrim);
+  --secondary-color: var(--overlay-surface);
+  --txt-color: var(--overlay-text);
+  --img-bg-color: var(--overlay-image-bg);
+  --backdrop-color: var(--overlay-image-bg);
 }
 
 .gg-box {
@@ -156,15 +156,15 @@
   padding: 0 1rem 0 1rem;
   margin: 0.25rem;
   opacity: 0.85;
-  color: #fff;
+  color: var(--text-inverse);
   cursor: pointer;
   font-weight: 600;
   transition: opacity .35s;
-  background: linear-gradient(90deg, #DFA878 0%, #6C3428 167%);
+  background: linear-gradient(90deg, var(--accent-soft) 0%, var(--accent-hover) 167%);
 }
 
 .gallery_tag.active {
-  background: linear-gradient(90deg, #a52903 0%, #470e01 167%);
+  background: linear-gradient(90deg, var(--accent-hover) 0%, var(--accent) 167%);
 }
 
 body.is-preload .gg-box {

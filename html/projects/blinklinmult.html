@@ -1,13 +1,32 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 	<head>
-		<title>Adam Fodor portfolio</title>
+<!-- seo:begin -->
+		<title>BlinkLinMulT — Transformer-Based Eye Blink Detection</title>
+		<meta name="description" content="Transformer-based eye blink detection shipped as a PyPI package: ONNX inference 4.9x faster, a 42.8 fps CPU pipeline, and a live demo." />
+		<meta name="author" content="Adam Fodor" />
+		<link rel="canonical" href="https://adamfodor.com/html/projects/blinklinmult.html" />
+		<meta property="og:type" content="article" />
+		<meta property="og:title" content="BlinkLinMulT — Transformer-Based Eye Blink Detection" />
+		<meta property="og:description" content="Transformer-based eye blink detection shipped as a PyPI package: ONNX inference 4.9x faster, a 42.8 fps CPU pipeline, and a live demo." />
+		<meta property="og:url" content="https://adamfodor.com/html/projects/blinklinmult.html" />
+		<meta property="og:image" content="https://adamfodor.com/images/Adam_Fodor.jpg" />
+		<meta property="og:site_name" content="Adam Fodor" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="BlinkLinMulT — Transformer-Based Eye Blink Detection" />
+		<meta name="twitter:description" content="Transformer-based eye blink detection shipped as a PyPI package: ONNX inference 4.9x faster, a 42.8 fps CPU pipeline, and a live demo." />
+		<meta name="twitter:image" content="https://adamfodor.com/images/Adam_Fodor.jpg" />
+		<!-- seo:end -->
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 		<link rel="stylesheet" href="../../css/styles.css" />
 		<noscript><div class="alert alert-warning" role="alert"><h2>Warning!</h2><p>This website requires JavaScript to function. Please enable JavaScript in your browser settings.</p></div></noscript>
+		<!-- analytics:begin -->
+		<script data-goatcounter="https://fodorad.goatcounter.com/count"
+		        async src="//gc.zgo.at/count.js"></script>
+		<!-- analytics:end -->
 	</head>
 
 	<body class="is-preload">
@@ -21,10 +40,7 @@
 			</div>
 
 			<nav id="menu">
-				<h2>
-					Menu
-					<span id="themeSwitch" class="theme-icon" aria-label="Toggle Theme"><i class="far fa-moon"></i></span>
-				</h2>
+				<h2>Menu</h2>
 				<ul>
 					<li><a href="../../index.html">Home</a></li>
 					<li><a href="../projects.html">Projects</a></li>
@@ -34,6 +50,7 @@
 					<li><a href="../gallery.html">Gallery</a></li>
 					<li><a href="../about.html">About</a></li>
 				</ul>
+				<span id="themeSwitch" class="theme-icon" role="button" tabindex="0" aria-label="Toggle colour theme"><i class="far fa-moon"></i></span>
 			</nav>		
 		</header>
 
@@ -46,7 +63,13 @@
 			<img class="img-fluid rounded middle" src="../../images/projects/blinklinmult/pipeline.png" alt=""/>
 			<div class="d-flex mt-4 mb-4">
 				<a id="button_contact" target="_blank" href="../../pdf/2023_Fodor_Adam_MDPI_BlinkLinMulT.pdf" class="button mx-3">Paper</a>
-				<a id="button_contact" target="_blank" href="https://github.com/fodorad/BlinkLinMulT" class="button primary mx-3">Code</a>
+				<a id="button_contact" target="_blank" href="https://huggingface.co/spaces/fodorad/blink_detection" class="button primary mx-3">Live demo</a>
+				<a id="button_contact" target="_blank" href="https://github.com/fodorad/BlinkLinMulT" class="button mx-3">Code</a>
+			</div>
+			<div class="package-links justify-content-center mb-4">
+				<a href="https://pypi.org/project/blinklinmult/" target="_blank" rel="noopener">PyPI</a>
+				<a href="https://fodorad.github.io/BlinkLinMulT/" target="_blank" rel="noopener">Docs</a>
+				<a href="https://huggingface.co/fodorad/blink_detection" target="_blank" rel="noopener">Model weights</a>
 			</div>
 
 			<div class="row">
@@ -122,6 +145,66 @@
 					</div>
 				</div>
 			</div>
+		</div>
+
+		<div class="container software-section">
+			<h2 class="text-center">From paper to production</h2>
+			<p class="software-lead">
+				The 2023 paper was the starting point, not the end. The repository now ships four models
+				behind one interface, an optimized inference path, and a statistically grounded comparison
+				of which model is actually better.
+			</p>
+			<div class="practice-grid grid-2x2">
+				<div class="practice-card">
+					<h3><i class="fa-solid fa-bolt"></i>ONNX optimization</h3>
+					<ul>
+						<li>Exported behind a numerical-parity gate: the graph must agree with the PyTorch model to <strong>4.8e-07</strong> before it ships.</li>
+						<li><strong>4.9&times; faster</strong> inference &mdash; 20.19 &rarr; 4.15 ms/frame.</li>
+						<li>The ONNX extra runs all four models <strong>without importing torch</strong>, saving 469&nbsp;MB in a deployment; a packaging test fails if that regresses.</li>
+					</ul>
+				</div>
+				<div class="practice-card">
+					<h3><i class="fa-solid fa-gauge-high"></i>Real-time pipeline</h3>
+					<ul>
+						<li>Face detection, eye localisation, head pose, and blink scoring at <strong>42.8 fps on CPU</strong>.</li>
+						<li>That number came from profiling the pipeline, not from guessing where the time went.</li>
+						<li>Runs live from a webcam, offline over video files, or as a Docker REST service.</li>
+					</ul>
+				</div>
+				<div class="practice-card">
+					<h3><i class="fa-solid fa-chart-simple"></i>Statistical model comparison</h3>
+					<ul>
+						<li>&ldquo;Model A scored higher&rdquo; is not the same claim as &ldquo;model A is better&rdquo;, so the comparison is a test rather than a table of point estimates.</li>
+						<li>Recording-clustered paired bootstrap over <strong>35 held-out recordings</strong>, resampling recordings rather than frames.</li>
+						<li>95% confidence intervals and <strong>Holm-corrected p-values</strong> across all six pairwise comparisons.</li>
+					</ul>
+				</div>
+				<div class="practice-card">
+					<h3><i class="fa-solid fa-code"></i>Engineering</h3>
+					<ul>
+						<li><strong>96% line coverage</strong>, enforced in CI by Codecov, behind a <code>make check</code> gate &mdash; ruff, ty, the suite, and a docs build &mdash; that runs in about 40 seconds.</li>
+						<li>One <code>BlinkDetector</code> class serves all four models, ONNX and PyTorch alike, with weights resolved from the Hugging Face Hub on first use.</li>
+						<li>Trained with PyTorch Lightning across multiple GPUs (DDP, data-parallel), and published Sphinx API documentation, ruff linting, and coverage reporting.</li>
+					</ul>
+				</div>
+			</div>
+
+			<h3 class="text-center mt-5">Which model is actually better?</h3>
+			<p class="software-lead">
+				Average precision on the RN30 test split &mdash; 35 held-out recordings, 54&nbsp;814 valid frames,
+				1.04% positive. Intervals are 95%, from a paired bootstrap that resamples recordings.
+			</p>
+			<table>
+				<thead>
+					<tr><th>Model</th><th>Average precision</th><th>95% CI</th></tr>
+				</thead>
+				<tbody>
+					<tr><td><strong>blinkcnn</strong></td><td><strong>0.7893</strong></td><td>[0.700, 0.861]</td></tr>
+					<tr><td>blinklint-union</td><td>0.4338</td><td>[0.340, 0.540]</td></tr>
+					<tr><td>blinklinmult-union</td><td>0.3815</td><td>[0.204, 0.585]</td></tr>
+					<tr><td>densenet121-union</td><td>0.3569</td><td>[0.213, 0.617]</td></tr>
+				</tbody>
+			</table>
 		</div>
 
 		<h2>Visualization</h2>

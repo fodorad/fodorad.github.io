@@ -1,13 +1,32 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 	<head>
-		<title>Adam Fodor portfolio</title>
+<!-- seo:begin -->
+		<title>Personality Questionnaire — Adam Fodor</title>
+		<meta name="description" content="A local-first application to administer, score, and record validated personality and affect questionnaires: BFI-2, BFI-2-XS, BFI-10, PANAS, VAS-F. Published on PyPI." />
+		<meta name="author" content="Adam Fodor" />
+		<link rel="canonical" href="https://adamfodor.com/html/projects/personality_questionnaires.html" />
+		<meta property="og:type" content="article" />
+		<meta property="og:title" content="Personality Questionnaire — Adam Fodor" />
+		<meta property="og:description" content="A local-first application to administer, score, and record validated personality and affect questionnaires: BFI-2, BFI-2-XS, BFI-10, PANAS, VAS-F. Published on PyPI." />
+		<meta property="og:url" content="https://adamfodor.com/html/projects/personality_questionnaires.html" />
+		<meta property="og:image" content="https://adamfodor.com/images/Adam_Fodor.jpg" />
+		<meta property="og:site_name" content="Adam Fodor" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="Personality Questionnaire — Adam Fodor" />
+		<meta name="twitter:description" content="A local-first application to administer, score, and record validated personality and affect questionnaires: BFI-2, BFI-2-XS, BFI-10, PANAS, VAS-F. Published on PyPI." />
+		<meta name="twitter:image" content="https://adamfodor.com/images/Adam_Fodor.jpg" />
+		<!-- seo:end -->
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 		<link rel="stylesheet" href="../../css/styles.css" />
 		<noscript><div class="alert alert-warning" role="alert"><h2>Warning!</h2><p>This website requires JavaScript to function. Please enable JavaScript in your browser settings.</p></div></noscript>
+		<!-- analytics:begin -->
+		<script data-goatcounter="https://fodorad.goatcounter.com/count"
+		        async src="//gc.zgo.at/count.js"></script>
+		<!-- analytics:end -->
 	</head>
 
 	<body class="is-preload">
@@ -21,10 +40,7 @@
 			</div>
 
 			<nav id="menu">
-				<h2>
-					Menu
-					<span id="themeSwitch" class="theme-icon" aria-label="Toggle Theme"><i class="far fa-moon"></i></span>
-				</h2>
+				<h2>Menu</h2>
 				<ul>
 					<li><a href="../../index.html">Home</a></li>
 					<li><a href="../projects.html">Projects</a></li>
@@ -34,60 +50,153 @@
 					<li><a href="../gallery.html">Gallery</a></li>
 					<li><a href="../about.html">About</a></li>
 				</ul>
-			</nav>		
+				<span id="themeSwitch" class="theme-icon" role="button" tabindex="0" aria-label="Toggle colour theme"><i class="far fa-moon"></i></span>
+			</nav>
 		</header>
 
 		<div class="container">
-			<div class="paper"><h1>Personality Questionnaires</h1></div>
-			<img class="img-fluid rounded middle" src="../../images/projects/personality_questionnaires/personalities.jpg" alt=""/>
-			<div class="d-flex mt-4 mb-4">
-				<a id="button_contact" target="_blank" href="https://www.colby.edu/academics/departments-and-programs/psychology/research-opportunities/personality-lab/the-bfi-2/" class="button mx-3">BFI-2</a>
-				<a id="button_contact" target="_blank" href="https://www.researchgate.net/publication/21092999_Validity_and_reliability_of_a_scale_to_assess_fatigue" class="button mx-3">VAS-F</a>
-				<a id="button_contact" target="_blank" href="https://github.com/fodorad/personality_questionnaire" class="button primary mx-3">Code</a>
+			<div class="paper">
+				<h1>Personality Questionnaire</h1>
+				<p>Administer, score and record validated personality and affect questionnaires</p>
 			</div>
 
-			<h2>Motivation</h2>
-				<p>This repository offers a suite of tools designed to simplify the processing of personality questionnaires in research experiments. The motivation behind this project stems from the need for a standardized and automated approach to handle questionnaire data efficiently across various experimental settings. By providing a robust package with support for different questionnaires and export formats, researchers can focus more on experimental design and analysis, rather than spending time on manual data processing.</p>
+			<img class="img-fluid rounded middle" src="../../images/projects/personality_questionnaires/screenshot-overview.png" alt="Personality Questionnaire application overview screen"/>
+			<div class="d-flex flex-wrap justify-content-center mt-4 mb-4">
+				<a target="_blank" href="https://github.com/fodorad/personality_questionnaire" class="button primary mx-2 my-1">GitHub</a>
+				<a target="_blank" href="https://pypi.org/project/personality_questionnaire/" class="button mx-2 my-1">PyPI</a>
+				<a target="_blank" href="https://fodorad.github.io/personality_questionnaire/" class="button mx-2 my-1">Docs</a>
+			</div>
 
-			<h2>Supported Questionnaires</h2>
-			
+			<h2>What this is</h2>
+			<p>Collecting validated self-reports is the unglamorous half of an affective-computing pipeline.
+				This started as a small helper for scoring BFI-2 and VAS-F responses in one experiment; it is now a
+				full data-collection application, built around one idea: <strong>an instrument is data, not code.</strong>
+				Items, response ranges, subscale membership and reverse keys are declared as values, and a single
+				vectorised scorer turns responses into scores without knowing which questionnaire it is holding.
+				Adding an instrument adds no arithmetic.</p>
+
+			<h2>Instruments</h2>
 			<table>
 				<tr>
-					<th>Name</th>
-					<th>Status</th>
-					<th>Description</th>
+					<th>Instrument</th>
+					<th>Items</th>
+					<th>Scores</th>
 				</tr>
 				<tr>
-					<td>BFI-2</td>
-					<td>Supported</td>
-					<td>The initial focus of the repository is on supporting the BFI-2 questionnaire, a widely used instrument for assessing personality traits based on the Big Five framework. The BFI-2 provides valuable insights into an individual's personality across dimensions such as openness, conscientiousness, extraversion, agreeableness, and neuroticism. The package facilitates the processing of BFI-2 questionnaire responses, offering scaled outputs representing both Big Five values and FACET scores, which can be utilized in various research projects.</td>
+					<td>BFI-2 — Big Five Inventory-2</td>
+					<td>60</td>
+					<td>5 domains, 15 facets</td>
 				</tr>
 				<tr>
-					<td>VAS-F</td>
-					<td>Supported</td>
-					<td>On the other hand, The Visual Analogue Scale for Fatigue Severity (VAS-F) offers a succinct means of assessing fatigue levels before and after experimental tasks. 
-						With 18 questions prompting participants to circle numbers between 0 and 10, the pre-experiment assessment provides insight into baseline fatigue levels, while the post-experiment version captures changes resulting from the task.
-						Quick to complete, both assessments take less than one minute, offering researchers valuable data on participant fatigue and its response to experimental manipulations.</td>
+					<td>BFI-2-XS — Extra-Short Form</td>
+					<td>15</td>
+					<td>5 domains</td>
 				</tr>
 				<tr>
-					<td>HEXACO</td>
-					<td>Soon!</td>
-					<td>The HEXACO model extends the Big Five framework by incorporating an additional factor, honesty-humility, providing a more comprehensive understanding of personality traits. </td>
+					<td>BFI-10</td>
+					<td>10</td>
+					<td>5 domains</td>
+				</tr>
+				<tr>
+					<td>PANAS — Positive and Negative Affect Schedule</td>
+					<td>20</td>
+					<td>Positive / Negative Affect</td>
+				</tr>
+				<tr>
+					<td>VAS-F — Visual Analogue Scale for Fatigue</td>
+					<td>18</td>
+					<td>Fatigue, Energy, composite</td>
 				</tr>
 			</table>
-			<p>By incorporating support for these additional questionnaires, the repository seeks to cater to a broader range of research needs.</p>
 
-			<h2>API and Export Formats</h2>
-				<p>This repository can be easily installed using pip, making it simple to get started. One of the key features of the repository is its flexible API, which allows seamless integration into various experimental settings.
-					Researchers can easily incorporate the questionnaire processing functionality into their workflows, whether they are conducting online surveys or laboratory experiments.</p>
-				<p>Additionally, the package supports exporting questionnaire data in multiple formats, including numpy ndarrays and CSV files, ensuring compatibility with different analysis tools and software environments.</p>
+			<h2>The application</h2>
+			<p>Beyond the Python API and CLI, <code>pq ui</code> serves a local data-collection application with five
+				tabs: an overview, participant setup, the questionnaire itself — rendered as the authors published it,
+				radio buttons with the labelled response scale, sliders for visual-analogue items — the computed
+				scores, and every record collected so far with filters and export. It <strong>binds to
+				<code>127.0.0.1</code> and makes no outbound request</strong>: participant self-reports are
+				consent-restricted, and a tool that cannot be reached from another machine is the honest default for
+				that kind of data. Two browser tabs are two independent participants, so one machine runs two stations
+				side by side.</p>
+
+			<div class="container my-5">
+				<div class="row g-4">
+					<div class="col-md-6">
+						<div class="project-card card-task h-100 text-center">
+							<div class="project-title">Data-driven instruments</div>
+							<ul class="text-start">
+								<li>Items, subscales and reverse keys are declared as Python literals, checked by the type checker and validated at import.</li>
+								<li>Reverse-keying belongs to the subscale, not the item, folded into a signed weight matrix.</li>
+								<li>Every subscale carries a <code>higher_is</code> polarity, so nothing has to be inferred from a name.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="project-card card-method h-100 text-center">
+							<div class="project-title">Provenance & storage</div>
+							<ul class="text-start">
+								<li>Every record carries the package version, git SHA, and instrument hash it was scored with.</li>
+								<li>A SQLAlchemy record store, configurable via <code>PQ_DATABASE_URL</code>.</li>
+								<li>Export as wide CSV, long CSV, or archival JSON — from the CLI or the Records tab.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="project-card card-challenges h-100 text-center">
+							<div class="project-title">Engineering practice</div>
+							<ul class="text-start">
+								<li><strong>97% test coverage</strong>, enforced in CI by Codecov.</li>
+								<li>GitHub Actions CI, release-please-driven versioning, and published Sphinx docs.</li>
+								<li>Deprecated a CSV-based instrument format that was never actually read by any code path — and had a misspelled subscale name to prove it.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="project-card card-results h-100 text-center">
+							<div class="project-title">Related work</div>
+							<ul class="text-start">
+								<li><a href="personalitylinmult.html">PersonalityLinMulT</a> predicts perceived Big Five traits from video; this package collects the self-reported ground truth on the same [0, 1] scale.</li>
+								<li>The two are deliberately uncoupled in code — this package has no ML dependencies.</li>
+								<li>An exported BFI-2 record drops straight into a self-report-versus-perception comparison.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<h2>Try it</h2>
+			<pre><code>pip install "personality_questionnaire[ui]"
+pq ui                      # http://127.0.0.1:8080</code></pre>
+			<p>Or from the command line directly:</p>
+			<pre><code>pq list                                  # what is available
+pq info bfi2                             # items, subscales, citation
+pq run bfi2 --participant P01            # ask, score, and store
+pq score bfi2 --input answers.csv        # score a file
+pq export --shape long --output study-a.csv</code></pre>
+
+			<div class="notice-box">
+				<span class="notice-icon" aria-label="Notice">
+				  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffd600" viewBox="0 0 16 16">
+					<path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767z"/>
+					<path d="M8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" fill="#333"/>
+				  </svg>
+				</span>
+				<div class="notice-content">
+				  <p>Nothing here encrypts the database.</p> <br>
+				  <p>
+					Securing the machine the application runs on is the operator's responsibility. Stack: Python 3.12+,
+					SQLAlchemy, MIT licensed.
+				  </p>
+				</div>
+			  </div>
+
 		</div>
 
-		<div class="d-flex mt-4 mb-4"><a id="button_contact" href="#" class="button mx-3">Details at the Top: Code</a></div>
+		<div class="d-flex mt-4 mb-4"><a id="button_contact" href="https://github.com/fodorad/personality_questionnaire" target="_blank" class="button mx-3">Star it on GitHub</a></div>
 		<div id="footer-container"></div>
 
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>	
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<script src="https://kit.fontawesome.com/a8f44bbdfa.js"></script>
 		<script src="../../js/menu.js"></script>
 		<script src="../../js/pre-load.js"></script>

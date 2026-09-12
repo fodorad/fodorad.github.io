@@ -1,0 +1,232 @@
+{
+  "demos_hosted": [
+    {
+      "title": "Eye Blink Detection",
+      "subtitle": "BlinkLinMulT",
+      "image": "images/projects/blinklinmult/pipeline.png",
+      "content": "Upload a video or use your webcam: the model scores eye closure per frame, per eye, and derives blink events from that signal. Runs the ONNX graph at 4.15 ms/frame.",
+      "url": "https://huggingface.co/spaces/fodorad/blink_detection",
+      "tags": [
+        "Gradio",
+        "ONNX Runtime",
+        "Hugging Face Spaces"
+      ]
+    },
+    {
+      "title": "Personality Perception",
+      "subtitle": "PersonalityLinMulT",
+      "image": "images/projects/personalitylinmult/cover.png",
+      "content": "Estimates perceived Big Five traits from speech. The demo exposes a live PyTorch-vs-ONNX backend switch, so you can compare the two runtimes on the same input.",
+      "url": "https://huggingface.co/spaces/fodorad/personalitylinmult-fi",
+      "tags": [
+        "Gradio",
+        "PyTorch",
+        "ONNX Runtime",
+        "Hugging Face Spaces"
+      ]
+    }
+  ],
+  "demos_showcase": [
+    {
+      "title": "Annie",
+      "subtitle": "annie",
+      "image": "images/projects/annie/browse.png",
+      "content": "A local-first browser UI to explore, inspect, and validate a video annotation dataset side by side with its frame-wise labels. Runs entirely on your machine — no upload, no cloud.",
+      "url": "https://fodorad.github.io/Annie/",
+      "cta": "See how it works",
+      "tags": [
+        "Local-first",
+        "Docker",
+        "Data Quality"
+      ]
+    },
+    {
+      "title": "Personality Questionnaire",
+      "subtitle": "personality_questionnaire",
+      "image": "images/projects/personality_questionnaires/screenshot-questionnaire.png",
+      "content": "A localhost application to administer, score, and record validated personality and affect instruments (BFI-2, PANAS, VAS-F). Binds to 127.0.0.1 only — no data leaves the machine, by design.",
+      "url": "https://fodorad.github.io/personality_questionnaire/ui.html",
+      "cta": "See how it works",
+      "tags": [
+        "Local-first",
+        "SQLAlchemy",
+        "Data Collection"
+      ]
+    }
+  ],
+  "packages": [
+    {
+      "name": "exordium",
+      "version": "2.11.4",
+      "content": "Multimodal feature extraction across audio, video, and text: WavLM, Wav2Vec2, CLAP, OpenSMILE, DINOv2, CLIP, BERT/RoBERTa.",
+      "install": "pip install exordium",
+      "links": {
+        "PyPI": "https://pypi.org/project/exordium/",
+        "GitHub": "https://github.com/fodorad/exordium",
+        "Docs": "https://fodorad.github.io/exordium/",
+        "Models": "https://huggingface.co/fodorad/exordium-weights"
+      },
+      "status": "active",
+      "coverage": 93
+    },
+    {
+      "name": "personalitylinmult",
+      "version": "3.0.0",
+      "content": "Big Five personality perception and interview-variable estimation. MLflow registry with alias-based champion promotion, Optuna HPO, ONNX serving on Cloud Run.",
+      "install": "pip install personalitylinmult",
+      "links": {
+        "PyPI": "https://pypi.org/project/personalitylinmult/",
+        "GitHub": "https://github.com/fodorad/PersonalityLinMulT",
+        "Docs": "https://fodorad.github.io/PersonalityLinMulT/",
+        "Demo": "https://huggingface.co/spaces/fodorad/personalitylinmult-fi"
+      },
+      "status": "active",
+      "coverage": 84
+    },
+    {
+      "name": "blinklinmult",
+      "version": "2.1.0",
+      "content": "Eye blink detection and eye state recognition. Four models behind one interface, compared under one protocol, benchmarked for latency.",
+      "install": "pip install blinklinmult",
+      "links": {
+        "PyPI": "https://pypi.org/project/blinklinmult/",
+        "GitHub": "https://github.com/fodorad/BlinkLinMulT",
+        "Docs": "https://fodorad.github.io/BlinkLinMulT/",
+        "Models": "https://huggingface.co/fodorad/blink_detection",
+        "Demo": "https://huggingface.co/spaces/fodorad/blink_detection"
+      },
+      "status": "active",
+      "coverage": 96
+    },
+    {
+      "name": "linmult",
+      "version": "2.1.2",
+      "content": "General-purpose multimodal transformer with linear-complexity attention. The shared architecture underneath the LinMulT family of projects.",
+      "install": "pip install linmult",
+      "links": {
+        "PyPI": "https://pypi.org/project/linmult/",
+        "GitHub": "https://github.com/fodorad/LinMulT",
+        "Docs": "https://fodorad.github.io/LinMulT/"
+      },
+      "status": "active",
+      "coverage": 100
+    },
+    {
+      "name": "omniloader",
+      "version": "1.1.1",
+      "content": "A PyTorch meta data loader that unifies disjoint, multi-task datasets into one batchable schema, with masks distinguishing real labels from missing ones.",
+      "install": "pip install omniloader",
+      "links": {
+        "PyPI": "https://pypi.org/project/omniloader/",
+        "GitHub": "https://github.com/fodorad/OmniLoader",
+        "Docs": "https://fodorad.github.io/OmniLoader/"
+      },
+      "status": "active",
+      "coverage": 99
+    },
+    {
+      "name": "annie",
+      "version": "1.4.0",
+      "content": "Local-first browser UI to explore, inspect, and validate video annotation datasets. Ships as a package and a Docker image.",
+      "install": "pip install annie",
+      "links": {
+        "PyPI": "https://pypi.org/project/annie/",
+        "GitHub": "https://github.com/fodorad/Annie",
+        "Docs": "https://fodorad.github.io/Annie/",
+        "Docker": "https://hub.docker.com/r/fodorad/annie"
+      },
+      "status": "active",
+      "coverage": 96
+    },
+    {
+      "name": "emotionlinmult",
+      "version": "0.1.0",
+      "status": "earlier",
+      "content": "Multimodal multi-task transformer for emotion, valence, arousal, and sentiment estimation from video. Early release.",
+      "install": "pip install emotionlinmult",
+      "links": {
+        "PyPI": "https://pypi.org/project/emotionlinmult/"
+      }
+    },
+    {
+      "name": "avst",
+      "version": "1.1.1",
+      "status": "earlier",
+      "content": "Audio Video Sync Tool - aligns two recordings by cross-correlating their audio tracks.",
+      "install": "pip install avst",
+      "links": {
+        "PyPI": "https://pypi.org/project/avst/",
+        "GitHub": "https://github.com/fodorad/AVST"
+      }
+    },
+    {
+      "name": "personality_questionnaire",
+      "version": "2.3.0",
+      "content": "Administer, score, and record validated personality and affect questionnaires (BFI-2, BFI-2-XS, BFI-10, PANAS, VAS-F) through a local-first data-collection application or a CLI/API.",
+      "install": "pip install personality_questionnaire[ui]",
+      "links": {
+        "PyPI": "https://pypi.org/project/personality_questionnaire/",
+        "GitHub": "https://github.com/fodorad/personality_questionnaire",
+        "Docs": "https://fodorad.github.io/personality_questionnaire/"
+      },
+      "status": "active",
+      "coverage": 97
+    }
+  ],
+  "practices": [
+    {
+      "icon": "fa-bolt",
+      "title": "Model optimization",
+      "points": [
+        "ONNX export gated on numerical parity: agreement to 4.8e-07 before a graph is allowed to ship.",
+        "4.9x faster inference, 20.19 to 4.15 ms/frame, measured rather than estimated.",
+        "A torch-free inference path saves 469 MB in deployment; a packaging test fails if that regresses."
+      ]
+    },
+    {
+      "icon": "fa-cubes",
+      "title": "Deployment & containerization",
+      "points": [
+        "Docker images serving the ONNX path, running identically on localhost and Google Cloud Run.",
+        "Cloud Run with true scale-to-zero, so an idle demo costs nothing.",
+        "FastAPI REST services and two public Gradio apps on Hugging Face Spaces."
+      ]
+    },
+    {
+      "icon": "fa-flask",
+      "title": "Experiment tracking & model lifecycle",
+      "points": [
+        "MLflow tracking for every run, with the Model Registry as the promotion boundary.",
+        "Alias-based promotion (@champion, not deprecated stages), so a specific run becomes the deployable model through a deliberate, auditable step.",
+        "Optuna hyperparameter optimization and systematic feature-ablation matrices."
+      ]
+    },
+    {
+      "icon": "fa-chart-simple",
+      "title": "Statistical rigor",
+      "points": [
+        "\"Model A scored higher\" is not the same claim as \"model A is better\", so comparisons are tested, not tabulated.",
+        "Recording-clustered paired bootstrap resampling recordings rather than frames, with 95% confidence intervals.",
+        "Holm-corrected p-values across the whole family of pairwise comparisons."
+      ]
+    },
+    {
+      "icon": "fa-arrows-rotate",
+      "title": "Reproducibility",
+      "points": [
+        "Training reads a single HDF5 artifact, which is the reproducibility boundary.",
+        "That artifact embeds the builder config verbatim, the commit SHA, and the label hash, so a built file always traces back to what produced it.",
+        "Config-driven pipelines; licensed raw data is never redistributed, only derived features."
+      ]
+    },
+    {
+      "icon": "fa-code",
+      "title": "Software quality & CI",
+      "points": [
+        "84-100% line coverage across the published packages, enforced in CI by Codecov, exercising every public entry point: the inference API, the ONNX and PyTorch runtimes, the CLI, and the packaging contract.",
+        "Tests are written against real use cases and reviewed by hand, not generated to inflate a number - a packaging test fails if the torch-free install regresses, and numerical-parity tests gate every ONNX export.",
+        "`make check` - ruff, ty, the full suite, and a docs build - is the same gate CI runs."
+      ]
+    }
+  ]
+}
