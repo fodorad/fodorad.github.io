@@ -40,16 +40,21 @@ input[type="submit"]:active,
     color: var(--active-color-default);
 }
 
+/* A filled button: the accent carries it in both themes, with the paired
+   contrast token for its label. Previously it filled with --button-color, a
+   mid grey, which left the label barely legible on the dark theme. */
 input[type="submit"].primary,
 .button.primary {
     box-shadow: none;
-    background-color: var(--button-color);
-    color: #ffffff !important;
+    background-color: var(--accent);
+    color: var(--accent-contrast) !important;
 }
 
 input[type="submit"].primary:hover,
 .button.primary:hover {
-    background-color: var(--hover-color-default);
+    background-color: var(--accent-hover);
+    color: var(--accent-contrast) !important;
+    box-shadow: none;
 }
 
 input[type="submit"].primary:active,
@@ -57,7 +62,9 @@ input[type="submit"].primary:active,
     background-color: var(--active-color-default);
 }
 
-.button.primary .icon.solid.fa-download {
+/* The icon inherits the generic .icon chrome, which would draw a second box
+   inside the button; strip it regardless of the button's colour variant. */
+.button .icon.solid.fa-download {
     border: none !important;
     box-shadow: none !important;
 }

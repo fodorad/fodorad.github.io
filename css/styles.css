@@ -1,6 +1,7 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700,900");
 
+@import url("theme.css");
 @import url("variables.css");
 @import url("general.css");
 @import url("image.css");
@@ -8,6 +9,7 @@
 @import url("table.css");
 @import url("menu.css");
 @import url("project.css");
+@import url("software.css");
 @import url("page.css");
 @import url("recent.css");
 @import url("gallery.css");

@@ -1,0 +1,180 @@
+/* ============================================================================
+   THEME — the single source of truth for every colour on this site.
+   ============================================================================
+
+   Both light and dark values live in this one file. To retheme the site, edit
+   here and nowhere else; every other stylesheet references these tokens via
+   var(--token) and must not hardcode a colour.
+
+   Contrast ratios in the comments are measured against WCAG 2.1 AA, which
+   requires 4.5:1 for body text and 3:1 for large text and UI borders.
+   ========================================================================= */
+
+:root {
+	/* --- surfaces ------------------------------------------------------- */
+	/* A softly warm off-white rather than pure #fff, which reads flat and
+	   cheap at full-page scale; cards then sit *lighter* than the ground. */
+	--bg: #f7f6f4;                   /* warm neutral page ground */
+	--bg-elevated: #fffefd;          /* cards lift above the ground */
+	--bg-footer: #edebe7;            /* recedes below the page */
+	--bg-subtle: #eceae6;            /* code blocks, inset panels */
+	--border: #dcd8d2;
+	--border-strong: #b3aca3;
+	--shadow: rgba(40, 34, 28, 0.10);
+	--shadow-strong: rgba(40, 34, 28, 0.18);
+
+	/* --- text ----------------------------------------------------------- */
+	--text: #222b35;                 /* neutral-800  14.33:1 on --bg */
+	--text-muted: #4c6176;           /* neutral-600   6.40:1 on --bg */
+	--text-inverse: #ffffff;         /* text on accent/overlay fills */
+
+	/* --- brand ---------------------------------------------------------- */
+	--accent: #ab4c31;               /* terracotta-600  5.51:1 on --bg,
+	                                    and >=4.5:1 on every surface above */
+	--accent-hover: #8e4129;         /* terracotta-700  7.15:1 on --bg */
+	--accent-contrast: #ffffff;      /* text on an --accent fill */
+	--accent-muted: rgba(171, 76, 49, 0.12);   /* tinted fills, never text */
+	--accent-soft: #d88f79;          /* terracotta-400 - large text and fills only */
+
+	/* --- controls ------------------------------------------------------- */
+	--button-color: #4c6176;
+	--focus-ring: #ab4c31;
+
+	/* --- project tiles --------------------------------------------------
+	   Colour overlays behind white tile text. Deep enough that white clears
+	   4.5:1 on every one except --tile-3, which only ever sits behind the
+	   large tile heading. */
+	--tile-1: #b3455e;               /* rose     5.34:1 */
+	--tile-2: #2c7da0;               /* blue     4.62:1 */
+	--tile-3: #2a9d8f;               /* teal     3.32:1 - large text only */
+	--tile-4: #9b3b78;               /* magenta  6.38:1 */
+	--tile-5: #7a5aa8;               /* purple   5.45:1 */
+	--tile-6: #4a5fc1;               /* indigo   5.68:1 */
+
+	/* Featured work uses a warmer, accent-adjacent ramp so it is immediately
+	   distinguishable from the cooler Recent works strip below it. */
+	--tile-f1: #9c4430;              /* terracotta deep  6.28:1 */
+	--tile-f2: #8a5a2b;              /* amber deep       5.79:1 */
+	--tile-f3: #7d4a52;              /* mulberry         6.72:1 */
+
+	/* Resting overlay keeps the artwork visible; the hover overlay has to
+	   carry body text over an arbitrary image, including white regions, so
+	   it is much darker: white on it measures 9.65:1 even over pure white. */
+	--tile-overlay-opacity: 0.8;
+	--tile-overlay-hover: rgba(20, 20, 20, 0.82);
+	--tile-tag-bg: rgba(255, 255, 255, 0.18);
+	--tile-tag-border: rgba(255, 255, 255, 0.65);
+	/* Tile text always sits on a saturated colour or the dark hover scrim, in
+	   both themes, so it stays white in both - unlike --text-inverse, which
+	   flips with the theme. */
+	--tile-text: #ffffff;
+	--tile-image-ground: #f4f4f4;    /* behind transparent logo artwork */
+
+	/* --- project summary cards (Task / Challenges / Method / Results) --- */
+	--card-task: #fff8d5;
+	--card-task-hover: #fbf3b6;
+	--card-challenges: #ffe8e7;
+	--card-challenges-hover: #f6b7b7;
+	--card-method: #e3f2f8;
+	--card-method-hover: #b9e8fa;
+	--card-results: #e4f8d6;
+	--card-results-hover: #cef6b2;
+	--card-title-bg: #ffffff;
+	--card-title-border: #d9d9d9;
+	--card-text: #202020;            /* these cards keep dark text in both modes */
+
+	/* --- event cards & pdf chips ---------------------------------------- */
+	--event-chip-bg: #ede1d4;
+	--event-chip-bg-hover: #dbc6ae;
+	--event-chip-text: #7f5946;      /* 4.77:1 on --event-chip-bg */
+
+	/* --- notices -------------------------------------------------------- */
+	--notice-bg: #fff9db;
+	--notice-border: #ffe066;
+	--notice-text: #553a00;          /* 9.95:1 on --notice-bg */
+
+	/* --- gallery / lightbox --------------------------------------------- */
+	--overlay-scrim: #00000081;
+	--overlay-surface: #111111;
+	--overlay-text: #ffffff;
+	--overlay-image-bg: rgba(240, 240, 240, 0.9);
+
+	/* --- menu ----------------------------------------------------------- */
+	--menu-bg: #f6f7f9;
+	--menu-active-bg: var(--accent-muted);
+	--menu-active-text: #ab4c31;
+}
+
+/* ============================================================================
+   DARK THEME
+   Only the token values change; no component rules belong here.
+   ========================================================================= */
+
+body.dark-theme {
+	/* --- surfaces ------------------------------------------------------- */
+	--bg: #181f25;                   /* neutral-900 page ground */
+	--bg-elevated: #222b35;          /* neutral-800 cards lift off the ground */
+	--bg-footer: #131920;            /* recedes below the page */
+	--bg-subtle: #222b35;
+	--border: #303d4b;               /* neutral-700 */
+	--border-strong: #4c6176;        /* neutral-600 */
+	--shadow: rgba(0, 0, 0, 0.45);
+	--shadow-strong: rgba(0, 0, 0, 0.65);
+
+	/* --- text ----------------------------------------------------------- */
+	--text: #ecf0f3;                 /* neutral-100 14.53:1 on --bg */
+	--text-muted: #a8b8c7;           /* neutral-300  8.20:1 on --bg */
+	--text-inverse: #181f25;
+
+	/* --- brand ---------------------------------------------------------- */
+	--accent: #e1a998;               /* terracotta-300  8.19:1 on --bg */
+	--accent-hover: #eebfb2;         /* terracotta-200 10.09:1 on --bg */
+	--accent-contrast: #181f25;      /* dark text on a light accent fill */
+	--accent-muted: rgba(225, 169, 152, 0.14);
+	--accent-soft: #d88f79;
+
+	/* --- controls ------------------------------------------------------- */
+	--button-color: #a8b8c7;
+	--focus-ring: #e1a998;
+
+	/* --- project tiles --------------------------------------------------
+	   Unchanged: the tiles are saturated colour over imagery in both modes,
+	   and white text already clears AA on them. */
+	--tile-image-ground: #2a3a48;
+
+	/* --- project summary cards ------------------------------------------
+	   Deep tints replacing the light pastels, which left near-white body
+	   text at 1.07:1 - effectively invisible. These clear 8.6-10.4:1. */
+	--card-task: #443d24;
+	--card-task-hover: #564d2e;
+	--card-challenges: #472b2a;
+	--card-challenges-hover: #593635;
+	--card-method: #1f3b47;
+	--card-method-hover: #284b5a;
+	--card-results: #2a4025;
+	--card-results-hover: #35512f;
+	--card-title-bg: #222b35;
+	--card-title-border: rgba(236, 240, 241, 0.25);
+	--card-text: #e8edf2;
+
+	/* --- event cards & pdf chips ---------------------------------------- */
+	--event-chip-bg: #382e26;
+	--event-chip-bg-hover: #473a30;
+	--event-chip-text: #e6d2bf;
+
+	/* --- notices -------------------------------------------------------- */
+	--notice-bg: #352e1d;
+	--notice-border: #a8892c;
+	--notice-text: #f3e8c8;
+
+	/* --- gallery / lightbox --------------------------------------------- */
+	--overlay-scrim: #000000a8;
+	--overlay-surface: #dddddd;
+	--overlay-text: #111111;
+	--overlay-image-bg: rgba(20, 20, 20, 0.9);
+
+	/* --- menu ----------------------------------------------------------- */
+	--menu-bg: #222b35;
+	--menu-active-bg: var(--accent-muted);
+	--menu-active-text: #e1a998;
+}

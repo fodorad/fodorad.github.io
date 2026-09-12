@@ -20,7 +20,17 @@
     width: calc(33% - 4rem);
     min-width: 300px;
     margin: 1rem 2rem 1rem 2rem;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    /* The inner .tile-image scales to 1.1 on hover; without clipping here the
+       enlarged image spills past the tile's rounded corners. */
+    overflow: hidden;
+    box-shadow: 0 2px 10px var(--shadow);
+    transition: transform 0.5s ease, opacity 0.5s ease, box-shadow 0.3s ease;
+}
+
+/* Matches the lift used by the demo and event cards. */
+body:not(.is-touch) .tiles article:hover {
+    box-shadow: 0 8px 28px var(--shadow-strong);
 }
 
 @media (max-width: 767.98px) { /* Affects screens smaller than md breakpoint */
@@ -47,7 +57,6 @@
     display: block;
     width: 100%;
     border: 0;
-    border-radius: 4px;
 }
 
 .tiles article > .tile-image:before {
@@ -63,9 +72,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 1.0;
     z-index: 1;
-    opacity: 0.8;
+    opacity: var(--tile-overlay-opacity);
 }
 
 .tiles article > .tile-image:after {
@@ -115,16 +123,16 @@
     width: 100%;
     height: 100%;
     padding: 1rem;
-    border-radius: 4px;
+    border-radius: 10px;
     border-bottom: 0;
-    color: #ffffff;
+    color: var(--tile-text);
     text-align: center;
     text-decoration: none;
     z-index: 3;
 }
 
 .tiles article > a:hover {
-    color: #ffffff !important;
+    color: var(--tile-text) !important;
 }
 
 .tiles article > a h2 {
@@ -154,27 +162,40 @@
 }
 
 .tiles article.style1 > .tile-image:before {
-    background-color: #f2849e;
+    background-color: var(--tile-1);
 }
 
 .tiles article.style2 > .tile-image:before {
-    background-color: #7ecaf6;
+    background-color: var(--tile-2);
 }
 
 .tiles article.style3 > .tile-image:before {
-    background-color: #7bd0c1;
+    background-color: var(--tile-3);
 }
 
 .tiles article.style4 > .tile-image:before {
-    background-color: #c75b9b;
+    background-color: var(--tile-4);
 }
 
 .tiles article.style5 > .tile-image:before {
-    background-color: #ae85ca;
+    background-color: var(--tile-5);
 }
 
 .tiles article.style6 > .tile-image:before {
-    background-color: #8499e7;
+    background-color: var(--tile-6);
+}
+
+/* Featured work: a warmer ramp, distinct from the cooler recent strip. */
+.tiles article.styleF1 > .tile-image:before {
+    background-color: var(--tile-f1);
+}
+
+.tiles article.styleF2 > .tile-image:before {
+    background-color: var(--tile-f2);
+}
+
+.tiles article.styleF3 > .tile-image:before {
+    background-color: var(--tile-f3);
 }
 
 body:not(.is-touch) .tiles article:hover > .tile-image {
@@ -184,9 +205,12 @@ body:not(.is-touch) .tiles article:hover > .tile-image {
     transform: scale(1.1);
 }
 
+/* Body text has to stay legible over an arbitrary image, including white
+   regions of a screenshot. At the old #333/0.35 white text measured 1.98:1;
+   this lands at 6.90:1 even over pure white. */
 body:not(.is-touch) .tiles article:hover > .tile-image:before {
-    background-color: #333333;
-    opacity: 0.35;
+    background-color: var(--tile-overlay-hover);
+    opacity: 1;
 }
 
 body:not(.is-touch) .tiles article:hover > .tile-image:after {
@@ -194,7 +218,7 @@ body:not(.is-touch) .tiles article:hover > .tile-image:after {
 }
 
 body:not(.is-touch) .tiles article:hover .content {
-    max-height: 15rem;
+    max-height: 22rem;
     opacity: 1;
 }
 
@@ -207,13 +231,13 @@ body.is-preload .tiles article {
 }
 
 body.is-touch .tiles article .content {
-    max-height: 15rem;
+    max-height: 22rem;
     opacity: 1;
 }
 
 .project-card {
     border-radius: 1rem;
-    box-shadow: 0 3px 12px rgba(0,0,0,.1);
+    box-shadow: 0 3px 12px var(--shadow);
     padding: 2.3rem 1.5rem 1.4rem 1.5rem;
     margin: 0;
     position: relative;
@@ -223,6 +247,10 @@ body.is-touch .tiles article .content {
     justify-content: flex-start;
     align-items: stretch;
     transition: background 0.3s, box-shadow 0.3s;
+    border: 1px solid var(--border);
+    /* These cards carry their own tinted background in both themes, so the
+       text colour is pinned to the token rather than inherited from body. */
+    color: var(--card-text);
   }
   
   .project-title {
@@ -230,49 +258,51 @@ body.is-touch .tiles article .content {
     top: -1.35rem;
     left: 50%;
     transform: translateX(-50%);
-    background: #ffffff;
+    background: var(--card-title-bg);
     padding: 0.2em 1.3em;
     border-radius: 1.5em;
-    border: 1px solid #d9d9d9;
+    border: 1px solid var(--card-title-border);
     font-weight: bold;
-    box-shadow: 0 1px 8px rgba(0,0,0,.04);
+    box-shadow: 0 1px 8px var(--shadow);
     font-size: 1.3rem;
     letter-spacing: .1em;
     z-index: 2;
+    color: var(--card-text);
   }
   
   .card-task {
-    background: #fff8d5;
+    background: var(--card-task);
   }
   
   .card-task:hover {
-    background: #fbf3b6;
+    background: var(--card-task-hover);
   }
   
   .card-challenges {
-    background: #ffe8e7;
+    background: var(--card-challenges);
   }
   
   .card-challenges:hover {
-    background: #f6b7b7;
+    background: var(--card-challenges-hover);
   }
   
   .card-method {
-    background: #e3f2f8;
+    background: var(--card-method);
   }
   
   .card-method:hover {
-    background: #b9e8fa;
+    background: var(--card-method-hover);
   }
   
   .card-results {
-    background: #e4f8d6;
+    background: var(--card-results);
   }
   
   .card-results:hover {
-    background: #cef6b2;
+    background: var(--card-results-hover);
   }
   
+
   /* Space between cards (bootstrap g-4 class manages gaps as well) */
   @media (min-width: 768px) {
     .row.g-4 > [class^="col-"] {

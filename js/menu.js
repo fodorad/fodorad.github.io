@@ -27,28 +27,35 @@
         if ($menu._lock()) $body.toggleClass('is-menu-visible');
     };
 
+    /* Paints the switch to match the active theme. The label names the theme
+       currently in use, and the icon shows the one you would switch to. */
+    function renderThemeSwitch(isDark) {
+        $themeSwitch
+            .html(isDark
+                ? '<i class="far fa-sun" aria-hidden="true"></i><span class="theme-label">Dark</span>'
+                : '<i class="far fa-moon" aria-hidden="true"></i><span class="theme-label">Light</span>')
+            .attr('aria-pressed', isDark ? 'true' : 'false')
+            .attr('title', isDark ? 'Switch to light theme' : 'Switch to dark theme');
+    }
+
     function handleThemeSwitch() {
         $body.toggleClass('dark-theme');
-
-        if ($body.hasClass('dark-theme')) {
-            $themeSwitch.html('<i class="far fa-sun"></i>');
-        } else {
-            $themeSwitch.html('<i class="far fa-moon"></i>');
-        }
-
-        const currentTheme = $body.hasClass('dark-theme') ? 'dark' : 'light';
-        localStorage.setItem('theme', currentTheme);
+        const isDark = $body.hasClass('dark-theme');
+        renderThemeSwitch(isDark);
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
     }
 
     function applyStoredTheme() {
         const storedTheme = localStorage.getItem('theme');
-        if (storedTheme === 'dark') {
-            $body.addClass('dark-theme');
-            $themeSwitch.html('<i class="far fa-sun"></i>');
-        } else {
-            $body.removeClass('dark-theme');
-            $themeSwitch.html('<i class="far fa-moon"></i>');
-        }
+
+        /* Fall back to the operating system preference on a first visit, but
+           never override a choice the visitor has already made here. */
+        const isDark = storedTheme
+            ? storedTheme === 'dark'
+            : window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        $body.toggleClass('dark-theme', isDark);
+        renderThemeSwitch(isDark);
     }
 
     $(document).ready(function () {
@@ -85,9 +92,18 @@
             if (event.keyCode == 27) $menu._hide();
         });
 
-    $themeSwitch.on('click', function() {
-        handleThemeSwitch();
-    });
+    $themeSwitch
+        .attr('role', 'button')
+        .attr('tabindex', '0')
+        .on('click', function() {
+            handleThemeSwitch();
+        })
+        .on('keydown', function(event) {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                handleThemeSwitch();
+            }
+        });
     
     $('#menu-header')
         .on('click', 'a[href="#menu"]', function(event) {

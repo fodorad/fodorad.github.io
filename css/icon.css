@@ -18,7 +18,7 @@
 .icon {
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
     background-color: transparent;
-    border: 1px solid #a0a0a0;
+    border: 1px solid var(--border-strong);
     border-radius: 4px;
     width: 2.65rem;
     height: 2.65rem;

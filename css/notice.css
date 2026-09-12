@@ -1,12 +1,12 @@
 .notice-box {
     display: flex;
     align-items: flex-start;
-    background: #fff9db;
-    border-left: 4px solid #ffe066;
+    background: var(--notice-bg);
+    border-left: 4px solid var(--notice-border);
     padding: 16px 20px;
     border-radius: 6px;
     margin: 24px 0;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    box-shadow: 0 2px 6px var(--shadow);
   }
   
 .notice-icon {
@@ -19,13 +19,13 @@
 
 .notice-content p {
     margin: 0;
-    color: #553a00;
+    color: var(--notice-text);
     font-size: 1rem;
     line-height: 1.5;
 }
 
 .notice-content a {
-    color: #e6b800;
+    color: var(--notice-border);
     text-decoration: underline;
     font-weight: 500;
 }

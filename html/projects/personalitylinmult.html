@@ -1,13 +1,32 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 	<head>
-		<title>Adam Fodor portfolio</title>
+<!-- seo:begin -->
+		<title>PersonalityLinMulT — Multimodal Big Five Personality Perception</title>
+		<meta name="description" content="Multimodal personality perception with an MLflow model registry, ONNX serving on Google Cloud Run, and a live Hugging Face demo." />
+		<meta name="author" content="Adam Fodor" />
+		<link rel="canonical" href="https://adamfodor.com/html/projects/personalitylinmult.html" />
+		<meta property="og:type" content="article" />
+		<meta property="og:title" content="PersonalityLinMulT — Multimodal Big Five Personality Perception" />
+		<meta property="og:description" content="Multimodal personality perception with an MLflow model registry, ONNX serving on Google Cloud Run, and a live Hugging Face demo." />
+		<meta property="og:url" content="https://adamfodor.com/html/projects/personalitylinmult.html" />
+		<meta property="og:image" content="https://adamfodor.com/images/Adam_Fodor.jpg" />
+		<meta property="og:site_name" content="Adam Fodor" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="PersonalityLinMulT — Multimodal Big Five Personality Perception" />
+		<meta name="twitter:description" content="Multimodal personality perception with an MLflow model registry, ONNX serving on Google Cloud Run, and a live Hugging Face demo." />
+		<meta name="twitter:image" content="https://adamfodor.com/images/Adam_Fodor.jpg" />
+		<!-- seo:end -->
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 		<link rel="stylesheet" href="../../css/styles.css" />
 		<noscript><div class="alert alert-warning" role="alert"><h2>Warning!</h2><p>This website requires JavaScript to function. Please enable JavaScript in your browser settings.</p></div></noscript>
+		<!-- analytics:begin -->
+		<script data-goatcounter="https://fodorad.goatcounter.com/count"
+		        async src="//gc.zgo.at/count.js"></script>
+		<!-- analytics:end -->
 	</head>
 
 	<body class="is-preload">
@@ -21,10 +40,7 @@
 			</div>
 
 			<nav id="menu">
-				<h2>
-					Menu
-					<span id="themeSwitch" class="theme-icon" aria-label="Toggle Theme"><i class="far fa-moon"></i></span>
-				</h2>
+				<h2>Menu</h2>
 				<ul>
 					<li><a href="../../index.html">Home</a></li>
 					<li><a href="../projects.html">Projects</a></li>
@@ -34,6 +50,7 @@
 					<li><a href="../gallery.html">Gallery</a></li>
 					<li><a href="../about.html">About</a></li>
 				</ul>
+				<span id="themeSwitch" class="theme-icon" role="button" tabindex="0" aria-label="Toggle colour theme"><i class="far fa-moon"></i></span>
 			</nav>		
 		</header>
 
@@ -46,7 +63,14 @@
 			<img class="img-fluid rounded middle" src="../../images/projects/personalitylinmult/cover.png" alt=""/>
 			<div class="d-flex mt-4 mb-4">
 				<a id="button_contact" target="_blank" href="../../pdf/2021_Fodor_Adam_PMLR_Personality_LinMulT.pdf" class="button mx-3">Paper</a>
-				<a id="button_contact" target="_blank" href="https://github.com/fodorad/PersonalityLinMulT" class="button primary mx-3">Code</a>
+				<a id="button_contact" target="_blank" href="https://huggingface.co/spaces/fodorad/personalitylinmult-fi" class="button primary mx-3">Live demo</a>
+				<a id="button_contact" target="_blank" href="https://github.com/fodorad/PersonalityLinMulT" class="button mx-3">Code</a>
+			</div>
+			<div class="package-links justify-content-center mb-4">
+				<a href="https://pypi.org/project/personalitylinmult/" target="_blank" rel="noopener">PyPI</a>
+				<a href="https://fodorad.github.io/PersonalityLinMulT/" target="_blank" rel="noopener">Docs</a>
+				<a href="https://huggingface.co/fodorad/personalitylinmult-fi-models" target="_blank" rel="noopener">Model weights</a>
+				<a href="https://huggingface.co/datasets/fodorad/personalitylinmult-fi" target="_blank" rel="noopener">Dataset</a>
 			</div>
 
 			<div class="row">
@@ -121,6 +145,49 @@
 								<li>Reported results achieve performance competitive with state-of-the-art, while promoting reduced bias through use of appearance-invariant features.</li>
 							</ul>
 						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container software-section">
+				<h2 class="text-center">From paper to production</h2>
+				<p class="software-lead">
+					Two promoted champions ship from this repository &mdash; <code>wavlm_best-ccc</code> (acoustic only)
+					and <code>avt_best-ccc</code> (acoustic + visual + textual fusion). Both are wired end to end
+					through the public API, ONNX export, container, and hosted demo.
+				</p>
+				<div class="practice-grid grid-2x2">
+					<div class="practice-card">
+						<h3><i class="fa-solid fa-flask"></i>Model lifecycle</h3>
+						<ul>
+							<li>Every run tracked in <strong>MLflow</strong>, with the Model Registry as the promotion boundary.</li>
+							<li>Alias-based promotion (<code>@champion</code>, not deprecated stages), so a specific trained run becomes &ldquo;the&rdquo; deployable model through a deliberate, auditable step.</li>
+							<li><strong>Optuna</strong> hyperparameter optimization and systematic feature-ablation matrices across seven features, trained with PyTorch Lightning across multiple GPUs (DDP).</li>
+						</ul>
+					</div>
+					<div class="practice-card">
+						<h3><i class="fa-solid fa-cubes"></i>Deployment</h3>
+						<ul>
+							<li>A Docker image serving the ONNX path, running identically on <code>localhost</code> and on <strong>Google Cloud Run</strong>.</li>
+							<li>Cloud Run with true <strong>scale-to-zero</strong>, so an idle demo bills nothing.</li>
+							<li>A Hugging Face Space with a live <strong>PyTorch-vs-ONNX backend switch</strong>, comparing both runtimes on the same input.</li>
+						</ul>
+					</div>
+					<div class="practice-card">
+						<h3><i class="fa-solid fa-box"></i>Public inference API</h3>
+						<ul>
+							<li><code>pip install personalitylinmult</code>, then <code>PersonalityModel.from_pretrained(...)</code> &mdash; no MLflow and no repo clone needed.</li>
+							<li>Checkpoints are self-describing, so one class serves every architecture; you never track LinT vs. LinMulT yourself.</li>
+							<li>An optional ONNX extra gives a full raw-audio-to-prediction pipeline with no PyTorch or Lightning installed.</li>
+						</ul>
+					</div>
+					<div class="practice-card">
+						<h3><i class="fa-solid fa-arrows-rotate"></i>Reproducibility &amp; metrics</h3>
+						<ul>
+							<li>Training reads a single HDF5 artifact and nothing else &mdash; that file is the reproducibility boundary.</li>
+							<li>It embeds the builder config verbatim, the <strong>commit SHA</strong>, and the label hash, so a built file always traces back to what produced it.</li>
+							<li>Reported alongside 1-MAE: Pearson r, CCC, R&sup2;, and <code>std_ratio</code>, which catches regression-to-the-mean that 1-MAE alone hides.</li>
+						</ul>
 					</div>
 				</div>
 			</div>

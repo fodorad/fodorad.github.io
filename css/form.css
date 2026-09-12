@@ -11,9 +11,18 @@
 #footer textarea.form-control {
     background-color: transparent !important;
     border: none;
-    border-bottom: 2px solid #ccc;
+    border-bottom: 2px solid var(--border-strong);
     outline: none;
     box-shadow: none;
+    /* Bootstrap's .form-control hardcodes a dark colour, which disappears on
+       the dark footer; the placeholder needs the muted token for the same
+       reason. */
+    color: var(--text);
+}
+
+#footer .form-control::placeholder {
+    color: var(--text-muted);
+    opacity: 1;
 }
 
 #footer input[type="text"].form-control:focus,
