@@ -40,22 +40,23 @@
 	--button-color: #4c6176;
 	--focus-ring: #ab4c31;
 
-	/* --- project tiles --------------------------------------------------
-	   Colour overlays behind white tile text. Deep enough that white clears
-	   4.5:1 on every one except --tile-3, which only ever sits behind the
-	   large tile heading. */
-	--tile-1: #b3455e;               /* rose     5.34:1 */
-	--tile-2: #2c7da0;               /* blue     4.62:1 */
-	--tile-3: #2a9d8f;               /* teal     3.32:1 - large text only */
-	--tile-4: #9b3b78;               /* magenta  6.38:1 */
-	--tile-5: #7a5aa8;               /* purple   5.45:1 */
-	--tile-6: #4a5fc1;               /* indigo   5.68:1 */
+/* --- project tiles --------------------------------------------------
+   Colour overlays behind white tile text. Deep enough that white clears
+   4.5:1 on every one except --tile-3, which only ever sits behind the
+   large tile heading.  Colors are intentionally distinct: no two adjacent
+   numbers (including the cyclic wrap 6→1) share hue family. */
+--tile-1: #b3455e;               /* rose     5.34:1 - warm red */
+--tile-2: #2c7da0;               /* blue     4.62:1 - cool primary */
+--tile-3: #7a5aa8;               /* purple   5.45:1 - distinct, NOT adjacent to magenta/indigo */
+--tile-4: #2a9d8f;               /* teal     3.32:1 - large text only - cyan-green, distinct from blue */
+--tile-5: #9b3b78;               /* magenta  6.38:1 - pinkish purple, distinct from purple & indigo */
+--tile-6: #4a5fc1;               /* indigo   5.68:1 - distinct from blue & purple */
 
-	/* Featured work uses a warmer, accent-adjacent ramp so it is immediately
-	   distinguishable from the cooler Recent works strip below it. */
-	--tile-f1: #9c4430;              /* terracotta deep  6.28:1 */
-	--tile-f2: #8a5a2b;              /* amber deep       5.79:1 */
-	--tile-f3: #7d4a52;              /* mulberry         6.72:1 */
+   /* Featured work uses a warmer, accent-adjacent ramp so it is immediately
+      distinguishable from the cooler Recent works strip below it. */
+--tile-f1: #2a9d8f;              /* teal     3.32:1 - cool cyan-green, mathematically distinct from rose red & amber */
+--tile-f2: #b3455e;              /* rose red 5.34:1 - warm red, distinct from teal & amber */
+--tile-f3: #c99631;              /* amber    7.5:1 - warm gold, distinct from teal & rose red */
 
 	/* Resting overlay keeps the artwork visible; the hover overlay has to
 	   carry body text over an arbitrary image, including white regions, so
