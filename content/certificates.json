@@ -1,5 +1,29 @@
 [
     {
+        "src": "images/gallery/certificates/image/Coursera S6IW0FNFK2S3-1.jpg",
+        "thumbnail": "images/gallery/certificates/image/Coursera S6IW0FNFK2S3-1.jpg",
+        "caption": "IBM: Building AI Agents and Agentic Workflows",
+        "tags": ["IBM"]
+    },
+    {
+        "src": "images/gallery/certificates/image/Coursera 54KK56N1LZTB-1.jpg",
+        "thumbnail": "images/gallery/certificates/image/Coursera 54KK56N1LZTB-1.jpg",
+        "caption": "IBM: Agentic AI with LangGraph, CrewAI, AutoGen and BeeAI",
+        "tags": ["IBM"]
+    },
+    {
+        "src": "images/gallery/certificates/image/Coursera LWAZIGGISJTG-1.jpg",
+        "thumbnail": "images/gallery/certificates/image/Coursera LWAZIGGISJTG-1.jpg",
+        "caption": "IBM: Agentic AI with LangChain and LangGraph",
+        "tags": ["IBM"]
+    },
+    {
+        "src": "images/gallery/certificates/image/Coursera W6978L4IDDAH-1.jpg",
+        "thumbnail": "images/gallery/certificates/image/Coursera W6978L4IDDAH-1.jpg",
+        "caption": "Duke University: MLOps Tools: MLflow and Hugging Face",
+        "tags": ["Duke University"]
+    },
+    {
         "src": "images/gallery/certificates/image/Coursera 6RTSKGBYDV9D.jpg",
         "thumbnail": "images/gallery/certificates/image/Coursera 6RTSKGBYDV9D.jpg",
         "caption": "IBM DevOps and Software Engineering",
