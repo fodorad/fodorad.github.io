@@ -139,6 +139,21 @@
   },
   {
     "year": 2026,
+    "image": "images/projects/voicemate/logo.svg",
+    "title": "voicemate",
+    "content": "Private voice assistant that runs entirely on a Mac, in Hungarian and English: streaming speech, a LangGraph agent on Ollama, memory and interruptible replies.",
+    "page": "projects/voicemate.html",
+    "tags": [
+      "LangGraph",
+      "Ollama",
+      "Speech",
+      "Agentic AI"
+    ],
+    "theme": "Machine Learning Models & Tools",
+    "priority": 1
+  },
+  {
+    "year": 2026,
     "image": "images/projects/labmate/logo.svg",
     "title": "labmate",
     "content": "Local agentic AI toolkit on Ollama: LangChain chains, a LangGraph graph and agents for papers, arXiv and CV tailoring.",
@@ -150,7 +165,7 @@
       "Agentic AI"
     ],
     "theme": "Machine Learning Models & Tools",
-    "priority": 1
+    "priority": 2
   },
   {
     "year": 2026,
@@ -165,7 +180,7 @@
       "PyPI"
     ],
     "theme": "Machine Learning Models & Tools",
-    "priority": 2
+    "priority": 3
   },
   {
     "year": 2026,
@@ -223,6 +238,6 @@
       "PyPI"
     ],
     "theme": "Machine Learning Models & Tools",
-    "priority": 3
+    "priority": 4
   }
 ]
