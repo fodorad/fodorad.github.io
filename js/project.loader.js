@@ -22,8 +22,15 @@ fetch('../content/projects.json')
         const numbers = [1, 2, 3, 4, 5, 6];
 
         /* Grouped by research theme rather than year: with one to three
-           projects per year, year headers made a steady output look sparse. */
-        data.forEach((item, index) => {
+           projects per year, year headers made a steady output look sparse.
+           Themes keep their order of first appearance in the data; inside a
+           theme the newest comes first (see project.sort.js). */
+        const themes = [...new Set(data.map(item => item.theme))];
+        const ordered = themes.flatMap(
+            theme => data.filter(item => item.theme === theme).sort(compareProjects)
+        );
+
+        ordered.forEach((item, index) => {
 
             if (item.theme !== currentTheme) {
                 const themeSection = document.createElement('div');

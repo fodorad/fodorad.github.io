@@ -53,7 +53,7 @@ fetch('content/projects.json')
             ['F1', 'F2', 'F3']
         );
 
-        const newestFirst = [...data].sort((a, b) => b.year - a.year);
+        const newestFirst = [...data].sort(compareProjects);
         renderTiles(
             newestFirst.slice(0, 3),
             document.getElementById('project-container-recent')

@@ -1,0 +1,281 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+<!-- seo:begin -->
+		<title>labmate — Local Agentic AI Tools on Ollama</title>
+		<meta name="description" content="Local tools on Ollama: fact-checked paper overviews and posts, cited answers about a paper library, an arXiv scout and CV tailoring, built as LangChain chains, a LangGraph graph and agents." />
+		<meta name="author" content="Adam Fodor" />
+		<link rel="canonical" href="https://adamfodor.com/html/projects/labmate.html" />
+		<meta property="og:type" content="article" />
+		<meta property="og:title" content="labmate — Local Agentic AI Tools on Ollama" />
+		<meta property="og:description" content="Local tools on Ollama: fact-checked paper overviews and posts, cited answers about a paper library, an arXiv scout and CV tailoring, built as LangChain chains, a LangGraph graph and agents." />
+		<meta property="og:url" content="https://adamfodor.com/html/projects/labmate.html" />
+		<meta property="og:image" content="https://adamfodor.com/images/Adam_Fodor.jpg" />
+		<meta property="og:site_name" content="Adam Fodor" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="labmate — Local Agentic AI Tools on Ollama" />
+		<meta name="twitter:description" content="Local tools on Ollama: fact-checked paper overviews and posts, cited answers about a paper library, an arXiv scout and CV tailoring, built as LangChain chains, a LangGraph graph and agents." />
+		<meta name="twitter:image" content="https://adamfodor.com/images/Adam_Fodor.jpg" />
+		<!-- seo:end -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+		<link rel="stylesheet" href="../../css/styles.css" />
+		<noscript><div class="alert alert-warning" role="alert"><h2>Warning!</h2><p>This website requires JavaScript to function. Please enable JavaScript in your browser settings.</p></div></noscript>
+		<!-- analytics:begin -->
+		<script data-goatcounter="https://fodorad.goatcounter.com/count"
+		        async src="//gc.zgo.at/count.js"></script>
+		<!-- analytics:end -->
+	</head>
+
+	<body class="is-preload">
+		<header>
+			<div id="menu-header">
+				<nav>
+					<ul>
+						<li><a href="#menu">Menu</a></li>
+					</ul>
+				</nav>
+			</div>
+
+			<nav id="menu">
+				<h2>Menu</h2>
+				<ul>
+					<li><a href="../../index.html">Home</a></li>
+					<li><a href="../projects.html">Projects</a></li>
+					<li><a href="../blog.html">Blog</a></li>
+					<li><a href="../events.html">Events</a></li>
+					<li><a href="../teaching.html">Teaching</a></li>
+					<li><a href="../gallery.html">Gallery</a></li>
+					<li><a href="../about.html">About</a></li>
+				</ul>
+				<span id="themeSwitch" class="theme-icon" role="button" tabindex="0" aria-label="Toggle colour theme"><i class="far fa-moon"></i></span>
+			</nav>
+		</header>
+
+		<div class="container">
+			<div class="paper">
+				<img class="img-fluid middle" style="max-width: 7rem;" src="../../images/projects/labmate/logo.svg" alt="labmate logo: a chip with the letters l a b and gold pins"/>
+				<h1>labmate</h1>
+				<p>Local tools on Ollama: paper overviews and posts,<br />cited answers about a paper library, an arXiv scout and CV tailoring</p>
+			</div>
+
+			<div class="d-flex flex-wrap justify-content-center mt-4 mb-4">
+				<a target="_blank" rel="noopener" href="https://github.com/fodorad/labmate" class="button primary mx-2 my-1">GitHub</a>
+			</div>
+
+			<h2>Why I built it</h2>
+			<p>I wanted a hands-on way to learn the agentic patterns that matter in practice, on tasks I actually have:
+				reading papers, writing about them, finding new ones, answering questions about my own research and tailoring a CV.
+				labmate is a small collection of features that each show a different way of building with LLMs, all on one shared core.</p>
+			<p>Everything runs on <strong>local models through Ollama</strong>, with no paid APIs. The question each feature answers is
+				<em>who decides the next step</em>: in a <strong>workflow</strong> the code fixes the order and the model fills in each step;
+				in an <strong>agent</strong> the model picks its own tools. Both are built with LangChain chains, a LangGraph graph and
+				<code>create_agent</code>. Model output is never trusted blindly: claims are checked against the source, and checks in code
+				can send the model back or drop what it wrote.</p>
+
+			<h2>Pipelines</h2>
+			<p class="text-center">Each feature is shown as the diagram it is built from. Hover a diagram to magnify it, click to open it full size.</p>
+			<div class="legend" aria-label="Diagram legend">
+				<span class="legend-item"><i class="legend-swatch sw-code"></i>plain code</span>
+				<span class="legend-item"><i class="legend-swatch sw-llm"></i>model call</span>
+				<span class="legend-item"><i class="legend-swatch sw-judge"></i>judge model</span>
+				<span class="legend-item"><i class="legend-swatch sw-agent"></i>agent</span>
+				<span class="legend-item"><i class="legend-swatch sw-guard"></i>check in code</span>
+				<span class="legend-item"><i class="legend-swatch sw-data"></i>input / output</span>
+			</div>
+
+			<div class="row feature-row align-items-center g-4">
+				<div class="col-md-6">
+					<h3 class="feature-title">paper2flow <span class="type-badge">chain</span></h3>
+					<p>A research paper in, a fact-checked <code>overview.pdf</code> out: a cover, four cards (Task, Challenges, Method, Results) and data-flow diagrams.</p>
+					<ul>
+						<li>Every claim carries a verbatim quote; a quote that is not in the paper, or has other numbers, is dropped in code.</li>
+						<li>A judge model checks each bullet; failed bullets are rewritten twice at most, then dropped.</li>
+						<li>The model only proposes typed boxes and arrows. Code validates them and writes the diagram.</li>
+					</ul>
+
+				</div>
+				<div class="col-md-6">
+					<a class="diagram-panel" href="../../images/projects/labmate/paper2flow.svg" target="_blank" rel="noopener" title="Open the diagram full size">
+						<img src="../../images/projects/labmate/paper2flow.svg" alt="paper2flow pipeline: ingest, extract, quote guard, write, factcheck, rewrite, flows, diagram guard, render" loading="lazy"/>
+					</a>
+				</div>
+			</div>
+			<div class="row feature-row align-items-center g-4">
+				<div class="col-md-6">
+					<h3 class="feature-title">paper2post <span class="type-badge">chain</span></h3>
+					<p>Reuses the paper2flow analysis to write a short LinkedIn post: a hook, three to five sentences that tell the story, and a question about something specific in the paper.</p>
+					<ul>
+						<li>Every sentence cites known claims and passes the same fact-check as the overview.</li>
+						<li>Page 1 is the post text with icons and links, page 2 the pipeline diagram to attach as the image.</li>
+					</ul>
+
+				</div>
+				<div class="col-md-6 order-md-first">
+					<a class="diagram-panel" href="../../images/projects/labmate/paper2post.svg" target="_blank" rel="noopener" title="Open the diagram full size">
+						<img src="../../images/projects/labmate/paper2post.svg" alt="paper2post pipeline: analyze, post, draft guard, factcheck, render" loading="lazy"/>
+					</a>
+				</div>
+			</div>
+			<div class="row feature-row align-items-center g-4">
+				<div class="col-md-6">
+					<h3 class="feature-title">scout <span class="type-badge">agent</span></h3>
+					<p>Give it a topic and it searches arXiv, reads and writes <code>notes.md</code>. Nothing fixes the order of its steps: the model plans, picks a tool, reads what comes back and repeats.</p>
+					<ul>
+						<li>Tools: <code>search_arxiv</code>, <code>read_abstract</code>, <code>read_overview</code> (runs paper2flow on one paper).</li>
+						<li>A citation guard refuses notes that cite an arXiv id the agent never read.</li>
+					</ul>
+
+				</div>
+				<div class="col-md-6">
+					<a class="diagram-panel" href="../../images/projects/labmate/scout.svg" target="_blank" rel="noopener" title="Open the diagram full size">
+						<img src="../../images/projects/labmate/scout.svg" alt="scout agent loop: the model calls arXiv tools, writes notes, a citation guard checks them" loading="lazy"/>
+					</a>
+				</div>
+			</div>
+			<div class="row feature-row align-items-center g-4">
+				<div class="col-md-6">
+					<h3 class="feature-title">triage <span class="type-badge">workflow + decision model</span></h3>
+					<p>A topic and your interests in, a sorted reading list out: each arXiv hit becomes <em>deep read</em>, <em>post</em> or <em>skip</em>.</p>
+					<ul>
+						<li>A small decision model scores each paper on five levels in a single pass, so one paper costs one short request.</li>
+						<li>Code turns the score into an action and keeps deep reads within a budget. With <code>--run</code> the chosen papers go through paper2flow or paper2post.</li>
+						<li>On 36 hand-labelled cases the default decision model picks the right action 30 times, a general 4B model 16.</li>
+					</ul>
+
+				</div>
+				<div class="col-md-6 order-md-first">
+					<a class="diagram-panel" href="../../images/projects/labmate/triage.svg" target="_blank" rel="noopener" title="Open the diagram full size">
+						<img src="../../images/projects/labmate/triage.svg" alt="triage workflow: search arXiv, rate each paper with a decision model, action, budget, report" loading="lazy"/>
+					</a>
+				</div>
+			</div>
+			<div class="row feature-row align-items-center g-4">
+				<div class="col-md-6">
+					<h3 class="feature-title">ask: graph <span class="type-badge">LangGraph graph</span></h3>
+					<p>Questions about a library of PDFs (here my dissertation and papers), answered with citations such as <em>Dissertation §4.2, p. 57</em>. The code fixes the path.</p>
+					<ul>
+						<li>Retrieval fuses BM25 and vectors; a judge grades the hits and the query is rewritten while evidence is missing.</li>
+						<li>An ambiguous question pauses the graph (<code>interrupt</code>) until you pick a reading.</li>
+						<li>A judge reads every answer sentence with its cited chunks; unsupported ones are dropped, and with nothing left the graph abstains instead of guessing.</li>
+					</ul>
+
+				</div>
+				<div class="col-md-6">
+					<a class="diagram-panel" href="../../images/projects/labmate/ask-graph.svg" target="_blank" rel="noopener" title="Open the diagram full size">
+						<img src="../../images/projects/labmate/ask-graph.svg" alt="ask graph: understand, clarify, retrieve, grade, rewrite, answer, verify, abstain" loading="lazy"/>
+					</a>
+				</div>
+			</div>
+			<div class="row feature-row align-items-center g-4">
+				<div class="col-md-6">
+					<h3 class="feature-title">ask: agent <span class="type-badge">agent</span></h3>
+					<p>The same task with the model in charge: it chooses what to search, whether to read more context and when to stop.</p>
+					<ul>
+						<li>Tools: <code>search_library</code>, <code>read_context</code>, <code>list_sources</code>.</li>
+						<li>Its final text goes through the same citation parsing and sentence verification as the graph, so the two are comparable on a golden question set.</li>
+					</ul>
+
+				</div>
+				<div class="col-md-6 order-md-first">
+					<a class="diagram-panel" href="../../images/projects/labmate/ask-agent.svg" target="_blank" rel="noopener" title="Open the diagram full size">
+						<img src="../../images/projects/labmate/ask-agent.svg" alt="ask agent: the model calls library tools, then parse and verify the answer" loading="lazy"/>
+					</a>
+				</div>
+			</div>
+			<div class="row feature-row align-items-center g-4">
+				<div class="col-md-6">
+					<h3 class="feature-title">cv2job <span class="type-badge">chain + one agent step</span></h3>
+					<p>A CV (YAML) and a job posting in; a tailored CV, a cover letter and a separate gap report out.</p>
+					<ul>
+						<li>Requirements are read from the posting and matched to CV bullets; every quote and id is checked.</li>
+						<li>The <em>gaps</em> step is an agent: it re-searches the CV with other words and may ask you a question.</li>
+						<li>Numbers and names must come from the source bullet, years of experience come from the CV, and the letter is a fixed template.</li>
+					</ul>
+
+				</div>
+				<div class="col-md-6">
+					<a class="diagram-panel" href="../../images/projects/labmate/cv2job.svg" target="_blank" rel="noopener" title="Open the diagram full size">
+						<img src="../../images/projects/labmate/cv2job.svg" alt="cv2job pipeline: requirements, match, gaps agent, tailor, letter, render" loading="lazy"/>
+					</a>
+				</div>
+			</div>
+
+			<h2>Shared core</h2>
+			<div class="container my-5">
+				<div class="row g-4">
+					<div class="col-md-6">
+						<div class="project-card card-task h-100 text-center">
+							<div class="project-title">Reply cache</div>
+							<ul class="text-start">
+								<li>A SQLite cache answers a repeated request (same messages, model, options and schema) without calling the model.</li>
+								<li>A rerun only pays for what changed.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="project-card card-method h-100 text-center">
+							<div class="project-title">Structured output</div>
+							<ul class="text-start">
+								<li>Replies are validated against a Pydantic schema, and a failed reply is retried with the error shown to the model.</li>
+								<li>The schema goes both into Ollama's <code>format</code> and into the prompt.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="project-card card-challenges h-100 text-center">
+							<div class="project-title">Grounding</div>
+							<ul class="text-start">
+								<li>Claims carry verbatim quotes that are checked against the source.</li>
+								<li>A judge-and-rewrite loop drops statements the evidence does not support.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="project-card card-results h-100 text-center">
+							<div class="project-title">Tracing &amp; evals</div>
+							<ul class="text-start">
+								<li>LangSmith tracing is opt-in; nothing is sent otherwise.</li>
+								<li>Run metrics and a golden question set compare the ask graph with the ask agent, and a benchmark compares local models.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="notice-box">
+				<span class="notice-icon" aria-label="Notice">
+				  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffd600" viewBox="0 0 16 16">
+					<path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767z"/>
+					<path d="M8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" fill="#333"/>
+				  </svg>
+				</span>
+				<div class="notice-content">
+				  <p>A personal, local-first project.</p> <br>
+				  <p>
+					labmate is developed on a 32 GB Mac with Ollama and is not packaged on PyPI yet: you run it from a clone of the repository.
+					The code and the diagrams above are the current state; expect fast-moving internals.
+				  </p>
+				  <br>
+				  <p>
+					Stack: Python, LangChain, LangGraph, Ollama, SQLite, Typst, Mermaid. AGPL-3.0 licensed.
+				  </p>
+				</div>
+			  </div>
+
+		</div>
+
+		<div class="d-flex mt-4 mb-4"><a id="button_contact" href="https://github.com/fodorad/labmate" target="_blank" rel="noopener" class="button mx-3">Star it on GitHub</a></div>
+		<div id="footer-container"></div>
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<script src="https://kit.fontawesome.com/a8f44bbdfa.js"></script>
+		<script src="../../js/menu.js"></script>
+		<script src="../../js/pre-load.js"></script>
+		<script src="../../js/footer.loader.js"></script>
+		<script src="../../js/diagram.lens.js"></script>
+	</body>
+</html>

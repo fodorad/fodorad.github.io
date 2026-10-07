@@ -461,3 +461,100 @@
 		font-size: 1.4rem;
 	}
 }
+
+
+/* --- labmate project page: alternating text / diagram rows --- */
+
+.feature-row {
+	margin: 2.5rem 0;
+}
+
+.feature-title {
+	margin-bottom: 0.6rem;
+}
+
+.type-badge {
+	display: inline-block;
+	margin-left: 0.4rem;
+	padding: 0.1rem 0.7rem;
+	border: 1px solid var(--border);
+	border-radius: 1rem;
+	font-size: 0.75rem;
+	font-weight: 400;
+	vertical-align: middle;
+	opacity: 0.85;
+}
+
+/* Diagrams use fixed light node colours, so they sit on a light panel in
+   both themes. */
+.diagram-panel {
+	display: block;
+	background: #fffefd;
+	border: 1px solid var(--border);
+	border-radius: 0.8rem;
+	box-shadow: 0 2px 10px var(--shadow);
+	padding: 0.8rem;
+	border-bottom: 1px solid var(--border);
+}
+
+.diagram-panel img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.legend {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 0.5rem 1.2rem;
+	margin: 1rem 0 0 0;
+	font-size: 0.85rem;
+}
+
+.legend-item {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4rem;
+}
+
+.legend-swatch {
+	display: inline-block;
+	width: 1rem;
+	height: 1rem;
+	border-radius: 0.25rem;
+	border: 1px solid;
+}
+
+.sw-code  { background: #f1efea; border-color: #8a8478; }
+.sw-llm   { background: #e3f2f8; border-color: #4c8aa8; }
+.sw-judge { background: #efe6f8; border-color: #8a64b0; }
+.sw-agent { background: #ffe9d2; border-color: #c9772b; }
+.sw-guard { background: #fde8e6; border-color: #c0504d; }
+.sw-data  { background: #fffefd; border-color: #b9b3a8; }
+
+.feature-row p,
+.feature-row li {
+	text-align: left;
+}
+
+/* --- magnifying lens over a diagram (see js/diagram.lens.js) --- */
+
+.diagram-panel {
+	position: relative;
+	cursor: zoom-in;
+}
+
+.diagram-lens {
+	display: none;
+	position: absolute;
+	width: 240px;
+	height: 240px;
+	border-radius: 50%;
+	border: 3px solid var(--border);
+	background-color: #fffefd;
+	background-repeat: no-repeat;
+	box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+	pointer-events: none;
+	z-index: 5;
+}
