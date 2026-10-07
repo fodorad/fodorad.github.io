@@ -1,0 +1,234 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+<!-- seo:begin -->
+		<title>voicemate — Private Bilingual Voice Assistant</title>
+		<meta name="description" content="A private voice assistant that runs entirely on a Mac, in Hungarian and English: streaming speech recognition, a LangGraph agent on Ollama with tools and memory, and replies you can interrupt." />
+		<meta name="author" content="Adam Fodor" />
+		<link rel="canonical" href="https://adamfodor.com/html/projects/voicemate.html" />
+		<meta property="og:type" content="article" />
+		<meta property="og:title" content="voicemate — Private Bilingual Voice Assistant" />
+		<meta property="og:description" content="A private voice assistant that runs entirely on a Mac, in Hungarian and English: streaming speech recognition, a LangGraph agent on Ollama with tools and memory, and replies you can interrupt." />
+		<meta property="og:url" content="https://adamfodor.com/html/projects/voicemate.html" />
+		<meta property="og:image" content="https://adamfodor.com/images/Adam_Fodor.jpg" />
+		<meta property="og:site_name" content="Adam Fodor" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="voicemate — Private Bilingual Voice Assistant" />
+		<meta name="twitter:description" content="A private voice assistant that runs entirely on a Mac, in Hungarian and English: streaming speech recognition, a LangGraph agent on Ollama with tools and memory, and replies you can interrupt." />
+		<meta name="twitter:image" content="https://adamfodor.com/images/Adam_Fodor.jpg" />
+		<!-- seo:end -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+		<link rel="stylesheet" href="../../css/styles.css" />
+		<noscript><div class="alert alert-warning" role="alert"><h2>Warning!</h2><p>This website requires JavaScript to function. Please enable JavaScript in your browser settings.</p></div></noscript>
+		<!-- analytics:begin -->
+		<script data-goatcounter="https://fodorad.goatcounter.com/count"
+		        async src="//gc.zgo.at/count.js"></script>
+		<!-- analytics:end -->
+	</head>
+
+	<body class="is-preload">
+		<header>
+			<div id="menu-header">
+				<nav>
+					<ul>
+						<li><a href="#menu">Menu</a></li>
+					</ul>
+				</nav>
+			</div>
+
+			<nav id="menu">
+				<h2>Menu</h2>
+				<ul>
+					<li><a href="../../index.html">Home</a></li>
+					<li><a href="../projects.html">Projects</a></li>
+					<li><a href="../blog.html">Blog</a></li>
+					<li><a href="../events.html">Events</a></li>
+					<li><a href="../teaching.html">Teaching</a></li>
+					<li><a href="../gallery.html">Gallery</a></li>
+					<li><a href="../about.html">About</a></li>
+				</ul>
+				<span id="themeSwitch" class="theme-icon" role="button" tabindex="0" aria-label="Toggle colour theme"><i class="far fa-moon"></i></span>
+			</nav>
+		</header>
+
+		<div class="container">
+			<div class="paper">
+				<img class="img-fluid middle" style="max-width: 7rem;" src="../../images/projects/voicemate/logo.svg" alt="voicemate logo: a cyberpunk assistant with a headset and a voice waveform on her visor"/>
+				<h1>voicemate</h1>
+				<p>A private voice assistant that runs entirely on your Mac,<br />in English and Hungarian</p>
+			</div>
+
+			<div class="d-flex flex-wrap justify-content-center mt-4 mb-4">
+				<a target="_blank" rel="noopener" href="https://github.com/fodorad/voicemate" class="button primary mx-2 my-1">GitHub</a>
+				<a target="_blank" rel="noopener" href="https://fodorad.github.io/voicemate/" class="button mx-2 my-1">Docs</a>
+			</div>
+
+			<h2>Why I built it</h2>
+			<p>I wanted an assistant I can simply <em>talk to</em>, in Hungarian or English, the way I would talk to a colleague.
+				Cloud assistants send conversations to third parties, forget context between sessions and handle Hungarian poorly.
+				My first prototype was a blocking five-second record, transcribe, generate, speak loop: Hungarian only, no tools, no memory and too slow to feel like a conversation.</p>
+			<p>voicemate is the rewrite. Speech recognition, the language model, memory and speech synthesis all run on the machine.
+				Only explicit tool calls (web search, page fetch, arXiv, weather) go online, and each one is marked in the UI.
+				The assistant's name ("Ava" by default) is just a setting.</p>
+
+			<h2>Early look</h2>
+			<img class="img-fluid rounded middle" src="../../images/projects/voicemate/early-look.png" alt="voicemate in the browser: a conversation in the middle, pipeline stages with timings on the left, recalled memory on the right" loading="lazy"/>
+			<p class="text-center mt-3"><small>A real session with the <code>fast</code> profile (gemma4:e4b): a tool-backed question about the date and weather,
+				then a trip-planning request interrupted mid-answer with a follow-up. The left rail shows each pipeline stage with its timing,
+				the right panel what was recalled from memory.</small></p>
+
+			<h2>How it works</h2>
+			<p class="text-center">Each part is shown as the diagram it is built from. Hover a diagram to magnify it, click to open it full size.</p>
+			<div class="legend" aria-label="Diagram legend">
+				<span class="legend-item"><i class="legend-swatch sw-code"></i>plain code</span>
+				<span class="legend-item"><i class="legend-swatch sw-llm"></i>speech model</span>
+				<span class="legend-item"><i class="legend-swatch sw-agent"></i>language model / agent</span>
+				<span class="legend-item"><i class="legend-swatch sw-guard"></i>safeguard / goes online</span>
+				<span class="legend-item"><i class="legend-swatch sw-data"></i>input / output / storage</span>
+			</div>
+
+			<div class="row feature-row align-items-center g-4">
+				<div class="col-md-6">
+					<h3 class="feature-title">Streaming pipeline <span class="type-badge">speech</span></h3>
+					<p>Everything runs on the Mac. Speech starts while the answer is still being written, so a chat turn typically begins speaking 1-3 s after you stop talking.</p>
+					<ul>
+						<li>Silero VAD finds the end of your turn; Parakeet v3 transcribes it; the language is detected per turn and the reply comes back in the same language.</li>
+						<li>Piper speaks Hungarian and Kokoro speaks English, one sentence at a time.</li>
+						<li>The speech models run on the CPU on purpose: the GPU and most of the memory belong to the language model.</li>
+					</ul>
+				</div>
+				<div class="col-md-6">
+					<a class="diagram-panel" href="../../images/projects/voicemate/system.svg" target="_blank" rel="noopener" title="Open the diagram full size">
+						<img src="../../images/projects/voicemate/system.svg" alt="voicemate system: browser microphone, VAD, ASR, language detection, LangGraph agent with memory and tools, sentence chunker, TTS, browser speaker" loading="lazy"/>
+					</a>
+				</div>
+			</div>
+			<div class="row feature-row align-items-center g-4">
+				<div class="col-md-6">
+					<h3 class="feature-title">Agent and tools <span class="type-badge">LangGraph agent</span></h3>
+					<p>A small graph: <em>recall</em> loads relevant memory, the <em>agent</em> calls the model with every tool bound, and <em>tools</em> run what it asks for.</p>
+					<ul>
+						<li>Tools: web search, page fetch, arXiv search and paper download, weather, time, calculator, notes and reminders, and files in two whitelisted folders.</li>
+						<li>Errors go back to the model as text so it can retry; after 6 tool rounds the tools are removed and it must answer.</li>
+						<li>A SQLite checkpointer keeps the conversation across page reloads and restarts.</li>
+					</ul>
+				</div>
+				<div class="col-md-6 order-md-first">
+					<a class="diagram-panel" href="../../images/projects/voicemate/agent.svg" target="_blank" rel="noopener" title="Open the diagram full size">
+						<img style="max-width: 60%; margin: 0 auto;" src="../../images/projects/voicemate/agent.svg" alt="LangGraph agent: recall, agent and tools loop, with a pause that asks the user before risky actions" loading="lazy"/>
+					</a>
+				</div>
+			</div>
+			<div class="row feature-row align-items-center g-4">
+				<div class="col-md-6">
+					<h3 class="feature-title">Natural turn-taking <span class="type-badge">interruptions</span></h3>
+					<p>Speak while it talks and it stops at once, remembers what you already heard, and treats your words as a correction or a new question.</p>
+					<ul>
+						<li>Barge-in needs louder and longer speech than a normal turn, so its own voice from the speakers does not interrupt it.</li>
+						<li><strong>Hold</strong> lets you think out loud: pauses no longer end the turn, and everything is answered at once when you say you are finished.</li>
+						<li>Ctrl+M turns the microphone on and off; turning it off means "I am done" and what was heard is answered.</li>
+					</ul>
+				</div>
+				<div class="col-md-6">
+					<a class="diagram-panel" href="../../images/projects/voicemate/barge-in.svg" target="_blank" rel="noopener" title="Open the diagram full size">
+						<img style="max-width: 60%; margin: 0 auto;" src="../../images/projects/voicemate/barge-in.svg" alt="Conversation states: idle, listening, thinking and speaking, with the transitions caused by interruptions" loading="lazy"/>
+					</a>
+				</div>
+			</div>
+			<div class="row feature-row align-items-center g-4">
+				<div class="col-md-6">
+					<h3 class="feature-title">One spoken turn <span class="type-badge">latency</span></h3>
+					<p>The latency budget of a chat turn, from the last word you say to the first audio you hear.</p>
+					<ul>
+						<li>The prompt prefix never changes between turns, so Ollama reuses its cached prompt; only the newest message carries the time, language and recalled memories.</li>
+						<li>A tool that goes online adds a short spoken filler such as "One moment, let me check."</li>
+					</ul>
+				</div>
+				<div class="col-md-6 order-md-first">
+					<a class="diagram-panel" href="../../images/projects/voicemate/turn.svg" target="_blank" rel="noopener" title="Open the diagram full size">
+						<img src="../../images/projects/voicemate/turn.svg" alt="One spoken turn: silence ends the turn, ASR, recall, first LLM tokens, first sentence, TTS, audio" loading="lazy"/>
+					</a>
+				</div>
+			</div>
+
+			<h2>Under the hood</h2>
+			<div class="container my-5">
+				<div class="row g-4">
+					<div class="col-md-6">
+						<div class="project-card card-task h-100 text-center">
+							<div class="project-title">Local &amp; private</div>
+							<ul class="text-start">
+								<li>Conversations, memory, notes and logs stay in a git-ignored folder; raw audio is not stored.</li>
+								<li>The server only answers to localhost, and fetched URLs must resolve to public addresses.</li>
+								<li>Web content is treated as untrusted data, never as instructions.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="project-card card-method h-100 text-center">
+							<div class="project-title">Memory</div>
+							<ul class="text-start">
+								<li>LanceDB with bge-m3 embeddings holds facts about me, past conversations and a research cache.</li>
+								<li>Asking the same research question again is answered from memory, with the date it was found.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="project-card card-challenges h-100 text-center">
+							<div class="project-title">Asks before risky actions</div>
+							<ul class="text-start">
+								<li>Replacing an existing file, or opening a page no search result listed, pauses the agent with LangGraph's <code>interrupt()</code>.</li>
+								<li>The question is shown and spoken, and your exact words resume the run, so a "no, call it plan2" redirects the action.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="project-card card-results h-100 text-center">
+							<div class="project-title">Measured, not guessed</div>
+							<ul class="text-start">
+								<li>Parakeet transcribes a 4 s utterance in about 280 ms on the CPU; Piper speaks a sentence in about 70 ms.</li>
+								<li>Three model profiles (<code>fast</code>, <code>gemma</code>, <code>qwen</code>); a startup memory check falls back to <code>fast</code> if the chosen one would be paged out.</li>
+								<li><code>make bench</code> and <code>make report</code> give component benchmarks and a latency summary of recent turns.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="notice-box">
+				<span class="notice-icon" aria-label="Notice">
+				  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffd600" viewBox="0 0 16 16">
+					<path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767z"/>
+					<path d="M8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" fill="#333"/>
+				  </svg>
+				</span>
+				<div class="notice-content">
+				  <p>A personal, local-first project.</p> <br>
+				  <p>
+					voicemate is developed on an Apple Silicon Mac (M4, 32 GB) with Ollama, needs about 15 GB of disk for the models and is not packaged on PyPI: you run it from a clone of the repository.
+					The code and the diagrams above are the current state.
+				  </p>
+				  <br>
+				  <p>
+					Stack: Python, LangGraph, Ollama, NiceGUI, LanceDB, Silero VAD, Parakeet (MLX), Piper, Kokoro. MIT licensed.
+				  </p>
+				</div>
+			  </div>
+
+		</div>
+
+		<div class="d-flex mt-4 mb-4"><a id="button_contact" href="https://github.com/fodorad/voicemate" target="_blank" rel="noopener" class="button mx-3">Star it on GitHub</a></div>
+		<div id="footer-container"></div>
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<script src="https://kit.fontawesome.com/a8f44bbdfa.js"></script>
+		<script src="../../js/menu.js"></script>
+		<script src="../../js/pre-load.js"></script>
+		<script src="../../js/footer.loader.js"></script>
+		<script src="../../js/diagram.lens.js"></script>
+	</body>
+</html>
