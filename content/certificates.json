@@ -1,5 +1,11 @@
 [
     {
+        "src": "images/gallery/certificates/image/Coursera XC968F9FEYWD-1.jpg",
+        "thumbnail": "images/gallery/certificates/image/Coursera XC968F9FEYWD-1.jpg",
+        "caption": "Packt: System Design Masterclass",
+        "tags": ["Packt"]
+    },
+    {
         "src": "images/gallery/certificates/image/Coursera S6IW0FNFK2S3-1.jpg",
         "thumbnail": "images/gallery/certificates/image/Coursera S6IW0FNFK2S3-1.jpg",
         "caption": "IBM: Building AI Agents and Agentic Workflows",
